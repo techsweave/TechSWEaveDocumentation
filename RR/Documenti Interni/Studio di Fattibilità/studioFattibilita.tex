@@ -1,0 +1,56 @@
+\documentclass[a4paper]{article}
+\usepackage{geometry}
+%\geometry{hmargin={2cm,2cm}}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{logo}{RGB}{20,99,163}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \includegraphics{../../../Images/logo}\\
+        \vspace{20px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{20px}
+        \textbf{\huge\textcolor{logo}{Studio di fattibilità}}\\
+        \vspace{10px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{20px}
+        \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
+        \vspace{40px}
+        \textbf{Informazioni sul documento}\\
+        \vspace{20px}
+        \begin{tabular}{p{100px} | p{100px}}
+            \textbf{Versione} & 0.2\\
+            \textbf{Responsabile} & \\
+            \textbf{Redattori} & Nicolò Giaccone \newline Samuele De Simone\\
+            \textbf{Verificatore} & \\
+            \textbf{Destinatari} & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave\\
+            \textbf{Stato} & Da approvare\\
+            \textbf{Uso} & Interno\\
+        \end{tabular}
+            \vspace{1ex}
+
+    \end{center}
+    \end{titlepage}
+    \begin{center}
+       \textbf{Diario delle modifiche}
+        \begin{itemize}
+            \item \textit{Prima stesura del documento}, Nicolò Giaccone,(ruolo da definire), v0.1;
+        \end{itemize}
+    \end{center}
+    \newpage
+\tableofcontents
+\newpage
+
+\input{Capitolati/C2.tex}
+\input{Capitolati/C1.tex}
+\input{Capitolati/C3.tex}
+\input{Capitolati/C4.tex}
+\input{Capitolati/C5.tex}
+\input{Capitolati/C6.tex}
+\input{Capitolati/C7.tex}
+\end{document}
