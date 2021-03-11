@@ -15,9 +15,14 @@ Il capitolato prevede che vengano fornite alcune funzioni irrinunciabili
 per tutte le categorie di utenti che ne faranno uso: clienti, commercianti,
  admin.
 \subsection{Finalità del progetto}
-La finalità del progetto è quella di realizzare una applicazione in grado di gestire, lo spostamento di un unità all'interno di un area controllata,
-attraverso la consocenza di alcuni dati e con l'obbiettivo di minimizzare costi e tempi di viaggio e di evitare eventuali collisioni
+\begin{itemize}
+    \item \textbf{EmporioLambda-frontend:} si occupa di gestire le pagine richieste dall’utente. Il compito di questo modulo è pre-renderizzare le pagine in HTML sul server ad ogni richiesta. Dovrà essere implementato utilizzando Next.js e TypeScript;
+    \item \textbf{EmporioLambda-backend:} si occupa di gestire i servizi dell’applicazione e cioè gestire la business-logic, i dati relativi ad utenti, prodotti ed ordini, lo stato del carrello. Dovrà essere implementato utilizzando Serverless Framework, TypeScript e AWS Lambda;
+    \item \textbf{EmporioLambda-integration:} rappresenta tutti i servizi di terze parti che interagiscono con EmporioLambda-backend. Dovrà essere implementato utilizzando Serverless Framework e TypeScript;
+    \item \textbf{EmporioLambda-monitoring:} rappresenta gli strumenti impiegati dagli admin per monitorare lo stato dell’applicazione. Dovrà essere implementato con Amazon CloudWatch.
+\end{itemize}
 \subsection{Tecnologie interessate}
+Il proponente richiede l’utilizzo delle seguenti tecnologie:
 \begin{itemize}
     \item \textbf{Architettura serverless:} Un'architettura serverless è un’applicazione di progettazione che include servizi "Backend as aServiceG" (BaaS) di terze parti, codice personalizzato e container temporanei su una piattaforma di esecuzione "Function as a ServiceG" (FaaS). Le architetture Serverless potrebbero trarre beneficio dalla riduzione dei costi delle operazioni, complessità e tempi di consegna. Essi sono sistemi basati su cloud di eventi, dove lo sviluppo di applicazioni è basato esclusivamente su una combinazione di servizi di terze parti, logica lato client e chiamate a procedure presenti nel cloud.
     \item \textbf{AWS Lambda:} WS Lambda è una piattaforma di elaborazione serverless basata su eventi fornita da Amazon come parte di Amazon Web Services. È un servizio di elaborazione che esegue il codice in risposta agli eventi e automaticamente gestisce le risorse di calcolo necessarie per l'esecuzione di quel codice.
