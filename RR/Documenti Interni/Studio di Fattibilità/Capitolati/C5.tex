@@ -6,14 +6,20 @@
     \item \textbf{Commitenti:} \textit{Prof. Tullio Vardanega, Prof. Riccardo Cardin};
 \end{itemize}
 \subsection{Descrizione del capitolato}
-Il capitolato richiede di un software in grado di gestire un ente centrale che riceve dati 
-di posizioni e velocita da varie unità e ne regola gli spostementi. L'applicazione avrà una \textit{UI} che inicherà 
-la posizione, la velocita di ogniu unità e la direzione che questa dovrà prendere.
+Il capitolato richiede un software in grado di gestire, in real-time, una serie di unità con dei punti di interesse da raggiungere evitando le collisioni con altre unità del sistema. 
+Presenta anche una \textit{UI} che rappresenterà una mappa in cui sono indicate tutte le unità controllate con un'interfaccia che indica la prossima direzione consigliata 
+all'unità di cui saranno indicati: id, un pulsante stop/start, velocità attuale.
 \subsection{Finalità del progetto}
-La finalità del progetto è quella di realizzare una applicazione in grado di gestire, lo spostamento di un unità all'interno di un area controllata,
-attraverso la consocenza di alcuni dati e con l'obbiettivo di minimizzare costi e tempi di viaggio e di evitare eventuali collisioni
+La finalità del progetto è quella di realizzare una web-app che ricevuti degli input, possa creare una mappa, all'interno della quale censire le varie unità operative 
+(id, velocità massima e di crociera, posizione iniziale, lista dei POI da raggiungere,) e di consigliare 
+alle unità la prossima mossa da eseguire tenendo conto delle dimesioni delle unità e di eventuali collisioni con altre unità presenti all'interno del sistema 
 \subsection{Tecnologie interessate}
 \begin{itemize}
+    \item La scelta delle tecnologie da utilizzare è stata lasciata agli sviluppatori del progetto, sono comunque stati indicati alcune tecnologie :
+    \begin{itemize}
+        \item A seconda dell'approccio scelto per il real-time sono stati consigliati determinati linguaggi come derivati del C, o linguaggi multi-thread
+        \item Per la ui essendo una web-app, sono stati consigliati framework come React ed Angular.
+    \end{itemize}
     \item \textbf{Docker:} progetto open-source che automatizza il deploymentGdi applicazioni all’in-terno di container.
 \end{itemize}
 \subsection{Aspetti positivi}
