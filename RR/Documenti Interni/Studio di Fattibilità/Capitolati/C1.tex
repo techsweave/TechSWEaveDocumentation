@@ -1,1 +1,69 @@
 \section{Capitolato C1 - BlockCOVID}
+
+\subsection{Informaizoni genarli}
+\begin{itemize}
+    \item \textbf{Titolo:} \textit{BlockCOVID};
+    \item \textbf{Proponente:} \textit{Imola Informatica};
+    \item \textbf{Commitenti:} \textit{Prof. Tullio Vardanega, Prof. Riccardo Cardin};
+\end{itemize}
+
+\subsection{Descrizione del capitolato}
+Il capitolato richiede di realizzare un'applicazione in grado di monitorare le postazioni di più stanze in modo da parmetterne un'efficace tracciamento della sanificazione delle stesse in maniera immutabile e certificata.
+Deve essere quindi possibile tracciare in tempo reale l'occupazione delle postazioni e la loro prenotazione, considerando che le postazioni da sanificare non possono essere utilizzate.
+Deve essere possibile anche tracciare la sanificazione di tali postazioni, sia che suano fatte da aziende terze specializzate, sia che siano fatte manualmente dall'utilizzatore della postazione.
+
+\subsection{Finalità del progetto}
+La finalità del progetto è quella di creare un server completo di \texttit{UI} per la gestione delle stanze e delle postazioni e un'applicazione mobile per Android e iOS.
+Il server deve poter esporre queste funzionalità:
+\begin{itemize}
+    \item Prevedere un sistema di autenticazione e ruoli.
+    \item Creare e modificare stanze e postazioni.
+    \item Monitorare lo stato delle postazioni: ocuupate, prenotate da pulire e pulite.
+    \item Esportazione di un report delle pulizie per ogni singola postazione o per stanza.
+\end{itemize}
+L'applicazione deve permettere le seguenti operazioni:
+\begin{itemize}
+    \item Visualizzare le postazioni libere ed eventualmente prenotarne una.
+    \item Tracciamento in tempo reale della postazione utilizzata.
+    \item Sanificazione di una postazione.
+    \item Storico delle postazioni occupate e di quelle igenizzate.
+\end{itemize}
+La comunicazione tra server e applicazione mobile avviene nel momento in cui lo smarphone dell'utente viene a contatto con il tag RFID della postazione.
+In questo modo è possibile sapere che la postazione sta venendo usata da un utente, e quindi sarà da sanificare una volta liberata.
+
+\subsection{Tecnologie interessate}
+La scelta delle tecnologie da utilizzare è in parte data dal proponente, in parte lasciata a discrezione agli sviluppatori del progetto.
+È comunque possibilie utilizzare tecnologie diverse da quelle obbligatorie discutendone preventivamente con il proponente.
+\begin{itemize}
+    \item Teconolgie per raggiungere i requisiti minimi:
+    \begin{itemize}
+        \item Possibilità di usare l'applicativo attraverso delle API Rest esposte dal server. In alternativa, è possibile usare gRPC a Rest.
+        \item Lettore RFID integrato nei dispositivi mobili, solamente per il tempo strettamente necessario.
+        \item Test unitari e d'integrazione per le componenti applicative, con test end-to-end sull'intero sistema. 
+    \end{itemize}
+    \item Teconolgie suggerite, ma non vincolanti:
+    \begin{itemize}
+        \item Java (versione 8 o superiori), Python o NodeJs per lo sviluppo del server back-end.
+        \item Utilizzo di protocolli asincroni per la comunicazione tra app e server.
+        \item Un sistema blockchain per salvare con opponibilità a terzi i dati di sanificazione.
+        \item AAS Kubernetes o di un PAAS, Openshift o Rancher, per il rilascio delle componenti del server e la gestione della scalabilità orizzontale.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+    \item Utilizzo di svariate tecnologie recenti e all'avanguardia.
+    \item Integrazione tra dispositivi mobili e postazioni fisse.
+    \item Possibilità di realizzare un software di grande utilità ad aziende e personale messe in difficoltà dal Covid-19.
+    \item Possibilità di realizzare un progetto per un'azienda con molta esperienza e interessata alle tecnologie open-source.
+\end{itemize}
+
+\subsection{Criticità e fattori di rischio}
+\begin{itemize}
+    \item Il capitolato non presenta posti disponibili.
+    \item Nessun membro del gruppo ha abbastanza conoscenze riguardanti le teconolgie da utilizzare.
+    \item L'immutabilità e la certificazione del tracciamento sono questioni molto delicate, in quanto sono previste anche sanzioni penali per un datore di lavoro che non possa dimostrare di aver garantito la salubrità dell’ambiente di lavoro.
+\end{itemize}
+
+\subsection{Conclusioni}
+Il capitolato per quanto di forte interesse e utilità non presenta posti disponibili e non è stato quindi possibile sceglierlo.
