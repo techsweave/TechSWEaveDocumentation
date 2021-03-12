@@ -1,8 +1,8 @@
 \documentclass[a4paper]{article}
 \usepackage{geometry}
-%\geometry{hmargin={2cm,2cm}}
+\geometry{hmargin={2cm,2cm}, vmargin={2cm,2cm}}
 \usepackage{graphicx}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{hyperref}
 \definecolor{logo}{RGB}{20,99,163}
 \usepackage{titlesec}
@@ -23,7 +23,7 @@
         \vspace{20px}
         \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
         \vspace{40px}
-        \textbf{Informazioni sul documento}\\
+        \textbf{\Large Informazioni sul documento}\\
         \vspace{20px}
         \begin{tabular}{p{100px} | p{100px}}
             \textbf{Versione} & 0.5\\
@@ -34,17 +34,26 @@
             \textbf{Stato} & Da approvare\\
             \textbf{Uso} & Interno\\
         \end{tabular}
-            \vspace{1ex}
 
     \end{center}
     \end{titlepage}
     \begin{center}
-       \textbf{Diario delle modifiche}
-        \begin{itemize}
-            \item \textit{Prima stesura del documento}, Nicolò Giaccone, analista, v0.1;
-            \item \textit{Revisione struttura e aggiunta capitolati C2, C5 e C6}, Samuele De Simone, analista, v0.2;
-            \item \textit{Aggiunta dei capitolati da C3 a C4}, Nicolò Giaccone, analista, v0.5;
-        \end{itemize}
+
+        \textbf{\Large Diario delle modifiche}\\
+        \vspace{10px}
+        \begin{table}[h!]
+        \centering
+        \rowcolors{2}{logo!10}{logo!40}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{p{150px} p{90px} p{50px} p{60px} p{45px}}
+            \rowcolor{logo!70} \textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}\\
+            Prima stesura documento & Nicolò Giaccone & Analista & 11/03/2021 & 0.1\\
+            Revisione struttura \newline Aggiunta capitolati C2, C5 & Samuele De Simone & Analista & 11/03/2021 & 0.2\\
+            Aggiunta capitolato C6 & Tito Scutari & Analista & 11/03/2021 & 0.3 \\
+            Aggiunta dei capitolati C3 e C4 & Nicolò Giaccone & Analista & 11/03/2021 & 0.5\\
+            Revisione capitolato C6 & Samuele De Simone & Analista & 12/03/2021 & 0.5.1
+        \end{tabular}
+    \end{table}
     \end{center}
     \newpage
 \tableofcontents
