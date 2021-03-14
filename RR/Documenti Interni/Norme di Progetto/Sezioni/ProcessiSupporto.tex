@@ -1,30 +1,132 @@
 \section{Processi di Supporto}
     \subsection{Documentazione}
+    Ogni attività significativa per lo sviluppo del progetto viene documentata.
         \subsubsection{Scopo}
+        Lo scopo di questa sezione è di annotare le norme che regolano il processo di documentazinoe durante tutto il ciclo di vita del software, in modo che tutti i documenti risultino coerenti e validi.
         \subsubsection{Descrizione}
+        Questa sezione contiene le norme per la corretta stesura, verifica e approvazione di tutti i documenti prodotti dal gruppo. Ogni membro è tenuto a rispettare tutto ciò che è esposto.
         \subsubsection{Aspettative}
+        Le attese, riguardo il processo in questione, sono le seguenti:
+        \begin{itemize}
+            \item individuazione di una struttura comune a tutti i prodotti del processo, nell’arco delciclo di vita del software;
+            \item collezione di tutte le norme comuni per la stesura di documenti ufficiali.
+        \end{itemize}
         \subsubsection{Ciclo di vita di un documento}
+        Ogni documento attraversa le seguenti fasi del ciclo di vita:
+        \begin{itemize}
+            \item \textbf{Creazione:} il documento viene creato utilizzano un template situato nella cartella \textit{Template} del repository remoto, con la prima pagina e l'intestazione della tabella contenente il diario nelle modifiche;
+            \item \textbf{Strutturazione:} viene iniziato a popolare il diario delle modifiche nella seconda pagina e viene creato l'indice;
+            \item \textbf{Stesura:} il corpo del documento viene scritto da più membri del gruppo usando un metodo incrementale, ad ogni modifica viene aggiornato il diario delle modifiche.
+            \item \textbf{Revisione:} ogni singola sezione del corpo del documento viene regolarmente rivistada almeno un membro del gruppo, che deve essere obbligatoriamente diverso dalredattore della parte in verifica; se necessario, la verifica può essere svolta da piùpersone: in questo caso può partecipare anche chi ha scritto la sezione in verifica apatto che non si occupi della parte da esso redatta;
+            \item \textbf{Approvazione:} terminata la revisione, ilResponsabile di Progettostabilisce la vali-dità del documento, che solo a questo punto può essere considerato completo e puòessere quindi rilasciato.
+        \end{itemize}
         \subsubsection{Template}
+        Il gruppo ha creato un Template con \LaTeX per uniformare velocemente la struttura grafica e lo stile di tutti i documenti, in modo che tutti si possano concentrare sulla stesura del corpo del documento. Il template permette di adottare automaticamente le conformità previste dalle \textit{Norme di Progetto}.
         \subsubsection{Struttura di un documento}
             \subsubsubsection{Prima pagina}
+            Il frontespizio è la prima pagina del documento e contiene:
+            \begin{itemize}
+                \item \textbf{Logo del gruppo:} posto in alto in centro
+                \item \textbf{Titolo del documento:} in centro alla pagina
+                \item \textbf{e-mail del gruppo:} appena sotto al titolo del documento
+                \item \textbf{Informazioni sul documento:}
+                    \begin{itemize}
+                        \item \textbf{Versione:} indica la versione corrente del documento;
+                        \item \textbf{Responsabile:} il nome del \textit{Responsabile di Progetto} che deve approvare il documento;
+                        \item \textbf{Redattori:} i membri del gruppo che si occupano della stesura del documento; 
+                        \item \textbf{Verificatore:} i membri del gruppo che si occupano di verificare l'operato dei Redattori;
+                        \item \textbf{Destinatari:} i destinatari del documento;
+                        \item \textbf{Stato:} ndica se il documento è stato approvato dal \textit{Responsabile di Progetto};
+                        \item \textbf{Uso:} indica se il documento è ad uso interno o esterno.
+                    \end{itemize} 
+            \end{itemize}
             \subsubsubsection{Diario delle modifiche}
+            Ogni documento presenta un registro delle modifiche, sotto forma di tabella, che tienetraccia di tutte le modifiche significative apportate al documento durante le fasi del suo ciclodi vita. Ogni voce della tabella riporta:
+            \begin{itemize}
+                \item \textbf{Modifica:}una sintetica descrizione della modifica apportata;
+                \item \textbf{Autore:} il nome dell’autore della modifica;
+                \item \textbf{Ruolo:} il ruolo ricoperto dall’autore quando ha eseguito la modifica;
+                \item \textbf{Data:} la data in cui è stata apportata tale modifica;
+                \item \textbf{Versione:} la versione del documento dopo la modifica.
+            \end{itemize}
             \subsubsubsection{Indice}
+            L’indice delle sezioni fornisce al fruitore una visione complessiva della struttura deldocumento, permette di orientarsi tra i contenuti e di individuare la posizione delle varieparti.Ogni documento presenta un indice dei contenuti, subito dopo il registro delle modifiche;dove necessario, sono presenti anche un indice delle illustrazioni e uno delle tabelle presentinel documento.
             \subsubsubsection{Contenuto principale}
+            Le pagine sono così strutturate:
+            \begin{itemize}
+                \item in alto a sinistra è presente il logo del gruppo;
+                \item in alto a destra è presente il titolo del documento;
+                \item una riga divide il contenuto dalla intestazione;
+                \item il contenuto è tra l'intestazione e il piè di pagina;
+                \item un'altra rigi divide il contenuto dal piè di pagina;
+                \item in basso in centro è presente il numero di pagina corrente.
+            \end{itemize}
             \subsubsubsection{Verbali}
+            I verbali vengono prodotti da un componente del gruppo in occasione di incontri tra i membri con o senza la presenza di esterni. È prevista un'unica stesura. I verbali seguono la struttura degli altri documenti, ma contengono un'introduzione che contiene:
+            \begin{itemize}
+                \item \textbf{Data e ora:} data e orario in cui è iniziata la riunione;
+                \item \textbf{Luogo:} luogo in cui si è svolta la riunione;
+                \item \textbf{Partecipanti interni:} elenco dei partecipanti del gruppo presenti alla riunione;
+                \item \textbf{Partecipanti esterni:} elenco dei partecipanti esterni al gruppo presenti alla riunione; 
+                \item \textbf{Segretario:} il membro del gruppo che prende appunti sulla riunione e fa un resoconto.
+            \end{itemize}
+            Ogni verbale viene denominato con il formato:
+            \begin{center}
+                \textbf{Verbale\_GGMMAAAA} \\
+            \end{center}
+            e mantenuto nella \textit{Directory} Documenti esterni se è relativo a una riunione esterna, nella \textit{Directory} Documenti interni, se si riferisce a una riunione interna
         \subsubsection{Norme tipografiche}
             \subsubsubsection{Convenzioni sui nomi dei file}
+            I nomi dei file utilizzano la convenzione camelCase\textsubscript{\textbf{G}}, sono senza le proposizioni e non ci sono lettere accentate.
+            Ad esempio sono corretti:
+            \begin{itemize}
+                \item analisiRequisiti;
+                \item studioFattibilita;
+                \item normeProgetto.
+            \end{itemize}
+            Mentre non sono corretti:
+            \begin{itemize}
+                \item AnalisiDeiRequisiti;
+                \item studio\_fattibilità;
+                \item normeprogetto.
+            \end{itemize}
             \subsubsubsection{Stili del testo}
+            
             \subsubsubsection{Glossario}
+            \begin{itemize}
+                \item Ogni termine nel glossario viene marcato con una \textbf{G} maiuscola a pedice;
+                \item Se la voce è presente ripetutamente nello stesso paragrafo non è necessario marcarla ad ogni occorrenza, basta farlo alla prima occorrenza;
+                \item Se la voce è presente come singolo termine in elenchi puntati non è necessario marcarlo. 
+            \end{itemize}
+            
             \subsubsubsection{Elenchi puntati}
+            Ogni voce di un elenco termina con ";", tranne l'ultima che termina con ".". I sottoelenchi rispettano le stesse regole, essendo una funzione analoga. Se le voci sono della forma \textit{termine: descrizione}, i termini vanno in grassetto.
             \subsubsubsection{Formati dei dati}
+            Le date vengono indicate usando il formato
+            \begin{center}
+                \textbf{[YYYY]-[MM]-[DD]}
+            \end{center}
             \subsubsubsection{Sigle}
+            Tutte le sigle sono indicate con le iniziali di ogni parola maiuscole, tranne per le proposizioni, congiunzioni e articoli.
         \subsubsection{Elementi grafici}
             \subsubsubsection{Imamgini}
+            Le figure presenti nei documenti sono tutte centrate rispetto al testo e accompagnate dauna opportuna didascalia.
             \subsubsubsection{Tabelle}
+            Ogni tabella è contrassegnata da una didascalia descrittiva del contenuto, posta sotto di essa centrata rispetto alla pagina.  Nella didascalia di ogni tabella viene indicato l’identificativo
+            \begin{center}
+                \textbf{Tabella [X]}
+            \end{center}
+            dove \textbf{[X]} indica il numero assoluto della tabella all’interno del documento; a questo il testodella didascalia. A questa prassi fanno eccezione le tabelle del registro delle modifiche, chenon hanno la didascalia.
             \subsubsubsection{Grafici UML}
+            I grafici in linguaggio UML, usati per la modellazione dei casi\textsubscript{\textbf{G}} e per i diagrammi della progettazione\textsubscript{\textbf{G}}, sono inseriti come immagini.
         \subsubsection{Strumenti di stesura}
             \subsubsubsection{\LaTeX}
+            Per la stesura dei documenti, il gruppoProApesha scelto \LaTeX, un linguaggio compi-lato basato sul programma di composizione tipografica \TeX, al fine di produrre documenticoerenti, ordinati, templatizzati e stesi in modo collaborativo.
             \subsubsubsection{Draw.io}
+            Per la produzione di grafici UML è stato scelto il programma \textit{Draw.io}.
+            \begin{center}
+                \href{https://www.draw.io/}{https://www.draw.io/}\\
+            \end{center}
     \subsection{Gestione della configurazione}
         \subsubsection{Scopo}
         Il processo ha lo scopo di andare ad ordinare il software e la documentazione. Tutto quello che è stato configurato si trova in un posto preciso e consciuto, con una denominazione ed uno stato ben definiti. Ogni modifica deve rispettare determinate norme e deve essere sottoposta a versionamento.

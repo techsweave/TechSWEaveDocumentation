@@ -1,16 +1,18 @@
 \documentclass[a4paper]{article}
 \usepackage{titlesec}
 \usepackage{geometry}
-\geometry{hmargin={2cm,2cm}, vmargin={2cm,2cm}}
+\geometry{hmargin={2cm,2cm}, vmargin={3.5cm,3.5cm}}
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
 \usepackage{hyperref}
 \definecolor{logo}{RGB}{20,99,163}
-\usepackage{titlesec}
 \newcommand{\sectionbreak}{\clearpage}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,italian]{babel}
+\usepackage{layouts}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
 
 % creazione comando subsubsubsection
 \titleclass{\subsubsubsection}{straight}[\subsection]
@@ -19,8 +21,8 @@
 \renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
 \titleformat{\subsubsubsection}
   {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
-\titlespacing*{\subsubsubsection}
-{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+    \titlespacing*{\subsubsubsection}
+    {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 \makeatletter
 \def\toclevel@subsubsubsection{4}
@@ -30,6 +32,20 @@
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 %fine creazione comando
+
+
+%Comandi di impaginazione uguale per tutti i documenti
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.2]{../../../Images/logo.png}}
+%Titolo del documento
+\rhead{\large Norme di Progetto}
+%\rfoot{\thepage}
+\cfoot{Pagina \thepage{} di \pageref{LastPage}}
+\setlength{\headheight}{35pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
 
 \begin{document}
 \begin{titlepage}
@@ -45,7 +61,7 @@
         \textbf{\Large Informazioni sul documento}\\
         \vspace{20px}
         \begin{tabular}{p{100px} | p{100px}}
-            \textbf{Versione} & 0.0.1\\
+            \textbf{Versione} & 0.1\\
             \textbf{Responsabile} & Manuel Varo\\
             \textbf{Redattori} & Nicolò Giaccone \newline Samuele De Simone\\
             \textbf{Verificatore} & Amedeo Meggiolaro\\
@@ -55,6 +71,10 @@
         \end{tabular}\\
         \vspace{60px}
         \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
+<<<<<<< HEAD
+=======
+
+>>>>>>> 51e5f0a0a5ddd30c9771595a4a2728e26186bc04
     \end{center}
     \end{titlepage}
     \begin{center}
@@ -67,15 +87,16 @@
         \renewcommand{\arraystretch}{1.8}
         \begin{tabular}{p{150px} p{90px} p{50px} p{60px} p{45px}}
             \rowcolor{logo!70} \textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}\\
-            Prima stesura documento & Samuele De Simone & Analista & 13/03/2021 & 0.0.1\\    
-            Scaletta per processi di Supporto & Samuele De Simone & Analista & 13/03/2021 & 0.0.2\\
+            Prima stesura documento & Samuele De Simone & Analista & 2021/13/03 & 0.0.1\\    
+            Scaletta per processi di Supporto & Samuele De Simone & Analista & 2021/13/03 & 0.0.2\\
+            Completata sezione documentazione & Samuele De Simone & Analista & 2021/13/03 & 0.1 \\
         \end{tabular}
     \end{table}
     \end{center}
     \newpage
-\tableofcontents
-\newpage
-%\input{Sezioni/ProcessiPrimari.tex}
-\input{Sezioni/ProcessiSupporto.tex}
-%\input{Sezioni/ProcessiOrganizzativi.tex}
+    \tableofcontents
+    \newpage
+    %\input{Sezioni/ProcessiPrimari.tex}
+    \input{Sezioni/ProcessiSupporto.tex}
+    %\input{Sezioni/ProcessiOrganizzativi.tex}
 \end{document}
