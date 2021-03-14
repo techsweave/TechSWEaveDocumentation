@@ -27,8 +27,74 @@
             \subsubsubsection{Draw.io}
     \subsection{Gestione della configurazione}
         \subsubsection{Scopo}
+        Il processo ha lo scopo di andare ad ordinare il software e la documentazione. Tutto quello che è stato configurato si trova in un posto preciso e consciuto, con una denominazione ed uno stato ben definiti. Ogni modifica deve rispettare determinate norme e deve essere sottoposta a versionamento.
         \subsubsection{Descrizione}
+        La gestione della configurazione raggruppa ed organizza tutti gli strumenti necessari al organizzazione della produzione di documenti, diagrammi e codice, ma anche di quello necessari al versionamento e al coordinamento del gruppo.
         \subsubsection{Versionamento}
+        \subsubsubsection{Codice di versione}
+        La storia di un documento è ricostruibile attraverso le sue versioni, consultabili nella tabella presente all'inizio di ogni documento. Le versioni sono identificate da un codice a tre cifre nel fromato: 
+        \begin{center}
+            \textbf{\large [X].[Y].[Z]}\\             
+        \end{center}
+        dove: 
+        \begin{itemize}
+            \item \textbf{\large X:} rappresenta la versione del documento approvata dal \textit{Responsabile di progetto}, che ne autorizza l'incremento. La numerazione parte da 0;
+            \item \textbf{\large Y:} indica la versione approvata dal \textit{Verificatore}, che autorizza l’incremento del numero della versione; la numerazione inizia da 0, e riparte da questo valore ad ogni incrementodi \textbf{X};
+            \item \textbf{\large Z:} indica una versione in fase di elaborazione da parte dei \textit{redattori}, che ne incrementano il valore ad ogni modifica; la numerazione inizia da 0 e riparte da tale valore adogni incremento di \textbf{X} o \textbf{Y}.
+        \end{itemize}
+        \subsubsubsection{Tecnologie adottate}
+        Il versionamento è stato gestito attraverso il sistema di versionamento distribuito Git, con due repo situate in GitHub.
+        \subsubsubsection{Repository}
+        Le due repository create dal gruppo TechSWEave sono le seguenti:
+        \begin{itemize}
+            \item \textbf{\href{https://github.com/techsweave/TechSWEave.git}{TechSWEave}}: per il versionamento del codice;
+            \item \textbf{\href{https://github.com/techsweave/TechSWEaveDocumentation.git}{TechSWEaveDocumentation}}: per il versionamento dei documenti redatti;
+        \end{itemize}
+        Per una maggiore chiarezza nell'organizzazione si è deciso di tenere separato la documentazione dal codice.
+        \subsubsubsection{Struttura del repository}
+        Per ognuno dei due repository, esisite una versione \textbf{remota} ed una \textbf{locale}, con la medemisa struttura: 
+        \begin{itemize}
+            \item \textbf{Remoto :} presente su \textit{GitHub}, contiene tutti i prodotti condivisi dai membri del gruppo;
+            \item \textbf{Locale :} lanciando da terminale il comando {\fontfamily{qcr}\selectfont git clone [URLrepository]}, ogni componente del gruppo ha in locale sul suo pc una copia del repository su cui lavorare;
+        \end{itemize} 
+        Il repository \textbf{\href{https://github.com/techsweave/TechSWEave.git}{TechSWEave}} non ha ancora una struttura in quanto la scrittura di codice non è richiesta per la \textit{Revisone dei requisiti}. 
+        Il repository  \textbf{\href{https://github.com/techsweave/TechSWEaveDocumentation.git}{TechSWEaveDocumentation}} ha invece la seguente struttura:
+        \begin{itemize}
+            \item \textbf{Template :} la cartella la cui interno è presente un template del documento che ogni \textit{redattore} può utilizzare per produrre i file;
+            \item \textbf{Images :} la cartella contenente immagini e grafici da inserire poi nei documenti;
+            \item \textbf{RR :} la cartella contenente tutti i documenti che dovranno essere presentati alla \textit{Revisione dei requisiti} divisi in \textit{esterni} ed \textit{interni}, la stessa divisione verrà adottata anche per le altre revisioni queli \textit{Revisoni di progettazione} \textbf{RP}, \textit{Revisione di qualità} \textbf{RQ} e \textit{Revisione di avanzamento} \textbf{RA}.
+        \end{itemize}
+        La divisione dei file in base alle revisioni favorisce l'organizzazione dei documenti ed una veloce stesura degli stessi.
+        \begin{itemize}
+            \item i file {\fontfamily{qcr}\selectfont .tex} ossia i sorgenti dei documenti scritti in \LaTeX;
+            \item i file {\fontfamily{qcr}\selectfont .pdf} i documenti che verranno poi consegnati a commitenti e proponenti.
+            \item le immagini e i grafici che verrano poi usati nei documenti.
+        \end{itemize}
+        Il file {\fontfamily{qcr}\selectfont .gitignore} è il file che non versiona determinati file, sono stati tolti dal versionamento i file non necesiari.
+        \subsubsubsection{Comandi GitHub}
+        L'approccio al verisonameno scelto è stato quello dello sviluppo per \textit{feature}\textsubscript{\textbf{G}}, questo ha fatto si che il lavoro sia stato diviso in vari branch:
+        \begin{itemize}
+            \item \textbf{Master :} il branch principale in cui sono presenti i documenti finali approvati dal \textit{Responsabile di progetto};
+            \item \textbf{Develop :} il branch dove sono presenti i documenti terminati ma che devono essere ancora approvati dal \textit{Responsabile di progetto};
+            \item Ogni documento, durante la sua redazione, appartiene ad un singolo branch nominato con lo stesso nome del documento. Il documento rimarrà all'interno del proprio branch fino a che non è stato verificato dal \textit{Verificatore};
+        \end{itemize}
+        Si è scelto un approccio per \textit{feature}, per facilitare l'organizzazione e lo sviluppo parallelo dei documenti. Per raggiungere quest'obbiettivo ogni componente del gruppo deve:
+        \begin{itemize}
+            \item Dalla propria repository locale deve posizionarsi nel branch corretto attraverso l'apposito comando;
+            \item una volta arrivato nel branch corretto, il componente si deve mettere in pari con le, eventuali, modifiche apportate ai documenti;
+            \item svolgere il compito assegnato, come la scrittura di nuovo materiale o la modifica di quello già esisitente, attraverso l'editor predisposto (\textit{Visual Studio Code});
+            \item una volta terminato il proprio lavoro si deve aggiungere all'area di staging\textsubscript{\textbf{G}}, attraverso l'apposito comando;
+            \item eseguire il comando per andare a fare il commit delle modifiche fatte, corredandole con un messaggio identificativo;
+            \item caricare le modifiche nel repository remoto 
+        \end{itemize}
+        \subsubsubsection{Modifiche}
+        Tutti i membri possono modificare tutti i documenti tranne quelli presenti all'interno del ramo master, per i quali è richiesta una \textit{pull request}\textsubscript{\textbf{G}}, che deve essere approvata da almeno un componente del gruppo.
+        Per modifiche maggiori sui contenuti o modifiche alla struttura si deve:
+        \begin{itemize}
+            \item presentare la modifica che si vuole effettuare al responsabile motivando tale modifica;
+            \item una volta accetta dal resposabile si può procedre con la modifica; 
+        \end{itemize} 
+        Per le modifiche minori come correzzioni grammaticali e sintattiche si possono fare modicihe autonome, ma che devono comunque essere tracciate attraverso appositi commit autoesplicativi.
     \subsection{Gestione della Qualità}
         \subsubsection{Scopo}
         \subsubsection{Descrizione}
