@@ -17,8 +17,8 @@
             \item \textbf{Creazione:} il documento viene creato utilizzano un template situato nella cartella \textit{Template} del repository remoto, con la prima pagina e l'intestazione della tabella contenente il diario nelle modifiche;
             \item \textbf{Strutturazione:} viene iniziato a popolare il diario delle modifiche nella seconda pagina e viene creato l'indice;
             \item \textbf{Stesura:} il corpo del documento viene scritto da più membri del gruppo usando un metodo incrementale, ad ogni modifica viene aggiornato il diario delle modifiche.
-            \item \textbf{Revisione:} ogni singola sezione del corpo del documento viene regolarmente rivistada almeno un membro del gruppo, che deve essere obbligatoriamente diverso dalredattore della parte in verifica; se necessario, la verifica può essere svolta da piùpersone: in questo caso può partecipare anche chi ha scritto la sezione in verifica apatto che non si occupi della parte da esso redatta;
-            \item \textbf{Approvazione:} terminata la revisione, ilResponsabile di Progettostabilisce la vali-dità del documento, che solo a questo punto può essere considerato completo e puòessere quindi rilasciato.
+            \item \textbf{Revisione:} ogni singola sezione del corpo del documento viene regolarmente rivista da almeno un membro del gruppo, che deve essere obbligatoriamente diverso dal redattore della parte in verifica; se necessario, la verifica può essere svolta da piùpersone: in questo caso può partecipare anche chi ha scritto la sezione in verifica a patto che non si occupi della parte da esso redatta;
+            \item \textbf{Approvazione:} terminata la revisione, il Responsabile di Progetto stabilisce la validità del documento, che solo a questo punto può essere considerato completo e puòessere quindi rilasciato.
         \end{itemize}
         \subsubsection{Template}
         Il gruppo ha creato un Template con \LaTeX per uniformare velocemente la struttura grafica e lo stile di tutti i documenti, in modo che tutti si possano concentrare sulla stesura del corpo del documento. Il template permette di adottare automaticamente le conformità previste dalle \textit{Norme di Progetto}.
@@ -235,10 +235,72 @@
         \end{itemize}
     \subsection{Verifica}
         \subsubsection{Scopo}
+        L'obbiettivo della verifica è quello di realizzare prodotti corretti, coesi\textsubscript{\textbf{G}} e completi. La verifica si applica sia al codice che ai documenti.
         \subsubsection{Descrizione}
+        La verifica prende in input un file prodotto e, attraverso analisi e test, va a verificare che quanto fatto rispetti le aspettative.
+        \subsubsection{Aspettative}
+        Il corretto svolgimento del processo di verifica rispetta i seguenti punti:
+        \begin{itemize}
+            \item viene effettuato seguendo procedure definite e consolidate;
+            \item si usano criteri chiari ed affidabili per verificare;
+            \item i prodotti passano attraverso fasi successive, ognuna delle quali è sottoposta a verifica;
+            \item al termine della verifica il prodotto diventa stabile;
+            \item una volta completata permette il passaggio alla fase di validazione.
+        \end{itemize}
         \subsubsection{Attività}
             \subsubsubsection{Analisi}
+            Il processo di analisi si divide in due tipologie statica e dinamica.\\
+            \textbf{Analisi statica}\\
+            La verifica stativa si occupa di verificare documenti e codice per quanto concerne la loro correttezza (assenza di errori e difetti), il rispetto delle regole e la coesione\textsubscript{\textbf{G}} dei componenti. L'analisi statica può essere effettuata seguendo metodi manuali di lettura (eseguiti da persone) e metodi formali (eseguiti da macchine). I metodi manuali di lettura sono i seguenti due:
+            \begin{itemize}
+                \item \textbf{Walktrough}: i \textit{Verificatori} anlizzano i prodotti nella loro totalità per cercarare anomalie, si fà una lettura completa perchè non si conosco i principali difetti e la loro locazione;
+                \item \textbf{Inspection}: attraverso liste di controllo i \textit{Verificatori} andranno a cercare determinate tipologie di errori in specifiche parti del prodotto. 
+            \end{itemize}
+            \textbf{Analisi dinamica}\\
+            L'analisi dinamica è una tecnica di anlisi di un prodotto software, che ne richiede l'esecuzione per poterlo verificare. Vieni effettuata tramite test che verificano che il prodotto sia privo di anomalie, che rispetti le aspettative e che funzioni.
             \subsubsubsection{Test}
+            I test sono il fondamento dell'analisi dinamica, in quanto hanno lo scopo di verificare il corretto funzionamento del codice e che si conforme all'analisi dei requisiti.
+            Per ogni test devono essere definiti i seguenti parametri:
+            \begin{itemize}
+                \item \textbf{ambiente}: sistema hardware e software sul quale verrà eseguito il test;
+                \item \textbf{stato iniziale}: lo stato iniziale dal quale il test viene eseguito;
+                \item \textbf{input}: input inserito;
+                \item \textbf{output}: output atteso;
+                \item \textbf{istruzioni aggiuntive}: ulteriori informazioni sull'esecuzione del test e su come devono essere interpretati i dati.
+            \end{itemize}
+            Dei test ben scritti devono:
+            \begin{itemize}
+                \item essere ripetibili;
+                \item specificare l'ambiente d'esecuzione;
+                \item identificare input ed output richiesti;
+                \item avvertire in caso di effetti non desiderati;
+                \item fornire informazioni sui risultati dell'esecuzione in forma di file {\fontfamily{qcr}\selectfont .log}.
+            \end{itemize}
+            I test  del software sono di vario tipo, ognuno dei quali ha un diverso scopo ed ambito di verifica.\\
+            \\
+            \textbf{Test di unità}\\
+            I test d'unita si eseguno su piccoli moduli di codice detti unità. Questi test si concentrano sul testare la correttezza di queste unità, vengono forniti in input dei dati e si controlla che l'output sia quello desiderato. I test di unità hanno anche lo scopo di verificare la correttezza del codice scritto. Questi test possono essere fatti con l'utilizzo di dirver\textsubscript{\textbf{G}} e si stub\textsubscript{\textbf{G}}.\\
+            \\
+            \textbf{Test d'intergrazione}\\
+            Dopo aver superato i test di unità, le varie unità vengono unite in agglomerati di dimensioni sempre maggiori. Questi test si concentrano sulle interfaccie tra i componenti. Un agglomerato che supera un test d'integrazione costituisce un unità per un un agglomerato di dimensioni maggiori, fino a raggiungere le dimensioni totali del sistema.\\
+            \\
+            \textbf{Test di sitema}\\
+            I test di sistema vanno a testare il sistema nella sua interezza. Si verificano le interazioni tra le parti, che il comportamento dello stesso rispetti quanto attese e so verfica la copertura di tutte le funzionalità. Questi test vanno a evidenziare errate supposizioni che diversi sviluppatori fanno su parti di codice prodotto da altri.
+            In questa fase ci si assicura anche che l'applicazione rispetti tutti i vincoli e le specifiche presenti all'interno dell'\textit{Analisi dei requisiti}.\\
+            \\
+            \textbf{Test di regresisone}\\
+            Sono test che vengono effettuati in seguito alla modifica del sistema, consistono nella riescuzione dei test esistenti. Questi test hanno lo scopo di garantire il funzionamento degli elementi precedentemente funzionanti. Questi test sono fortemente automatizzabili.\\\\
+            \textbf{Test di accettazione}\\
+            Detti anche "test di collaudo" hanno la stessa funzione dei test di sistema, solo che questi vengono eseguiti insieme ai committenti, per verificare la correttezza del prodotto e il soddisfacimento dei clienti. Una volta superato il test di accettazione il prodotto è pronto per essere rilasciato.
+            \subsubsection{Strumenti}
+            Gli strumnti utilizzati per la verifca sono
+            \subsubsubsection{Verifica ortografica}
+            Viene utilizzata la verifica ortigrafica in tempo reale, attraverso l'apposita estensione di Visual Studio Code. 
+            \subsubsubsection{Validazione W3C}
+            Per la validazione delle pagine di markup HTML viene utilizzato lo strumento offerto dal W3C, raggiungibile al seguente indirizzo:
+            \href{https://validator.w3.org/}{https://validator.w3.org/}\\\\
+            Per la validazione dei fogli di stile CSS viene utilizzato lo strumento offerto da W3C, raggiungibile al seguente indirizzo:
+            \href{https://jigsaw.w3.org/css- validator/}{https://jigsaw.w3.org/css- validator/}           
     \subsection{Validazione}
         \subsubsection{Scopo}
         \subsubsection{Descrizione}
