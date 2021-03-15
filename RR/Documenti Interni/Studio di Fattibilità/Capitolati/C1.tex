@@ -18,7 +18,7 @@ Il server deve poter esporre queste funzionalità:
 \begin{itemize}
     \item Prevedere un sistema di autenticazione e ruoli.
     \item Creare e modificare stanze e postazioni.
-    \item Monitorare lo stato delle postazioni: ocuupate, prenotate da pulire e pulite.
+    \item Monitorare lo stato delle postazioni: occupate, prenotate da pulire e pulite.
     \item Esportazione di un report delle pulizie per ogni singola postazione o per stanza.
 \end{itemize}
 L'applicazione deve permettere le seguenti operazioni:
@@ -28,7 +28,7 @@ L'applicazione deve permettere le seguenti operazioni:
     \item Sanificazione di una postazione.
     \item Storico delle postazioni occupate e di quelle igenizzate.
 \end{itemize}
-La comunicazione tra server e applicazione mobile avviene nel momento in cui lo smarphone dell'utente viene a contatto con il tag RFID della postazione.
+La comunicazione tra server e applicazione mobile avviene nel momento in cui lo smarphone dell'utente viene a contatto con il tag RFID\textsubscript{\textbf{G}} della postazione.
 In questo modo è possibile sapere che la postazione sta venendo usata da un utente, e quindi sarà da sanificare una volta liberata.
 
 \subsection{Tecnologie interessate}
@@ -37,16 +37,16 @@ La scelta delle tecnologie da utilizzare è in parte data dal proponente, in par
 \begin{itemize}
     \item Teconolgie per raggiungere i requisiti minimi:
     \begin{itemize}
-        \item Possibilità di usare l'applicativo attraverso delle API Rest esposte dal server. In alternativa, è possibile usare gRPC a Rest.
+        \item Possibilità di usare l'applicativo attraverso delle API Rest\textsubscript{\textbf{G}} esposte dal server. In alternativa, è possibile usare gRPC a Rest\textsubscript{\textbf{G}}.
         \item Lettore RFID integrato nei dispositivi mobili, solamente per il tempo strettamente necessario.
         \item Test unitari e d'integrazione per le componenti applicative, con test end-to-end sull'intero sistema. 
     \end{itemize}
     \item Teconolgie suggerite, ma non vincolanti:
     \begin{itemize}
-        \item Java (versione 8 o superiori), Python o NodeJs per lo sviluppo del server back-end.
+        \item Java\textsubscript{\textbf{G}} (versione 8 o superiori), Python\textsubscript{\textbf{G}} o NodeJs\textsubscript{\textbf{G}} per lo sviluppo del server back-end\textsubscript{\textbf{G}}.
         \item Utilizzo di protocolli asincroni per la comunicazione tra app e server.
-        \item Un sistema blockchain per salvare con opponibilità a terzi i dati di sanificazione.
-        \item AAS Kubernetes o di un PAAS, Openshift o Rancher, per il rilascio delle componenti del server e la gestione della scalabilità orizzontale.
+        \item Un sistema blockchain\textsubscript{\textbf{G}} per salvare con opponibilità a terzi i dati di sanificazione.
+        \item AAS Kubernetes\textsubscript{\textbf{G}} o di un PAAS\textsubscript{\textbf{G}}, Openshift o Rancher, per il rilascio delle componenti del server e la gestione della scalabilità orizzontale.
     \end{itemize}
 \end{itemize}
 

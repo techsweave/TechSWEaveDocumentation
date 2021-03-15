@@ -10,23 +10,23 @@ Il capitolato richiede la realizzazione di una piattaforma e-commerce
 basata interamente sulle tecnologie serverless che possa essere utilizzata 
 dal proponente come prototipo da mostrare ad altre aziende. EmporioLambda 
 deve poter essere utilizzato da un ipotetico commerciante con il minimo 
-quantitativo di configurazione manuale tramite account AWS Merchant. 
+quantitativo di configurazione manuale tramite account AWS Merchant\textsubscript{\textbf{G}}. 
 Il capitolato prevede che vengano fornite alcune funzioni irrinunciabili 
 per tutte le categorie di utenti che ne faranno uso: clienti, commercianti,
  admin.
 \subsection{Finalità del progetto}
 EmporioLambda dovrà consistere di 4 moduli: 
 \begin{itemize}
-    \item \textbf{EmporioLambda-frontend:} si occupa di gestire le pagine richieste dall’utente. Il compito di questo modulo è pre-renderizzare le pagine in HTML sul server ad ogni richiesta. Dovrà essere implementato utilizzando Next.js e TypeScript;
-    \item \textbf{EmporioLambda-backend:} si occupa di gestire i servizi dell’applicazione e cioè gestire la business-logic, i dati relativi ad utenti, prodotti ed ordini, lo stato del carrello. Dovrà essere implementato utilizzando Serverless Framework, TypeScript e AWS Lambda;
+    \item \textbf{EmporioLambda-frontend:} si occupa di gestire le pagine richieste dall’utente. Il compito di questo modulo è pre-renderizzare le pagine in HTML\textsubscript{\textbf{G}} sul server ad ogni richiesta. Dovrà essere implementato utilizzando Next.js\textsubscript{\textbf{G}} e TypeScript\textsubscript{\textbf{G}};
+    \item \textbf{EmporioLambda-backend:} si occupa di gestire i servizi dell’applicazione e cioè gestire la business-logic\textsubscript{\textbf{G}}, i dati relativi ad utenti, prodotti ed ordini, lo stato del carrello. Dovrà essere implementato utilizzando Serverless Framework\textsubscript{\textbf{G}}, TypeScript e AWS Lambda\textsubscript{\textbf{G}};
     \item \textbf{EmporioLambda-integration:} rappresenta tutti i servizi di terze parti che interagiscono con \\EmporioLambda-backend. Dovrà essere implementato utilizzando Serverless Framework e TypeScript;
-    \item \textbf{EmporioLambda-monitoring:} rappresenta gli strumenti impiegati dagli admin per monitorare lo stato dell’applicazione. Dovrà essere implementato con Amazon CloudWatch.
+    \item \textbf{EmporioLambda-monitoring:} rappresenta gli strumenti impiegati dagli admin per monitorare lo stato dell’applicazione. Dovrà essere implementato con Amazon CloudWatch\textsubscript{\textbf{G}}.
 \end{itemize}
 \subsection{Tecnologie interessate}
 Il proponente richiede l’utilizzo delle seguenti tecnologie:
 \begin{itemize}
-    \item \textbf{Architettura serverless:} Un'architettura serverless è un’applicazione di progettazione che include servizi "Backend as aServiceG" (BaaS) di terze parti, codice personalizzato e container temporanei su una piattaforma di esecuzione "Function as a ServiceG" (FaaS). Le architetture Serverless potrebbero trarre beneficio dalla riduzione dei costi delle operazioni, complessità e tempi di consegna. Essi sono sistemi basati su cloud di eventi, dove lo sviluppo di applicazioni è basato esclusivamente su una combinazione di servizi di terze parti, logica lato client e chiamate a procedure presenti nel cloud.
-    \item \textbf{AWS Lambda:} WS Lambda è una piattaforma di elaborazione serverless basata su eventi fornita da Amazon come parte di Amazon Web Services. È un servizio di elaborazione che esegue il codice in risposta agli eventi e automaticamente gestisce le risorse di calcolo necessarie per l'esecuzione di quel codice.
+    \item \textbf{Architettura serverless:} Un'architettura serverless è un’applicazione di progettazione che include servizi "Backend as aService\textsubscript{\textbf{G}}" (BaaS) di terze parti, codice personalizzato e container temporanei su una piattaforma di esecuzione "Function as a Service\textsubscript{\textbf{G}}" (FaaS). Le architetture Serverless potrebbero trarre beneficio dalla riduzione dei costi delle operazioni, complessità e tempi di consegna. Essi sono sistemi basati su cloud di eventi, dove lo sviluppo di applicazioni è basato esclusivamente su una combinazione di servizi di terze parti, logica lato client e chiamate a procedure presenti nel cloud.
+    \item \textbf{AWS Lambda:} AWS Lambda è una piattaforma di elaborazione serverless basata su eventi fornita da Amazon come parte di Amazon Web Services. È un servizio di elaborazione che esegue il codice in risposta agli eventi e automaticamente gestisce le risorse di calcolo necessarie per l'esecuzione di quel codice.
     \item \textbf{Serverless Framework:} Serverless Framework è un framework Web gratuito e open source scritto utilizzando Node.js. Serverless è il primo framework sviluppato per la creazione di applicazioni su AWS Lambda.
     \item \textbf{Next.js:} Next.js è un framework web di sviluppo front-end React open source che abilita funzionalità come il rendering lato server e la generazione di siti web statici per applicazioni web basate su React. Fornisce possibilità di integrazione con Typescript.
     \item \textbf{Typescript:} TypeScript è un Super-set di JavaScript. Il linguaggio estende la sintassi di JavaScript in modo che qualunque programma scritto in JavaScript sia anche in grado di funzionare con TypeScript senza nessuna modifica.
