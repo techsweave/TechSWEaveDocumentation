@@ -49,9 +49,9 @@ Nel corso del progetto, i componenti del gruppo ricopriranno i seguenti ruoli:
     \item Programmatore;
     \item Verificatore.
 \end {itemize}
-Essi corrispondono alle rispettive figure aziendali, e sarà stato stabilito un calendario che permetterà ad ogni membro di ricoprire almeno una volta ciascun ruolo per un periodo di tempo omogeneo. L’assegnazione di un ruolo comporta lo svolgimento di determinati compiti, così come previsto dal Piano di progetto\textsubscript{\textbf{G}}. Inoltre si cercherà di eliminare eventuali conflitti di interesse: per esempio, un componente non potrà redigere e poi verificare ciò che è stato da lui stesso prodotto.
+Essi corrispondono alle rispettive figure aziendali, e sarà stabilito un calendario che permetterà ad ogni membro di ricoprire almeno una volta ciascun ruolo per un periodo di tempo omogeneo. L’assegnazione di un ruolo comporta lo svolgimento di determinati compiti, così come previsto dal Piano di progetto\textsubscript{\textbf{G}}. Inoltre si cercherà di eliminare eventuali conflitti di interesse: per esempio, un componente non potrà redigere e poi verificare ciò che è stato da lui stesso prodotto.
 \subsubsubsection{Responsabile di progetto}
-Il Responsabile di progetto\textsubscript{\textbf{G}} è una figura importante in quanto ricadono su di lui le responsabilità di pianificazione, gestione, controllo e coordinamento. Un altro suo compito è quello di fare da intermediario nella comuncazione tra il gruppo e i soggetti esterni: sono quindi di sua competenza le comunicazioni con committente e proponente.\\
+Il Responsabile di progetto\textsubscript{\textbf{G}} è una figura importante in quanto ricadono su di lui le responsabilità di pianificazione, gestione, controllo e coordinamento. Un altro suo compito è quello di fare da intermediario nella comunicazione tra il gruppo e i soggetti esterni: sono quindi di sua competenza le comunicazioni con committente e proponente.\\
 I suoi compiti sono i seguenti:
 \begin {itemize}
     \item Assegnare i ruoli ai componenti del gruppo;
@@ -95,7 +95,7 @@ I suoi compiti sono i seguenti:
 Il Programmatore\textsubscript{\textbf{G}} è la figura incaricata alla codifica del progetto. Egli deve implementare l’architettura prodotta dal Progettista in modo che aderisca alle specifiche, ed è responsabile della manutenzione del codice.\\
 I suoi compiti sono i seguenti:
 \begin {itemize}
-    \item Codificare secondo le specifiche stabilite dal Progettista. Il codice prodotto è documentato, versionabile e strutturato modo da agevolarne la futura manutenzione;
+    \item Codificare secondo le specifiche stabilite dal Progettista. Il codice prodotto è documentato, versionabile e strutturato in modo da agevolarne la futura manutenzione;
     \item Creare e gestire le componenti per la verifica e validazione del codice;
     \item Redigere il manuale utente.
 \end {itemize}
@@ -108,11 +108,11 @@ I suoi compiti sono i seguenti:
     \item Redigere la parte retrospettiva del Piano di Qualifica, il quale descrive e chiarisce le verifiche e le prove effettuate.
 \end {itemize}
 \subsubsection{Assegnazione dei compiti}
-La progressione nello svolgimento del progetto può essere vista come il completamento di una serie di compiti\textsubscript{\textbf{G}}, ognuno con la sua scadenza temporale, i quali producono risultati utili alla realizzazione degli obiettivi posti. Tali compiti sono determinati a volte dalla contingenza, a volte dai processi in atto, ma nella maggior parte dei casi sono dovuti da entrambi i fattori. Per l’assegnazione dei compiti si è deciso di utilizzare il servizio di ticketing\textsubscript{\textbf{G}} offerto da GitHub, basato sul concetto di issue\textsubscript{\textbf{G}}. La figura che si occupa della gestione dei compiti è il Responsabile di Progetto.\\
+La progressione nello svolgimento del progetto può essere vista come il completamento di una serie di compiti\textsubscript{\textbf{G}}, ognuno con la sua scadenza temporale, i quali producono risultati utili alla realizzazione degli obiettivi posti. Tali compiti sono determinati a volte dalla contingenza, altre volte sono legati ai processi in atto. Per l’assegnazione dei compiti si è deciso di utilizzare il servizio di ticketing\textsubscript{\textbf{G}} offerto da GitHub\textsubscript{\textbf{G}}, basato sul concetto di issue\textsubscript{\textbf{G}}. La figura che si occupa della gestione dei compiti è il Responsabile di Progetto.\\
 Egli:
 \begin {itemize}
     \item Individua il compito da svolgere;
-    \item Se ritiene il compito troppo complesso, lo può suddividere in più sotto-compiti;
+    \item Se ritiene il compito troppo complesso, lo suddivide in più sotto-compiti;
     \item Individua uno o più componenti del gruppo al quale assegnare il compito;
     \item Apre una issue, assegnando il compito al soggetto/i e definendo una data entro la quale completarlo.
 \end {itemize}
@@ -129,12 +129,22 @@ Il ciclo di vita del ticket si suddivide nei seguenti punti:
     \item \textbf{Creazione issue}: il Responsabile crea una issue utilizzando GitHub, definendo l’Assegnatario e la data di scadenza decisi precedentemente;
     \item \textbf{Spostamento issue in "TO-DO"}: una volta creata la issue, il Responsabile la sposta nell’insieme "TO-DO", indicante tutti i compiti individuati ma non ancora iniziati;
     \item \textbf{Spostamento issue in "IN PROGRESS"}: una volta che l’Assegnatario decide di iniziare il lavoro, sposta la issue nella categoria "IN PROGRESS";
-    \item \textbf{Svolgimento issue}: in questo periodo di tempo il compito viene portato a termine dal relativo Assegnatario;
+    \item \textbf{Svolgimento issue}: in questo periodo di tempo il compito viene portato a termine dall'Assegnatario;
     \item \textbf{Spostamento issue in "DONE"}: l’Assegnatario sposta la issue nella categoria "DONE", per indicare che ha completato il suo lavoro;
     \item \textbf{Verifica del lavoro}: il Verificatore giudica quanto fatto dall’Assegnatario:
     \begin {itemize}
         \item accettando il lavoro svolto;
-        \item rifiutando e spostando nuovamente la issue in "TO-DO".
+        \item rifiutando il lavoro e spostando nuovamente la issue in "TO-DO".
     \end {itemize}
-    \item \textbf{Approvazione del lavoro}: il Responsabile esamina per un’ultima volta il lavoro, controllando che rispetti gli obiettivi fissati in partenza, e lo approva.
+    \item \textbf{Approvazione del lavoro}: il Responsabile esamina un’ultima volta il lavoro svolto, controllando che rispetti gli obiettivi prefissati, in tal caso lo approva.
+\end {itemize}
+\subsection{Formazione}
+I membri del gruppo devono provvedere alla propria formazione in maniera autonoma, studiando le tecnologie usate e colmando le proprie lacune.\\
+Il gruppo fa riferimento alla seguente documentazione:
+\begin {itemize}
+\item \textbf{\LaTeX}: \url{https://www.latex-project.org/help/documentation/};
+\item \textbf{GitHub}: \url{https://docs.github.com/en};
+\item \textbf{GitKraken}: \url{https://support.gitkraken.com/boards/quick-start/};
+\item \textbf{GitHub Desktop}: \url{https://docs.github.com/en/desktop};
+\item \textbf{Visual Studio Code}: \url{https://code.visualstudio.com/docs}.
 \end {itemize}
