@@ -10,12 +10,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,italian]{babel}
-<<<<<<< HEAD
-
-=======
 \usepackage{fancyhdr}
 \usepackage{lastpage}
->>>>>>> processiSupporto
 % creazione comando subsubsubsection
 \titleclass{\subsubsubsection}{straight}[\subsection]
 
@@ -23,13 +19,8 @@
 \renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
 \titleformat{\subsubsubsection}
   {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
-<<<<<<< HEAD
-\titlespacing*{\subsubsubsection}
-{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-=======
     \titlespacing*{\subsubsubsection}
     {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
->>>>>>> processiSupporto
 
 \makeatletter
 \def\toclevel@subsubsubsection{4}
@@ -40,8 +31,6 @@
 \setcounter{tocdepth}{4}
 %fine creazione comando
 
-<<<<<<< HEAD
-=======
 
 %Comandi di impaginazione uguale per tutti i documenti
 \pagestyle{fancy}
@@ -56,7 +45,6 @@
 
 
 
->>>>>>> processiSupporto
 \begin{document}
 \begin{titlepage}
     \begin{center}
@@ -103,19 +91,10 @@
     \end{table}
     \end{center}
     \newpage
-<<<<<<< HEAD
 \tableofcontents
 \newpage
 \input{Sezioni/introduzione.tex}
 %\input{Sezioni/ProcessiPrimari.tex}
 \input{Sezioni/ProcessiSupporto.tex}
 \input{Sezioni/ProcessiOrganizzativi.tex}
-=======
-    \tableofcontents
-    \newpage
-    \input{Sezioni/introduzione.tex}
-    \input{Sezioni/ProcessiPrimari.tex}
-    \input{Sezioni/ProcessiSupporto.tex}
-    \input{Sezioni/ProcessiOrganizzativi.tex}
->>>>>>> processiSupporto
 \end{document}
