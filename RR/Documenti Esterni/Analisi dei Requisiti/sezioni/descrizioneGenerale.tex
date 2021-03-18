@@ -1,12 +1,34 @@
-
 \section{Descrizione generale}
 \subsection{Obbiettivi del prodotto}
+L'obbiettivo del progetto è quello di realizzare un prototipo di un servizio di e-commerce basato su architettura server-less. Basato principalmente su tecnologie \textit{AWS Cloud}. Il sito dovrà permettere a ipotetico venditore di vendere e gestire i proprio prodotti all'interno della piattaforma. Deve permettere ai clienti del e-commerce di registrarsi, avendo così un account personale, di ricercare i prodotti e uno volta in possesso di un'account registrato di acquistare i prodotti in vendita all'interno della piattaforma.
 \subsection{Funzioni del prodotto}
+Il prodotto propone diverse funzionalità a seconda del utente in utilizzo della piattaforma.
+\begin{itemize}
+    \item \textit{Cliente}: un cliente può ricercare e filtrare prodotti di suo interesse, aggiungerli al carrello e se autenticato,attraverso la piattaforma %inserire piattaforma scelta 
+    può procedere al chekout e quindi all'acquisto;
+    \item \textit{Venditore}: può gestire tutti i prodotti a catalogo fornendo per ognuno informazioni come prezzo e descrizioni. Queste informazioni, come gli stessi prodotti, possono essere modificati, rivisti o eliminati a seconda delle esigenze del venditore stesso;
+    \item \textit{Admin}: L'admin attraverso gli strumenti mezzi a sua disposizione attraverso la tecnologia \textit{Amazon CloudWatch} può controllare lo stato dell'intera piattaforma.
+\end{itemize}
 \subsection{Caratteristiche degli utenti}
+I tipi di utenti sono divisi in tre categorie:
+\begin{itemize}
+    \item clienti
+    \item venditore
+    \item admin
+\end{itemize}
+I clienti e venditore devono avere conoscenze minime, ossia l'utilizzo di browser  web. I venditori inoltre devono avere una competenza minima della gestione della vendita sulla piattaforma e una minima conoscenze del funzionamento dell'IVA. L'admin deve avere delle sviluppate competenze per gestire al meglio l'intera piattaforma, come la relazione con i servizi di terze parti.
 \subsection{Macro architetture del progetto}
-\subsubsection{Back end}
+Il progetto è caratterizzato da alcune macro architetture:
+\subsubsection{Backend}
+Il backend si occupa d'implementare la business logic della piattaforma, andando a gestire le i dati del sistema e il carrello, si occuperà inoltre di gestire i servizi di terze parti utilizzate dal sistema.
 \subsubsection{Front end}
-\subsection{Vincoli generali}
+Il frontend si occupa di gestire la UI che consiste in una serie di pagine web visualizzabili attraverso i vari browser. Le pagine devono essere precaricate lato server per permettere una renderizzazione più veloce.
+\subsubsection{Integration}
+È la parte di sistema dedicata alla gestione di componenti di terze parti, come i servizi utilizzati per il pagamento e per l'accesso al proprio account.
+\subsubsection{Monitoring}
+Sono gli strumenti impiegati degli admin per gestire la piattaforma e la correlazione con gli strumenti di terze parti.
+
+
 
 
 
