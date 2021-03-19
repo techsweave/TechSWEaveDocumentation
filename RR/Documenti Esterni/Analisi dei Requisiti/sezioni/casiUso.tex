@@ -114,46 +114,38 @@
         
         \subsection{UC12: Logout}
         \begin{itemize}
-            \item \textbf{Descrizione:}
-            \item \textbf{Attore Primario:}
-            \item \textbf{Attore Secondario:}
-            \item \textbf{Precondizione:}
-            \item \textbf{Input:}
-            \item \textbf{Postcondizione:}
-            \item \textbf{Scenario Principale:}
-            \item \textbf{Estensioni:}
-            \item \textbf{Generalizzazioni:}
-            \item \textbf{Inclusioni:}
+            \item \textbf{Descrizione:} sezione per effettuare il logout;
+            \item \textbf{Attore Primario:} utente autenticato;
+            \item \textbf{Precondizione:} l'utente (cliente o venditore) si trova in una qualsiasi pagina della piattaforma;
+            \item \textbf{Input:} l'utente clicca il bottone apposito per effettuare il logout;
+            \item \textbf{Postcondizione:} l'utente diventa non autenticato, uscendo dalla sessione;
         \end{itemize}
 
 
-        \subsection{UC13: Gestione degli ordini effettuati}
+        \subsection{UC13: Visualizza gli ordini effettuati}
+        \label{sec:UC13}
         \begin{itemize}
-            \item \textbf{Descrizione:}
-            \item \textbf{Attore Primario:}
-            \item \textbf{Attore Secondario:}
-            \item \textbf{Precondizione:}
-            \item \textbf{Input:}
-            \item \textbf{Postcondizione:}
-            \item \textbf{Scenario Principale:}
-            \item \textbf{Estensioni:}
-            \item \textbf{Generalizzazioni:}
-            \item \textbf{Inclusioni:}
+            \item \textbf{Descrizione:} sezione per visualizzare l'elenco degli ordini effettuati;
+            \item \textbf{Attore Primario:} cliente autenticato;
+            \item \textbf{Precondizione:} il cliente si trova in una qualsiasi pagina della piattaforma;
+            \item \textbf{Input:} il cliente clicca il bottone apposito per entrare il questa sezione;
+            \item \textbf{Postcondizione:} il cliente visualizza l'elenco degli ordini che ha effettuato;
         \end{itemize}
 
 
         \subsection{UC14: Effettua un reso}
         \begin{itemize}
-            \item \textbf{Descrizione:}
-            \item \textbf{Attore Primario:}
-            \item \textbf{Attore Secondario:}
-            \item \textbf{Precondizione:}
-            \item \textbf{Input:}
-            \item \textbf{Postcondizione:}
+            \item \textbf{Descrizione:} sezione per effettuare il reso di un ordine;
+            \item \textbf{Attore Primario:} cliente autenticato;
+            \item \textbf{Precondizione:} il cliente si trova nella pagina per la visualizzazione dell'elenco degli ordini (\hyperref[sec:UC13]{UC13});
+            \item \textbf{Input:} il cliente clicca il bottone per entrare in questa sezione;
+            \item \textbf{Postcondizione:} la richiesta di reso è andata a buon fine e i prodotti dell'ordine torneranno al venditore;
             \item \textbf{Scenario Principale:}
-            \item \textbf{Estensioni:}
-            \item \textbf{Generalizzazioni:}
-            \item \textbf{Inclusioni:}
+                \begin{itemize}
+                    \item il cliente si trova nella sezione per visualizzare gli ordini effettuati;
+                    \item clicca il bottone per eseguire il reso di un ordine;
+                    \item il cliente conferma e il reso è confermato.
+                \end{itemize}
         \end{itemize}
 
 
@@ -171,8 +163,15 @@
             \item \textbf{Input:} l'utente clicca il bottone per entrare nel carrello;
             \item \textbf{Postcondizione:} l'utente ha completato le operazioni per gestire i prodotti nel carrello;
             \item \textbf{Scenario Principale:}
+                \begin{itemize}
+                    \item l'utente si trova in una qualsiasi pagina della piattaforma;
+                    \item clicca il bottone per entrare nel carrello;
+                    \item una volta entrato vede la lista di tutti i prodotti all'interno del carrello;
+                    \item può decidere se rimuovere qualche prodotto o modificarne le quantità.
+                \end{itemize}
         \end{itemize}
         \subsubsection{UC15.1: Visualizzazione dei prodotti inseriti}
+        \label{sec:UC15.1}
         \begin{itemize}
             \item \textbf{Descrizione:} sezione per visualizzare tutti i prodotti inseriti nel carrello;
             \item \textbf{Attore Primario:} utente generico;
@@ -190,7 +189,7 @@
         \begin{itemize}
             \item \textbf{Descrizione:} sezione per rimuovere uno o più prodotti dal carrello;
             \item \textbf{Attore Primario:} utente generico;
-            \item \textbf{Precondizione:} l'utente è nella pagina del carrello (UC15.1);
+            \item \textbf{Precondizione:} l'utente è nella pagina del carrello (\hyperref[sec:UC15.1]{UC15.1});
             \item \textbf{Input:} l'utente seleziona i prodotti da rimuovere dal carrello;
             \item \textbf{Postcondizione:} vengono rimossi i prodotti selezionati;
         \end{itemize}
@@ -198,7 +197,7 @@
         \begin{itemize}
             \item \textbf{Descrizione:} sezione per modificare le quantità dei prodotti nel carrello;
             \item \textbf{Attore Primario:} utente generico;
-            \item \textbf{Precondizione:} l'utente è nella pagina del carrello (UC15.1);
+            \item \textbf{Precondizione:} l'utente è nella pagina del carrello (\hyperref[sec:UC15.1]{UC15.1});
             \item \textbf{Input:} l'utente inserisce le modifiche desiderate ai prodotti;
             \item \textbf{Postcondizione:} le modifiche sono applicate;
             \item \textbf{Estensioni:} 
@@ -225,7 +224,7 @@
                 \item \textbf{Scenario Principale:} 
                     \begin{itemize}
                         \item il cliente preme sul pulsante per entrare nella sezione del checkout;
-                        \item il cliente inserisce i dati di fatturazione (UC16.1) e, se diversi, i dati di spedizione (UC16.2);
+                        \item il cliente inserisce i dati di fatturazione (\hyperref[sec:UC16.1]{UC16.1}) e, se diversi, i dati di spedizione (\hyperref[sec:UC16.2]{UC16.2});
                         \item vengono inseriti eventuali costi di spedizione;
                         \item il cliente viene reindirizzato al servizio di pagamento esterno, dove inserisce i dati di pagamento;
                         \item l'ordine è emesso e segnato come completato.
@@ -237,24 +236,27 @@
                     \end{itemize}
             \end{itemize}
             \subsubsection{UC16.1: Inserimento dell'indirizzo di fatturazione}
+            \label{sec:UC16.1}
                 \begin{itemize}
                     \item \textbf{Descrizione:} Sezione per l'inserimento dell'indirizzo fatturazione;
                     \item \textbf{Attore Primario:} cliente autenticato;
                     \item \textbf{Precondizione:} il cliente si trova nella fase di checkout;
                     \item \textbf{Input:} il cliente inserisce i dati richiesti dalla pagina;
-                    \item \textbf{Postcondizione:} si procede con la fase successiva del checkout (UC16.2)
+                    \item \textbf{Postcondizione:} si procede con la fase successiva del checkout (\hyperref[sec:UC16.2]{UC16.2})
                     \item \textbf{Scenario Principale:} il cliente inserisce negli appositi spazi i dati per completare l'indirizzo di fatturazione.
                 \end{itemize}
             \subsubsection{UC16.2: Inserimento dell'indirizzo di spedizione}
+            \label{sec:UC16.2}
                 \begin{itemize}
                     \item \textbf{Descrizione:} Sezione per l'inserimento dell'indirizzo spedizione;
                     \item \textbf{Attore Primario:} cliente autenticato;
                     \item \textbf{Precondizione:} il cliente si trova nella fase di checkout;
                     \item \textbf{Input:} il cliente inserisce i dati richiesti dalla pagina, oppure clicca un pulsante se l'indirizzo di spedizione è lo stesso di quello di fatturazione;
-                    \item \textbf{Postcondizione:} si procede con la fase successiva del checkout (UC16.3)
+                    \item \textbf{Postcondizione:} si procede con la fase successiva del checkout (\hyperref[sec:UC16.3]{UC16.3})
                     \item \textbf{Scenario Principale:} il cliente inserisce negli appositi spazi i dati per completare l'indirizzo di spedizione oppure clicca il pulsante per autocompletarli se è il medesimo di quello di fatturazione.
                 \end{itemize}
             \subsubsection{UC16.3: Reindirizzamento al servizio di pagamento esterno}
+            \label{sec:UC16.3}
                 \begin{itemize}
                     \item \textbf{Descrizione:} Sezione per il pagamento dell'ordine da effettuare;
                     \item \textbf{Attore Primario:} cliente autenticato;
@@ -263,17 +265,18 @@
                     \item \textbf{Input:} il cliente preme il pulsante per il pagamento;
                     \item \textbf{Postcondizione:} il pagamento ha avuto esito positivo, l'ordine viene confermato e viene decrementata la quantità dei prodotti disponibili al venditore, in base al numero di prodotti acquistati dal cliente;
                     \item \textbf{Scenario Principale:}
-                    \item \begin{itemize}
+                    \begin{itemize}
                         \item il cliente preme sul pulsante e viene reindirizzato al servizio esterno per eseguire il pagamento;
                         \item il cliente inserisce i propri dati ed esegue il pagamento;
                         \item il pagamento è riuscito e l'ordine viene confermato.
                     \end{itemize}
                     \item \textbf{Estensioni:}
                     \begin{itemize}
-                        \item il pagamento non è riuscito, viene visualizzato un errore di pagamento (UC16.4) e si viene reindirizzati alla pagina del checkout per riprovare.
+                        \item il pagamento non è riuscito, viene visualizzato un errore di pagamento (\hyperref[sec:UC16.4]{UC16.4}) e si viene reindirizzati alla pagina del checkout per riprovare.
                     \end{itemize}
                 \end{itemize}
             \subsubsection{UC16.4: Errore di pagamento}
+            \label{sec:UC16.4}
                 \begin{itemize}
                     \item \textbf{Descrizione:} visualizzazione di un errore per un fallimento nella fase di pagamento;
                     \item \textbf{Attore Primario:} Stripe
@@ -282,69 +285,195 @@
                     \item \textbf{Postcondizione:} viene visualizzato un messaggio di errore, successivamente il cliente viene reindirizzato alla sezione del checkout;
                 \end{itemize}
 
+
         \subsection{UC17: Visualizzazione dei resi effettuati}
             \begin{itemize}
-                \item \textbf{Descrizione:}
-                \item \textbf{Attore Primario:}
-                \item \textbf{Attore Secondario:}
-                \item \textbf{Precondizione:}
-                \item \textbf{Input:}
-                \item \textbf{Postcondizione:}
-                \item \textbf{Scenario Principale:}
-                \item \textbf{Estensioni:}
-                \item \textbf{Generalizzazioni:}
-                \item \textbf{Inclusioni:}
+                \item \textbf{Descrizione:} sezione per visualizzare l'elenco dei resi effettuati;
+                \item \textbf{Attore Primario:} cliente autenticato;
+                \item \textbf{Precondizione:} l'utente si trova nella sezione degli ordini effettuati (\hyperref[sec:UC18]{UC18})
+                \item \textbf{Input:} l'utente clicca il bottone apposito per entrare il questa sezione;
+                \item \textbf{Postcondizione:} l'utente visualizza l'elenco dei resi che ha effettuato;
             \end{itemize}
+
+
         \subsection{UC18: Visualizzazione della lista degli ordini}
+        \label{sec:UC18}
         \begin{itemize}
-            \item \textbf{Descrizione:}
-            \item \textbf{Attore Primario:}
-            \item \textbf{Attore Secondario:}
-            \item \textbf{Precondizione:}
-            \item \textbf{Input:}
-            \item \textbf{Postcondizione:}
-            \item \textbf{Scenario Principale:}
-            \item \textbf{Estensioni:}
-            \item \textbf{Generalizzazioni:}
-            \item \textbf{Inclusioni:}
+            \item \textbf{Descrizione:} sezione per visualizzare l'elenco degli ordini effettuati dai clienti;
+            \item \textbf{Attore Primario:} venditore autenticato; 
+            \item \textbf{Precondizione:} il venditore si trova in una qualsiasi pagina;
+            \item \textbf{Input:} il venditore clicca il bottone per entrare in questa sezione; 
+            \item \textbf{Postcondizione:} il venditore visualizza la lista di tutti gli ordini effettuati dai suoi clienti.
         \end{itemize}
-        \subsection{UC19: Visualizzazione della lista degli utenti}
+
+
+        \subsection{UC19: Visualizzazione della lista dei clienti}
+        \label{sec:UC19}
             \begin{itemize}
-                \item \textbf{Descrizione:}
-                \item \textbf{Attore Primario:}
-                \item \textbf{Attore Secondario:}
-                \item \textbf{Precondizione:}
-                \item \textbf{Input:}
-                \item \textbf{Postcondizione:}
-                \item \textbf{Scenario Principale:}
-                \item \textbf{Estensioni:}
-                \item \textbf{Generalizzazioni:}
-                \item \textbf{Inclusioni:}
-            \end{itemize}
+                \item \textbf{Descrizione:} sezione per visualizzare l'elenco dei clienti del proprio negozio;
+                \item \textbf{Attore Primario:} venditore autenticato; 
+                \item \textbf{Precondizione:} il venditore si trova in una qualsiasi pagina;
+                \item \textbf{Input:} il venditore clicca il bottone per entrare in questa sezione; 
+                \item \textbf{Postcondizione:} il venditore visualizza la lista di tutti i clienti del negozio.
+                \end{itemize}
+
+
         \subsection{UC20: Contatta un cliente}
         \begin{itemize}
-            \item \textbf{Descrizione}
-            \item \textbf{Attore Primario}
-            \item \textbf{Attore Secondario}
-            \item \textbf{Precondizione}
-            \item \textbf{Input}
-            \item \textbf{Postcondizione}
+            \item \textbf{Descrizione:}
+            \item \textbf{Attore Primario:} venditore autenticato;
+            \item \textbf{Precondizione:} il venditore si trova nella lista dei suoi clienti (\hyperref[sec:UC19]{UC19});
+            \item \textbf{Input} il venditore clicca il bottone per entrare in questa sezione; 
+            \item \textbf{Postcondizione:} il venditore ha inviato una e-mail ad un suo cliente;
             \item \textbf{Scenario Principale}
-            \item \textbf{Estensioni}
-            \item \textbf{Generalizzazioni}
-            \item \textbf{Inclusioni}
+                \begin{itemize}
+                    \item il venditore si trova nella lista dei suoi clienti;
+                    \item sceglie uno dei suoi clienti per poterlo contattare;
+                    \item compila il campo di testo scrivendo ciò che deve inviare;
+                    \item preme il pulsante per inviare, una e-mail verrà inviata al cliente;
+                \end{itemize}
         \end{itemize}
+
+
         \subsection{UC21: Gestione del negozio}
+        \label{sec:UC21}
+        \begin{figure}[!ht]
+            \caption{Diagramma di UC21: Gestione del negozio}
+            \vspace{10px}
+            \includegraphics[scale=0.5]{../../../Images/AnalisiRequisiti/UC21}
+            \centering
+        \end{figure}
         \begin{itemize}
-            \item \textbf{Descrizione}
-            \item \textbf{Attore Primario}
-            \item \textbf{Attore Secondario}
-            \item \textbf{Precondizione}
-            \item \textbf{Input}
-            \item \textbf{Postcondizione}
-            \item \textbf{Scenario Principale}
-            \item \textbf{Estensioni}
-            \item \textbf{Generalizzazioni}
-            \item \textbf{Inclusioni}
+            \item \textbf{Descrizione:} sezione per il venditore, dove può gestire le parti relative al negozio;
+            \item \textbf{Attore Primario:} venditore autenticato;
+            \item \textbf{Precondizione:} il venditore si trova in una qualsiasi pagina;
+            \item \textbf{Input:} il venditore preme il bottone per entrare in questa sezione;
+            \item \textbf{Postcondizione:} il venditore ha completato le modifiche desiderate;
+            \item \textbf{Scenario Principale:} 
+                \begin{itemize}
+                    \item il venditore si trova in una pagina della piattaforma e preme il bottone per entrare in questa sezione;
+                    \item può gestire i prodotti presenti nel negozio;
+                    \item può gestire le categorie per permettere ai clienti di individuare meglio i prodotti;
+                    \item una volta terminato applica le modifiche.
+                \end{itemize}
+        \end{itemize}
+        \subsubsection{UC21.1: Gestione dei prodotti}
+        \label{sec:UC21.1}
+        \begin{figure}[!ht]
+            \caption{Diagramma di UC21.1: Gestione dei prodotti}
+            \vspace{10px}
+            \includegraphics[scale=0.5]{../../../Images/AnalisiRequisiti/UC21.1}
+            \centering
+        \end{figure}
+        \begin{itemize}
+            \item \textbf{Descrizione:} sezione per il venditore, dove può gestire i prodotti del negozio;
+            \item \textbf{Attore Primario:} venditore autenticato;
+            \item \textbf{Precondizione:} il venditore si trova nella pagina per la gestione del negozio (\hyperref[sec:UC21]{UC21});
+            \item \textbf{Input:} il venditore preme il bottone per entrare in questa sezione;
+            \item \textbf{Postcondizione:} il venditore ha completato le modifiche ai prodotti desiderati;
+            \item \textbf{Scenario Principale:} 
+                \begin{itemize}
+                    \item il venditore si trova nella pagina per la gestione del negozio;
+                    \item può decidere se aggiungere un nuovo prodotto, modificarne o rimuoverne uno già presente;
+                    \item una volta terminato applica le modifiche
+                \end{itemize}
+        \end{itemize}
+        \subsubsubsection{UC21.1.1: Aggiunta di un prodotto}
+        \begin{itemize}
+            \item \textbf{Descrizione:} sezione per aggiungere un prodotto nel negozio;
+            \item \textbf{Attore Primario:} venditore autenticato;
+            \item \textbf{Precondizione:} il venditore si trova nella sezione per gestire i prodotti (\hyperref[sec:UC21.1]{UC21.1});
+            \item \textbf{Input:} il venditore inserisce tutti i dati relativi al prodotto da inserire;
+            \item \textbf{Postcondizione:} il prodotto è aggiunto e i clienti possono trovarlo nel negozio;
+            \item \textbf{Scenario Principale:} 
+                \begin{itemize}
+                    \item il venditore si trova nella sezione per gestire i prodotti;
+                    \item il venditore decide di aggiungere un nuovo prodotto ed entra in questa sezione;
+                    \item inserisce tutti i dati richiesti (nome, descrizione, prezzo ecc.);
+                    \item conferma l'aggiunta e il prodotto è disponibile nel negozio.
+                \end{itemize}
+        \end{itemize}
+        \subsubsubsection{UC21.1.2: Modifica di un prodotto}
+        \begin{itemize}
+            \item \textbf{Descrizione:} sezione per modificare un prodotto del negozio;
+            \item \textbf{Attore Primario:} venditore autenticato;
+            \item \textbf{Precondizione:} il venditore si trova nella sezione per gestire i prodotti (\hyperref[sec:UC21.1]{UC21.1});
+            \item \textbf{Input:} il venditore modifica i dati che ritiene opportuni relativi al prodotto da modificare;
+            \item \textbf{Postcondizione:} il prodotto è stato modificato;
+            \item \textbf{Scenario Principale:} 
+                \begin{itemize}
+                    \item il venditore si trova nella sezione per gestire i prodotti;
+                    \item il venditore decide di modificare un prodotto ed entra in questa sezione;
+                    \item modifica i dati che preferisce;
+                    \item conferma le modifiche.
+                \end{itemize}
+        \end{itemize}
+        \subsubsubsection{UC21.1.3: Rimozione di un prodotto}
+        \begin{itemize}
+            \item \textbf{Descrizione:} sezione per rimuovere un prodotto dal negozio;
+            \item \textbf{Attore Primario:} venditore autenticato;
+            \item \textbf{Precondizione:} il venditore si trova nella sezione per gestire i prodotti (\hyperref[sec:UC21.1]{UC21.1});
+            \item \textbf{Input:} il venditore sceglie il prodotto da eliminare;
+            \item \textbf{Postcondizione:} il prodotto è stato rimosso dal negozio;
+            \item \textbf{Scenario Principale:} 
+                \begin{itemize}
+                    \item il venditore si trova nella sezione per gestire i prodotti;
+                    \item il venditore decide di rimuovere un prodotto dal negozio;
+                    \item conferma;
+                    \item il prodotto non è più visibile nel negozio.
+                \end{itemize}
+        \end{itemize}
+
+
+        \subsubsection{UC21.2: Gestione delle categorie}
+        \label{sec:UC21.2}
+        \begin{figure}[!ht]
+            \caption{Diagramma di UC21.2: Gestione delle categorie}
+            \vspace{10px}
+            \includegraphics[scale=0.5]{../../../Images/AnalisiRequisiti/UC21.2}
+            \centering
+        \end{figure}
+        \begin{itemize}
+            \item \textbf{Descrizione:} sezione per il venditore, dove può gestire le categorie del negozio;
+            \item \textbf{Attore Primario:} venditore autenticato;
+            \item \textbf{Precondizione:} il venditore si trova nella pagina per la gestione del negozio (\hyperref[sec:UC21]{UC21});
+            \item \textbf{Input:} il venditore preme il bottone per entrare in questa sezione;
+            \item \textbf{Postcondizione:} il venditore ha completato le operazioni sulle categorie;
+            \item \textbf{Scenario Principale:} 
+                \begin{itemize}
+                    \item il venditore si trova nella pagina per la gestione del negozio;
+                    \item può decidere se aggiungere una nuova categoria o se rimuoverne una già presente;
+                    \item una volta terminato applica le modifiche.
+                \end{itemize}
+        \end{itemize}
+        \subsubsubsection{UC21.2.1: Aggiunta di una categoria}
+        \begin{itemize}
+            \item \textbf{Descrizione:} sezione per aggiungere una categoria di prodotti nel negozio;
+            \item \textbf{Attore Primario:} venditore autenticato;
+            \item \textbf{Precondizione:} il venditore si trova nella sezione per gestire le categorie (\hyperref[sec:UC21.2]{UC21.2});
+            \item \textbf{Input:} il venditore inserisce tutti i dati relativi alla categoria da inserire;
+            \item \textbf{Postcondizione:} la categoria è aggiunta e i clienti possono trovarlo nel negozio;
+            \item \textbf{Scenario Principale:} 
+                \begin{itemize}
+                    \item il venditore si trova nella sezione per gestire le categorie;
+                    \item il venditore decide di aggiungere una nuova categoria ed entra in questa sezione;
+                    \item inserisce tutti i dati richiesti;
+                    \item conferma l'aggiunta e la categoria è visibile nel negozio.
+                \end{itemize}
+        \end{itemize}
+        \subsubsubsection{UC21.2.2: Rimozione di una categoria}
+        \begin{itemize}
+            \item \textbf{Descrizione:} sezione per rimuovere una categoria dal negozio;
+            \item \textbf{Attore Primario:} venditore autenticato;
+            \item \textbf{Precondizione:} il venditore si trova nella sezione per gestire le categorie (\hyperref[sec:UC21.2]{UC21.2});
+            \item \textbf{Input:} il venditore sceglie la categoria da eliminare;
+            \item \textbf{Postcondizione:} la categoria è stata rimossa dal negozio;
+            \item \textbf{Scenario Principale:} 
+                \begin{itemize}
+                    \item il venditore si trova nella sezione per gestire le categorie;
+                    \item il venditore decide di rimuovere una categoria dal negozio;
+                    \item conferma;
+                    \item la categoria non è più visibile nel negozio.
+                \end{itemize}
         \end{itemize}
 
