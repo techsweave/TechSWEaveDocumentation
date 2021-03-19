@@ -34,11 +34,65 @@
             \centering
         \end{figure}
         \subsection{UC1: Primo ingresso alla piattaforma}
+        \begin{itemize}
+            \item \textbf{Descrizione} L'utente effettua il primo accesso alla piattaforma;
+            \item \textbf{Attore Primario} Utente generico;
+            \item \textbf{Precondizione} L'utente non sta visualizzando nulla;
+            \item \textbf{Postcondizione} L'utente visualizza l'homepage della piattaforma;
+            \item \textbf{Scenario Principale} L'utente arriva per la prima volta nell'e-commerce e visualizza l'homepage.
+        \end{itemize}
         \subsection{UC2: Login}
+        \begin{itemize}
+            \item \textbf{Descrizione} Permette l'autenticazione di un utente;
+            \item \textbf{Attore Primario} Utente generico;
+            \item \textbf{Attore Secondario} Amazon Cognito;
+            \item \textbf{Precondizione}L'utente generico non si è ancora autenticato
+            \item \textbf{Input} Pressione bottone login;
+            \item \textbf{Postcondizione} L'utente è autenticato;
+            \item \textbf{Scenario Principale} L'utente entra nella pagina, preme il bottone per il login e viene inderizzato alla pagina di login fornita da \textit{Amazon cognito}.
+        \end{itemize}
         \subsection{UC3: visualizzazione dettagli di un prodotto}
+        \begin{itemize}
+            \item \textbf{Descrizione} L'utente può visualizzare i dettagli di un prodotto di suo interesse;
+            \item \textbf{Attore Primario} Utente generico
+            \item \textbf{Precondizione} L'utente generico si trova nella pagina della lista dei prodotti;
+            \item \textbf{Input} Click sul prodotto (icona, immagine, nome);
+            \item \textbf{Postcondizione} L'utente visualizza i dettagli del prodotto d'interesse;
+            \item \textbf{Scenario Principale} L'utente all'interno della lista dei prodotti visualizza un prodotto di suo interesse e lo apre e ne visualizza i dettagli.
+        \end{itemize}
         \subsection{UC4: Aggiunta di un prodotto al carrello}
+        \begin{itemize}
+            \item \textbf{Descrizione} L'utente aggiunge al carrello un prodotto che intende acquistare;
+            \item \textbf{Attore Primario} Utente generico;
+            \item \textbf{Precondizione} L'utente generico di trova nella pagina dettagliata del prodotto;
+            \item \textbf{Input} Click sul bottone di aggiunta al carrello;
+            \item \textbf{Postcondizione} Il prodotto è stato aggiunto al carrello;
+            \item \textbf{Scenario Principale} L'utente una volta deciso il prodotto da acquistare lo aggiunge al proprio carrello tramite l'apposito bottone.
+        \end{itemize}
         \subsection{UC5: Ricerca dei prodotti}
+        \begin{itemize}
+            \item \textbf{Descrizione} L'utente vuole ricercare un prodotto in base ad una parola chiave; 
+            \item \textbf{Attore Primario} Utente generico;
+            \item \textbf{Precondizione} L'utente si trova in una pagina dedicata alla ricerca; 
+            \item \textbf{Input} stringa;
+            \item \textbf{Postcondizione} L'utente visualizza i prodotti corrispondenti alla parola chiave;
+            \item \textbf{Scenario Principale} Un utente vuole ricercare un prodotto secondo una determinata parola chiave, gli vengo mostrati tutti i risultati della ricerca nella lista dei prodotti;
+            \item \textbf{Inclusioni}
+            \begin{itemize}
+                \item viene visualizzata una pagina con tutti i risultati della ricerca (UC6)
+            \end{itemize}
+        \end{itemize}
         \subsection{UC6: Visualizzazione della lista dei prodotti}
+        \begin{itemize}
+            \item \textbf{Descrizione}
+            \item \textbf{Attore Primario}
+            \item \textbf{Attore Secondario}
+            \item \textbf{Precondizione}
+            \item \textbf{Input}
+            \item \textbf{Postcondizione}
+            \item \textbf{Scenario Principale}
+            \item \textbf{Inclusioni}
+        \end{itemize}
         \subsection{UC7: Contatta il venditore}
         \subsection{UC8: Prima registrazione}
         \subsection{UC9: Scelta della categoria}
