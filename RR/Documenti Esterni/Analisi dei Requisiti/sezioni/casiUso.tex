@@ -78,15 +78,36 @@
             \end{itemize}
         \end{itemize}
         \subsection{UC6: Visualizzazione della lista dei prodotti}
+        \begin{figure}[!ht]
+            \caption{Visualizzazione della lista dei prodotti}
+            \vspace{10px}
+            \includegraphics[scale=0.5]{../../../Images/AnalisiRequisiti/UC6.png}
+            \centering
+        \end{figure}
         \begin{itemize}
-            \item \textbf{Descrizione}
-            \item \textbf{Attore Primario}
-            \item \textbf{Attore Secondario}
-            \item \textbf{Precondizione}
-            \item \textbf{Input}
-            \item \textbf{Postcondizione}
-            \item \textbf{Scenario Principale}
-            \item \textbf{Inclusioni}
+            \item \textbf{Descrizione} Un utente visualizza la pagina della lista dei prodotti;
+            \item \textbf{Attore Primario} Utente generico;
+            \item \textbf{Precondizione} L'utente non sta visualizzando nulla;
+            \item \textbf{Postcondizione} L'utente visualizza la pagina con la lista dei prodotti;
+            \item \textbf{Scenario Principale} L'utente arriva nella piattaforma e visualizza la lista dei prodotti;
+        \end{itemize}
+        \subsubsection{UC6.1: Ordinamento prodotti}
+        \begin{itemize}
+            \item \textbf{Descrizione} L'utente seleziona la modalità in cui visualizzare i file;
+            \item \textbf{Attore Primario} Utente generico;
+            \item \textbf{Precondizione} L'utente si trova all'interno di una pagina dove l'ordinamento è consentito;
+            \item \textbf{Input} selezione parametro scelto
+            \item \textbf{Postcondizione} La lista dei prodotti si aggiorna secondo l'ordinamento scelto;
+            \item \textbf{Scenario Principale} L'utente si trova all'interno di una pagina che consente l'ordinamento, l'utente seleziona come vuole ordinare i prodotti e la pagina si aggiorna di conseguenza.
+        \end{itemize}
+        \subsubsection{UC6.2: Applicazione filtri}
+        \begin{itemize}
+            \item \textbf{Descrizione} L'utente filtra i prodotti in base alle loro caratteristiche;
+            \item \textbf{Attore Primario} Utente generico
+            \item \textbf{Precondizione} L'utente si trova all'interno di una pagina che consente l'utilizzo di filtri;
+            \item \textbf{Input} selezione del filtro desiderato;
+            \item \textbf{Postcondizione} La pagina si aggiorna secondo i filtri selezionati;
+            \item \textbf{Scenario Principale} L'utente vuole filtrare i prodotti secondo determinate caratteristiche, seleziona questa e la pagina di aggiorna di conseguenza;
         \end{itemize}
         \subsection{UC7: Contatta il venditore}
         \begin{itemize}
