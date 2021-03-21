@@ -19,6 +19,10 @@ urlcolor=blue}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{grffile}
+%l'indice delle sezioni e immagini parte dalla sezione in cui si trovano 
+\usepackage{chngcntr}
+\counterwithin{table}{section}
+\counterwithin{figure}{section}
 
 % creazione comando subsubsubsection
 \titleclass{\subsubsubsection}{straight}[\subsection]
