@@ -37,53 +37,76 @@
         \subsection{UC1: Primo ingresso alla piattaforma}
         \label{sec:UC1}
         \begin{itemize}
-            \item \textbf{Descrizione} L'utente effettua il primo accesso alla piattaforma;
-            \item \textbf{Attore Primario} Utente generico;
-            \item \textbf{Precondizione} L'utente non sta visualizzando nulla;
-            \item \textbf{Postcondizione} L'utente visualizza l'homepage della piattaforma;
-            \item \textbf{Scenario Principale} L'utente arriva per la prima volta nell'e-commerce e visualizza l'homepage.
+            \item \textbf{Descrizione:} l'utente effettua il primo accesso alla piattaforma;
+            \item \textbf{Attore Primario:} utente generico;
+            \item \textbf{Precondizione:} l'utente non sta visualizzando nulla;
+            \item \textbf{Postcondizione:} l'utente visualizza l'homepage della piattaforma;
+            \item \textbf{Scenario Principale:} 
+            \begin{itemize}
+                \item l'utente arriva per la prima volta nell'e-commerce;
+                \item visualizza l'homepage.
+            \end{itemize}
         \end{itemize}
         \subsection{UC2: Login}
         \label{sec:UC2}
         \begin{itemize}
-            \item \textbf{Descrizione} Permette l'autenticazione di un utente;
-            \item \textbf{Attore Primario} Utente generico;
-            \item \textbf{Attore Secondario} Amazon Cognito;
-            \item \textbf{Precondizione}L'utente generico non si è ancora autenticato
-            \item \textbf{Input} Pressione bottone login;
-            \item \textbf{Postcondizione} L'utente è autenticato;
-            \item \textbf{Scenario Principale} L'utente entra nella pagina, preme il bottone per il login e viene inderizzato alla pagina di login fornita da \textit{Amazon cognito}.
+            \item \textbf{Descrizione:} permette l'autenticazione di un utente;
+            \item \textbf{Attore Primario:} utente generico;
+            \item \textbf{Attore Secondario:} Amazon Cognito;
+            \item \textbf{Precondizione:} l'utente generico non si è ancora autenticato
+            \item \textbf{Input:} pressione bottone login;
+            \item \textbf{Postcondizione:} l'utente è autenticato;
+            \item \textbf{Scenario Principale:} 
+            \begin{itemize}
+                \item l'utente entra nella pagina
+                \item preme il bottone per il login
+                \item viene inderizzato alla pagina di login fornita da \textit{Amazon Cognito}.
+            \end{itemize}
         \end{itemize}
-        \subsection{UC3: visualizzazione dettagli di un prodotto}
+        \subsection{UC3: Visualizzazione dei dettagli di un prodotto}
         \label{sec:UC3}
         \begin{itemize}
-            \item \textbf{Descrizione} L'utente può visualizzare i dettagli di un prodotto di suo interesse;
-            \item \textbf{Attore Primario} Utente generico
-            \item \textbf{Precondizione} L'utente generico si trova nella pagina della lista dei prodotti;
-            \item \textbf{Input} Click sul prodotto (icona, immagine, nome);
-            \item \textbf{Postcondizione} L'utente visualizza i dettagli del prodotto d'interesse;
-            \item \textbf{Scenario Principale} L'utente all'interno della lista dei prodotti visualizza un prodotto di suo interesse e lo apre e ne visualizza i dettagli.
+            \item \textbf{Descrizione:} l'utente può visualizzare i dettagli di un prodotto di suo interesse;
+            \item \textbf{Attore Primario:} utente generico
+            \item \textbf{Precondizione:} l'utente generico si trova nella pagina della lista dei prodotti;
+            \item \textbf{Input:} click sul prodotto (icona, immagine, nome);
+            \item \textbf{Postcondizione:} l'utente visualizza i dettagli del prodotto d'interesse;
+            \item \textbf{Scenario Principale:} 
+                \begin{itemize}
+                    \item l'utente si trova nella lista dei prodotti (\hyperref[sec:UC6]{\underline{UC6}});
+                    \item l'utente visualizza un prodotto di suo interesse;
+                    \item l'utente lo apre e ne visualizza i dettagli.
+                \end{itemize}
         \end{itemize}
         \subsection{UC4: Aggiunta di un prodotto al carrello}
         \label{sec:UC4}
         \begin{itemize}
-            \item \textbf{Descrizione} L'utente aggiunge al carrello un prodotto che intende acquistare;
-            \item \textbf{Attore Primario} Utente generico;
-            \item \textbf{Precondizione} L'utente generico di trova nella pagina dettagliata del prodotto;
-            \item \textbf{Input} Click sul bottone di aggiunta al carrello;
-            \item \textbf{Postcondizione} Il prodotto è stato aggiunto al carrello;
-            \item \textbf{Scenario Principale} L'utente una volta deciso il prodotto da acquistare lo aggiunge al proprio carrello tramite l'apposito bottone.
+            \item \textbf{Descrizione:} l'utente aggiunge al carrello un prodotto che intende acquistare;
+            \item \textbf{Attore Primario:} utente generico;
+            \item \textbf{Precondizione:} l'utente generico di trova nella pagina dettagliata del prodotto (\hyperref[sec:UC3]{\underline{UC3}});
+            \item \textbf{Input:} click sul bottone di aggiunta al carrello;
+            \item \textbf{Postcondizione:} il prodotto è stato aggiunto al carrello;
+            \item \textbf{Scenario Principale:}
+            \begin{itemize}
+                \item l'utente si trova nella pagina dei dettagli del prodotto;
+                \item l'utente clicca il bottone per aggiungere il prodotto al carrello;
+                \item il prodotto si trova nel carrello.
+            \end{itemize}
         \end{itemize}
         \subsection{UC5: Ricerca dei prodotti}
         \label{sec:UC5}
         \begin{itemize}
-            \item \textbf{Descrizione} L'utente vuole ricercare un prodotto in base ad una parola chiave; 
-            \item \textbf{Attore Primario} Utente generico;
-            \item \textbf{Precondizione} L'utente si trova in una pagina dedicata alla ricerca; 
-            \item \textbf{Input} stringa;
-            \item \textbf{Postcondizione} L'utente visualizza i prodotti corrispondenti alla parola chiave;
-            \item \textbf{Scenario Principale} Un utente vuole ricercare un prodotto secondo una determinata parola chiave, gli vengo mostrati tutti i risultati della ricerca nella lista dei prodotti;
-            \item \textbf{Inclusioni}
+            \item \textbf{Descrizione:} l'utente vuole ricercare un prodotto in base ad una parola chiave; 
+            \item \textbf{Attore Primario:} utente generico;
+            \item \textbf{Precondizione:} l'utente si trova in una pagina dedicata alla ricerca; 
+            \item \textbf{Input:} stringa relativa a ciò che si vuole cercare;
+            \item \textbf{Postcondizione:} l'utente visualizza i prodotti corrispondenti alla parola chiave;
+            \item \textbf{Scenario Principale:}
+            \begin{itemize}
+                \item l'utente vuole ricercare un prodotto secondo una determinata parola chiave;
+                \item gli vengo mostrati tutti i risultati della ricerca nella lista dei prodotti.
+            \end{itemize}
+            \item \textbf{Inclusioni:}
             \begin{itemize}
                 \item viene visualizzata una pagina con tutti i risultati della ricerca \hyperref[sec:UC6]{\underline{UC6}}.
             \end{itemize}
@@ -97,95 +120,131 @@
             \centering
         \end{figure}
         \begin{itemize}
-            \item \textbf{Descrizione} Un utente visualizza la pagina della lista dei prodotti;
-            \item \textbf{Attore Primario} Utente generico;
-            \item \textbf{Precondizione} L'utente non sta visualizzando nulla;
-            \item \textbf{Postcondizione} L'utente visualizza la pagina con la lista dei prodotti;
-            \item \textbf{Scenario Principale} L'utente arriva nella piattaforma e visualizza la lista dei prodotti;
+            \item \textbf{Descrizione:} l'utente visualizza la pagina della lista dei prodotti;
+            \item \textbf{Attore Primario:} utente generico;
+            \item \textbf{Precondizione:} l'utente si trova in una qualsiasi pagina della piattaforma;
+            \item \textbf{Postcondizione:} l'utente visualizza la pagina con la lista dei prodotti;
+            \item \textbf{Scenario Principale:}
+            \begin{itemize}
+                \item l'utente è in una pagina della piattaforma;
+                \item cerca un prodotto o sceglie una categoria;
+                \item l'utente visualizza la lista dei prodott.
+            \end{itemize}
         \end{itemize}
         \subsubsection{UC6.1: Ordinamento prodotti}
         \label{sec:UC6.1}
         \begin{itemize}
-            \item \textbf{Descrizione} L'utente seleziona la modalità in cui visualizzare i file;
-            \item \textbf{Attore Primario} Utente generico;
-            \item \textbf{Precondizione} L'utente si trova all'interno di una pagina dove l'ordinamento è consentito;
-            \item \textbf{Input} selezione parametro scelto
-            \item \textbf{Postcondizione} La lista dei prodotti si aggiorna secondo l'ordinamento scelto;
-            \item \textbf{Scenario Principale} L'utente si trova all'interno di una pagina che consente l'ordinamento, l'utente seleziona come vuole ordinare i prodotti e la pagina si aggiorna di conseguenza.
+            \item \textbf{Descrizione:} l'utente seleziona la modalità in cui visualizzare i file;
+            \item \textbf{Attore Primario:} utente generico;
+            \item \textbf{Precondizione:} l'utente si trova all'interno della pagina con la lista dei prodotti;
+            \item \textbf{Input:} selezione del parametro scelto;
+            \item \textbf{Postcondizione:} la lista dei prodotti si aggiorna secondo l'ordinamento scelto;
+            \item \textbf{Scenario Principale:}
+            \begin{itemize}
+                \item l'utente si trova all'interno della pagina con la lista dei prodotti;
+                \item inserisce i parametri per ordinare i prodotti;
+                \item la pagina con la lista dei prodotti si aggiorna con i prodotti ordinati.
+            \end{itemize}
         \end{itemize}
         \subsubsection{UC6.2: Applicazione filtri}
         \label{sec:UC6.2}
         \begin{itemize}
-            \item \textbf{Descrizione} L'utente filtra i prodotti in base alle loro caratteristiche;
-            \item \textbf{Attore Primario} Utente generico
-            \item \textbf{Precondizione} L'utente si trova all'interno di una pagina che consente l'utilizzo di filtri;
-            \item \textbf{Input} selezione del filtro desiderato;
-            \item \textbf{Postcondizione} La pagina si aggiorna secondo i filtri selezionati;
-            \item \textbf{Scenario Principale} L'utente vuole filtrare i prodotti secondo determinate caratteristiche, seleziona questa e la pagina di aggiorna di conseguenza;
+            \item \textbf{Descrizione:} l'utente filtra i prodotti in base alle loro caratteristiche;
+            \item \textbf{Attore Primarilo:} utente generico
+            \item \textbf{Precondizione:} l'utente si trova all'interno della pagina con la lista dei prodotti;
+            \item \textbf{Input:} selezione del filtro desiderato;
+            \item \textbf{Postcondizione:} la pagina si aggiorna secondo i filtri selezionati;
+            \item \textbf{Scenario Principale:}
+            \begin{itemize}
+                \item l'utente si trova all'interno della pagina con la lista dei prodotti;
+                \item inserisce i parametri per filtrare i prodotti;
+                \item la pagina con la lista dei prodotti si aggiorna con i prodotti filtrati.
+            \end{itemize}
         \end{itemize}
         \subsection{UC7: Contatta il venditore}
         \label{sec:UC7}
         \begin{itemize}
-            \item \textbf{Descrizione} L'utente vuole contattare il venditore;
-            \item \textbf{Attore Primario} Utente autenticato
-            \item \textbf{Precondizione} L'utente si trova in una pagina che permette di contattare il venditore;
-            \item \textbf{Input} pressione dell'apposito bottone;
-            \item \textbf{Postcondizione} L'utente può contattare il venditore;
-            \item \textbf{Scenario Principale} L'utente attraverso l'apposita sezione contatta il venditore.
+            \item \textbf{Descrizione:} l'utente vuole contattare il venditore;
+            \item \textbf{Attore Primario:} utente autenticato
+            \item \textbf{Precondizione:} l'utente si trova in una pagina che permette di contattare il venditore;
+            \item \textbf{Input:} pressione dell'apposito bottone;
+            \item \textbf{Postcondizione:} l'utente può contattare il venditore;
+            \item \textbf{Scenario Principale:}
+            \begin{itemize}
+                \item l'utente contatta il venditore tramite questa sezione.
+            \end{itemize}
         \end{itemize}
         \subsection{UC8: Prima registrazione}
         \label{sec:UC8}
         \begin{itemize}
-            \item \textbf{Descrizione} L'utente non si è mai registrato nella piattaforma;
-            \item \textbf{Attore Primario} Utente generico;
-            \item \textbf{Attore Secondario} Amazon Cognito;
-            \item \textbf{Precondizione} L'utente non ha un profilo nella piattaforma;
-            \item \textbf{Input} pressione apposito bottone;
-            \item \textbf{Postcondizione}L'utente viene reinderizzato alla pagina Amazon cognito per la registrazione;
-            \item \textbf{Scenario Principale} Un utente arriva per la prima volta nella piattaforma e si registra attraverso la piattaforma Amazon Cognito dove potrà registrarsi inserendo:
+            \item \textbf{Descrizione:} l'utente non si è mai registrato nella piattaforma;
+            \item \textbf{Attore Primario:} utente generico;
+            \item \textbf{Attore Secondario:} Amazon Cognito;
+            \item \textbf{Precondizione:} l'utente non ha un profilo nella piattaforma;
+            \item \textbf{Input:} pressione apposito bottone;
+            \item \textbf{Postcondizione:} l'utente viene reinderizzato alla pagina Amazon cognito per la registrazione;
+            \item \textbf{Scenario Principale:}
             \begin{itemize}
-                \item nome;
-                \item cognome;
-                \item username;
-                \item password;
-                \item ripetizione password;
-            \end{itemize}
+                \item un utente arriva per la prima volta nella piattaforma;
+                \item si registra attraverso la piattaforma Amazon Cognito dove potrà registrarsi inserendo:
+                \begin{itemize}
+                    \item nome;
+                    \item cognome;
+                    \item username;
+                    \item password;
+                    \item ripetizione password.
+                \end{itemize}
+            \end{itemize} 
         \end{itemize}
         \subsection{UC9: Scelta della categoria}
         \label{sec:UC9}
         \begin{itemize}
-            \item \textbf{Descrizione} L'utente sceglie una specifica categoria di prodotti da ricercare;
-            \item \textbf{Attore Primario} Utente generico;
-            \item \textbf{Precondizione} L'utente si trova in una pagina che consente la divisione in categorie;
-            \item \textbf{Input} selezione della categoria;
-            \item \textbf{Postcondizione} La categoria di ricerca cambia secondo la scelta dell'utente;
-            \item \textbf{Scenario Principale} L'utente vuole ricercare un prodotto appartenente ad una determinata categoria.
+            \item \textbf{Descrizione:} l'utente sceglie una specifica categoria di prodotti da ricercare;
+            \item \textbf{Attore Primario:} utente generico;
+            \item \textbf{Precondizione:} l'utente si trova in una pagina che consente la divisione in categorie;
+            \item \textbf{Input:} selezione della categoria;
+            \item \textbf{Postcondizione:} la categoria di ricerca cambia secondo la scelta dell'utente;
+            \item \textbf{Scenario Principale:}
+            \begin{itemize}
+                \item l'utente vuole ricercare un prodotto appartenente ad una determinata categoria.
+            \end{itemize} 
+            \item \textbf{Inclusioni:}
+            \begin{itemize}
+                \item viene visualizzata una pagina con tutti i risultati della ricerca \hyperref[sec:UC6]{\underline{UC6}}.
+            \end{itemize}
         \end{itemize}
         \subsection{UC10: Reimposta password (dimenticata)}
         \label{sec:UC10}
         \begin{itemize}
-            \item \textbf{Descrizione} L'utente non ricorda le prorpie credenziali;
-            \item \textbf{Attore Primario} Amazon Cognito;
-            \item \textbf{Precondizione} L'utente si trova nella pagina di login;
-            \item \textbf{Input} pressione apposito bottone;
-            \item \textbf{Postcondizione} L'utente viene reindirizzato alla pagina di recupero password;
-            \item \textbf{Scenario Principale}Un utente non ancora autenticato, non ricorda la proprio password quindi procede con la procedura di recupero.
+            \item \textbf{Descrizione:} l'utente non ricorda le prorpie credenziali;
+            \item \textbf{Attore Primario:} Amazon Cognito;
+            \item \textbf{Precondizione:} l'utente si trova nella pagina di login;
+            \item \textbf{Input:} pressione apposito bottone;
+            \item \textbf{Postcondizione:} l'utente viene reindirizzato alla pagina di recupero password;
+            \item \textbf{Scenario Principale:}
+            \begin{itemize}
+                \item un utente non ancora autenticato, non ricorda la proprio password;
+                \item procede con la procedura di recupero.
+            \end{itemize}
         \end{itemize}
         \subsection{UC11: Gestione profilo}
         \label{sec:UC11}
         \begin{itemize}
-            \item \textbf{Descrizione} L'utente vuole gestire il proprio profilo;
-            \item \textbf{Attore Primario} Utente autenticato;
-            \item \textbf{Attore Secondario} Amazon Cognito;
-            \item \textbf{Precondizione} L'utente si trova all'interno del suo profilo
-            \item \textbf{Postcondizione} L'utente può modificare il proprio profilo
-            \item \textbf{Scenario Principale}L'utente può modificare:
+            \item \textbf{Descrizione:} l'utente vuole gestire il proprio profilo;
+            \item \textbf{Attore Primario:} utente autenticato;
+            \item \textbf{Attore Secondario:} Amazon Cognito;
+            \item \textbf{Precondizione:} l'utente si trova all'interno del suo profilo
+            \item \textbf{Postcondizione:} l'utente può modificare il proprio profilo
+            \item \textbf{Scenario Principale:}
             \begin{itemize}
-                \item nome;
-                \item cognome;
-                \item username;
-                \item password
-                \item indirizzi;
+                \item  l'utente può modificare:
+                \begin{itemize}
+                    \item nome;
+                    \item cognome;
+                    \item username;
+                    \item password
+                    \item indirizzi.
+                \end{itemize}
             \end{itemize}
         \end{itemize}
 
@@ -196,7 +255,11 @@
             \item \textbf{Attore Primario:} utente autenticato;
             \item \textbf{Precondizione:} l'utente (cliente o venditore) si trova in una qualsiasi pagina della piattaforma;
             \item \textbf{Input:} l'utente clicca il bottone apposito per effettuare il logout;
-            \item \textbf{Postcondizione:} l'utente diventa non autenticato, uscendo dalla sessione;
+            \item \textbf{Postcondizione:} l'utente diventa non autenticato, uscendo dalla sessione.
+            \item \textbf{Scenario Principale:}
+            \begin{itemize}
+                \item l'utente autenticato preme il pulsante per terminare la sessione ed effettua il logout.
+            \end{itemize}
         \end{itemize}
 
 
@@ -207,7 +270,12 @@
             \item \textbf{Attore Primario:} cliente autenticato;
             \item \textbf{Precondizione:} il cliente si trova in una qualsiasi pagina della piattaforma;
             \item \textbf{Input:} il cliente clicca il bottone apposito per entrare il questa sezione;
-            \item \textbf{Postcondizione:} il cliente visualizza l'elenco degli ordini che ha effettuato;
+            \item \textbf{Postcondizione:} il cliente visualizza l'elenco degli ordini che ha effettuato.
+            \item \textbf{Scenario Principale:}
+            \begin{itemize}
+                \item l'utente si trova in una qualsiasi pagina;
+                \item clicca il pulsante per visualizzare gli ordini e li visualizza.
+            \end{itemize}
         \end{itemize}
 
 
@@ -556,17 +624,17 @@
         \subsection{UC22: Visualizzazione profilo}
         \label{sec:UC22}
         \begin{itemize}
-            \item \textbf{Descrizione} l'utente vuole visualizzare le informazioni del proprio profilo;
-            \item \textbf{Attore Primario} Utente autenticato;
-            \item \textbf{Attore Secondario} Amazon Cognito;
-            \item \textbf{Precondizione} L'utente di trova all'interno della piattaforma;
-            \item \textbf{Input} pressione dell'apposito bottone;
-            \item \textbf{Postcondizione} L'utente viene reindirizzato alla pagnia del suo profilo.
-            \item \textbf{Scenario Principale} L'utente entra nel proprio profilo e vede le sue informazioni:
+            \item \textbf{Descrizione:} l'utente vuole visualizzare le informazioni del proprio profilo;
+            \item \textbf{Attore Primario:} Utente autenticato;
+            \item \textbf{Attore Secondario:} Amazon Cognito;
+            \item \textbf{Precondizione:} l'utente di trova all'interno della piattaforma;
+            \item \textbf{Input:} pressione dell'apposito bottone;
+            \item \textbf{Postcondizione:} L'utente viene reindirizzato alla pagnia del suo profilo.
+            \item \textbf{Scenario Principale:} L'utente entra nel proprio profilo e vede le sue informazioni:
             \begin{itemize}
                 \item nome;
                 \item e-mail;
-                \item indirizzi;
+                \item indirizzi.
             \end{itemize}
         \end{itemize}
 
