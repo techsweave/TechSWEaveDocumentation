@@ -38,7 +38,6 @@ urlcolor=blue}
 \setcounter{tocdepth}{4}
 %fine creazione comando
 
-
 %Comandi di impaginazione uguale per tutti i documenti
 \pagestyle{fancy}
 \lhead{\includegraphics[scale=0.2]{../../../Images/logo}}
@@ -48,9 +47,6 @@ urlcolor=blue}
 \cfoot{Pagina \thepage{} di \pageref{LastPage}}
 \setlength{\headheight}{35pt}
 \renewcommand{\footrulewidth}{0.4pt}
-
-
-
 
 \begin{document}
 \begin{titlepage}
@@ -66,7 +62,7 @@ urlcolor=blue}
         \textbf{\Large Informazioni sul documento}\\
         \vspace{20px}
         \begin{tabular}{p{100px} | p{100px}}
-            \textbf{Versione} & 0.0.2\\
+            \textbf{Versione} & 0.0.3\\
             \textbf{Responsabile} & Samuele de Simone\\
             \textbf{Redattori} & Marco Barbaresco \newline Tito Scutari\\
             \textbf{Verificatore} & \\
@@ -90,7 +86,11 @@ urlcolor=blue}
         \renewcommand{\arraystretch}{1.8}
         \begin{tabular}{p{150px} p{90px} p{50px} p{60px} p{45px}}
             \rowcolor{logo!70} \textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}\\
-            Prima stesura documento & Marco Barbaresco & Analista & 2021-03-18 & 0.0.1 \\    
+            Prima stesura documento & Marco Barbaresco & Analista & 2021-03-18 & 0.0.1 \\
+            Aggiunta sezione 1 & Marco Barbaresco & Analista & 2021-03-19 & 0.0.2 \\
+            Aggiunta sezione 2 & Marco Barbaresco & Analista & 2021-03-21 & 0.0.2 \\
+            Aggiunta sezione 3 & Marco Barbaresco & Analista & 2021-03-22 & 0.0.3 \\
+
         \end{tabular}
     \end{table}
     \end{center}
@@ -107,5 +107,5 @@ urlcolor=blue}
     \input{sezioni/standardQualità.tex}
     \input{sezioni/resocontoAttivitàVerifica.tex}
     \input{sezioni/valutazioniMiglioramento.tex}
-
+ 
 \end{document}
