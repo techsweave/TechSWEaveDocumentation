@@ -3,18 +3,18 @@
     \subsubsection{Attori primari}
     Gli attori che il gruppo ha ritenuto essere i più adeguati sono:
         \begin{itemize}
-            \item \textbf{Utente generico:} si divide in:
+            \item \textbf{Utente generico:} utente che può navigare nell'e-commerce e può usufruire di alcune funzionalità, come la visualizzazione e la ricerca dei prodotti, che può aggiungere al proprio carrello, la applicazione di filtri e categorie per la ricerca, e infine di potersi autenticare.\\ Inoltre si divide in:
                 \begin{itemize}
-                    \item \textbf{Utente non autenticato:} utente che può navigare nell'e-commerce e può usufruire di alcune funzionalità, come la visualizzazione e la ricerca dei prodotti, che può aggiungere al proprio carrello, la applicazione di filtri e categorie per la ricerca, e infine di potersi autenticare.
+                    \item \textbf{Utente non autenticato:} è un utente che ha già un account ma che non ha ancora effettuato il login; può quindi reimpostare la sua password nel caso in cui se la sia dimenticata;
                     \item \textbf{Utente autenticato:} un utente autenticato può a sua volta essere:
                         \begin{itemize}
-                            \item \textbf{Cliente autenticato:} cliente che ha effettuato il login, può accedere a molte funzionalità, come l'aggiunta di prodotti al carrello, l'acquisto, la visualizzazione della lista degli ordini, la possibilità di contattare il venditore;
+                            \item \textbf{Cliente autenticato:} cliente che ha effettuato il login, può accedere a tutte le funzionalità riservate ai clienti, come l'aggiunta di prodotti al carrello, l'acquisto, la visualizzazione della lista degli ordini, la possibilità di contattare il venditore, la possibilità di effettuare un reso;
                             \item \textbf{Venditore autenticato:} venditore che ha effettuato il login, può accedere alle funzionalità relative all'amministrazione dei prodotti e delle categorie.
                         \end{itemize}
                         \begin{figure}[!ht]
                             \caption{Attori primari}
                             \vspace{5px}
-                            \includegraphics[scale=0.59]{../../../Images/AnalisiRequisiti/attori}
+                            \includegraphics[scale=0.6]{../../../Images/AnalisiRequisiti/attori}
                             \centering
                         \end{figure}
                 \end{itemize}
@@ -33,6 +33,7 @@
             \includegraphics[scale=0.44]{../../../Images/AnalisiRequisiti/casiUso}
             \centering
         \end{figure}
+        \newpage
         \subsection{UC1: Primo ingresso alla piattaforma}
         \label{sec:UC1}
         \begin{itemize}
@@ -236,7 +237,7 @@
         \begin{itemize}
             \item \textbf{Descrizione:} questa sezione tratta l'insieme di operazioni che un utente generico fa per gestire i prodotti nel carrello;
             \item \textbf{Attore Primario:} utente generico;
-            \item \textbf{Precondizione:} l'utente si trova in una pagina della piattaforma;
+            \item \textbf{Precondizione:} l'utente si trova in una qualsiasi pagina della piattaforma;
             \item \textbf{Input:} l'utente clicca il bottone per entrare nel carrello;
             \item \textbf{Postcondizione:} l'utente ha completato le operazioni per gestire i prodotti nel carrello;
             \item \textbf{Scenario Principale:}
@@ -252,9 +253,9 @@
         \begin{itemize}
             \item \textbf{Descrizione:} sezione per visualizzare tutti i prodotti inseriti nel carrello;
             \item \textbf{Attore Primario:} utente generico;
-            \item \textbf{Precondizione:}  l'utente si trova in una pagina della piattaforma;
+            \item \textbf{Precondizione:}  l'utente si trova in una qualsiasi pagina della piattaforma;
             \item \textbf{Input:} l'utente clicca il bottone per entrare nel carrello;
-            \item \textbf{Postcondizione:} l'utente si trova sulla pagina principale del carrello e vede tutti i prodotti presenti al suo interno;
+            \item \textbf{Postcondizione:} l'utente si trova sulla pagina del carrello e vede tutti i prodotti presenti al suo interno;
             \item \textbf{Scenario Principale:}
                 \begin{itemize}
                     \item l'utente si trova in una pagina della piattaforma;
@@ -378,7 +379,7 @@
         \begin{itemize}
             \item \textbf{Descrizione:} sezione per visualizzare l'elenco degli ordini effettuati dai clienti;
             \item \textbf{Attore Primario:} venditore autenticato; 
-            \item \textbf{Precondizione:} il venditore si trova in una qualsiasi pagina;
+            \item \textbf{Precondizione:} il venditore si trova in una qualsiasi pagina della piattaforma;
             \item \textbf{Input:} il venditore clicca il bottone per entrare in questa sezione; 
             \item \textbf{Postcondizione:} il venditore visualizza la lista di tutti gli ordini effettuati dai suoi clienti.
         \end{itemize}
@@ -397,7 +398,7 @@
 
         \subsection{UC20: Contatta un cliente}
         \begin{itemize}
-            \item \textbf{Descrizione:}
+            \item \textbf{Descrizione:} sezione per il venditore che permette di contattare un cliente;
             \item \textbf{Attore Primario:} venditore autenticato;
             \item \textbf{Precondizione:} il venditore si trova nella lista dei suoi clienti (\hyperref[sec:UC19]{\underline{UC19}});
             \item \textbf{Input} il venditore clicca il bottone per entrare in questa sezione; 
@@ -411,16 +412,15 @@
                 \end{itemize}
         \end{itemize}
 
-
-        \subsection{UC21: Gestione del negozio}
+        \subsection{UC21: Gestione del negozio }
         \label{sec:UC21}
-        \begin{figure}[!ht]
-            \caption{Diagramma di UC21: Gestione del negozio}
-            \vspace{10px}
-            \includegraphics[scale=0.5]{../../../Images/AnalisiRequisiti/UC21}
-            \centering
-        \end{figure}
         \begin{itemize}
+            \begin{figure}
+                \caption{Diagramma di UC21: Gestione del negozio}
+                \vspace{10px}
+                \includegraphics[scale=0.5]{../../../Images/AnalisiRequisiti/UC21}
+                \centering
+            \end{figure}
             \item \textbf{Descrizione:} sezione per il venditore, dove può gestire le parti relative al negozio;
             \item \textbf{Attore Primario:} venditore autenticato;
             \item \textbf{Precondizione:} il venditore si trova in una qualsiasi pagina;
