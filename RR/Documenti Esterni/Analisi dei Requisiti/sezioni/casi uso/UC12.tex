@@ -1,0 +1,63 @@
+\subsection{UC12: Gestione del carrello}
+        \begin{figure}[!ht]
+            \caption{Diagramma di UC12: Gestione del carrello}
+            \vspace{10px}
+            \includegraphics[scale=0.5]{../../../Images/AnalisiRequisiti/UC8}
+            \centering
+        \end{figure}
+        \begin{itemize}
+            \item \textbf{Descrizione:} questa sezione tratta l'insieme di operazioni che un utente generico fa per gestire i prodotti nel carrello;
+            \item \textbf{Attore Primario:} utente generico;
+            \item \textbf{Precondizione:} l'utente si trova in una qualsiasi pagina della piattaforma;
+            \item \textbf{Input:} l'utente clicca il bottone per entrare nel carrello;
+            \item \textbf{Postcondizione:} l'utente ha completato le operazioni per gestire i prodotti nel carrello;
+            \item \textbf{Scenario Principale:}
+                \begin{itemize}
+                    \item l'utente si trova in una qualsiasi pagina della piattaforma;
+                    \item clicca il bottone per entrare nel carrello;
+                    \item una volta entrato vede la lista di tutti i prodotti all'interno del carrello;
+                    \item può decidere se rimuovere qualche prodotto o modificarne le quantità.
+                \end{itemize}
+        \end{itemize}
+        \subsubsection{UC12.1: Visualizzazione dei prodotti inseriti}
+        \label{sec:UC12.1}
+        \begin{itemize}
+            \item \textbf{Descrizione:} sezione per visualizzare tutti i prodotti inseriti nel carrello;
+            \item \textbf{Attore Primario:} utente generico;
+            \item \textbf{Precondizione:}  l'utente si trova in una qualsiasi pagina della piattaforma;
+            \item \textbf{Input:} l'utente clicca il bottone per entrare nel carrello;
+            \item \textbf{Postcondizione:} l'utente si trova sulla pagina del carrello e vede tutti i prodotti presenti al suo interno;
+            \item \textbf{Scenario Principale:}
+                \begin{itemize}
+                    \item l'utente si trova in una pagina della piattaforma;
+                    \item l'utente clicca il bottone per entrare nel carrello;
+                    \item una volta entrato l'elenco dei prodotti è subito visibile.
+                \end{itemize}
+        \end{itemize}
+        \subsubsection{UC12.2: Rimozione di uno o più prodotti}
+        \begin{itemize}
+            \item \textbf{Descrizione:} sezione per rimuovere uno o più prodotti dal carrello;
+            \item \textbf{Attore Primario:} utente generico;
+            \item \textbf{Precondizione:} l'utente è nella pagina del carrello (\hyperref[sec:UC8.1]{\underline{UC8.1}});
+            \item \textbf{Input:} l'utente seleziona i prodotti da rimuovere dal carrello;
+            \item \textbf{Postcondizione:} vengono rimossi i prodotti selezionati;
+        \end{itemize}
+        \subsubsection{UC12.3: Modifica della quantità di uno o più prodotti}
+        \begin{itemize}
+            \item \textbf{Descrizione:} sezione per modificare le quantità dei prodotti nel carrello;
+            \item \textbf{Attore Primario:} utente generico;
+            \item \textbf{Precondizione:} l'utente è nella pagina del carrello (\hyperref[sec:UC8.1]{\underline{UC8.1}});
+            \item \textbf{Input:} l'utente inserisce le modifiche desiderate ai prodotti;
+            \item \textbf{Postcondizione:} le modifiche sono applicate;
+            \item \textbf{Estensioni:} 
+                \begin{itemize}
+                    \item se la nuova quantità non dovesse essere disponibile per il venditore, l'utente viene avvisato.
+                \end{itemize}
+        \end{itemize}
+        \subsection{UC12.4 Visualizzazione errore quantità superata}
+        \begin{itemize}
+            \item \textbf{Descrizione:} La quantità inserita dall'utente supera quella disponibile in magazzino;
+            \item \textbf{Attore primario:} Utente generico;
+            \item \textbf{Precondizione:} L'utente si trova all'interno del carrello;
+            \item \textbf{Postcondizione:} Vienie visualizzato il messaggio di errore.
+        \end{itemize}
