@@ -1,16 +1,18 @@
-\subsection{UC2: Autenticazione esterna}
-        \label{sec:UC2}
+\subsection{UC4: Autenticazione esterna}
+        \label{sec:UC4}
         \begin{itemize}
-            \item \textbf{Descrizione:} permette l'autenticazione di un utente;
+            \item \textbf{Descrizione:} permette l'autenticazione di un utente attraverso un servizio esterno (Google, Amazon, Facebook, ecc.);
             \item \textbf{Attore Primario:} utente generico;
             \item \textbf{Attore Secondario:} Amazon Cognito;
-            \item \textbf{Precondizione:} l'utente generico non si è ancora autenticato
-            \item \textbf{Input:} pressione bottone login;
+            \item \textbf{Precondizione:} l'utente genrico è nella pagina di autenticazione;
+            \item \textbf{Input:} sceglie il servizio con cui autenticarsi;
             \item \textbf{Postcondizione:} l'utente è autenticato;
             \item \textbf{Scenario Principale:} 
             \begin{itemize}
-                \item l'utente entra nella pagina
-                \item preme il bottone per il login
-                \item viene inderizzato alla pagina di login fornita da \textit{Amazon Cognito}.
+                \item l'utente entra nella pagina;
+                \item preme il bottone del servizio scelto;
+                \item viene inderizzato alla pagina di login del servizio;
+                \item l'utente è autenticato.
+                \item 
             \end{itemize}
         \end{itemize}
