@@ -1,9 +1,8 @@
 \section{Qualità di processo}
-Per ricercare qualità nello svolgimento del progetto si adoperano dei processi. Inizialmente, si sono scelti i processi dello standard ISO/IEC/IEEE 12207:1995\textsubscript{\textbf{G}}.
-Successivamente sono stati adattati secondo le esigenze: in alcuni casi (analisi dei requisiti,
+Per ricercare qualità nello svolgimento del progetto si adoperano dei processi.
+Il gruppo ha deciso di adattare i processi dello standard ISO/IEC/IEEE 12207:1995\textsubscript{\textbf{G}} secondo le esigenze: in alcuni casi (analisi dei requisiti,
 progettazione dell’architettura, progettazione di dettaglio, pianificazione) le attività sono trattate
 alla pari di processi, vista la loro importanza nell’esito del progetto.
-Il risultato sono i processi esposti a seguire.
 \subsection{Processi primari}
 \subsubsection{Processo di sviluppo}
 Il processo di sviluppo contiene le attività che riguardano lo sviluppo software. Di seguito saranno approfondite le più importanti.
@@ -26,9 +25,9 @@ dal proponente in modo dettagliato.
 \paragraph{Metriche}
 \textbf{PROS (Percentuale di requisiti obbligatori soddisfatti):} indica la percentuale di requisiti obbligatori soddisfatti.
 \begin{itemize}
-    \item misurazione: valore percentuale: $PROS = \frac{requisiti \ obbligatori \ soddisfatti}{requisiti \ obbligatori \ totali}$
-    \item valore preferibile: 100\%;
-    \item valore accettabile: 100\%;
+    \item \textbf{metodo di misura}: valore percentuale: $PROS = \frac{requisiti \ obbligatori \ soddisfatti}{requisiti \ obbligatori \ totali}$
+    \item \textbf{valore preferibile}: 100\%;
+    \item \textbf{valore accettabile}: 100\%;
 \end{itemize}
 \subsubsubsection{Progettazione dell'architettura}
 La progettazione dell'architettura consiste nel tradurre i requisiti in un modello architetturale del sistema. Questo modello rappresenta 
@@ -50,15 +49,15 @@ il sistema ad alto livello e lo descrive come la composizione delle sue parti.
 \paragraph{Metriche}
 \textbf{SFIN (Structural Fan-in):} indica il numero di componenti che utilizzano un dato modulo. Un valore alto indica un alto riuso della componente.
 \begin{itemize}
-    \item misurazione: valore intero: conteggio delle componenti;
-    \item valore preferibile: $\geq 1$;
-    \item valore accettabile: $\geq 0$.
+    \item \textbf{metodo di misura}: valore intero: conteggio delle componenti;
+    \item \textbf{valore preferibile}: $\geq 1$;
+    \item \textbf{valore accettabile}: $\geq 0$.
 \end{itemize}
 \textbf{SFOUT (Structural Fan-out):} indica il numero di componenti utilizzate dalla componente in esame. Un valore alto indica un alto accoppiamento della componente.
 \begin{itemize}
-    \item misurazione: valore intero: conteggio delle componenti;
-    \item valore preferibile: = 0;
-    \item valore accettabile: $\leq 6$.
+    \item \textbf{metodo di misura}: valore intero: conteggio delle componenti;
+    \item \textbf{valore preferibile}: = 0;
+    \item \textbf{valore accettabile}: $\leq 6$.
 \end{itemize}
 \subsubsubsection{Progettazione di dettaglio}
 La progettazione di design segue la progettazione architetturale e consiste nello scomporre le macro-componenti in componenti 
@@ -83,9 +82,9 @@ più piccole, che sono:
 \paragraph{Metriche}
 \textbf{CBO (accoppiamento tra le classi di oggetti):} una classe è accoppiata ad un'altra se usa metodi o variabili definiti in quest'ultima.
 \begin{itemize}
-    \item misurazione: valore intero: CBO;
-    \item valore preferibile: $0 \leq CBO \leq 1$;
-    \item valore accettabile: $0 \leq CBO \leq 6$.
+    \item \textbf{metodo di misura}: valore intero: CBO;
+    \item \textbf{valore preferibile}: $0 \leq CBO \leq 1$;
+    \item \textbf{valore accettabile}: $0 \leq CBO \leq 6$.
 \end{itemize}
 \subsubsection{Processi di supporto}
 \subsubsubsection{Pianificazione}
@@ -106,42 +105,42 @@ del modello di ciclo di vita da applicare al progetto, la pianificazione tempora
 \paragraph{Metriche}
 \textbf{BAC (Budget at Completion):} budget totale disponibile per il progetto.
 \begin{itemize}
-    \item misurazione: numero intero;
-    \item valore preferibile: pari al preventivo;
-    \item valore accettabile: valore preventivo$ - 5\% \leq BAC \leq$ valore preventivo + 5\%.
+    \item \textbf{metodo di misura}: numero intero;
+    \item \textbf{valore preferibile}: pari al preventivo;
+    \item \textbf{valore accettabile}: valore preventivo$ - 5\% \leq BAC \leq$ valore preventivo + 5\%.
 \end{itemize}
 \textbf{AC (Actual Cost:} somma spesa fino al momento del calcolo.
 \begin{itemize}
-    \item misurazione: numero intero;
-    \item valore preferibile: $0 \leq AC \leq PV$;
-    \item valore accettabile: $0 \leq AC \leq$ budget totale.
+    \item \textbf{metodo di misura}: numero intero;
+    \item \textbf{valore preferibile}: $0 \leq AC \leq PV$;
+    \item \textbf{valore accettabile}: $0 \leq AC \leq$ budget totale.
 \end{itemize}
 \textbf{EV (Earned Value):} valore del lavoro svolto fino al momento del calcolo, cioè il denaro guadagnato fino a quel momento.
 Serve per il calcolo di SV e CV, metriche spiegate successivamente.
 \begin{itemize}
-    \item misurazione: BAC * (\% di lavoro svolto);
-    \item valore preferibile: $\geq$ 0;
-    \item valore accettabile: $\geq$ 0.
+    \item \textbf{metodo di misura}: BAC * (\% di lavoro svolto);
+    \item \textbf{valore preferibile}: $\geq$ 0;
+    \item \textbf{valore accettabile}: $\geq$ 0.
 \end{itemize}
 \textbf{PV (Planned Value):} valore del lavoro pianificato al momento del calcolo, cioè il denaro che ci si aspetta di guadagnare in quel momento.
 Serve per il calcolo di SV e CV, metriche spiegate successivamente.
 \begin{itemize}
-    \item misurazione: BAC * (\% di lavoro pianificato);
-    \item valore preferibile: $\geq$ 0;
-    \item valore accettabile: $\geq$ 0.
+    \item \textbf{metodo di misura}: BAC * (\% di lavoro pianificato);
+    \item \textbf{valore preferibile}: $\geq$ 0;
+    \item \textbf{valore accettabile}: $\geq$ 0.
 \end{itemize}
 \textbf{SV (Schedule Variance):} indica l'aniticipo o il ritardo nello svolgimento del progetto rispetto alla pianificazione.
 \begin{itemize}
-    \item misurazione: SV = EV - PV;
-    \item valore preferibile: > 0;
-    \item valore accettabile: 0.
+    \item \textbf{metodo di misura}: SV = EV - PV;
+    \item \textbf{valore preferibile}: > 0;
+    \item \textbf{valore accettabile}: 0.
 \end{itemize}
-\textbf{CV (Cost Variance):} differenza tra il costo del lavoro completato e quello pianificato. Si sta rispettando il budget se il valore di questa misurazione 
+\textbf{CV (Cost Variance):} differenza tra il costo del lavoro completato e quello pianificato. Si sta rispettando il budget se il valore di questa \textbf{metodo di misura} 
 è positivo.
 \begin{itemize}
-    \item misurazione: CV = EV - AC;
-    \item valore preferibile: > 0;
-    \item valore accettabile: $\geq$ 0.
+    \item \textbf{metodo di misura}: CV = EV - AC;
+    \item \textbf{valore preferibile}: > 0;
+    \item \textbf{valore accettabile}: $\geq$ 0.
 \end{itemize}
 \subsubsubsection{Verifica}
 Il processo di verifica accerta che l'esecuzione delle attività attuate nel periodo in esame non abbia introdotto errori.
@@ -161,9 +160,9 @@ Fornisce quindi delle prove oggettive che dimostrano che una fase del ciclo di v
 \textbf{CC (Code Coverage):} indica il numero di righe di codice sottoposte ai test di verifica durante la loro esecuzione. Per linee di codice totali 
 si intende tutte quelle appartenenti all'unità sottoposta al test.
 \begin{itemize}
-    \item misurazione: valore percentuale: CC = $\frac{linee \ di \ codice \ testate}{linee \ di \ codice \ totali}$;
-    \item valore preferibile: 100\%;
-    \item valore accettabile: 75\%.
+    \item \textbf{metodo di misura}: valore percentuale: CC = $\frac{linee \ di \ codice \ testate}{linee \ di \ codice \ totali}$;
+    \item \textbf{valore preferibile}: 100\%;
+    \item \textbf{valore accettabile}: 75\%.
 \end{itemize}
 \subsubsubsection{Documentazione}
 La documentazione consiste nella stesura di documenti a supporto di tutte le attività di progetto.
@@ -173,12 +172,11 @@ Lo scopo della documentazione è definire un body of knowledge\textsubscript{\te
     \item completo;
     \item non ambiguo;
     \item modulare e coeso tra le parti che lo compongono;
-    \item adatto alla trasmissione di informazioni;
-    \item disponibile esternamente.
+    \item adatto alla trasmissione di informazioni.
 \end{itemize}
 \paragraph{Strategia}
 \begin{itemize}
-    \item produrre i documenti durante tutte le attività del progetto;
+    \item produrre i documenti necessari alle varie fasi di progetto;
     \item produrre i documenti in modo collaborativo;
     \item supportare la documentazione con un \textit{Glossario};
     \item supportare la documentazione con le \textit{Norme di progetto};
@@ -191,22 +189,22 @@ di educazione formale della quale una persona necessita al fine di leggere il te
 Ha dei limiti, uno di questi è la sua definizione di parola complessa, intesa come una parola di
 tre o più sillabe eccetto alcuni suffissi comuni.
 \begin{itemize}
-    \item misurazione: valore intero: I\textsubscript{GF} = $(0.4 *\frac{numero \ di \ parole}{numero \ di \ frasi} + 100 * \frac{numero \ di \ parole \ complesse}{numero \ di \ frasi})$;
-    \item valore preferibile: $\leq$ 12;
-    \item valore accettabile: $\leq$ 16.
+    \item \textbf{metodo di misura}: valore intero: I\textsubscript{GF} = $(0.4 *\frac{numero \ di \ parole}{numero \ di \ frasi} + 100 * \frac{numero \ di \ parole \ complesse}{numero \ di \ frasi})$;
+    \item \textbf{valore preferibile}: $\leq$ 12;
+    \item \textbf{valore accettabile}: $\leq$ 16.
 \end{itemize}
 \textbf{Indice di Gulpease:} è un indice di leggibilità di un testo tarato sulla lingua italiana. 
 Ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. 
 \begin{itemize}
-    \item misurazione: valore intero da 0 a 100: I\textsubscript{G} = 89 $+ \frac{300*numero \ di \ frasi \ - \ 10*numero \ di \ lettere}{numero \ di \ parole}$;
-    \item valore preferibile: 80 < I\textsubscript{G} < 100;
-    \item valore accettabile: 40 < I\textsubscript{G} < 100.
+    \item \textbf{metodo di misura}: valore intero da 0 a 100: I\textsubscript{G} = 89 $+ \frac{300*numero \ di \ frasi \ - \ 10*numero \ di \ lettere}{numero \ di \ parole}$;
+    \item \textbf{valore preferibile}: 80 < I\textsubscript{G} < 100;
+    \item \textbf{valore accettabile}: 40 < I\textsubscript{G} < 100.
 \end{itemize}
 \textbf{Correttezza ortografica:} la documentazione non deve contenere errori grammaticali o ortografici. 
 \begin{itemize}
-    \item misurazione: valore intero: numero di errori per documento;
-    \item valore preferibile: 0;
-    \item valore accettabile: 0.
+    \item \textbf{metodo di misura}: valore intero: numero di errori per documento;
+    \item \textbf{valore preferibile}: 0;
+    \item \textbf{valore accettabile}: 0.
 \end{itemize}
 \subsection{Processi organizzativi}
 \subsubsection{Gestione della qualità}
@@ -222,9 +220,9 @@ Garantire che i processi e i prodotti ottenuti rispettino gli standard di qualit
 \subsubsubsection{Metriche}
 \textbf{PMS (Percentuale di metriche soddisfatte):} indica in percentuale quante metriche raggiungono dei valori accettabili sul totale delle metriche calcolate.
 \begin{itemize}
-    \item misurazione: valore percentuale: PMS = $\frac{numero \ di \ metriche \ soddisfatte}{numero \ di \ metriche \ totali} * 100$ ;
-    \item valore preferibile: $\geq$ 80\%;
-    \item valore accettabile: $\geq$ 60\%.
+    \item \textbf{metodo di misura}: valore percentuale: PMS = $\frac{numero \ di \ metriche \ soddisfatte}{numero \ di \ metriche \ totali} * 100$ ;
+    \item \textbf{valore preferibile}: $\geq$ 80\%;
+    \item \textbf{valore accettabile}: $\geq$ 60\%.
 \end{itemize}
 \newpage
 

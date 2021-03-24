@@ -7,25 +7,23 @@ Una funzionalità è la capacità di un prodotto software di offire gli strument
 nell'\textit{Analisi dei requisiti v1.0.0.}
 \subsubsection{Obiettivi}
 \begin{itemize}
-    \item \textbf{Appropriatezza:} capacità del prodotto software di fornire un insieme di funzioni in grado
+    \item \textbf{Adeguatezza:} capacità del prodotto software di fornire un insieme di funzioni in grado
     di soddisfare gli obiettttivi esposti nell’\textit{Analisi dei Requisiti 1.0.0};
     \item \textbf{Accuratezza:} capacità del prodotto software di fornire i risultati desiderati con la precisione richiesta;
-    \item \textbf{Conformità:} il prodotto deve aderire a determinati standard.
+    \item \textbf{Conformità:} il prodotto deve aderire agli standard scelti dal gruppo.
 \end{itemize}
 \subsubsection{Metriche}
 \textbf{Completezza dell'implementazione:} misura la completezza del prodotto in percentuale.
 \begin{itemize}
-    \item misurazione: valore percentuale: C = $1-\frac{N\textsubscript{FNI}}{N\textsubscript{FI}}*100$ \\
+    \item \textbf{metodo di misura}: valore percentuale: C = $1-\frac{N\textsubscript{FNI}}{N\textsubscript{FI}}*100$ \\
     \\dove N\textsubscript{FNI} indica il numero di funzionalità non implementate e N\textsubscript{FI} indica il numero di funzionalità 
     individuate dall'analisi;
-    \item valore preferibile: 100\%;
-    \item valore accettabile: 100\%.
+    \item \textbf{valore preferibile}: 100\%;
+    \item \textbf{valore accettabile}: 100\%.
 \end{itemize}
 \subsection{Affidabilità}
 È la capacità del prodotto software di mantenere il livello di prestazioni
-desiderato anche quando operante in un contesto e per un arco di tempo dati. Possibili
-limitazioni all’affidabilità sono causate da errori nei requisiti, nella progettazione e nello
-sviluppo del codice.
+desiderato anche a fronte di anoomalie dovute ad errori di analisi\textsubscript{\textbf{G}}, progettazione\textsubscript{\textbf{G}} e sviluppo del codice.
 \subsubsection{Obiettivi}
 \begin{itemize}
     \item \textbf{Maturità:} capacità del prodotto software di evitare errori e risultati non corretti durante l’esecuzione;
@@ -35,12 +33,12 @@ sviluppo del codice.
 \subsubsection{Metriche}
 \textbf{Densità errori:} indica la capacità del prodotto di resistere a malfunzionamenti.
 \begin{itemize}
-    \item misurazione: valore percentuale: M = $\frac{N\textsubscript{ER}}{N\textsubscript{TE}}*100$ \\
+    \item \textbf{metodo di misura}: valore percentuale: M = $\frac{N\textsubscript{ER}}{N\textsubscript{TE}}*100$ \\
     \\dove N\textsubscript{ER} indica il numero di errori rilevati e N\textsubscript{TE} indica il numero di test eseguiti;
-    \item valore preferibile: 0\%;
-    \item valore accettabile: $\leq$ 10\%.
+    \item \textbf{valore preferibile}: 0\%;
+    \item \textbf{valore accettabile}: $\leq$ 10\%.
 \end{itemize}
-\subsubsection{Usabilità}
+\subsection{Usabilità}
 È la capacità del prodotto software di essere compreso, appreso, usato e gradito dall’utente quando usato nel contesto per cui è stato progettato.
 \subsubsection{Obiettivi}
 \begin{itemize}
@@ -51,48 +49,49 @@ sviluppo del codice.
 \subsubsection{Metriche}
 \textbf{Facilità di utilizzo:} indica la facilità con cui l'utente riesce ad ottenere l'informazione che sta cercando.
 \begin{itemize}
-    \item misurazione: numero di click necessari per arrivare alla pagina di checkout;
-    \item valore preferibile: $\leq$ 10;
-    \item valore accettabile: $\leq$ 15.
+    \item \textbf{metodo di misura}: numero di click necessari per arrivare alla pagina di checkout;
+    \item \textbf{valore preferibile}: $\leq$ 10;
+    \item \textbf{valore accettabile}: $\leq$ 15.
 \end{itemize}
 \textbf{Facilità di apprendimento:} indica la facilità con cui l'utente riesce ad imparare ad usare le funzionalità del prodotto.
 \begin{itemize}
-    \item misurazione: minuti necessari a raggiungere la pagina di checkout;
-    \item valore preferibile: $\leq$ 3;
-    \item valore accettabile: $\leq$ 5.
+    \item \textbf{metodo di misura}: minuti necessari a raggiungere la pagina di checkout;
+    \item \textbf{valore preferibile}: $\leq$ 3;
+    \item \textbf{valore accettabile}: $\leq$ 5.
 \end{itemize}
 \textbf{Profondità della gerarchia:} indica la profondità del sito.
 \begin{itemize}
-    \item misurazione: livello di profondità delle pagine;
-    \item valore preferibile: $\leq$ 4;
-    \item valore accettabile: $\leq$ 7.
+    \item \textbf{metodo di misura}: livello di profondità delle pagine;
+    \item \textbf{valore preferibile}: $\leq$ 4;
+    \item \textbf{valore accettabile}: $\leq$ 7.
 \end{itemize}
 \subsection{Manutenibilità}
-È la capacità del software di essere modificato mediante correzioni, miglioramenti o adattamenti.
+È la capacità del software di essere modificato mediante correzioni e miglioramenti.
 \subsubsection{Obiettivi}
 \begin{itemize}
     \item \textbf{Analizzabilità:} indica la difficoltà incontrata nel diagnosticare un errore nel prodotto;
-    \item \textbf{Modificabilità:} indica la facilità di apportare modifiche al prodotto.
+    \item \textbf{Modificabilità:} indica la facilità di apportare modifiche al prodotto;
+    \item \textbf{Stabilità:} indica la capacità del software di evitare effetti indesiderati dovuti alle modifiche apportate.
 \end{itemize}
 \subsubsection{Metriche}
 \textbf{Facilità di comprensione:} la facilità con cui l'utente riesce a comprendere il codice può essere rappresentata dal numero di linee di 
 commento nel codice.
 \begin{itemize}
-    \item misurazione: R = $\frac{N\textsubscript{LCOM}}{N\textsubscript{LCOD}}$ \\
+    \item \textbf{metodo di misura}: R = $\frac{N\textsubscript{LCOM}}{N\textsubscript{LCOD}}$ \\
     \\dove N\textsubscript{LCOM} indica il numero di linee di commento e N\textsubscript{LCOD} indica le linee di codice;
-    \item valore preferibile: $\geq$ 0.20;
-    \item valore accettabile: $\geq$ 0.10.
+    \item \textbf{valore preferibile}: $\geq$ 0.20;
+    \item \textbf{valore accettabile}: $\geq$ 0.10.
 \end{itemize}
 \textbf{Semplicità delle funzioni:} indica la semplicità di un metodo in base al numero di parametri passati allo stesso.
 \begin{itemize}
-    \item misurazione: numero di parametri per metodo;
-    \item valore preferibile: $\leq$ 3;
-    \item valore accettabile: $\leq$ 6.
+    \item \textbf{metodo di misura}: numero di parametri del metodo;
+    \item \textbf{valore preferibile}: $\leq$ 3;
+    \item \textbf{valore accettabile}: $\leq$ 6.
 \end{itemize}
 \textbf{Semplicità delle classi:} indica la semplicità di una classe in base al numero di metodi della stessa.
 \begin{itemize}
-    \item misurazione: numero di metodi per classe;
-    \item valore preferibile: $\leq$ 8;
-    \item valore accettabile: $\leq$ 15.
+    \item \textbf{metodo di misura}: numero di metodi della classe;
+    \item \textbf{valore preferibile}: $\leq$ 8;
+    \item \textbf{valore accettabile}: $\leq$ 15.
 \end{itemize}
 
