@@ -1,52 +1,48 @@
 \section{Qualità di processo}
-Per ricercare qualità nello svolgimento del progetto si adoperano dei processi.
-Il gruppo ha deciso di adattare i processi dello standard ISO/IEC/IEEE 12207:1995\textsubscript{\textbf{G}} secondo le esigenze: in alcuni casi (analisi dei requisiti,
-progettazione dell’architettura, progettazione di dettaglio, pianificazione) le attività sono trattate
-alla pari di processi, vista la loro importanza nell’esito del progetto.
+Per garantire qualità dei processi\textsubscript{\textbf{G}} il gruppo ha deciso di utilizzare come riferimento lo standard ISO/IEC/IEEE 12207:1995\textsubscript{\textbf{G}}. 
+I processi di tale standard sono poi stati semplificati e adattati alle esigenze.\\Il risultato di questo adattamento è descritto nel seguito del presente documento.
 \subsection{Processi primari}
-\subsubsection{Processo di sviluppo}
-Il processo di sviluppo contiene le attività che riguardano lo sviluppo software. Di seguito saranno approfondite le più importanti.
-\subsubsubsection{Analisi dei Requisiti}
+\subsubsection{Analisi dei Requisiti}
 Durante l'attività di analisi le informazioni ottenute dalle varie fonti sono trasformate in requisiti e casi d'uso che descrivono il sistema richiesto
 dal proponente in modo dettagliato.
-\paragraph{Obiettivi}
+\subsubsubsection{Obiettivi}
 \begin{itemize}
     \item definire i casi d'uso e i requisiti;
     \item tracciare il loro cambiamento nel tempo.
 \end{itemize}
-\paragraph{Strategia}
+\subsubsubsection{Strategia}
 \begin{itemize}
     \item comprendere lo scopo del progetto e le richieste degli stakeholders\textsubscript{\textbf{G}};
     \item descrivere le richieste in forma di requisiti;
     \item valutare quanto ottenuto e negoziare eventuali cambiamenti;
     \item ottenere la loro approvazione dal proponente;
-    \item definire il tracciamento dei requisiti del sistema;
+    \item traccire i requisiti del sistema;
 \end{itemize}
-\paragraph{Metriche}
+\subsubsubsection{Metriche}
 \textbf{PROS (Percentuale di requisiti obbligatori soddisfatti):} indica la percentuale di requisiti obbligatori soddisfatti.
 \begin{itemize}
     \item \textbf{metodo di misura}: valore percentuale: $PROS = \frac{requisiti \ obbligatori \ soddisfatti}{requisiti \ obbligatori \ totali}$
     \item \textbf{valore preferibile}: 100\%;
     \item \textbf{valore accettabile}: 100\%;
 \end{itemize}
-\subsubsubsection{Progettazione dell'architettura}
+\subsubsection{Progettazione dell'architettura}
 La progettazione dell'architettura consiste nel tradurre i requisiti in un modello architetturale del sistema. Questo modello rappresenta 
 il sistema ad alto livello e lo descrive come la composizione delle sue parti.
-\paragraph{Obiettivi}
+\subsubsubsection{Obiettivi}
 \begin{itemize}
     \item definire un'architettura adatta allo scopo;
     \item definire un'architettura che agevoli la codifica del sistema;
     \item perseguire la correttezza per costruzione;
-    \item ottenere una maggiore comprensione del sistema.
+    \item avere una maggiore comprensione del sistema.
 \end{itemize}
-\paragraph{Strategia}
+\subsubsubsection{Strategia}
 \begin{itemize}
-    \item valutare il tipo di software da produrre ragionando in termini di quanto ottenuto nella fase di analisi;
-    \item valutare e scegliere il modello architetturale più opportuno;
+    \item valutare il tipo di software da produrre sulla base dell'attività di analisi;
+    \item scegliere il modello architetturale più opportuno;
     \item individuare le componenti principali del sistema;
     \item definire le relazioni tra le componenti. 
 \end{itemize}
-\paragraph{Metriche}
+\subsubsubsection{Metriche}
 \textbf{SFIN (Structural Fan-in):} indica il numero di componenti che utilizzano un dato modulo. Un valore alto indica un alto riuso della componente.
 \begin{itemize}
     \item \textbf{metodo di misura}: valore intero: conteggio delle componenti;
@@ -59,7 +55,7 @@ il sistema ad alto livello e lo descrive come la composizione delle sue parti.
     \item \textbf{valore preferibile}: = 0;
     \item \textbf{valore accettabile}: $\leq 6$.
 \end{itemize}
-\subsubsubsection{Progettazione di dettaglio}
+\subsubsection{Progettazione di dettaglio}
 La progettazione di design segue la progettazione architetturale e consiste nello scomporre le macro-componenti in componenti 
 più piccole, che sono:
 \begin{itemize}
@@ -67,42 +63,42 @@ più piccole, che sono:
     \item strettamente riconducibili ai requisiti funzionali;
     \item implementabili da un singolo programmatore.
 \end{itemize}
-\paragraph{Obiettivi}
+\subsubsubsection{Obiettivi}
 \begin{itemize}
     \item tradurre i requisiti in unità di codice, i moduli;
-    \item agevolare il lavoro dei programmatori, affidando loro compiti individuali relativi ai singoli moduli;
+    \item agevolare il lavoro dei programmatori;
     \item produrre un sistema software da raffinare ma eseguibile;
     \item mantenere il tracciamento tra requisiti e componenti.
 \end{itemize}
-\paragraph{Strategia}
+\subsubsubsection{Strategia}
 \begin{itemize}
-    \item scomporre le componenti architetturali in componenti più piccole;
+    \item indivuduare le micro-componenti del sistema;
     \item implementare le componenti individuate.
 \end{itemize}
-\paragraph{Metriche}
+\subsubsubsection{Metriche}
 \textbf{CBO (accoppiamento tra le classi di oggetti):} una classe è accoppiata ad un'altra se usa metodi o variabili definiti in quest'ultima.
 \begin{itemize}
     \item \textbf{metodo di misura}: valore intero: CBO;
     \item \textbf{valore preferibile}: $0 \leq CBO \leq 1$;
     \item \textbf{valore accettabile}: $0 \leq CBO \leq 6$.
 \end{itemize}
-\subsubsection{Processi di supporto}
-\subsubsubsection{Pianificazione}
+\subsection{Processi di supporto}
+\subsubsection{Pianificazione}
 La pianificazione è un'attività, descritta nel \textit{Piano di progetto}, che definisce la gestione delle  attività, dei compiti da svolgere e della loro suddivisione, nonché la scelta
 del modello di ciclo di vita da applicare al progetto, la pianificazione temporale del lavoro e il corrispettivo costo di produzione.
-\paragraph{Obiettivi}
+\subsubsubsection{Obiettivi}
 \begin{itemize}
-    \item disporre di piani e obiettivi  definiti;
+    \item disporre di obiettivi definiti;
     \item definire i ruoli dei membri del gruppo;
     \item disporre le risorse necessarie.
 \end{itemize}
-\paragraph{Strategia}
+\subsubsubsection{Strategia}
 \begin{itemize}
-    \item produrre la pianificazione delle attività;
-    \item mantenerla aggiornata durante il loro svolgimento;
-    \item usarla come riferimento.
+    \item pianificare le attività;
+    \item aggiornare la pianificazione durante lo svolgimento delle attività;
+    \item usare la pianificazione come riferimento.
 \end{itemize}
-\paragraph{Metriche}
+\subsubsubsection{Metriche}
 \textbf{BAC (Budget at Completion):} budget totale disponibile per il progetto.
 \begin{itemize}
     \item \textbf{metodo di misura}: numero intero;
@@ -142,21 +138,21 @@ Serve per il calcolo di SV e CV, metriche spiegate successivamente.
     \item \textbf{valore preferibile}: > 0;
     \item \textbf{valore accettabile}: $\geq$ 0.
 \end{itemize}
-\subsubsubsection{Verifica}
+\subsubsection{Verifica}
 Il processo di verifica accerta che l'esecuzione delle attività attuate nel periodo in esame non abbia introdotto errori.
 Fornisce quindi delle prove oggettive che dimostrano che una fase del ciclo di vita del progetto soddisfa i requisiti di quella fase.
-\paragraph{Obiettivi}
+\subsubsubsection{Obiettivi}
 \begin{itemize}
     \item rilevare e corregere tempestivamente i difetti;
     \item provare che il sistema soddisfa i requisiti.
 \end{itemize}
-\paragraph{Strategia}
+\subsubsubsection{Strategia}
 \begin{itemize}
     \item individuare tecniche e strumenti di verifica;
     \item applicarli;
     \item affinarli con l'esperienza.
 \end{itemize}
-\paragraph{Metriche}
+\subsubsubsection{Metriche}
 \textbf{CC (Code Coverage):} indica il numero di righe di codice sottoposte ai test di verifica durante la loro esecuzione. Per linee di codice totali 
 si intende tutte quelle appartenenti all'unità sottoposta al test.
 \begin{itemize}
@@ -164,9 +160,9 @@ si intende tutte quelle appartenenti all'unità sottoposta al test.
     \item \textbf{valore preferibile}: 100\%;
     \item \textbf{valore accettabile}: 75\%.
 \end{itemize}
-\subsubsubsection{Documentazione}
+\subsubsection{Documentazione}
 La documentazione consiste nella stesura di documenti a supporto di tutte le attività di progetto.
-\paragraph{Obiettivi}
+\subsubsubsection{Obiettivi}
 Lo scopo della documentazione è definire un body of knowledge\textsubscript{\textbf{G}} che raccoglie la conoscenza in modo:
 \begin{itemize}
     \item completo;
@@ -174,7 +170,7 @@ Lo scopo della documentazione è definire un body of knowledge\textsubscript{\te
     \item modulare e coeso tra le parti che lo compongono;
     \item adatto alla trasmissione di informazioni.
 \end{itemize}
-\paragraph{Strategia}
+\subsubsubsection{Strategia}
 \begin{itemize}
     \item produrre i documenti necessari alle varie fasi di progetto;
     \item produrre i documenti in modo collaborativo;
@@ -183,7 +179,7 @@ Lo scopo della documentazione è definire un body of knowledge\textsubscript{\te
     \item produrre i documenti utilizzando strumenti idonei come LaTeX;
     \item ospitare la documentazione in una repository\textsubscript{\textbf{G}} su GitHub.
 \end{itemize}
-\paragraph{Metriche}
+\subsubsubsection{Metriche}
 \textbf{Indice di Gunning fog:} misura la facilità di lettura e di comprensione di un testo. Il numero risultante è un indicatore del numero di anni 
 di educazione formale della quale una persona necessita al fine di leggere il testo con facilità.
 Ha dei limiti, uno di questi è la sua definizione di parola complessa, intesa come una parola di
