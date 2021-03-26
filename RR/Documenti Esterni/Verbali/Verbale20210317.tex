@@ -1,0 +1,158 @@
+\documentclass[a4paper]{article}
+\usepackage{titlesec}
+\usepackage{geometry}
+\geometry{hmargin={2cm,2cm}, vmargin={3.5cm,3.5cm}}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\hypersetup{pdfborder = {0 0 0},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=blue}
+\definecolor{logo}{RGB}{20,99,163}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% creazione comando subsubsubsection
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+    \titlespacing*{\subsubsubsection}
+    {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\def\toclevel@subsubsubsection{4}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%fine creazione comando
+
+
+%Comandi di impaginazione uguale per tutti i documenti
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.2]{../../../Images/logo.png}}
+%Titolo del documento
+\rhead{\large Verbale Esterno 2021-03-17}
+%\rfoot{\thepage}
+\cfoot{Pagina \thepage{} di \pageref{LastPage}}
+\setlength{\headheight}{35pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \includegraphics{../../../Images/logo.png}\\
+        \vspace{20px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{20px}
+        \textbf{\huge\textcolor{logo}{Verbale Esterno 2021-03-17}}\\
+        \vspace{10px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{40px}
+        \textbf{\Large Informazioni sul documento}\\
+        \vspace{20px}
+        \begin{tabular}{p{100px} | p{100px}}
+            \textbf{Versione} & 0.0.1\\
+            \textbf{Responsabile} & Samuele De Simone\\
+            \textbf{Redattori} & Giaccone Nicolò\\
+            \textbf{Verificatore} & Samuele De Simone\\
+            \textbf{Destinatari} & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave\\
+            \textbf{Stato} & Approvato\\
+            \textbf{Uso} & Esterno\\
+        \end{tabular}\\
+        \vspace{60px}
+        \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
+
+    \end{center}
+    \end{titlepage}
+
+    %DIARIO DELLE MODIFICHE
+    \begin{center}
+        \textbf{\Large Diario delle modifiche}\\
+        \vspace{10px}
+        \begin{table}[h!]
+        \centering
+        \rowcolors{2}{logo!10}{logo!40}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{p{150px} p{90px} p{70px} p{60px} p{45px}}
+            \rowcolor{logo!70} \textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}\\
+            Stesura del verbale & Nicolò Giaccone & Analista & 2021-03-18 & 0.0.1 \\    
+            Completamento verbale & Nicolò Giaccone & Analista & 2021-03-18 & 0.0.2\\
+            Verifica verbale & Samuele De Simone & Responsabile & 2021-03-19 & 0.1.0\\
+            Approvazione & Samuele De Simone & Responsabile & 2021-03-26 & 1.0.0\\
+        \end{tabular}
+    \end{table}
+    \end{center}
+
+    %INDICE
+    \newpage
+    \tableofcontents
+    \newpage
+    % CORPO DEL DOCUMENTO
+    \section{Informazioni generali}
+    \begin{itemize}
+        \item Data e ora: 2021/03/17 ore 17:30-18:15;
+        \item Luogo: Google Meet fornito dai proponenti;
+        \item Partecipanti interni:  
+        \begin{itemize}
+            \item  Samuele De Simone;
+            \item  Manuel Varo;
+            \item  Tito Scutari;
+            \item  Nicolò Giaccone;
+            \item  Amedeo Meggiolaro;
+            \item  Simone Urbani;
+            \item  Marco Barbaresco;
+        \end{itemize}
+        \item Partecipanti esterni: 
+        \begin{itemize}
+            \item Alessandro Maccagnan; 
+            \item Milo Ertola;
+        \end{itemize} 
+        \item Segretario: Nicolò Giaccone.
+    \end{itemize}
+\section{Argomenti della riunione}
+\begin{itemize}
+    \item Presentazione del gruppo all'azienda;
+    \item Discussione sulle tempistiche della realizzazione del progetto didattico;
+    \item Chiarimenti su alcuni aspetti del progetto;
+    \item Discussione sulle criticità della consegna;
+    \item Chiarimenti sulla formulazione dei documenti;
+    \item Discussione sulle modalità di contatto.
+\end{itemize}
+\section{Resoconto}
+\subsection{Presentazione del gruppo all'azienda}
+I primi minuti della chiamata sono stati dedicati alla presentazione dei componenti del gruppo TechSWEave ai proponenti.
+\subsection{Discussione sulle tempistiche della realizzazione del progetto didattico}
+Si è discusso sulle tempistiche di realizzazione del progetto sia in relazione alle consegene fissate per il progetto didattico, si per la mole di lavoro che deve essere sostenuta per la realizzazione del progetto stesso.
+\subsection{Chiarimenti su alcuni aspetti del progetto}
+Sono state proposte alcuni dubbi sul capitolato, che erano sono sorti durante la stesura dei vari documenti:
+\begin{itemize}
+    \item La piattaforma consiste di un unico venditore;
+    \item Scelta della lingua da utilizzare nella piattaforma;
+    \item Tutto il codice, commenti compresi deve essere in lingua inglese.
+    \item Fattibilità sito multilingua, il gruppo si riservato del tempo per riflettere sulla porposta.
+\end{itemize}
+\subsection{Discussione sulle criticità della consegna}
+I proponenti hanno espesso quelle che per loro saranno le maggiori difficoltà nella realizzazione del progetto:
+\begin{itemize}
+    \item Programmazione asincrona, questa infatti non essendo mia stata affrontata comporterà uno studio ulteriore, per questo i proponenti hanno suggerito degli approcci e dei materiali da cui studiare;
+    \item Possibli problemi nella relazione del frontend.
+\end{itemize}
+\subsection{Chiarimenti sulla formulazione dei documenti}
+I documenti che devono essere forniti per la comprensione del codice devono essere in inglese, questo vale anche per il versionamento del codice stesso.
+\subsection{Discussione sulle modalità di contatto} 
+I proponenti hanno indicato come propria volontà l'utilizzo di una comunicazione agile attraverso Slack e videochiamate su Google Meet creato da loro. 
+\end{document}
