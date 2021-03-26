@@ -1,9 +1,9 @@
-\subsection{UC20: Visualizzazione dei resi effettuati}
+\subsection{UC20: Annullamento checkout}
 \label{sec:UC20}
 \begin{itemize}
-    \item \textbf{Descrizione:} sezione per visualizzare l'elenco dei resi effettuati;
-    \item \textbf{Attore Primario:} cliente autenticato;
-    \item \textbf{Precondizione:} l'utente si trova nella sezione degli ordini effettuati (\hyperref[sec:UC21]{\underline{UC21}})
-    \item \textbf{Input:} l'utente clicca il bottone apposito per entrare il questa sezione;
-    \item \textbf{Postcondizione:} l'utente visualizza l'elenco dei resi che ha effettuato;
+    \item \textbf{Descrizione:} visualizzazione di un errore per un fallimento nella fase di pagamento;
+    \item \textbf{Attore Primario:} Stripe
+    \item \textbf{Precondizione:} il cliente ha inserito i dati del pagamento;
+    \item \textbf{Input:} Stripe ritorna un errore nel risultato del pagamento;
+    \item \textbf{Postcondizione:} viene visualizzato un messaggio di errore, successivamente il cliente viene reindirizzato alla sezione del checkout;
 \end{itemize}

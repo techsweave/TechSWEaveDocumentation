@@ -9,7 +9,7 @@
 \begin{itemize}
     \item \textbf{Descrizione:} permette l'autenticazione di un utente;
     \item \textbf{Attore Primario:} utente generico;
-    \item \textbf{Attore Secondario:} Amazon Cognito;
+    \item \textbf{Attore Secondario:} servizio di autenticazione esterno;
     \item \textbf{Precondizione:} l'utente è all'interno della pagina di autenticazione
     \item \textbf{Input:} inserimento dati;
     \item \textbf{Postcondizione:} l'utente è autenticato;
@@ -23,7 +23,7 @@
     \textbf{Estensione:}
         Se la l'username o la password non sono corretti:
         \begin{itemize}
-            \item viene visualizzato un messaggio di errore;
+            \item viene visualizzato un messaggio di errore (\hyperref[sec:UC28]{\underline{UC28}});
             \item si può ritentare l'inserimento.
         \end{itemize}
 \end{itemize}
@@ -31,7 +31,7 @@
 \begin{itemize}
     \item \textbf{Descrizione:} permette l'inserimento dell'username;
     \item \textbf{Attore Primario:} utente generico;
-    \item \textbf{Attore Secondario:} Amazon Cognito;
+    \item \textbf{Attore Secondario:} servizio di autenticazione esterno;
     \item \textbf{Precondizione:} l'utente è all'interno della pagina di autenticazione
     \item \textbf{Input:} inserimento username;
     \item \textbf{Postcondizione:} l'username è stata inserita;
@@ -40,7 +40,7 @@
 \begin{itemize}
     \item \textbf{Descrizione:} permette l'inserimento della password;
     \item \textbf{Attore Primario:} utente generico;
-    \item \textbf{Attore Secondario:} Amazon Cognito;
+    \item \textbf{Attore Secondario:} servizio di autenticazione esterno;
     \item \textbf{Precondizione:} l'utente è all'interno della pagina di autenticazione
     \item \textbf{Input:} inserimento password;
     \item \textbf{Postcondizione:} la password è stata inserita;
