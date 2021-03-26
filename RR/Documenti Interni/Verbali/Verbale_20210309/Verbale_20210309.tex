@@ -1,12 +1,34 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
+\usepackage{titlesec}
 \usepackage{geometry}
-%\geometry{hmargin={2cm,2cm}}
+\geometry{hmargin={2cm,2cm}, vmargin={3.5cm,3.5cm}}
 \usepackage{graphicx}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{hyperref}
+\hypersetup{pdfborder = {0 0 0},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=blue}
 \definecolor{logo}{RGB}{20,99,163}
-\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{comment}
 
+%Comandi di impaginazione uguale per tutti i documenti
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.2]{../../../../Images/logo.png}}
+%Titolo del documento
+\rhead{\large Verbale Interno del 2021-03-23}
+%\rfoot{\thepage}
+\cfoot{Pagina \thepage{} di \pageref{LastPage}}
+\setlength{\headheight}{35pt}
+
+\renewcommand{\footrulewidth}{0.4pt}
 \begin{document}
 \begin{titlepage}
     \begin{center}
@@ -14,7 +36,7 @@
         \vspace{20px}
         \textcolor{logo}{\hrulefill}\\
         \vspace{20px}
-        \textbf{\huge\textcolor{logo}{Verbale Interno del 2021/03/09}}\\
+        \textbf{\huge\textcolor{logo}{Verbale Interno del 2021-03-09}}\\
         \vspace{10px}
         \textcolor{logo}{\hrulefill}\\
         \vspace{20px}
@@ -23,7 +45,7 @@
         \textbf{Informazioni sul documento}\\
         \vspace{20px}
         \begin{tabular}{p{100px} | p{100px}}
-            \textbf{Versione} & 0.0.2\\
+            \textbf{Versione} & 1.0.0\\
             \textbf{Responsabile} & Manuel Varo\\
             \textbf{Redattore} & Samuele De Simone\\
             \textbf{Verificatore} & Nicolò Giaccone\\
@@ -35,10 +57,31 @@
 
     \end{center}
     \end{titlepage}
+
+    %DIARIO DELLE MODIFICHE
+    \begin{center}
+        \textbf{\Large Diario delle modifiche}\\
+        \vspace{10px}
+        \begin{table}[h!]
+        \centering
+        \rowcolors{2}{logo!10}{logo!40}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{p{150px} p{90px} p{70px} p{60px} p{45px}}
+            \rowcolor{logo!70} \textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}\\
+            Stesura documento & Nicolò Giaccone & Analista & 2021-03-09 & 0.0.1\\   
+            Verifica & Samuele De Simone & Verificatore & 2021-03-11 & 0.1.0\\
+            Validazione & Manuel Varo & Responsabile & 2021-03-13 & 1.0.0
+        \end{tabular}
+    \end{table}
+    \end{center}
+    \newpage
+
     \tableofcontents
+    \newpage
+    
     \section{Informazioni riunione}
     \begin{itemize}
-        \item Data e ora: 09/03/2021 ore 21.30-22.45.
+        \item Data e ora: 2021-03-09 ore 21.30-22.45.
         \item Luogo: Canale Discord del gruppo tramite videochiamata.
         \item Partecipanti interni: Samuele De Simone, Manuel Varo, Tito Scutari, Nicolò Giaccone, Amedeo Meggiolaro, Simone Urbani, Marco Barbaresco.
         \item Partecipanti esterni: nessuno.
