@@ -1,50 +1,91 @@
 \section{Requisiti}
+Ogni requisito è composto dalla seguente struttura:
+\begin{itemize}
+    \item \textbf{Codice identificativo:} ogni codice identificativo è univoco e conforme alla seguente codifica:
+    \begin{center}
+        \textbf{R[ID][Tipologia]}
+    \end{center}
+    Il significato delle voci è:
+    \item \textbf{ID:} identificatore univoco del requisito in forma gerarchica.
+    \item \textbf{Tipologia:} ogni requisito può assumere uno dei seguenti valori:
+    \begin{itemize}
+        \item \textit{F}: funzionale;
+        \item \textit{Q}: professionale;
+        \item \textit{P}: qualitativo;
+        \item \textit{V}: vincolo.
+    \end{itemize}
+    \item \textbf{Importanza:} riporta l'importanza del requisito:
+    \begin{itemize}
+        \item obbligatorio: requisito irrinunciabile per gli stakeholder;
+        \item desiderabile: requisito non strettamente necessario che però apporta un valore aggiunto al prodotto;
+        \item opzionale: requisito relativamente utile oppure contrabile in un secondo momento durante lo sviluppo;
+    \end{itemize}
+    \item \textbf{Descrizione:} descrizione del requisito, meno ambigua possibile;
+    \item \textbf{Fonti:} ogni requisito deriva da una di queste fonti:
+    \begin{itemize}
+        \item \textit{capitolato:} è un requisito individuato dalle condizione imposte dal capitolato;
+        \item \textit{interno:} è un requisito aggiunto dagli analisti;
+        \item \textit{caso d'uso:} è un requisito estratto da uno o più casi d'uso, è riportato il codice del caso d'uso a cui ci si riferisce;
+        \item \textit{verbale:} è un requisito individuato attraverso una riunione con i proponenti.
+    \end{itemize}
+\end{itemize}
+
 \subsection{Requisiti funzionali}
 \begin{center}
     %\begin{table}[!ht]
     \centering
     \rowcolors{2}{logo!10}{logo!40}
     % \setlength\extrarowheight{2pt}
-    \renewcommand{\arraystretch}{1.8}
+    \renewcommand{\arraystretch}{1.5}
     \label{tab:RequisitiFunzionali}
-    \begin{longtable}[!h]{p{50px} p{200px} p{100px} p{50px}}
+    \begin{longtable}[!h]{p{50px} p{210px} p{80px} p{50px}}
         \rowcolor{logo!70} \textbf{Requisito} & \textbf{Descrizione}                                                                             & \textbf{Classificazione} & \textbf{Fonti}                \\
-        RFO01                                 & L'utente deve poter visualizzare l'homepage                                                      & Obbligatorio             & \hyperref[sec:UC1]{UC1}       \\
-        RFO02                                 & L'utente deve poter visualizzare la pagina per l'autenticazione                                  & Obbligatorio             & \hyperref[sec:UC2]{UC2}       \\
-        % RF03 & L'utente deve poter autenticarsi & Obbligatorio & \hyperref[sec:UC3] \\
-        RFO03.1                               & L'utente deve poter inserire il proprio username nella pagina di autenticazione                  & Obbligatorio             & \hyperref[sec:UC3]{UC3.1}     \\
-        RFO03.2                               & L'utente deve poter inserire la propria password nella pagina di autenticazione                  & Obbligatorio             & \hyperref[sec:UC3]{UC3.2}     \\
-        RFO04                                 & L'utente deve poter autenticarsi tramite un servizio esterno                                     & Obbligatorio             & \hyperref[sec:UC4]{UC4}       \\
-        RFO05                                 & L'utente deve poter visualizzare i dettagli di un prodotto                                       & Obbligatorio             & \hyperref[sec:UC5]{UC5}       \\
-        RFO06                                 & L'utente deve poter aggiungere un prodotto al carrello                                           & Obbligatorio             & \hyperref[sec:UC6]{UC6}       \\
-        RFO07                                 & L'utente deve poter cercare i prodotti tramite una parola chiave                                 & Obbligatorio             & \hyperref[sec:UC7]{UC7}       \\
-        RFO08                                 & L'utente deve poter visualizzare la lista di prodotti                                            & Obbligatorio             & \hyperref[sec:UC8]{UC8}       \\
-        RFD8.1                                & L'utente deve poter ordinare la lista di prodotti                                                & Desiderabile             & \hyperref[sec:UC8]{UC8.1}     \\
-        RFD8.2                                & L'utente deve poter filtrare la lista di prodotti                                                & Desiderabile             & \hyperref[sec:UC8]{UC8.2}     \\
-        RFO10                                 & L'utente deve poter registrarsi inserendo i propri dati                                          & Obbligatorio             & \hyperref[sec:UC10]{UC10}     \\
-        RFO11                                 & L'utente deve poter registrarsi tramite un servizio esterno                                      & Obbligatorio             & \hyperref[sec:UC11]{UC11}     \\
-        RFO12.1                               & L'utente deve poter visualizzare i prodotti inseriti nel carrello                                & Obbligatorio             & \hyperref[sec:UC12.1]{UC12.1} \\
-        RFO12.2                               & L'utente deve poter rimuovere i prodotti inseriti nel carrello                                   & Obbligatorio             & \hyperref[sec:UC12.1]{UC12.1} \\
-        RFD12.3                               & L'utente deve poter cambiare la quantità dei prodotti inseriti nel carrello                      & Desiderabile             & \hyperref[sec:UC12.3]{UC12.3} \\
-        RFD12.4                               & L'utente deve poter visualiizare se la quantità disponibile è minore della quantità nel carrello & Desiderabile             & \hyperref[sec:UC12.4]{UC12.4} \\
-        RFD13                                 & L'utente deve poter filtare i prodotti per categoria                                             & Desiderabile             & \hyperref[sec:UC13]{UC13}     \\
-        RFD14                                 & L'utente deve poter reimpostare la password                                                      & Desiderabile             & \hyperref[sec:UC14]{UC14}     \\
-        RFO15                                 & L'utente deve poter modificare i propri dati di profilo                                          & Obbligatorio             & \hyperref[sec:UC15]{UC15}     \\
-        RFO16                                 & L'utente deve poter effettuare il logout                                                         & Obbligatorio             & \hyperref[sec:UC16]{UC16}     \\
-        RFO17                                 & L'utente deve potervisualizzare i propri dati di profilo                                         & Obbligatorio             & \hyperref[sec:UC17]{UC17}     \\
-        RFO18                                 & L'utente deve contattare il venditore                                                            & Obbligatorio             & \hyperref[sec:UC18]{UC18}     \\
-        RFP19                                 & L'utente deve poter effettuare il reso di un prodotto                                            & Opzionale                & \hyperref[sec:UC19]{UC19}     \\
-        RFP20                                 & L'utente deve poter visualizzare lo storico dei propri resi                                      & Opzionale                & \hyperref[sec:UC20]{UC20}     \\
-        RFO21                                 & L'utente deve poter visualizzare lo storico dei propri ordini                                    & Obbligatorio             & \hyperref[sec:UC21]{UC21}     \\
-        RFO22                                 & L'utente deve poter effettuare il checkout di un ordine                                          & Obbligatorio             & \hyperref[sec:UC22]{UC22}     \\
-        RFO22.1                               & L'utente deve poter inserire l'indirizzo di fatturazione                                         & Obbligatorio             & \hyperref[sec:UC22]{UC2.1}    \\
-        RFO22.2                               & L'utente deve poter inserire l'indirizzo di spedizione                                           & Obbligatorio             & \hyperref[sec:UC22]{UC2.2}    \\
-        RFO22.3                               & L'utente deve poter essere indirizzato ad un servizio per il pagamento                           & Obbligatorio             & \hyperref[sec:UC22.3]{UC2.3}  \\
-        RFO22.4                               & L'utente deve poter essere avvisato del mancato pagamento                                        & Obbligatorio             & \hyperref[sec:UC22.4]{UC22.4} \\
-        RFO23                                 & L'utente deve poter annullare il checkout                                                        & Obbligatorio             & \hyperref[sec:UC23]{UC23}     \\
-        RFO24                                 & L'utente venditore deve poter visualiizare la lista di clienti                                   & Obbligatorio             & \hyperref[sec:UC24]{UC24}     \\
-        RFO25                                 & L'utente venditore deve poter visualiizare la lista degli ordini                                 & Obbligatorio             & \hyperref[sec:UC25]{UC25}     \\
-        RFO26                                 & L'utente venditore deve poter contattare un cliente                                              & Obbligatorio             & \hyperref[sec:UC26]{UC26}     \\
+        \textbf{R1F}                                    & L'utente deve poter visualizzare l'homepage                                                      & Obbligatorio             & Capitolato, \newline \hyperref[sec:UC1]{UC1}       \\
+        R1.1F                                           & Il cliente deve poter vedere i prodotti in evidenza e in offerta                                 & Obbligatorio             & Capitolato       \\
+        R1.2F                                           & Il cliente dalla home page deve poter accedere facilmente alla barra di ricerca e al menù        & Obbligatorio             & Capitolato\\
+        R1.3F                                           & Il cliente dalla home page deve poter accedere al carrello                                       & Obbligatorio             & Capitolato \\
+        \textbf{R2F}                                    & L'utente deve poter visualizzare la pagina per l'autenticazione                                  & Obbligatorio             & \hyperref[sec:UC2]{UC2}       \\
+        \textbf{R3F}                                    & L'utente deve poter autenticarsi tramite username e password                                    & Obbligatorio             & \hyperref[sec:UC3]{UC3} \\
+        R3.1F                                           & L'utente deve poter inserire il proprio username nella pagina di autenticazione                  & Obbligatorio             & \hyperref[sec:UC3]{UC3.1}     \\
+        R3.2F                                           & L'utente deve poter inserire la propria password nella pagina di autenticazione                  & Obbligatorio             & \hyperref[sec:UC3]{UC3.2}     \\
+        \textbf{R4F}                                    & L'utente deve poter autenticarsi tramite un servizio esterno                                     & Obbligatorio             & \hyperref[sec:UC4]{UC4}       \\
+        \textbf{R5F}                                    & L'utente deve poter visualizzare i dettagli di un prodotto                                       & Obbligatorio             & \hyperref[sec:UC5]{UC5}       \\
+        \textbf{R6F}                                    & L'utente deve poter aggiungere un prodotto al carrello                                           & Obbligatorio             & \hyperref[sec:UC6]{UC6}       \\
+        \textbf{R7F}                                    & L'utente deve poter cercare i prodotti tramite una parola chiave                                 & Obbligatorio             & \hyperref[sec:UC7]{UC7}       \\
+        \textbf{R8F}                                    & L'utente deve poter visualizzare la lista di prodotti                                            & Obbligatorio             & \hyperref[sec:UC8]{UC8}       \\
+        \textbf{R9F}                                    & L'utente deve poter ordinare la lista di prodotti                                                & Desiderabile             & \hyperref[sec:UC8]{UC8.1}     \\
+        R9.1F                                           & Il cliente deve poter ordinare i prodotti per prezzo & Desidirabile\hyperref[sec:UC8]{UC8.1}\\
+        R9.2F                                           & Il cliente deve poter ordinare i prodotti per nome & Desiderabile & UC8.1\\
+        \textbf{R10F}                                   & L'utente deve poter filtrare la lista di prodotti                                                & Obbligatorio             & \hyperref[sec:UC8]{UC8.2}     \\
+        R10.1F                                          & Il cliente deve poter decidere un prezzo minimo & Obbligatorio & \hyperref[sec:UC8]{UC8.2} \\
+        R10.2F                                          & Il cliente deve poter decidere un prezzo massimo & Obbligatorio & \hyperref[sec:UC8]{UC8.2} \\
+        R10.3F      & Il cliente deve poter filtrare per marca & Opzionale & \hyperref[sec:UC8]{UC8.2} \\
+        R10.4F  & Il cliente deve poter filtrare per categoria & Desiderabile & \hyperref[sec:UC8]{UC8.2} \\
+        R10.5F & Il cliente deve poter modificare un filtri & Obbligatorio & \hyperref[sec:UC8]{UC8.2} \\
+        R10.6F  & Il cliente deve poter rimuovere i filtri & Obbligatorio & \hyperref[sec:UC8]{UC8.2} \\
+        
+        \textbf{R11F}                                   & L'utente deve poter registrarsi inserendo i propri dati                                          & Obbligatorio             & \hyperref[sec:UC10]{UC10}     \\
+        \textbf{R12F}                                   & L'utente deve poter registrarsi tramite un servizio esterno                                      & Obbligatorio             & \hyperref[sec:UC11]{UC11}     \\
+        \textbf{R13F}                           & L'utente deve poter gestire il carrello                                                                                  & Obbligatorio & \hyperref[sec:UC12]{UC12} \\
+        R13.1F                               & L'utente deve poter visualizzare i prodotti inseriti nel carrello                                & Obbligatorio             & \hyperref[sec:UC12.1]{UC12.1} \\
+        R13.2F                               & L'utente deve poter rimuovere i prodotti inseriti nel carrello                                   & Obbligatorio             & \hyperref[sec:UC12.1]{UC12.1} \\
+        R13.3F                               & L'utente deve poter cambiare la quantità dei prodotti inseriti nel carrello                      & Desiderabile             & \hyperref[sec:UC12.3]{UC12.3} \\
+        R13.4F                               & L'utente deve poter visualiizare se la quantità disponibile è minore della quantità nel carrello & Desiderabile             & \hyperref[sec:UC12.4]{UC12.4} \\
+        \textbf{R14F}                                & L'utente deve poter reimpostare la password                                                      & Obbligatorio             & \hyperref[sec:UC14]{UC14}     \\
+        \textbf{R15F}                                 & L'utente deve poter modificare i propri dati di profilo                                          & Obbligatorio             & \hyperref[sec:UC15]{UC15}     \\
+        \textbf{R16F}                                 & L'utente deve poter effettuare il logout                                                         & Obbligatorio             & \hyperref[sec:UC16]{UC16}     \\
+        \textbf{R17F}                                 & L'utente deve potervisualizzare i propri dati di profilo                                         & Obbligatorio             & \hyperref[sec:UC17]{UC17}     \\
+        \textbf{R18F}                                 & L'utente deve poter contattare il venditore                                                            & Obbligatorio             & \hyperref[sec:UC18]{UC18}     \\
+        \textbf{R19F}                                 & L'utente deve poter visualizzare lo storico dei propri ordini                                    & Obbligatorio             & \hyperref[sec:UC21]{UC21}     \\
+        \textbf{R20F}                                 & L'utente deve poter effettuare il checkout di un ordine                                          & Obbligatorio             & \hyperref[sec:UC22]{UC22}     \\
+        R20.1F                               & L'utente deve poter inserire l'indirizzo di fatturazione                                         & Obbligatorio             & \hyperref[sec:UC22]{UC2.1}    \\
+        R20.2F                               & L'utente deve poter inserire l'indirizzo di spedizione                                           & Obbligatorio             & \hyperref[sec:UC22]{UC2.2}    \\
+        R20.3F                               & L'utente deve poter essere indirizzato ad un servizio per il pagamento                           & Obbligatorio             & \hyperref[sec:UC22.3]{UC2.3}  \\
+        R20.4F                               & L'utente deve poter essere avvisato del mancato pagamento                                        & Obbligatorio             & \hyperref[sec:UC22.4]{UC22.4} \\
+        \textbf{R21F}                                 & L'utente deve poter annullare il checkout                                                        & Obbligatorio             & \hyperref[sec:UC23]{UC23}     \\
+        \textbf{R22F}                                 & L'utente venditore deve poter visualiizare la lista di clienti                                   & Obbligatorio             & \hyperref[sec:UC24]{UC24}     \\
+        \textbf{R23F}                                 & L'utente venditore deve poter visualiizare la lista degli ordini                                 & Obbligatorio             & \hyperref[sec:UC25]{UC25}     \\
+        \textbf{R24F}                                 & L'utente venditore deve poter contattare un cliente                                              & Obbligatorio             & \hyperref[sec:UC26]{UC26}     \\
         \rowcolor{white}\caption{Rquisiti funzionali}
     \end{longtable}
     %\end{table}
@@ -59,13 +100,13 @@
     \label{tab:RequisitiQualita}
     \begin{longtable}[!h]{p{50px} p{200px} p{100px} p{50px}}
         \rowcolor{logo!70} \textbf{Requisito} & \textbf{Descrizione}                                                                                                                                        & \textbf{Classificazione} & \textbf{Fonti} \\
-        RQO01                                 & Deve essere prodotta una documentazione sull'uso del sito per l'utente                                                                                      & Obbligatorio             & BOH            \\
-        RQO02                                 & Deve essere prodotta una documentazione sull'istallazione dell'intera infrastuttura                                                                         & Obbligatorio             & BOH            \\
-        RQO03                                 & Le documentazioni devono essere scritte in lingua inglese                                                                                                   & Obbligatorio             & BOH            \\
-        RQO04                                 & Il codice deve essere ospitato sui un repository pubblica su github                                                                                         & Obbligatorio             & BOH            \\
-        RQO05                                 & Il sofrtware sviluppato deve eseere coerente con quanto descritto dal dicumetno norme di progetto                                                           & Obbligatorio             & BOH            \\
-        RQO06                                 & Tutto il codice (commenti, nomi di variabili, ecc...), commit di git, nomi di cartelle e tutto quello che rigiarda il codice deve essere scritto in inglese & Obbligatorio             & BOH            \\
-        RQO07                                 & Non vanno usate chiamate di callback, ma solo funzioni awayt/async                                                                                          & Obbligatorio             & BOH            \\
+        RQO01                                 & Deve essere prodotta una documentazione sull'uso del sito per l'utente                                                                                      & Obbligatorio             & Capitolato     \\
+        RQO02                                 & Deve essere prodotta una documentazione sull'istallazione dell'intera infrastuttura                                                                         & Obbligatorio             & Capitolato     \\
+        RQO03                                 & Le documentazioni devono essere scritte in lingua inglese                                                                                                   & Obbligatorio             & Capitolato     \\
+        RQO04                                 & Il codice deve essere ospitato sui un repository pubblica su github                                                                                         & Obbligatorio             & Capitolato     \\
+        RQO05                                 & Il sofrtware sviluppato deve eseere coerente con quanto descritto dal dicumetno norme di progetto                                                           & Obbligatorio             & Capitolato     \\
+        RQO06                                 & Tutto il codice (commenti, nomi di variabili, ecc...), commit di git, nomi di cartelle e tutto quello che rigiarda il codice deve essere scritto in inglese & Obbligatorio             & Capitolato     \\
+        RQO07                                 & Non vanno usate chiamate di callback, ma solo funzioni awayt/async                                                                                          & Obbligatorio             & Capitolato     \\
         \rowcolor{white}\caption{Rquisiti di qualità}
     \end{longtable}
     %\end{table}
