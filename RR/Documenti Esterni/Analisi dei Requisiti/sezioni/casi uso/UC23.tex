@@ -1,9 +1,9 @@
-\subsection{UC20: Annullamento checkout}
-\label{sec:UC20}
+\subsection{UC23: Visualizzazione della lista dei clienti}
+\label{sec:UC23}
 \begin{itemize}
-    \item \textbf{Descrizione:} visualizzazione di un errore per un fallimento nella fase di pagamento;
-    \item \textbf{Attore Primario:} Stripe
-    \item \textbf{Precondizione:} il cliente ha inserito i dati del pagamento;
-    \item \textbf{Input:} Stripe ritorna un errore nel risultato del pagamento;
-    \item \textbf{Postcondizione:} viene visualizzato un messaggio di errore, successivamente il cliente viene reindirizzato alla sezione del checkout;
+    \item \textbf{Descrizione:} sezione per visualizzare l'elenco dei clienti del proprio negozio;
+    \item \textbf{Attore Primario:} venditore autenticato; 
+    \item \textbf{Precondizione:} il venditore si trova in una qualsiasi pagina;
+    \item \textbf{Input:} il venditore clicca il bottone per entrare in questa sezione; 
+    \item \textbf{Postcondizione:} il venditore visualizza la lista di tutti i clienti del negozio.
 \end{itemize}
