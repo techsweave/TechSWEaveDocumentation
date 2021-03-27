@@ -1,7 +1,7 @@
 \section{Processi Primari}
 \subsection{Fornitura}
 \subsubsection{Scopo}
-Il processo di Fornitura, come stabilito dallo standard ISO/IEC 12207:1995, descrive le attività e i compiti che il fornitore deve rispettare per soddisfare le richieste del proponente. Dopo una prima attività di analisi per comprendere le richieste del proponente, il fornitore redige lo \textit{Studio di Fattibilità} al fine di individuare gli aspetti positivi e le criticità in base alle informazioni acquisite. Occorre quindi stipulare un contratto con cui regolare i rapporti e le scadenze con il proponente e definire un \textit{Piano di Progetto} da seguire fino alla consegna del prodotto finale.
+Il processo di Fornitura, come stabilito dallo standard ISO/IEC 12207:1995\textsubscript{\textbf{G}}, descrive le attività e i compiti che il fornitore deve rispettare per soddisfare le richieste del proponente. Dopo una prima attività di analisi per comprendere le richieste del proponente, il fornitore redige lo \textit{Studio di Fattibilità} al fine di individuare gli aspetti positivi e le criticità in base alle informazioni acquisite. Occorre quindi stipulare un contratto con cui regolare i rapporti e le scadenze con il proponente e definire un \textit{Piano di Progetto} da seguire fino alla consegna del prodotto finale.
 \\Il processo di fornitura è composto dalle fasi seguenti:
 \begin{itemize}
     \item avvio;
@@ -13,7 +13,7 @@ Il processo di Fornitura, come stabilito dallo standard ISO/IEC 12207:1995, desc
     \item consegna e completamento.
 \end{itemize}
 \subsubsection{Descrizione}
-L’obiettivo del processo primario di Fornitura consiste nell’individuare e formalizzare norme e procedure a cui il gruppo \textit{TechSWEave} deve attenersi durante tutte le fasi di realizzazione del prodotto per diventare fornitore del proponente \textit{RedBabel} e dei committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+L’obiettivo del processo di Fornitura consiste nell’individuare e formalizzare norme e procedure a cui il gruppo \textit{TechSWEave} deve attenersi durante tutte le fasi di realizzazione del prodotto per diventare fornitore del proponente \textit{RedBabel} e dei committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin.
 \subsubsection{Aspettative}
 Durante lo svolgimento del progetto è intenzione del gruppo \textit{TechSWEave} instaurare una collaborazione continua e costante con lo scopo di provvedere alle seguenti esigenze:
 \begin{itemize}
@@ -55,15 +55,13 @@ I \textit{Verificatori} redigono un documento chiamato \textit{Piano di Qualific
     \item \textbf{Qualità di prodotto}: vengono individuati gli attributi principali del prodotto, definiti degli obiettivi per raggiungerli e delle metriche per misurarli;
     \item \textbf{Specifiche dei test}: definiscono dei test che il prodotto deve passare per garantire il soddisfacimento dei requisiti;
     \item \textbf{Standard di qualità}: vengono determinati gli standard di qualità;
-    \item \textbf{Valutazioni per il miglioramento}: vengono riportate le difficoltà riscontrate e le possibili soluzioni attuabili in futuro;
-    \item \textbf{Resoconto delle attività di verifica}: vengono descritti i risultati delle metriche calcolate in forma di resoconto.
+    \item \textbf{Resoconto delle attività di verifica}: vengono descritti i risultati delle metriche calcolate in forma di resoconto;
+    \item \textbf{Valutazioni per il miglioramento}: vengono riportate le difficoltà riscontrate e le possibili soluzioni attuabili in futuro.
 \end{itemize}
 \subsubsection{Strumenti}
 Di seguito è riportato l’elenco degli strumenti impiegati dal gruppo per il processo di fornitura.
 \subsubsubsection{Gantt Project}
 Software utile alla realizzazione dei diagrammi di Gantt, utili nella pianificazione, gestione e assegnazione delle risorse;
-\subsubsubsection{LaTeX}
-Software utile alla preparazione e alla formattazione dei testi della documentazione;
 \subsubsubsection{Microsoft Excel}
 Software utile alla produzione e alla gestione di fogli elettronici. Utilizzato per la creazione di diagrammi, tabelle e per il calcolo matematico.
 \subsection{Sviluppo}
@@ -162,56 +160,49 @@ Un caso d’uso è un diagramma, accompagnato da una descrizione testuale aggiun
     \item \textbf{input (se presenti)}: valore o oggetto che l’attore porta nel sistema;
     \item \textbf{output (se presenti)}: valore o oggetto risultato di un’azione di un attore.
 \end{itemize}
-\subsubsubsection{Metriche}
-\textbf{MPD01 Completezza dell’implementazione}:
-una percentuale che indica la completezza del prodotto relizzato in funzione del numero di specifiche implementate e quelle ancora da realizzare. In particolare:
-\textbf{\[\mathbf{C = \biggl( 1 -  \frac{\mbox{numero di specifiche implementate}}{\mbox{numero di specifiche da implementare}} \biggr) \cdot 100}\]}
-Il il risultato è considerato ottimo se è maggiore del 90\%, accettabile se tra l'80\% e il 90\% e insufficiente se minore dell'80\%.
-
-
 \subsection{Progettazione}
 \subsubsection{Scopo}
-La fase di progettazione ha come scopo la ricerca di una soluzione architetturale in grado di soddisfare i requisiti degli \textit{stackeholders}\textsubscript{\textbf{G}}, esposti nel documneto \textit{Analisi dei Requisiti}.
-I \textit{progettisti} devono tenere conto che questa fase deve garantire un'\textit{approccio sistematico}\textsubscript{\textbf{G}} ai problemi, suddividendoli, se necessario, in sotto-problemi più semplici da risolvere.
+La fase di progettazione ha come scopo la ricerca di una soluzione architetturale in grado di soddisfare i requisiti degli \textit{stackeholders}, esposti nel documneto \textit{Analisi dei Requisiti}.
+I \textit{progettisti} devono tenere conto che questa fase deve garantire un'approccio sistematico\textsubscript{\textbf{G}} ai problemi, suddividendoli, se necessario, in sotto-problemi più semplici da risolvere.
 In questo modo la parte di codifica del codice è semplificata e ottimizzata.
 \subsubsection{Descrizione}
 La fase di proggettazione si suddivide in due parti:
 \begin{itemize}
     \item\textbf{Technology Baseline}: rappresenta la linea base per lo sviluppo e indica tutte le specifiche di alto livello dell'architettura. Deve contenere:
           \begin{itemize}
-              \item Le tecnologie utilizzate
-              \item Componenti del prodotto (sempre ad alto livello)
-              \item Diagrammi UML utilizati
-              \item Test di verifica
+              \item le tecnologie utilizzate;
+              \item le componenti del prodotto (sempre ad alto livello);
+              \item diagrammi UML utilizati;
+              \item test di verifica.
           \end{itemize}
     \item\textbf{Product Baseline}: integra la \textit{Technology Baseline} entrando più nello specifico. Deve includere:
           \begin{itemize}
-              \item Diagrammi delle classi
-              \item Ulteriori test di verifica
+              \item diagrammi delle classi;
+              \item ulteriori test di verifica.
           \end{itemize}
 \end{itemize}
 \subsubsection{Aspettative}
 Il lavoro dei \textit{progettisti} deve produrre una soluzione architetturale che presenti le seguenti caratteristische:
 \begin{itemize}
-    \item Soddisfare a pieno i requisiti degli \textit{stackeholders}\textsubscript{\textbf{G}}.
-    \item Identificare varie componenti distinte, facilmente comprensibili e coese.
-    \item Essere affidabile, garantendo il corretto funzionamento del prodotto.
-    \item Avere una gestione degli errori robusta.
-    \item Avere una gestione delle risorse ottimizzata.
-    \item Essere facilmente manutenibile.
+    \item soddisfare a pieno i requisiti degli \textit{stackeholders};
+    \item identificare varie componenti distinte, facilmente comprensibili e coese;
+    \item essere affidabile, garantendo il corretto funzionamento del prodotto;
+    \item avere una gestione degli errori robusta;
+    \item avere una gestione delle risorse ottimizzata;
+    \item essere facilmente manutenibile.
 \end{itemize}
 \subsubsection{Design Pattern}
 Una volta stilata l'\textit{Analisi dei Requisiti}, ai \textit{progettisti} verrà affidato il compiti di trovare soluzioni architetturali ai problemi più frequenti.
-Tutti i \textit{design pattern}\textsubscript{\textbf{G}} non devono essere troppo specifici, in modo da permettere ai \textit{programmatori} di essere abbastanza flessibili nel momento della stesura del codice.
-Il significato e la struttura di un \textit{design pattern}\textsubscript{\textbf{G}} vengono rappresentati con diagrammi e una descrizione.
+Tutti i design pattern\textsubscript{\textbf{G}} non devono essere troppo specifici, in modo da permettere ai \textit{programmatori} di essere abbastanza flessibili nel momento della stesura del codice.
+Il significato e la struttura di un design pattern\textsubscript{\textbf{G}} vengono rappresentati con diagrammi e una descrizione.
 \subsubsection{Diagrammi UML 2.0}
 Per facilitare la comprensione delle soluzioni architetturali pensate dai progettisti, questi devono utilizzare diagrammi UML 2.0.
 Nello specifico:
 \begin{itemize}
-    \item \textbf{Diagrammi di classi}: Illustra le classi, comprensive di metodi e membri, provati e pubblici.
-    \item \textbf{Diagrammi delle attività}: Illustra il flusso di un attività.
-    \item \textbf{Diagrammi di sequenza}: Illustra sequenza di azioni attraverso l'impego di scelte definite.
-    \item \textbf{Diagrammi dei moduli}: Illustra il raggruppamento di classi mei moduli dell'applicazione.
+    \item \textbf{Diagrammi di classi}: illustra le classi, comprensive di metodi e membri;
+    \item \textbf{Diagrammi delle attività}: illustra il flusso di un attività;
+    \item \textbf{Diagrammi di sequenza}: illustra sequenza di azioni attraverso l'impego di scelte definite;
+    \item \textbf{Diagrammi dei moduli}: illustra il raggruppamento di classi mei moduli dell'applicazione.
 \end{itemize}
 \subsubsection{Test}
 Durante la fase di progettazione devono essere definiti test opportuni, in coerenza con le richieste dei proponenti.
@@ -224,39 +215,39 @@ Vengono quindi implementate le specifiche esposte nella fase di progettazione, t
 \subsubsection{Descrizione}
 Ogni \textit{programmatore} deve rispettare un'insieme di regole stilistiche di stesura del codice, in modo da renderlo unifirme e fruibile.
 \subsubsection{Aspettative}
-L'obbiettivo della fase di codifica è la scrittura del codice del prodotto in modo che questo sia conforme alle richieste del proponente.
+L'obiettivo della fase di codifica è la scrittura del codice del prodotto in modo che questo sia conforme alle richieste del proponente.
 Stabilire delle regole stilistiche in questa fase ha lo scopo di migliorare la qualità del prodotto finito, nonché di renderene più semplice la manutenzione e verifica.
 \subsubsection{Regole di Stile}
 Ogni \textit{programmatore} deve attenersi a queste regole stilistiche:
 \begin{itemize}
-    \item \textbf{Lingua}: Ogni riga di codice deve obbligatoriamente essere scritta in inglese. Quindi anche commenti, nomi di varibili e classi.
-    \item \textbf{Classi}: Le classi devono evere queste caratteristiche:
+    \item \textbf{Lingua}: ogni riga di codice deve obbligatoriamente essere scritta in inglese. Quindi anche commenti, nomi di varibili e classi.
+    \item \textbf{Classi}: le classi devono evere queste caratteristiche:
           \begin{itemize}
-              \item Nome in \textit{PascalCase}\textsubscript{\textbf{G}}.
-              \item Gli attributi vengono scritti prima dei metodi, e gli attributi privati prima di quelli pubblici.
-              \item I metodi privati devono venire dichiarati prima di quelli pubblici.
-              \item I nomi dei metodi e attributi non devono contenre un riferimento alla classe alla quale appartengono. Esempio sbagliato: nome classe: Persona, nome attributo: CognomePersona.
+              \item nome in PascalCase\textsubscript{\textbf{G}}.
+              \item gli attributi vengono scritti prima dei metodi, e gli attributi privati prima di quelli pubblici;
+              \item i metodi privati devono venire dichiarati prima di quelli pubblici;
+              \item i nomi dei metodi e attributi non devono contenre un riferimento alla classe alla quale appartengono. Esempio sbagliato: nome classe: Persona, nome attributo: CognomePersona.
           \end{itemize}
-    \item \textbf{Variabili}: Le variabili vanno scritte in \textit{camelCase}\textsubscript{\textbf{G}}, precedute da un \_ se sono attributi di una classe.
-    \item \textbf{Costanti}: Le costanti vanno scritte in maiuscoletto, precedute da un \_ se sono attributi di una classe.
-    \item \textbf{Metodi}: I metodi vanno scritti in \textit{camelCase}\textsubscript{\textbf{G}}, con l'apertura della prima parentesi graffa in linea con la firma. Il codice all'inetrno deve avere una sola tabulazione.
+    \item \textbf{Variabili}: le variabili vanno scritte in camelCase\textsubscript{\textbf{G}}, precedute da un \_ se sono attributi di una classe;
+    \item \textbf{Costanti}: le costanti vanno scritte in maiuscoletto, precedute da un \_ se sono attributi di una classe;
+    \item \textbf{Metodi}: i metodi vanno scritti in camelCase\textsubscript{\textbf{G}}, con l'apertura della prima parentesi graffa in linea con la firma. Il codice all'inetrno deve avere una sola tabulazione.
     \item Altre regole:
           \begin{itemize}
-              \item \textbf{Un solo livello di indentazione per metodo}: Ogni metodo deve contenere righe di codice con massimmo una tabulazione. Se il codice ne richiede più di una, allora tale parte va estratta in un nuovo metodo.
-              \item \textbf{Non abbreviare}: Non abbreviare il nome di variabili, metodi e classi.
-              \item \textbf{Callback}: Non utilizzare mai \textit{metodi di callback}\textsubscript{\textbf{G}}.
-              \item \textbf{Un solo punto per linea}: Se possibile, ogni riga di codice deve contenere al massimo un punto.
-              \item \textbf{Ricorsione}: Se possibile, evitare di fare \textit{metodi ricorsivi}\textsubscript{\textbf{G}}.
+              \item \textbf{Un solo livello di indentazione per metodo}: ogni metodo deve contenere righe di codice con massimmo una tabulazione. Se il codice ne richiede più di una, allora tale parte va estratta in un nuovo metodo;
+              \item \textbf{Non abbreviare}: non abbreviare il nome di variabili, metodi e classi;
+              \item \textbf{Callback}: non utilizzare mai metodi di callback\textsubscript{\textbf{G}};
+              \item \textbf{Un solo punto per linea}: se possibile, ogni riga di codice deve contenere al massimo un punto;
+              \item \textbf{Ricorsione}: se possibile, evitare di fare metodi ricorsivi\textsubscript{\textbf{G}}.
           \end{itemize}
 \end{itemize}
 \subsubsection{Strumenti}
 Di seguito gli strumenti utilizzati:
 \begin{itemize}
-    \item \textbf{Visual Studio Code}: Un \textit{IDE}\textsubscript{\textbf{G}} \textit{(Integrated development environment)} adatto alla stesura del codice di diversi linguaggi di programmazione, oltre che all'ootima integrazione con git.
-    \item \textbf{AWS Lambda}: Servizio \textit{Serverless}\textsubscript{\textbf{G}} offerto da \textit{Amazon.com}\textsubscript{\textbf{G}}, il quale permette di eseguire codice senza effettuare il \textit{provisioning}\textsubscript{\textbf{G}} o gestire i server.
-    \item \textbf{AWS DynamoDB}: Servizio di \textit{database}\textsubscript{\textbf{G}} NoSql gestito da \textit{Amazon.com}\textsubscript{\textbf{G}} come parte di \textit{Amazon Web Service}\textsubscript{\textbf{G}}.
-    \item \textbf{Amazon CoudWatch}: Offre un servizio gestito da \textit{Amazon.com}\textsubscript{\textbf{G}} di monitoraggio e osservabilità in grado di monitorare le applicazioni, rispondere ai cambiamenti di prestazioni a livello di sistema, ottimizzare l'utilizzo delle risorse e ottenere una visualizzazione unificata dello stato di integrità operativa.
-    \item \textbf{AWS Amazon Cognito}: Servizio gestito da \textit{Amazon.com}\textsubscript{\textbf{G}} che permette di aggiungere strumenti di registrazione degli utenti, accesso e controllo degli accessi alle app Web e per dispositivi mobili, in modo rapido e semplice.
-    \item \textbf{Stripe}: Servizio che fornisce un'infrastruttura software che permette a privati e aziende di inviare e ricevere pagamenti via Internet.
+    \item \textbf{Visual Studio Code}: un IDE\textsubscript{\textbf{G}} (Integrated development environment) adatto alla stesura del codice di diversi linguaggi di programmazione, oltre che all'ootima integrazione con git;
+    \item \textbf{AWS Lambda}: servizio serverless\textsubscript{\textbf{G}} offerto da Amazon\textsubscript{\textbf{G}}, il quale permette di eseguire codice senza effettuare il provisioning\textsubscript{\textbf{G}} o gestire i server;
+    \item \textbf{AWS DynamoDB}: servizio di database\textsubscript{\textbf{G}} NoSql gestito da Amazon\textsubscript{\textbf{G}} come parte di Amazon Web Service\textsubscript{\textbf{G}};
+    \item \textbf{Amazon CoudWatch}: offre un servizio gestito da Amazon\textsubscript{\textbf{G}} di monitoraggio e osservabilità in grado di monitorare le applicazioni, rispondere ai cambiamenti di prestazioni a livello di sistema, ottimizzare l'utilizzo delle risorse e ottenere una visualizzazione unificata dello stato di integrità operativa;
+    \item \textbf{AWS Amazon Cognito}: servizio gestito da Amazon\textsubscript{\textbf{G}} che permette di aggiungere strumenti di registrazione degli utenti, accesso e controllo degli accessi alle app Web e per dispositivi mobili, in modo rapido e semplice;
+    \item \textbf{Stripe}: servizio che fornisce un'infrastruttura software che permette a privati e aziende di inviare e ricevere pagamenti via Internet.
 \end{itemize}
 
