@@ -29,7 +29,7 @@ Il \textit{Responsabile di Progetto} ha il compito di convocare i membri del gru
 \\Lo Studio di Fattibiltà comprende i seguenti punti:
 \begin{itemize}
     \item \textbf{Informazioni generali}: informazioni di base quali titolo del capitolato, nome del proponente e del committente;
-    \item \textbf{Descrizione del capitolato}: breve sintesi del prodotto da sviluppare;
+    \item \textbf{Descrizione del capitolato}: breve sintesi delle caratteristiche del prodotto da sviluppare;
     \item \textbf{Finalità del progetto}: le finalità richieste dal capitolato d’appalto;
     \item \textbf{Tecnologie interessate}: elenco delle tecnologie da utilizzare per lo sviluppo del progetto;
     \item \textbf{Aspetti positivi}: elenco di motivi per cui il gruppo reputa interessante il progetto proposto;
@@ -37,7 +37,7 @@ Il \textit{Responsabile di Progetto} ha il compito di convocare i membri del gru
     \item \textbf{Conclusioni}: valutazione finale con cui viene dichiarata l’intenzione del gruppo di accettare o rifiutare il capitolato.
 \end{itemize}
 \subsubsection{Altra documentazione fornita}
-Al fine di conseguire un metodo di tracciamento in modo da assicurarne la trasparenza durante tutto il ciclo di vita del progetto è necessario fornire al proponente \textit{RedBabel} e ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin documenti a seguire.
+Al fine di conseguire un metodo di tracciamento in modo da assicurarne la trasparenza durante tutto il ciclo di vita del progetto è necessario fornire al proponente \textit{RedBabel} e ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin i documenti a seguire.
 \subsubsubsection{Piano di Progetto}
 Il \textit{Responsabile}, con il supporto degli \textit{Amministratori}, redige il \textit{Piano di Progetto} da seguire durante il progetto.
 \\Questo documento è strutturato nel modo seguente:
@@ -66,7 +66,7 @@ Software utile alla realizzazione dei diagrammi di Gantt, utili nella pianificaz
 Software utile alla produzione e alla gestione di fogli elettronici. Utilizzato per la creazione di diagrammi, tabelle e per il calcolo matematico.
 \subsection{Sviluppo}
 \subsubsection{Scopo}
-Il processo di Sviluppo, come stabilito dallo standard ISO/IEC 12207:1995, descrive le attività di analisi, progettazione, codifica, integrazione, test, installazione ed accettazione utili alla realizzazione di un prodotto finale conforme ai requisiti richiesti dal proponente.
+Il processo di Sviluppo, come stabilito dallo standard ISO/IEC 12207:1995\textsubscript{\textbf{G}}, descrive le attività di analisi, progettazione, codifica, integrazione, test, installazione ed accettazione utili alla realizzazione di un prodotto finale conforme ai requisiti richiesti dal proponente.
 \subsubsection{Descrizione}
 Di seguito sono elencate le attività che compongono il processo di sviluppo:
 \begin{itemize}
@@ -143,11 +143,11 @@ Un caso d’uso è un diagramma, accompagnato da una descrizione testuale aggiun
               \item \textbf{CodiceBase}: codice che identifica il caso d’uso generico;
               \item \textbf{CodiceSottoCaso}: codice opzionale che identifica gli eventuali sottocasi.
           \end{itemize}
-    \item \textbf{titolo}: titolo testuale del caso d’uso;
-    \item \textbf{diagramma UML}: rappresentazione grafica del caso d’uso realizzata impiegando il formalismo dell’UML 2.0.
-    \item \textbf{attori}: rappresentano qualsiasi entità esterna al sistema e con il quale interagiscono. Esistono due tipologie di attori:\begin{itemize}
-              \item \textbf{attori primari}: interagiscono attivamente con il sistema per soddisfare le proprie esigenze;
-              \item \textbf{attori secondari}: attori il cui scopo è aiutare l’attore primario.
+    \item \textbf{Titolo}: titolo testuale del caso d’uso;
+    \item \textbf{Diagramma UML}: rappresentazione grafica del caso d’uso realizzata impiegando il formalismo dell’UML 2.0.
+    \item \textbf{Attori}: rappresentano qualsiasi entità esterna al sistema e con il quale interagiscono. Esistono due tipologie di attori:\begin{itemize}
+              \item \textbf{Attori primari}: interagiscono attivamente con il sistema per soddisfare le proprie esigenze;
+              \item \textbf{Attori secondari}: attori il cui scopo è aiutare l’attore primario.
           \end{itemize}
     \item \textbf{Descrizione}: breve descrizione testuale del caso d’uso;
     \item \textbf{Scenario principale}: elenco puntato dei passi che compongono il caso d’uso;
@@ -213,7 +213,7 @@ Tali test devono poter individuare errori o anomalie nell'architettura, logica o
 La fase di codifica ha come scopo la stesura del codice stesso, e quindi dell'effettiva realizzazione del prodotto.
 Vengono quindi implementate le specifiche esposte nella fase di progettazione, trasformandole in codice eseguibile.
 \subsubsection{Descrizione}
-Ogni \textit{programmatore} deve rispettare un'insieme di regole stilistiche di stesura del codice, in modo da renderlo unifirme e fruibile.
+Ogni \textit{programmatore} deve rispettare un'insieme di regole stilistiche di stesura del codice, in modo da renderlo uniforme e fruibile.
 \subsubsection{Aspettative}
 L'obiettivo della fase di codifica è la scrittura del codice del prodotto in modo che questo sia conforme alle richieste del proponente.
 Stabilire delle regole stilistiche in questa fase ha lo scopo di migliorare la qualità del prodotto finito, nonché di renderene più semplice la manutenzione e verifica.
@@ -230,7 +230,7 @@ Ogni \textit{programmatore} deve attenersi a queste regole stilistiche:
           \end{itemize}
     \item \textbf{Variabili}: le variabili vanno scritte in camelCase\textsubscript{\textbf{G}}, precedute da un \_ se sono attributi di una classe;
     \item \textbf{Costanti}: le costanti vanno scritte in maiuscoletto, precedute da un \_ se sono attributi di una classe;
-    \item \textbf{Metodi}: i metodi vanno scritti in camelCase\textsubscript{\textbf{G}}, con l'apertura della prima parentesi graffa in linea con la firma. Il codice all'inetrno deve avere una sola tabulazione.
+    \item \textbf{Metodi}: i metodi vanno scritti in camelCase\textsubscript{\textbf{G}}, con l'apertura della prima parentesi graffa in linea con la firma. Il codice all'interno deve avere una sola tabulazione.
     \item Altre regole:
           \begin{itemize}
               \item \textbf{Un solo livello di indentazione per metodo}: ogni metodo deve contenere righe di codice con massimo una tabulazione. Se il codice ne richiede più di una, allora tale parte va estratta in un nuovo metodo;
