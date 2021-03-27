@@ -1,0 +1,103 @@
+\documentclass[a4paper]{article}
+\usepackage{titlesec}
+\usepackage{geometry}
+\geometry{hmargin={2cm,2cm}, vmargin={3.5cm,3.5cm}}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\definecolor{logo}{RGB}{20,99,163}
+\newcommand{\sectionbreak}{\clearpage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+%Comandi di impaginazione uguale per tutti i documenti
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.2]{../../../Images/logo.png}}
+%Titolo del documento
+\rhead{\large Glossario}
+%\rfoot{\thepage}
+\cfoot{Pagina \thepage{} di \pageref{LastPage}}
+\setlength{\headheight}{35pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \includegraphics{../../../Images/logo}\\
+        \vspace{20px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{20px}
+        \textbf{\huge\textcolor{logo}{Glossario}}\\
+        \vspace{10px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{40px}
+        \textbf{\Large Informazioni sul documento}\\
+        \vspace{20px}
+        \begin{tabular}{p{100px} | p{100px}}
+            \textbf{Versione} & 0.0.1\\
+            \textbf{Responsabile} & Manuel Varo\\
+            \textbf{Redattori} & Samuele De Simoen \newline *Redattore2*\\
+            \textbf{Verificatore} & *Verificatore*\\
+            \textbf{Destinatari} & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave\\
+            \textbf{Stato} & Da approvare\\
+            \textbf{Uso} & Esterno\\
+        \end{tabular}\\
+        \vspace{60px}
+        \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
+
+    \end{center}
+    \end{titlepage}
+
+    %DIARIO DELLE MODIFICHE
+    \begin{center}
+        \textbf{\Large Diario delle modifiche}\\
+        \vspace{10px}
+        \begin{table}[h!]
+        \centering
+        \rowcolors{2}{logo!10}{logo!40}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{p{150px} p{90px} p{50px} p{60px} p{45px}}
+            \rowcolor{logo!70} \textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}\\
+            Prima stesura documento & Samuele De Simone & Analista & 2021-03-14 & 0.0.1 \\    
+        \end{tabular}
+    \end{table}
+    \end{center}
+
+    %INDICE
+    \newpage
+    \tableofcontents
+    \newpage
+    \appendix
+    \input{Definizioni/A.tex}
+    \input{Definizioni/B.tex}
+    \input{Definizioni/C.tex}
+    \input{Definizioni/D.tex}
+    \input{Definizioni/E.tex}
+    \input{Definizioni/F.tex}
+    \input{Definizioni/G.tex}
+    \input{Definizioni/H.tex}
+    \input{Definizioni/I.tex}
+    \input{Definizioni/J.tex}
+    \input{Definizioni/K.tex}
+    \input{Definizioni/L.tex}
+    \input{Definizioni/M.tex}
+    \input{Definizioni/N.tex}
+    \input{Definizioni/O.tex}
+    \input{Definizioni/P.tex}
+    \input{Definizioni/Q.tex}
+    \input{Definizioni/R.tex}
+    \input{Definizioni/S.tex}
+    \input{Definizioni/T.tex}
+    \input{Definizioni/U.tex}
+    \input{Definizioni/V.tex}
+    \input{Definizioni/W.tex}
+    \input{Definizioni/X.tex}
+    \input{Definizioni/Y.tex}
+    \input{Definizioni/Z.tex}
+\end{document}
