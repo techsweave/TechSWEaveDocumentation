@@ -3,21 +3,6 @@ Per garantire qualità dei processi\textsubscript{\textbf{G}} il gruppo ha decis
 I processi di tale standard sono poi stati semplificati e adattati alle esigenze.\\Il risultato di questo adattamento è descritto nel seguito del presente documento.
 \subsection{Processi primari}
 \subsubsection{Analisi dei Requisiti}
-Durante l'attività di analisi le informazioni ottenute dalle varie fonti sono trasformate in requisiti e casi d'uso che descrivono il sistema richiesto
-dal proponente in modo dettagliato.
-\subsubsubsection{Obiettivi}
-\begin{itemize}
-    \item definire i casi d'uso e i requisiti;
-    \item tracciare il loro cambiamento nel tempo.
-\end{itemize}
-\subsubsubsection{Strategia}
-\begin{itemize}
-    \item comprendere lo scopo del progetto e le richieste degli stakeholders\textsubscript{\textbf{G}};
-    \item descrivere le richieste in forma di requisiti;
-    \item valutare quanto ottenuto e negoziare eventuali cambiamenti;
-    \item ottenere la loro approvazione dal proponente;
-    \item traccire i requisiti del sistema;
-\end{itemize}
 \subsubsubsection{Metriche}
 \textbf{PROS (Percentuale di requisiti obbligatori soddisfatti):} indica la percentuale di requisiti obbligatori soddisfatti.
 \begin{itemize}
@@ -26,22 +11,6 @@ dal proponente in modo dettagliato.
     \item \textbf{valore accettabile}: 100\%;
 \end{itemize}
 \subsubsection{Progettazione dell'architettura}
-La progettazione dell'architettura consiste nel tradurre i requisiti in un modello architetturale del sistema. Questo modello rappresenta 
-il sistema ad alto livello e lo descrive come la composizione delle sue parti.
-\subsubsubsection{Obiettivi}
-\begin{itemize}
-    \item definire un'architettura adatta allo scopo;
-    \item definire un'architettura che agevoli la codifica del sistema;
-    \item perseguire la correttezza per costruzione;
-    \item avere una maggiore comprensione del sistema.
-\end{itemize}
-\subsubsubsection{Strategia}
-\begin{itemize}
-    \item valutare il tipo di software da produrre sulla base dell'attività di analisi;
-    \item scegliere il modello architetturale più opportuno;
-    \item individuare le componenti principali del sistema;
-    \item definire le relazioni tra le componenti. 
-\end{itemize}
 \subsubsubsection{Metriche}
 \textbf{SFIN (Structural Fan-in):} indica il numero di componenti che utilizzano un dato modulo. Un valore alto indica un alto riuso della componente.
 \begin{itemize}
@@ -56,25 +25,6 @@ il sistema ad alto livello e lo descrive come la composizione delle sue parti.
     \item \textbf{valore accettabile}: $\leq 6$.
 \end{itemize}
 \subsubsection{Progettazione di dettaglio}
-La progettazione di design segue la progettazione architetturale e consiste nello scomporre le macro-componenti in componenti 
-più piccole, che sono:
-\begin{itemize}
-    \item facilmente comprensibili;
-    \item strettamente riconducibili ai requisiti funzionali;
-    \item implementabili da un singolo programmatore.
-\end{itemize}
-\subsubsubsection{Obiettivi}
-\begin{itemize}
-    \item tradurre i requisiti in unità di codice, i moduli;
-    \item agevolare il lavoro dei programmatori;
-    \item produrre un sistema software da raffinare ma eseguibile;
-    \item mantenere il tracciamento tra requisiti e componenti.
-\end{itemize}
-\subsubsubsection{Strategia}
-\begin{itemize}
-    \item indivuduare le micro-componenti del sistema;
-    \item implementare le componenti individuate.
-\end{itemize}
 \subsubsubsection{Metriche}
 \textbf{CBO (accoppiamento tra le classi di oggetti):} una classe è accoppiata ad un'altra se usa metodi o variabili definiti in quest'ultima.
 \begin{itemize}
@@ -84,20 +34,6 @@ più piccole, che sono:
 \end{itemize}
 \subsection{Processi di supporto}
 \subsubsection{Pianificazione}
-La pianificazione è un'attività, descritta nel \textit{Piano di progetto}, che definisce la gestione delle  attività, dei compiti da svolgere e della loro suddivisione, nonché la scelta
-del modello di ciclo di vita da applicare al progetto, la pianificazione temporale del lavoro e il corrispettivo costo di produzione.
-\subsubsubsection{Obiettivi}
-\begin{itemize}
-    \item disporre di obiettivi definiti;
-    \item definire i ruoli dei membri del gruppo;
-    \item disporre le risorse necessarie.
-\end{itemize}
-\subsubsubsection{Strategia}
-\begin{itemize}
-    \item pianificare le attività;
-    \item aggiornare la pianificazione durante lo svolgimento delle attività;
-    \item usare la pianificazione come riferimento.
-\end{itemize}
 \subsubsubsection{Metriche}
 \textbf{BAC (Budget at Completion):} budget totale disponibile per il progetto.
 \begin{itemize}
@@ -139,19 +75,6 @@ Serve per il calcolo di SV e CV, metriche spiegate successivamente.
     \item \textbf{valore accettabile}: $\geq$ 0.
 \end{itemize}
 \subsubsection{Verifica}
-Il processo di verifica accerta che l'esecuzione delle attività attuate nel periodo in esame non abbia introdotto errori.
-Fornisce quindi delle prove oggettive che dimostrano che una fase del ciclo di vita del progetto soddisfa i requisiti di quella fase.
-\subsubsubsection{Obiettivi}
-\begin{itemize}
-    \item rilevare e corregere tempestivamente i difetti;
-    \item provare che il sistema soddisfa i requisiti.
-\end{itemize}
-\subsubsubsection{Strategia}
-\begin{itemize}
-    \item individuare tecniche e strumenti di verifica;
-    \item applicarli;
-    \item affinarli con l'esperienza.
-\end{itemize}
 \subsubsubsection{Metriche}
 \textbf{CC (Code Coverage):} indica il numero di righe di codice sottoposte ai test di verifica durante la loro esecuzione. Per linee di codice totali 
 si intende tutte quelle appartenenti all'unità sottoposta al test.
@@ -161,24 +84,6 @@ si intende tutte quelle appartenenti all'unità sottoposta al test.
     \item \textbf{valore accettabile}: 75\%.
 \end{itemize}
 \subsubsection{Documentazione}
-La documentazione consiste nella stesura di documenti a supporto di tutte le attività di progetto.
-\subsubsubsection{Obiettivi}
-Lo scopo della documentazione è definire un body of knowledge\textsubscript{\textbf{G}} che raccoglie la conoscenza in modo:
-\begin{itemize}
-    \item completo;
-    \item non ambiguo;
-    \item modulare e coeso tra le parti che lo compongono;
-    \item adatto alla trasmissione di informazioni.
-\end{itemize}
-\subsubsubsection{Strategia}
-\begin{itemize}
-    \item produrre i documenti necessari alle varie fasi di progetto;
-    \item produrre i documenti in modo collaborativo;
-    \item supportare la documentazione con un \textit{Glossario};
-    \item supportare la documentazione con le \textit{Norme di progetto};
-    \item produrre i documenti utilizzando strumenti idonei come LaTeX;
-    \item ospitare la documentazione in una repository\textsubscript{\textbf{G}} su GitHub.
-\end{itemize}
 \subsubsubsection{Metriche}
 \textbf{Indice di Gunning fog:} misura la facilità di lettura e di comprensione di un testo. Il numero risultante è un indicatore del numero di anni 
 di educazione formale della quale una persona necessita al fine di leggere il testo con facilità.
@@ -204,15 +109,6 @@ Ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in s
 \end{itemize}
 \subsection{Processi organizzativi}
 \subsubsection{Gestione della qualità}
-Questo processo ha come obiettivo il raggiungimento di un grado di qualità soddisfacente nel progetto.
-\subsubsubsection{Obiettivi}
-Garantire che i processi e i prodotti ottenuti rispettino gli standard di qualità prefissati.
-\subsubsubsection{Strategia}
-\begin{itemize}
-    \item pianificare le attività perseguendo gli obiettivi;
-    \item misurare i risultati con gli strumenti scelti;
-    \item reagire ai risultati aggiornando obiettivi, strategia e strumenti.
-\end{itemize}
 \subsubsubsection{Metriche}
 \textbf{PMS (Percentuale di metriche soddisfatte):} indica in percentuale quante metriche raggiungono dei valori accettabili sul totale delle metriche calcolate.
 \begin{itemize}
@@ -221,8 +117,3 @@ Garantire che i processi e i prodotti ottenuti rispettino gli standard di qualit
     \item \textbf{valore accettabile}: $\geq$ 60\%.
 \end{itemize}
 \newpage
-
-
-
-
-
