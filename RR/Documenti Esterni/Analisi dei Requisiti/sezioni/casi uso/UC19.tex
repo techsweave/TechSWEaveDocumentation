@@ -7,10 +7,10 @@
                 \centering
             \end{figure}
                 \begin{itemize}
-                \item \textbf{Descrizione:} caso d'uso per la creazione di un nuovo ordine e l'acquisto dei prodotti inseriti nel carrello;
+                \item \textbf{Descrizione:} caso d'uso per la creazione di un nuovo ordine e l'acquisto dei prodotti;
                 \item \textbf{Attore Primario:} cliente autenticato;
                 \item \textbf{Attore Secondario:} Stripe, gestore di pagamenti di terze parti;
-                \item \textbf{Precondizione:} il cliente si trova sul carrello e ha già inserito almeno un prodotto;
+                \item \textbf{Precondizione:} il cliente si trova nell carrello (\hyperref[sec:UC12]{\underline{UC12}}) e ha già inserito almeno un prodotto oppure nella pagina del prodotto (\hyperref[sec:UC5]{\underline{UC5}});
                 \item \textbf{Input:} il cliente clicca il bottone per iniziare il checkout;
                 \item \textbf{Postcondizione:} l'ordine viene emesso e aggiunto alla lista degli ordini di quel cliente; i prodotti acquistati vengono rimossi dal carrello e viene diminuita la quantità dal deposito del venditore; il cliente viene reindirizzato alla pagina del riepilogo dell'ordine (\hyperref[sec:UC21]{\underline{UC21}})
                 \item \textbf{Scenario Principale:} 
