@@ -10,6 +10,62 @@ Per definire in modo conciso lo stato dei test, vengono utilizzate le seguenti d
     \item \textbf{NS:} indica che il test non soddisfa la richiesta;
 \end{itemize}
 \subsection{Tipi di test}
+Ci sono quattro tipologie di test:
 \begin{itemize}
-    \item 
+    \item Test di accettazione: eseguiti per verificare che il prodotto soddisfi le richieste del proponente.
+    \item Test di sistema: eseguiti qundo il sistema viene installato per verificare che raggiunga gli obiettivi fissati.
+    \item Test di intergrazione: eseguiti per verificare il funzionamento di un gruppo di moduli.
+    \item Test di unit\`a: eseguiti per verificare il funzionamento delle singole unit\`a del software.
 \end{itemize}
+\subsubsection{Test di accetazione}
+I test di accettazione vengono svolti per verificare che il programma soddisfi i requisiti, i quali sono divisi nelle seguenti categorie:
+\begin{itemize}
+    \item Obbligatorio (O)
+    \item Desiderabile (D)
+    \item Facoltativo (F)
+\end{itemize}
+E assumono le seguenti importanze:
+\begin{itemize}
+    \item Funzionale (F)
+    \item Vincolo (V)
+    \item Qualit\`a (Q)
+    \item Prestazionale (P)
+\end{itemize}
+
+\begin{center}
+    \centering
+    \rowcolors{2}{logo!10}{logo!40}
+    \renewcommand{\arraystretch}{1.8}
+    \label{tab:TestAccettazione}
+    \begin{longtable}[!h]{p{50px} p{245px} p{75px} p{50px}}
+        \rowcolor{logo!70} \textbf{Test} & \textbf{Descrizione} & \textbf{Esito} \\
+        TSOF1   & Visualizzazione homepage. All'utente viene chiesto di: \begin{itemize} \item accedere a barra di ricerca e men\`u' \item accedere al carrello \end{itemize} & NI \\
+        TSOF2   & Autenticazione, all'utente vien richiesto di visualizzare la pagina di autenticazione & NI \\
+        TSOF3   & Autenticazione, all'utente viene richiesto di autenticarsi con username e password. & NI \\
+        TSOF4   & Autenticazione, all'utente viene richiesto di autenticarsi tramite un servizio esterno & NI \\
+        TSOF5   & Visualizzazione dettagli, all'utente viene richiesto di visualizzare i dettagli di un prodotto, nello specifico: \begin{itemize} \item Nome \item Foto \item Descrizione \item Prezzo\item IVA \item Disponibilit\`a \item Carrello \item Acquisto diretto \end{itemize} & NI \\
+        TSOF6   & Aggiungi a carrello, all'utente viene richiesto di aggiungere un prodotto al carrello & NI \\
+        TSOF7   & Ricerca, all'utente viene richiesto di cercare dei prodotti tramite parola chiave & NI \\
+        TSOF8   & Lista, all'utente viene richiesto di visualizzare la lista dei prodotti e selezionarne pi\`u di uno & NI \\
+        TSDF9   & Ordinamento lista, all'utente viene richiesto di: \begin{itemize} \item Ordinar3e i prodotti per prezzo \item Ordinare i prodotti per nome \end{itemize}& NI \\
+        TSOF10  & Filtri lista, all'utente viene chiesto di: \begin{itemize} \item Impostare un prezzo minimo \item Impostare un prezzo massimo \item Scegliere una o pi\`u marche \item Scegliere una categoria \item Modificare i filtri impostati \item rimuovere i filtri impostati \end{itemize} & NI \\
+        TSOF11  & Registrazione, all'utente viene richiesto di registrarsi inserendo i propri  & NI \\
+        TSOF12  & Registrazione, all'utente viene richiesto di registrarsi tramite un servizio esterno & NI \\
+        TSOF13  & Gestione carrello, all'utente viene richiesto di: \begin{itemize} \item Visualizzare i prodotti nel carrello \item Rimuovere i prodotti nel carrello \item Modificare la quantit\`a dei prodotti nel carrello \item Visualizzare totale, iva e avvisi circa la disponibilit\`a \end{itemize}  & NI \\
+        TSOF14  & Reimpostare password, all'utente viene richiesto di reimpostare la password & NI \\
+        TSOF15  & Modificare dati, Aall'utente viene richiesto di modificare i dati del proprio profilo, nel dettaglio: \begin{itemize} \item Email \item Username \item Password \item Nominativo \end{itemize} & NI \\
+        TSOF16  & Logout, all'utente viene richiesto di effettuare il logout  & NI \\
+        TSOF17  & Visualizzare profilo, all'utente viene richiesto di visualizzare il prorpio profilo & NI \\
+        TSOF18  & Contatta venditore, all'utente viene richiesto di contattare il venditore & NI \\
+        TSOF19  & Checkout, all'utente viene richiesto di effettuare il checkout di un ordine, nel dettaglio: \begin{itemize} \item Inserire i dati di pagamento \item Inserire l'indirizzo di fatturazione \item Inserire l'indirizzo di spedizione \item Essere indirizzato al servizio di pagamento \item Visualizzare risultato del pagamento \end{itemize} & NI \\
+        TSOF20  & Checkout, all'utente viene richiesto di annullare il checkout & NI \\
+        TSOF21  & Riepilogo ordine, all'utente viene richiesto di visualizzare il riepilogo dell'ordine & NI \\
+        TSOF22  & Lista ordini, all'utente viene richiesto di visualizzare la lista degli ordini effettuati  & NI \\
+        TSOF23  & Lista clienti, al venditore viene richiesto di visualizzare la lista dei clienti & NI \\
+        TSOF24  & Lista ordini, al venditore viene richiesto di visualizzare la lista degli ordini ricevuti & NI \\
+        TSOF25  & Contatta cliente, al venditore viene richiesto di contattare il cliente & NI \\
+        TSOF26  & gestione prodotto al venditore viene richiesto di \begin{itemize} \item Aggiungere un prodotto \item Modificare un prodotto \item Rimuovere un prodotto \end{itemize} & NI \\
+        TSOF27  & Errore accesso, all'utente viene richiesto di visualizzare un messaggio di errore a seguito di un tentativo di accesso con credenziali errate & NI \\
+        \rowcolor{white}\caption{Test di accetazione}            
+    \end{longtable}    
+\end{center}
