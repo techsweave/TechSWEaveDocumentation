@@ -1,5 +1,13 @@
 ____________________A____________________ 
+AAS Kubernetes
+AI
 Amazon CloudWatch 
+Amministratori
+Analisti
+Angular
+API
+API Rest
+approccio sistematico
 AWS 
 AWS Cloud 
 AWS lambda 
@@ -7,15 +15,20 @@ AWSLambda
 ____________________B____________________ 
 back-end 
 BFF 
+blockchain
 ____________________C____________________ 
+camelCase
 camelCase 
 capitolato 
 casi 
 checkout 
 ciclo di vita del software 
+coesi
 coesione 
 compiti 
 ____________________D____________________ 
+database
+design pattern
 driver  
 DynamoDb 
 ____________________E____________________ 
@@ -23,41 +36,66 @@ ____________________F____________________
 framework 
 ____________________G____________________ 
 GitHub 
+gRPC a Rest
 ____________________H____________________ 
+heat-map
 ____________________I____________________ 
+IDE
+IoT
+ISO-12207
 ISO/IEC 12207 
+ISO/IEC 12207:1995
 issue 
 ____________________J____________________ 
 ____________________K____________________ 
 ____________________L____________________ 
+LaTeX
 LaTeX  
+lettore RFID
 logout 
 ____________________M____________________ 
+M2M
+metodi di callback
+metodi ricorsivi
 microservices architecture 
+MQTT
 ____________________N____________________ 
 Next.js 
 ____________________O____________________ 
 ____________________P____________________ 
+PAAS
+PascalCase
+Predictive Analytics
+provisioning
 pull request 
 ____________________Q____________________ 
 ____________________R____________________ 
+Responsabile di Progetto
 Responsabile di Progetto 
 ____________________S____________________ 
 server-less 
+serverless
 Server-sideRendering 
+servizi di hosting
 staging 
+stakeholder
 Stripe 
 stub 
 ____________________T____________________ 
+tag RFID
+test end-to-end
 ticketing 
 Typescript 
 TypeScript 
 ____________________U____________________ 
 UI 
+UML
 UML  
 ____________________V____________________ 
 Verificatore 
+Verificatori
 ____________________W____________________ 
+W3C
 ____________________X____________________ 
 ____________________Y____________________ 
 ____________________Z____________________
