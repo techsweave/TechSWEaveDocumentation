@@ -13,7 +13,7 @@ Deve essere quindi possibile tracciare in tempo reale l'occupazione delle postaz
 Deve essere possibile anche tracciare la sanificazione di tali postazioni, sia che siano fatte da aziende terze specializzate, sia che siano fatte manualmente dall'utilizzatore della postazione.
 
 \subsection{Finalità del progetto}
-La finalità del progetto è quella di creare un server completo di \textit{UI} per la gestione delle stanze e delle postazioni e un'applicazione mobile per Android e iOS.
+La finalità del progetto è quella di creare un server completo di \textit{UI}\textsubscript{\textbf{G}} per la gestione delle stanze e delle postazioni e un'applicazione mobile per Android e iOS.
 Il server deve poter esporre queste funzionalità:
 \begin{itemize}
     \item Prevedere un sistema di autenticazione e ruoli;
@@ -28,7 +28,7 @@ L'applicazione deve permettere le seguenti operazioni:
     \item Sanificare una postazione;
     \item Fornire lo storico delle postazioni occupate e di quelle igenizzate.
 \end{itemize}
-La comunicazione tra server e applicazione mobile avviene nel momento in cui lo smarphone dell'utente viene a contatto con il tag RFID della postazione.
+La comunicazione tra server e applicazione mobile avviene nel momento in cui lo smarphone dell'utente viene a contatto con il tag RFID\textsubscript{\textbf{G}} della postazione.
 In questo modo è possibile sapere che la postazione sta venendo usata da un utente, e quindi sarà da sanificare una volta liberata.
 
 \subsection{Tecnologie interessate}
@@ -37,16 +37,16 @@ La scelta delle tecnologie da utilizzare è in parte data dal proponente, in par
 \begin{itemize}
     \item Tecnologie per raggiungere i requisiti minimi:
     \begin{itemize}
-        \item Possibilità di usare l'applicativo attraverso delle API Rest esposte dal server. In alternativa, è possibile usare gRPC a Rest;
-        \item Lettore RFID integrato nei dispositivi mobili, solamente per il tempo strettamente necessario;
-        \item Test unitari e d'integrazione per le componenti applicative, con test end-to-end sull'intero sistema. 
+        \item Possibilità di usare l'applicativo attraverso delle API Rest\textsubscript{\textbf{G}} esposte dal server. In alternativa, è possibile usare gRPC a Rest\textsubscript{\textbf{G}};
+        \item Lettore RFID\textsubscript{\textbf{G}} integrato nei dispositivi mobili, solamente per il tempo strettamente necessario;
+        \item Test unitari e d'integrazione per le componenti applicative, con test end-to-end\textsubscript{\textbf{G}} sull'intero sistema. 
     \end{itemize}
     \item Tecnologie suggerite, ma non vincolanti:
     \begin{itemize}
         \item Java (versione 8 o superiori), Python o NodeJs per lo sviluppo del server back-end.
         \item Utilizzo di protocolli asincroni per la comunicazione tra app e server.
-        \item Un sistema blockchain per salvare con opponibilità a terzi i dati di sanificazione.
-        \item AAS Kubernetes o di un PAAS, Openshift o Rancher, per il rilascio delle componenti del server e la gestione della scalabilità orizzontale.
+        \item Un sistema blockchain\textsubscript{\textbf{G}} per salvare con opponibilità a terzi i dati di sanificazione.
+        \item AAS Kubernetes\textsubscript{\textbf{G}} o di un PAAS\textsubscript{\textbf{G}}, Openshift o Rancher, per il rilascio delle componenti del server e la gestione della scalabilità orizzontale.
     \end{itemize}
 \end{itemize}
 

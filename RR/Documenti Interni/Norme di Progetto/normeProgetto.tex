@@ -5,6 +5,12 @@
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
 \usepackage{hyperref}
+\hypersetup{pdfborder = {0 0 0},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=blue}
 \definecolor{logo}{RGB}{20,99,163}
 \newcommand{\sectionbreak}{\clearpage}
 \usepackage[T1]{fontenc}
@@ -59,39 +65,39 @@
         \textbf{\Large Informazioni sul documento}\\
         \vspace{20px}
         \begin{tabular}{p{100px} | p{100px}}
-            \textbf{Versione} & 0.1.1\\
-            \textbf{Responsabile} & Manuel Varo\\
-            \textbf{Redattori} & Nicolò Giaccone \newline Samuele De Simone\\
-            \textbf{Verificatore} & Amedeo Meggiolaro\\
-            \textbf{Destinatari} & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave\\
-            \textbf{Stato} & Da approvare\\
-            \textbf{Uso} & Interno\\
+            \textbf{Versione}     & 0.1.1                                                                      \\
+            \textbf{Responsabile} & Manuel Varo                                                                \\
+            \textbf{Redattori}    & Nicolò Giaccone \newline Samuele De Simone                                 \\
+            \textbf{Verificatore} & Amedeo Meggiolaro                                                          \\
+            \textbf{Destinatari}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave \\
+            \textbf{Stato}        & Da approvare                                                               \\
+            \textbf{Uso}          & Interno                                                                    \\
         \end{tabular}\\
         \vspace{60px}
         \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
     \end{center}
-    \end{titlepage}
-    \begin{center}
+\end{titlepage}
+\begin{center}
 
-        \textbf{\Large Diario delle modifiche}\\
-        \vspace{10px}
-        \begin{table}[h!]
+    \textbf{\Large Diario delle modifiche}\\
+    \vspace{10px}
+    \begin{table}[h!]
         \centering
         \rowcolors{2}{logo!10}{logo!40}
         \renewcommand{\arraystretch}{1.8}
         \begin{tabular}{p{150px} p{90px} p{65px} p{60px} p{45px}}
-            \rowcolor{logo!70} \textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}\\
-            Prima stesura documento & Samuele De Simone & Analista & 2021/13/03 & 0.0.1\\    
-            Scaletta per processi di Supporto & Samuele De Simone & Analista & 2021/13/03 & 0.0.2\\
-            Completata sezione \newline documentazione & Samuele De Simone & Analista & 2021/15/03 & 0.0.3 \\
-            Aggiunta introduzione & Samuele De Simone & Analista & 2021/15/03 & 0.0.3 \\
-            Completata sezione processi \newline di supporto & Nicolò Giaccone & Analista & 2021/15/03 & 0.0.3\\
-            Verifica sezione processi \newline di supporto & Manuel Varo & Responsabile \newline di Progetto & 2021/16/03 & 0.1\\
-            Correzzione ortografica sezioni & Nicolò Giaccone & Analista & 2021/16/03 & 0.1.1\\
+            \rowcolor{logo!70} \textbf{Modifica}             & \textbf{Autore}   & \textbf{Ruolo}                    & \textbf{Data} & \textbf{Versione} \\
+            Prima stesura documento                          & Samuele De Simone & Analista                          & 2021/13/03    & 0.0.1             \\
+            Scaletta per processi di Supporto                & Samuele De Simone & Analista                          & 2021/13/03    & 0.0.2             \\
+            Completata sezione \newline documentazione       & Samuele De Simone & Analista                          & 2021/15/03    & 0.0.3             \\
+            Aggiunta introduzione                            & Samuele De Simone & Analista                          & 2021/15/03    & 0.0.3             \\
+            Completata sezione processi \newline di supporto & Nicolò Giaccone   & Analista                          & 2021/15/03    & 0.0.3             \\
+            Verifica sezione processi \newline di supporto   & Manuel Varo       & Responsabile \newline di Progetto & 2021/16/03    & 0.1               \\
+            Correzzione ortografica sezioni                  & Nicolò Giaccone   & Analista                          & 2021/16/03    & 0.1.1             \\
         \end{tabular}
     \end{table}
-    \end{center}
-    \newpage
+\end{center}
+\newpage
 \tableofcontents
 \newpage
 \input{Sezioni/introduzione.tex}
