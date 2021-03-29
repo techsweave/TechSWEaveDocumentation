@@ -1,3 +1,4 @@
+
 ____________________A____________________ 
 AAS Kubernetes
 AI
@@ -13,7 +14,6 @@ AWS Cloud
 AWS lambda 
 AWSLambda 
 AWS Merchant
-
 ____________________B____________________ 
 back-end 
 BFF 
@@ -33,18 +33,22 @@ ____________________D____________________
 D3.js
 database
 design pattern
-Docker
+Diagrammi di Gant
 driver  
 DynamoDb 
-Diagrammi di Gant
 ____________________E____________________ 
 ____________________F____________________ 
 framework 
 Front-end
 ____________________G____________________ 
+Gant
 GitHub 
+<<<<<<< HEAD
 gRPC
 Gantt    
+=======
+gRPC a Rest
+>>>>>>> d70038c5e6a55530c63026961e2156cc46413a1d
 ____________________H____________________ 
 heat-map
 HTML
@@ -77,6 +81,7 @@ ____________________P____________________
 PAAS
 PascalCase
 Predictive Analytics
+product baseline
 provisioning
 pull request 
 ____________________Q____________________ 
