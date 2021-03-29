@@ -25,7 +25,7 @@ Durante lo svolgimento del progetto è intenzione del gruppo \textit{TechSWEave}
     \item accordarsi sulla qualifica del prodotto.
 \end{itemize}
 \subsubsection{Studio di fattibilità}
-Il \textit{Responsabile di Progetto} ha il compito di convocare i membri del gruppo per discutere dei capitolati d’appalto disponibili, effettuando una prima analisi del materiale proposto. Per ogni capitolato gli \textit{Analisti} provvedono poi a redigere uno \textit{Studio di Fattibilità} in cui viene analizzato ulteriormente il materiale disponibile.
+Il \textit{Responsabile di Progetto}\textsubscript{\textbf{G}} ha il compito di convocare i membri del gruppo per discutere dei capitolati d’appalto disponibili, effettuando una prima analisi del materiale proposto. Per ogni capitolato gli \textit{Analisti}\textsubscript{\textbf{G}} provvedono poi a redigere uno \textit{Studio di Fattibilità} in cui viene analizzato ulteriormente il materiale disponibile.
 \\Lo Studio di Fattibiltà comprende i seguenti punti:
 \begin{itemize}
     \item \textbf{Informazioni generali}: informazioni di base quali titolo del capitolato, nome del proponente e del committente;
@@ -43,12 +43,12 @@ Il \textit{Responsabile}, con il supporto degli \textit{Amministratori}, redige 
 \\Questo documento è strutturato nel modo seguente:
 \begin{itemize}
     \item \textbf{Analisi dei rischi}: vengono analizzati i possibili rischi riscontrabili durante la realizzazione del progetto, la probabilità con cui possono presentarsi e il rispettivo livello di gravità;
-    \item \textbf{Modello di sviluppo}: descrizione del modello d sviluppo scelto, indispensabile per la progettazione;
+    \item \textbf{Modello di sviluppo}: descrizione del modello di sviluppo scelto, indispensabile per la progettazione;
     \item \textbf{Pianificazione}: vengono pianificate le attività e le rispettive scadenze temporali che si susseguiranno durante il progetto;
     \item \textbf{Preventivo e consuntivo}: viene calcolato un preventivo per il costo totale del progetto ed esposto un consuntivo di periodo per evidenziare eventuali discostamenti da quanto preventivato.
 \end{itemize}
 \subsubsubsection{Piano di Qualità}
-I \textit{Verificatori} redigono un documento chiamato \textit{Piano di Qualifica} che stabilisce le strategie da rispettare per garantire la qualità dei processi attuati e del materiale del prodotto dal gruppo.
+I \textit{Verificatori} redigono un documento chiamato \textit{Piano di Qualifica} che stabilisce le strategie da rispettare per garantire la qualità dei processi\textsubscript{\textbf{G}} attuati e del materiale del prodotto dal gruppo.
 \\Questo documento è strutturato nel modo seguente:
 \begin{itemize}
     \item \textbf{Qualità di processo}: vengono individuati dei processi dagli standard, stabiliti degli obiettivi, fissate delle procedure per attuarli e delle metriche per misurarli;
@@ -61,7 +61,7 @@ I \textit{Verificatori} redigono un documento chiamato \textit{Piano di Qualific
 \subsubsection{Strumenti}
 Di seguito è riportato l’elenco degli strumenti impiegati dal gruppo per il processo di fornitura.
 \subsubsubsection{Gantt Project}
-Software utile alla realizzazione dei diagrammi di Gantt, utili nella pianificazione, gestione e assegnazione delle risorse;
+Software utile alla realizzazione dei diagrammi di Gantt\textsubscript{\textbf{G}}, utili nella pianificazione, gestione e assegnazione delle risorse;
 \subsubsubsection{Microsoft Excel}
 Software utile alla produzione e alla gestione di fogli elettronici. Utilizzato per la creazione di diagrammi, tabelle e per il calcolo matematico.
 \subsection{Sviluppo}
@@ -84,7 +84,7 @@ Le aspettative sono le seguenti:
 \end{itemize}
 \subsubsection{Analisi dei requisiti}
 \subsubsubsection{Scopo}
-L’attività di analisi precede quella di sviluppo. Il documento di \textit{Analisi dei Requisiti} è redatto dagli \textit{Analisti} ed ha come scopo quello di individuare i requisiti diretti e indiretti, espliciti ed impliciti ed ha come scopo quello di:
+L’attività di analisi precede quella di sviluppo. Il documento di \textit{Analisi dei Requisiti} è redatto dagli \textit{Analisti}\textsubscript{\textbf{G}} ed ha come scopo quello di individuare i requisiti diretti e indiretti, espliciti ed impliciti ed ha come scopo quello di:
 \begin{itemize}
     \item definire gli obiettivi di sviluppo;
     \item definire le funzionalità del prodotto concordate con il proponente;
@@ -105,46 +105,56 @@ I requisiti si possono trarre da diverse fonti:
 \subsubsubsection{Aspettative}
 L’obiettivo è quello di creare un documento formale contenente tutti i requisiti richiesti e concordati con il proponente.
 \subsubsubsection{Classificazione dei requisiti}
-Per la classificazione dei requisiti si è deciso per la seguente convenzione:\\
-\\\centerline{\textbf{R[Tipologia][Importanza][Codice]}}\newline\newline
-[\textbf{Tipologia}]:
+Per la classificazione dei requisiti si è deciso per la seguente convenzione:
+
 \begin{itemize}
-    \item \textbf{V}: requisito di vincolo, descrive vincoli sui servizi offerti dal sistema;
-    \item \textbf{F}: requisito funzionale, descrive servizi o funzioni offerti dal sistema;
-    \item \textbf{P}: requisito prestazionale, descrive i vincoli sulle prestazioni che il sistema deve soddisfare;
-    \item \textbf{Q}: requisito di qualità, descrive i vincoli di qualità che il sistema deve soddisfare.
-\end{itemize}
-[\textbf{Importanza}]:
-\begin{itemize}
-    \item \textbf{O}: requisito obbligatorio, ovvero irrinunciabile per almeno uno degli stakeholder;
-    \item \textbf{D}: requisito desiderabile, ovvero non strettamente necessario ma a valore aggiunto riconoscibile;
-    \item \textbf{F}: requisito facoltativo, ovvero relativamente utile o contrattabile più avanti nel progetto.
-\end{itemize}
-[\textbf{Codice}]:
-\\\\Nello specifico:\\\\
-\centerline{\textbf{[CodiceBase](.[CodiceSottoCaso])*}}
-\\\\dove:
-\begin{itemize}
-    \item \textbf{CodiceBase}: codice che, insieme alla tipologia, identifica il caso d’uso generico;
-    \item \textbf{CodiceSottoCaso}: codice progressivo opzionale che identifica gli eventuali sottocasi. Può a sua volta includere altri livelli.
-\end{itemize}
-Ogni requisito deve essere accompagnato da una serie di informazioni testuali aggiuntive:
-\begin{itemize}
-    \item \textbf{Descrizione}: descrizione concisa del requisito, meno ambigua possibile;
-    \item \textbf{Classificazione}: viene riportata l’importanza del requisito. Sebbene sia un’informazione ridondante facilita la lettura del requisito stesso;
-    \item \textbf{Fonte}: indica la fonte del requisito tra le varie fonti possibili: Capitolato d’Appalto, Verbale Interno, Verbale Esterno, Casi d’Uso.
+    \item \textbf{Codice identificativo:} ogni codice identificativo è univoco e conforme alla seguente codifica:
+          \begin{center}
+              \textbf{R[ID][Tipologia]}
+          \end{center}
+          Il significato delle voci è:
+          \begin{itemize}
+              \item \textbf{ID:} identificatore univoco del requisito in forma gerarchica.
+              \item \textbf{Tipologia:} ogni requisito può assumere uno dei seguenti valori:
+                    \begin{itemize}
+                        \item \textit{F}: funzionale;
+                        \item \textit{Q}: qualitativo;
+                        \item \textit{V}: vincolo;
+                        \item \textit{P}: prestazionale.
+                    \end{itemize}
+          \end{itemize}
+
+    \item \textbf{Importanza:} riporta l'importanza del requisito:
+          \begin{itemize}
+              \item obbligatorio: requisito irrinunciabile per gli stakeholder;
+              \item desiderabile: requisito non strettamente necessario che però apporta un valore aggiunto al prodotto;
+              \item opzionale: requisito relativamente utile oppure contrabile in un secondo momento durante lo sviluppo;
+          \end{itemize}
+    \item \textbf{Descrizione:} descrizione del requisito, meno ambigua possibile;
+    \item \textbf{Fonti:} ogni requisito deriva da una di queste fonti:
+          \begin{itemize}
+              \item \textit{capitolato:} è un requisito individuato dalle condizione imposte dal capitolato;
+              \item \textit{interno:} è un requisito aggiunto dagli analisti;
+              \item \textit{caso d'uso:} è un requisito estratto da uno o più casi d'uso, è riportato il codice del caso d'uso a cui ci si riferisce;
+              \item \textit{verbale:} è un requisito individuato attraverso una riunione con i proponenti.
+          \end{itemize}
 \end{itemize}
 \subsubsubsection{Classificazione dei casi d'uso}
 Un caso d’uso è un diagramma, accompagnato da una descrizione testuale aggiuntiva, che rappresenta un comportamento, offerto o desiderato, sulla base di risultati osservabili.
 \\La struttura dei casi d’uso è così suddivisa:
 \begin{itemize}
-    \item \textbf{Codice identificativo: \\\\\centerline{UC[CodiceBase](.[CodiceSottoCaso])*}}\\\\ dove:\begin{itemize}
+    \item \textbf{Codice identificativo:}
+          \begin{center}
+              \textbf{UC[CodiceBase](.[CodiceSottoCaso])}
+          \end{center}
+          dove:
+          \begin{itemize}
               \item \textbf{UC}: acronimo di “use case”;
               \item \textbf{CodiceBase}: codice che identifica il caso d’uso generico;
               \item \textbf{CodiceSottoCaso}: codice opzionale che identifica gli eventuali sottocasi.
           \end{itemize}
     \item \textbf{Titolo}: titolo testuale del caso d’uso;
-    \item \textbf{Diagramma UML}: rappresentazione grafica del caso d’uso realizzata impiegando il formalismo dell’UML 2.0.
+    \item \textbf{Diagramma UML}: rappresentazione grafica del caso d’uso realizzata impiegando il formalismo dell’UML 2.0\textsubscript{\textbf{G}}.
     \item \textbf{Attori}: rappresentano qualsiasi entità esterna al sistema e con il quale interagiscono. Esistono due tipologie di attori:\begin{itemize}
               \item \textbf{Attori primari}: interagiscono attivamente con il sistema per soddisfare le proprie esigenze;
               \item \textbf{Attori secondari}: attori il cui scopo è aiutare l’attore primario.
@@ -155,7 +165,7 @@ Un caso d’uso è un diagramma, accompagnato da una descrizione testuale aggiun
     \item \textbf{Inclusioni (se presenti)}: utilizzate quando due casi d’uso sono collegati e il secondo è incluso nel primo;
     \item \textbf{Estensioni (se presenti)}: utilizzate per modellare scenari alternativi. Al verificarsi di una determinata condizione il caso d’uso ad essa collegata viene interrotto;
     \item \textbf{Generalizzazioni (se presenti)}: utilizzate per modellare specializzazioni dei casi d’uso;
-    \item \textbf{Precondizione}: : espone le condizioni in cui si trova il sistema prima del verificarsi dell’evento degli eventi del caso d’uso;
+    \item \textbf{Precondizione}: espone le condizioni in cui si trova il sistema prima del verificarsi dell’evento degli eventi del caso d’uso;
     \item \textbf{Postcondizione}: espone le condizioni in cui si trova il sistema al termine degli eventi del caso d’uso;
     \item \textbf{Input (se presenti)}: valore o oggetto che l’attore porta nel sistema;
     \item \textbf{Output (se presenti)}: valore o oggetto risultato di un’azione di un attore.
@@ -243,16 +253,14 @@ Ogni \textit{programmatore} deve attenersi a queste regole stilistiche:
 \subsubsection{Strumenti}
 Di seguito gli strumenti utilizzati:
 \begin{itemize}
-    \item \textbf{Visual Studio Code}: IDE (Integrated Development Environment) adatto alla codifica in diversi linguaggi di programmazione;
+    \item \textbf{Visual Studio Code}: IDE\textsubscript{\textbf{G}} (Integrated Development Environment) adatto alla codifica in diversi linguaggi di programmazione;
     \item \textbf{Draw.io}: piattaforma online utile alla creazione di diagrammi UML;
-    \item \textbf{Next.js}: framework web di sviluppo front-end React open source che abilita funzionalità come il rendering lato server e la generazione di siti web statici per applicazioni web basate su React. Fornisce possibilità di integrazione con Typescript;
+    \item \textbf{Next.js}: framework web di sviluppo front-end\textsubscript{\textbf{G}} React\textsubscript{\textbf{G}} open source\textsubscript{\textbf{G}} che abilita funzionalità come il rendering lato server e la generazione di siti web statici per applicazioni web basate su React. Fornisce possibilità di integrazione con Typescript;
     \item \textbf{TypeScript}: typeScript è un Super-set di JavaScript. Il linguaggio estende la sintassi di JavaScript in modo che qualunque programma scritto in JavaScript sia anche in grado di funzionare con TypeScript senza nessuna modifica;
-    \item \textbf{ESLint}: strumento che permette di verificare che il codice TypeScript scritto rispetti correttamente la sintassi di linguaggio;
-    \item \textbf{Serverless Framework}: framework Web gratuito e open source scritto utilizzando Node.js. Serverless è il primo framework sviluppato per la creazione di applicazioni su AWS Lambda;
+    \item \textbf{ESLint}: strumento che permette di verificare che il codice TypeScript\textsubscript{\textbf{G}} scritto rispetti correttamente la sintassi di linguaggio;
+    \item \textbf{Serverless Framework}: framework Web gratuito e open source scritto utilizzando Node.js\textsubscript{\textbf{G}}. Serverless è il primo framework sviluppato per la creazione di applicazioni su AWS Lambda\textsubscript{\textbf{G}};
     \item \textbf{AWS Lambda}: servizio serverless\textsubscript{\textbf{G}} offerto da Amazon\textsubscript{\textbf{G}} che permette di eseguire codice senza effettuare il provisioning\textsubscript{\textbf{G}} o gestire i server;
-    \item \textbf{Amazon CoudWatch}: offre un servizio gestito da Amazon\textsubscript{\textbf{G}} di monitoraggio e osservabilità in grado di monitorare le applicazioni, rispondere ai cambiamenti di prestazioni a livello di sistema, ottimizzare l'utilizzo delle risorse e ottenere una visualizzazione unificata dello stato di integrità operativa;
-    \item \textbf{Amazon DynamoDB}: servizio di database NoSQL facente parte dei servizi offerti da Amazon Web Services;
-    %\item \textbf{AWS Amazon Cognito}: servizio gestito da Amazon\textsubscript{\textbf{G}} che permette di aggiungere strumenti di registrazione degli utenti, accesso e controllo degli accessi alle app Web e per dispositivi mobili, in modo rapido e semplice;
+    \item \textbf{Amazon CoudWatch}: offre un servizio gestito da Amazon di monitoraggio e osservabilità in grado di monitorare le applicazioni, rispondere ai cambiamenti di prestazioni a livello di sistema, ottimizzare l'utilizzo delle risorse e ottenere una visualizzazione unificata dello stato di integrità operativa;
+    \item \textbf{Amazon DynamoDB}: servizio di database NoSQL\textsubscript{\textbf{G}} facente parte dei servizi offerti da Amazon Web Services;
     \item \textbf{Stripe}: servizio che fornisce un'infrastruttura software che permette a privati e aziende di inviare e ricevere pagamenti via Internet.
 \end{itemize}
-
