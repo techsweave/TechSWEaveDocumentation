@@ -28,19 +28,26 @@ ciclo di vita del software
 coesi
 coesione 
 compiti 
+CSS
 ____________________D____________________ 
+D3.js
 database
 design pattern
+Docker
 driver  
 DynamoDb 
+Diagrammi di Gant
 ____________________E____________________ 
 ____________________F____________________ 
 framework 
+Front-end
 ____________________G____________________ 
 GitHub 
 gRPC a Rest
+Gant
 ____________________H____________________ 
 heat-map
+HTML
 ____________________I____________________ 
 IDE
 IoT
@@ -49,6 +56,7 @@ ISO/IEC 12207
 ISO/IEC 12207:1995
 issue 
 ____________________J____________________ 
+JavaScript
 ____________________K____________________ 
 ____________________L____________________ 
 LaTeX
@@ -63,7 +71,10 @@ microservices architecture
 MQTT
 ____________________N____________________ 
 Next.js 
+Node.js
+NoSQL
 ____________________O____________________ 
+open source
 ____________________P____________________ 
 PAAS
 PascalCase
@@ -71,14 +82,15 @@ Predictive Analytics
 provisioning
 pull request 
 ____________________Q____________________ 
+Qualità dei processi
 ____________________R____________________ 
+React
 Responsabile di Progetto
-Responsabile di Progetto 
 ____________________S____________________ 
 server-less 
-serverless
 Server-side Rendering 
 servizi di hosting
+SQL
 staging 
 stakeholder
 Stripe 
@@ -87,15 +99,13 @@ ____________________T____________________
 tag RFID
 test end-to-end
 ticketing 
-Typescript 
+Tomcat
 TypeScript 
 ____________________U____________________ 
 UI 
 UML
-UML  
 ____________________V____________________ 
 Verificatore 
-Verificatori
 ____________________W____________________ 
 W3C
 ____________________X____________________ 
