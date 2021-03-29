@@ -41,14 +41,8 @@ ____________________F____________________
 framework 
 Front-end
 ____________________G____________________ 
-Gant
 GitHub 
-<<<<<<< HEAD
-gRPC
-Gantt    
-=======
 gRPC a Rest
->>>>>>> d70038c5e6a55530c63026961e2156cc46413a1d
 ____________________H____________________ 
 heat-map
 HTML
@@ -63,8 +57,6 @@ ____________________K____________________
 ____________________L____________________ 
 LaTeX
 LaTeX  
-lettore RFID
-logout 
 ____________________M____________________ 
 M2M
 metodi di callback
@@ -87,6 +79,7 @@ pull request
 ____________________Q____________________ 
 Qualità dei processi
 ____________________R____________________ 
+RFID
 React
 Responsabile di Progetto
 ____________________S____________________ 
@@ -99,7 +92,6 @@ stakeholder
 Stripe 
 stub 
 ____________________T____________________ 
-tag RFID
 test end-to-end
 ticketing 
 Tomcat
