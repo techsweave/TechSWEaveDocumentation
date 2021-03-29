@@ -18,35 +18,36 @@ BFF
 blockchain
 ____________________C____________________ 
 camelCase
-camelCase 
 capitolato 
 casi 
 checkout 
 ciclo di vita del software 
-coesi
-coesione 
-compiti 
+coesione
+CSS
 ____________________D____________________ 
+D3.js
 database
 design pattern
+Docker
 driver  
 DynamoDb 
 ____________________E____________________ 
 ____________________F____________________ 
 framework 
+Front-end
 ____________________G____________________ 
 GitHub 
 gRPC a Rest
 ____________________H____________________ 
 heat-map
+HTML
 ____________________I____________________ 
 IDE
 IoT
-ISO-12207
-ISO/IEC 12207 
 ISO/IEC 12207:1995
 issue 
 ____________________J____________________ 
+JavaScript
 ____________________K____________________ 
 ____________________L____________________ 
 LaTeX
@@ -61,6 +62,8 @@ microservices architecture
 MQTT
 ____________________N____________________ 
 Next.js 
+Node.js
+NoSQL
 ____________________O____________________ 
 ____________________P____________________ 
 PAAS
@@ -70,13 +73,14 @@ provisioning
 pull request 
 ____________________Q____________________ 
 ____________________R____________________ 
+React
 Responsabile di Progetto
 Responsabile di Progetto 
 ____________________S____________________ 
 server-less 
-serverless
 Server-sideRendering 
 servizi di hosting
+SQL
 staging 
 stakeholder
 Stripe 
@@ -85,7 +89,7 @@ ____________________T____________________
 tag RFID
 test end-to-end
 ticketing 
-Typescript 
+Tomcat
 TypeScript 
 ____________________U____________________ 
 UI 
