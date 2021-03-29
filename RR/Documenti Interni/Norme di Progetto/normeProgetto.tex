@@ -5,6 +5,12 @@
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
 \usepackage{hyperref}
+\hypersetup{pdfborder = {0 0 0},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=blue}
 \definecolor{logo}{RGB}{20,99,163}
 \newcommand{\sectionbreak}{\clearpage}
 \usepackage[T1]{fontenc}
@@ -95,7 +101,7 @@
 \tableofcontents
 \newpage
 \input{Sezioni/introduzione.tex}
-%\input{Sezioni/ProcessiPrimari.tex}
+\input{Sezioni/ProcessiPrimari.tex}
 \input{Sezioni/ProcessiSupporto.tex}
 \input{Sezioni/ProcessiOrganizzativi.tex}
 \end{document}
