@@ -7,16 +7,16 @@
     \centering
 \end{figure}
 \begin{itemize}
-    \item \textbf{Descrizione:} sezione per il venditore, dove può gestire i prodotti del negozio;
+    \item \textbf{Descrizione:} sezione dove il venditore può gestire i prodotti del negozio;
     \item \textbf{Attore Primario:} venditore autenticato;
     \item \textbf{Precondizione:} il venditore si trova in una qualsiasi pagina del negozio;
-    \item \textbf{Input:} il venditore preme il bottone per entrare in questa sezione;
+    \item \textbf{Input:} il venditore clicca il bottone per entrare in questa sezione;
     \item \textbf{Postcondizione:} il venditore ha completato le modifiche ai prodotti desiderati;
     \item \textbf{Scenario Principale:}
           \begin{itemize}
               \item il venditore si trova nella pagina per la gestione del negozio;
-              \item può decidere se aggiungere un nuovo prodotto, modificarne o rimuoverne uno già presente;
-              \item una volta terminato applica le modifiche
+              \item il venditore può decidere se aggiungere un nuovo prodotto, modificarne o rimuoverne uno già presente;
+              \item una volta terminato applica le modifiche.
           \end{itemize}
 \end{itemize}
 \subsubsection{UC26.1: Aggiunta di un prodotto}
@@ -26,13 +26,13 @@
     \item \textbf{Attore Primario:} venditore autenticato;
     \item \textbf{Precondizione:} il venditore si trova nella sezione per gestire i prodotti (\hyperref[sec:UC26]{\underline{UC26}});
     \item \textbf{Input:} il venditore inserisce tutti i dati relativi al prodotto da inserire;
-    \item \textbf{Postcondizione:} il prodotto è aggiunto e i clienti possono trovarlo nel negozio;
+    \item \textbf{Postcondizione:} il prodotto viene aggiunto e i clienti possono visualizzarlo nel negozio;
     \item \textbf{Scenario Principale:}
           \begin{itemize}
               \item il venditore si trova nella sezione per gestire i prodotti;
               \item il venditore decide di aggiungere un nuovo prodotto ed entra in questa sezione;
-              \item inserisce tutti i dati richiesti (nome, descrizione, prezzo ecc.);
-              \item conferma l'aggiunta e il prodotto è disponibile nel negozio.
+              \item il venditore inserisce tutti i dati richiesti (nome, descrizione, prezzo ecc.);
+              \item il venditore conferma l'aggiunta e il prodotto diviene disponibile nel negozio.
           \end{itemize}
 \end{itemize}
 \subsubsection{UC26.2: Modifica di un prodotto}
@@ -57,13 +57,13 @@
     \item \textbf{Descrizione:} sezione per rimuovere un prodotto dal negozio;
     \item \textbf{Attore Primario:} venditore autenticato;
     \item \textbf{Precondizione:} il venditore si trova nella sezione per gestire i prodotti (\hyperref[sec:UC26]{\underline{UC26}});
-    \item \textbf{Input:} il venditore sceglie il prodotto da eliminare;
+    \item \textbf{Input:} il venditore sceglie il prodotto da rimuovere;
     \item \textbf{Postcondizione:} il prodotto è stato rimosso dal negozio;
     \item \textbf{Scenario Principale:}
           \begin{itemize}
               \item il venditore si trova nella sezione per gestire i prodotti;
               \item il venditore decide di rimuovere un prodotto dal negozio;
-              \item conferma;
+              \item il venditore conferma la rimozione del prodotto selezionato;
               \item il prodotto non è più visibile nel negozio.
           \end{itemize}
 \end{itemize}

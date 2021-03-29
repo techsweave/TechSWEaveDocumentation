@@ -1,3 +1,4 @@
+\newpage
 \subsection{UC19: Checkout}
 \label{sec:UC19}
 \begin{figure}[!ht]
@@ -10,12 +11,12 @@
     \item \textbf{Descrizione:} caso d'uso per la creazione di un nuovo ordine e l'acquisto dei prodotti;
     \item \textbf{Attore Primario:} cliente autenticato;
     \item \textbf{Attore Secondario:} Stripe\textsubscript{\textbf{G}}, gestore di pagamenti di terze parti;
-    \item \textbf{Precondizione:} il cliente si trova, nel carrello (\hyperref[sec:UC12]{\underline{UC12}}) e ha già inserito almeno un prodotto oppure nella pagina del prodotto (\hyperref[sec:UC5]{\underline{UC5}});
+    \item \textbf{Precondizione:} il cliente si trova nel carrello (\hyperref[sec:UC12]{\underline{UC12}}) e ha già inserito almeno un prodotto oppure si trova nella pagina del prodotto (\hyperref[sec:UC5]{\underline{UC5}});
     \item \textbf{Input:} il cliente clicca il bottone per iniziare il checkout;
-    \item \textbf{Postcondizione:} l'ordine viene emesso e aggiunto alla lista degli ordini di quel cliente; i prodotti acquistati vengono rimossi dal carrello e viene diminuita la quantità dal deposito del venditore; il cliente viene reindirizzato alla pagina del riepilogo dell'ordine (\hyperref[sec:UC21]{\underline{UC21}})
+    \item \textbf{Postcondizione:} l'ordine viene emesso e aggiunto alla lista degli ordini di quel cliente; i prodotti acquistati vengono rimossi dal carrello e viene diminuita la rispettiva quantità dal deposito del venditore; il cliente viene reindirizzato alla pagina di riepilogo dell'ordine (\hyperref[sec:UC21]{\underline{UC21}})
     \item \textbf{Scenario Principale:}
           \begin{itemize}
-              \item il cliente preme sul pulsante per entrare nella sezione del checkout;
+              \item il cliente clicca il bottone per effettuare il checkout;
               \item il cliente inserisce i dati di fatturazione (\hyperref[sec:UC19.1]{\underline{UC19.1}}) e, se diversi, i dati di spedizione (\hyperref[sec:UC19.2]{\underline{UC19.2}});
               \item vengono inseriti eventuali costi di spedizione;
               \item il cliente viene reindirizzato al servizio di pagamento esterno, dove inserisce i dati di pagamento;
@@ -43,19 +44,19 @@
     \item \textbf{Descrizione:} Sezione per l'inserimento dell'indirizzo spedizione;
     \item \textbf{Attore Primario:} cliente autenticato;
     \item \textbf{Precondizione:} il cliente si trova nella fase di checkout;
-    \item \textbf{Input:} il cliente inserisce i dati richiesti dalla pagina, oppure clicca un pulsante se l'indirizzo di spedizione è lo stesso di quello di fatturazione;
+    \item \textbf{Input:} il cliente inserisce i dati richiesti oppure clicca un apposito bottone se l'indirizzo di spedizione è lo stesso di quello di fatturazione;
     \item \textbf{Postcondizione:} si procede con la fase successiva del checkout (\hyperref[sec:UC19.3]{\underline{UC19.3}})
     \item \textbf{Scenario Principale:} il cliente inserisce negli appositi spazi i dati per completare l'indirizzo di spedizione oppure clicca il pulsante per autocompletarli se è il medesimo di quello di fatturazione.
 \end{itemize}
 \subsubsection{UC19.3: Reindirizzamento al servizio di pagamento esterno}
 \label{sec:UC19.3}
 \begin{itemize}
-    \item \textbf{Descrizione:} Sezione per il pagamento dell'ordine da effettuare;
+    \item \textbf{Descrizione:} sezione per il pagamento dell'ordine da effettuare;
     \item \textbf{Attore Primario:} cliente autenticato;
     \item \textbf{Attore Secondario:} Stripe, gestore di pagamenti di terze parti;
-    \item \textbf{Precondizione:} il cliente ha inserito i dati per la fatturazione e la spedizione nella sezione del checkout;
+    \item \textbf{Precondizione:} il cliente ha inserito i dati per la fatturazione e la spedizione nella sezione di checkout;
     \item \textbf{Input:} il cliente preme il pulsante per il pagamento;
-    \item \textbf{Postcondizione:} il pagamento ha avuto esito positivo, l'ordine viene confermato e viene decrementata la quantità dei prodotti disponibili al venditore, in base al numero di prodotti acquistati dal cliente;
+    \item \textbf{Postcondizione:} il pagamento ha avuto esito positivo, l'ordine viene confermato e viene decrementata la rispettiva quantità dei prodotti disponibili del venditore, in base al numero di prodotti acquistati dal cliente;
     \item \textbf{Scenario Principale:}
           \begin{itemize}
               \item il cliente preme sul pulsante e viene reindirizzato al servizio esterno per eseguire il pagamento;
@@ -63,18 +64,18 @@
               \item il pagamento è riuscito e l'ordine viene confermato tramite la visualizzazione del riepilogo dell'ordine (\hyperref[sec:UC21]{\underline{UC21}}).
           \end{itemize}
     \item \textbf{Estensioni:}\\
-          Il pagamento non è andato a buon fine
+          Il pagamento non è andato a buon fine:
           \begin{itemize}
-              \item viene visualizzato un errore di pagamento (\hyperref[sec:UC19.4]{\underline{UC19.4}})
-              \item si viene reindirizzati alla pagina del checkout per riprovare.
+              \item viene visualizzato un errore di pagamento (\hyperref[sec:UC19.4]{\underline{UC19.4}});
+              \item il cliente viene reindirizzato alla pagina di checkout per riprovare l'acquisto.
           \end{itemize}
 \end{itemize}
 \subsubsection{UC19.4: Errore di pagamento}
 \label{sec:UC19.4}
 \begin{itemize}
     \item \textbf{Descrizione:} visualizzazione di un errore per un fallimento nella fase di pagamento;
-    \item \textbf{Attore Primario:} Stripe
+    \item \textbf{Attore Primario:} Stripe;
     \item \textbf{Precondizione:} il cliente ha inserito i dati del pagamento;
     \item \textbf{Input:} Stripe ritorna un errore nel risultato del pagamento;
-    \item \textbf{Postcondizione:} viene visualizzato un messaggio di errore, successivamente il cliente viene reindirizzato alla sezione del checkout;
+    \item \textbf{Postcondizione:} viene visualizzato un messaggio di errore, successivamente il cliente viene reindirizzato alla pagina di checkout.
 \end{itemize}

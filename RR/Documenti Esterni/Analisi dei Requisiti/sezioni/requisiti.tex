@@ -19,14 +19,14 @@ Ogni requisito è composto dalla seguente struttura:
 
     \item \textbf{Importanza:} riporta l'importanza del requisito:
           \begin{itemize}
-              \item obbligatorio: requisito irrinunciabile per gli \textit{stakeholder};
-              \item desiderabile: requisito non strettamente necessario che però apporta un valore aggiunto al prodotto;
-              \item opzionale: requisito relativamente utile oppure contrabile in un secondo momento durante lo sviluppo;
+              \item obbligatorio: requisito irrinunciabile per gli stakeholders\textsubscript{\textbf{G}};
+              \item desiderabile: requisito non strettamente necessario ma a valore aggiunto riconoscibile;
+              \item opzionale: requisito relativamente utile oppure contrattabile in un secondo momento durante lo sviluppo.
           \end{itemize}
     \item \textbf{Descrizione:} descrizione del requisito, meno ambigua possibile;
     \item \textbf{Fonti:} ogni requisito deriva da una di queste fonti:
           \begin{itemize}
-              \item \textit{capitolato:} è un requisito individuato dalle condizione imposte dal capitolato;
+              \item \textit{capitolato:} è un requisito emerso dall'analisi del capitolato;
               \item \textit{interno:} è un requisito aggiunto dagli analisti;
               \item \textit{caso d'uso:} è un requisito estratto da uno o più casi d'uso, è riportato il codice del caso d'uso a cui ci si riferisce;
               \item \textit{verbale:} è un requisito individuato attraverso una riunione con i proponenti.
@@ -84,7 +84,7 @@ Ogni requisito è composto dalla seguente struttura:
         R13.5F                                & L'utente deve poter visualizzare il conto totale del carrello                                              & Obbligatorio             & Capitolato                                   \\
         R13.6F                                & L'utente deve poter visualizzare l'\textit{IVA}\textsubscript{\textbf{G}} totale del carrello              & Obbligatorio             & Capitolato                                   \\
         \textbf{R14F}                         & Un utente che non riesce ad accedere deve poter reimpostare la \textit{password}\textsubscript{\textbf{G}} & Obbligatorio             & \hyperref[sec:UC14]{UC14}                    \\
-        \textbf{R15F}                         & L'utente deve poter modificare i propri dati di profilo                                                    & Obbligatorio             & \hyperref[sec:UC15]{UC15}                    \\
+        \textbf{R15F}                         & L'utente deve poter modificare i dati del proprio profilo                                                    & Obbligatorio             & \hyperref[sec:UC15]{UC15}                    \\
         R15.1F                                & L'utente deve poter modificare la propria mail di accesso                                                  & Obbligatorio             & \hyperref[sec:UC15]{UC15}                    \\
         R15.2F                                & L'utente deve poter modificare il proprio username                                                         & Obbligatorio             & \hyperref[sec:UC15]{UC15}                    \\
         R15.3F                                & L'utente deve poter cambiare la propria password                                                           & Obbligatorio             & \hyperref[sec:UC15]{UC15}                    \\
@@ -126,11 +126,11 @@ Ogni requisito è composto dalla seguente struttura:
     \begin{longtable}[!h]{p{50px} p{200px} p{100px} p{50px}}
         \rowcolor{logo!70} \textbf{Requisito} & \textbf{Descrizione}                                                                                                                                                 & \textbf{Classificazione} & \textbf{Fonti} \\
         \textbf{R1Q}                          & Deve essere prodotta una documentazione sull'uso del sito per l'utente                                                                                               & Obbligatorio             & Capitolato     \\
-        \textbf{R2Q}                          & Deve essere prodotta una documentazione sull'istallazione dell'intera infrastuttura                                                                                  & Obbligatorio             & Capitolato     \\
-        \textbf{R3Q}                          & Le documentazioni devono essere scritte in lingua inglese                                                                                                            & Obbligatorio             & Capitolato     \\
-        \textbf{R4Q}                          & Il codice deve essere ospitato su una repository pubblica su \textit{github}\textsubscript{\textbf{G}}                                                               & Obbligatorio             & Capitolato     \\
-        \textbf{R5Q}                          & Il software sviluppato deve essere coerente con quanto descritto dal documento \textit{Norme di Progetto v1.0.0}                                                     & Obbligatorio             & Interno        \\
-        \textbf{R6Q}                          & Tutto il codice (commenti, nomi di variabili, ecc...), commit di \textit{git}, nomi di cartelle e tutto quello che rigiarda il codice deve essere scritto in inglese & Obbligatorio             & Capitolato     \\
+        \textbf{R2Q}                          & Deve essere prodotta una documentazione sull'installazione della piattaforma \textit{EmporioLambda}                                                                                  & Obbligatorio             & Capitolato     \\
+        \textbf{R3Q}                          & La documentazione deve essere scritta in lingua inglese                                                                                                            & Obbligatorio             & Capitolato     \\
+        \textbf{R4Q}                          & Il codice deve essere ospitato su una repository pubblica su \textit{GitHub}\textsubscript{\textbf{G}}                                                               & Obbligatorio             & Capitolato     \\
+        \textbf{R5Q}                          & Il software sviluppato deve essere coerente con quanto descritto nel documento \textit{Norme di Progetto v1.0.0}                                                     & Obbligatorio             & Interno        \\
+        \textbf{R6Q}                          & Tutto il codice (commenti, nomi di variabili, ecc...), i commit di \textit{Git}, i nomi di cartelle e tutto quello che riguarda il codice deve essere scritto in lingua inglese & Obbligatorio             & Capitolato     \\
         \textbf{R7Q}                          & Non vanno usate chiamate di \textit{callback}, ma solo funzioni \textit{awayt/async}                                                                                 & Obbligatorio             & Capitolato     \\
         \rowcolor{white}\caption{Requisiti di qualità}
     \end{longtable}
@@ -146,10 +146,10 @@ Ogni requisito è composto dalla seguente struttura:
     \begin{longtable}[!h]{p{50px} p{200px} p{100px} p{50px}}
         \rowcolor{logo!70} \textbf{Requisito} & \textbf{Descrizione}                                                                                                                                   & \textbf{Classificazione} & \textbf{Fonti} \\
         \textbf{R1V}                          & L'architettura dell'applicazione deve essere bastata sulla \textit{microservices architecture}\textsubscript{\textbf{G}}                               & Obbligatorio             & Capitolato     \\
-        \textbf{R2V}                          & I microservizi devono essere delle funzioni \newline Lambda ospitate su \textit{AWS lambda}\textsubscript{\textbf{G}}                                  & Obbligatorio             & Capitolato     \\
+        \textbf{R2V}                          & I microservizi devono essere delle funzioni \newline Lambda ospitate su \textit{AWS Lambda}\textsubscript{\textbf{G}}                                  & Obbligatorio             & Capitolato     \\
         \textbf{R3V}                          & Deve essere sviluppato un componente,\newline il \textit{BFF}\textsubscript{\textbf{G}}, che gestistisca la comunicazione tra front-end e microservizi & Obbligatorio             & Capitolato     \\
         \textbf{R4V}                          & Il \textit{BFF} deve essere scritto in \textit{Next.js}\textsubscript{\textbf{G}}                                                                      & Obbligatorio             & Capitolato     \\
-        \textbf{R5V}                          & I microservizi devono essere scritti nell'ultima versione di \textit{TypeScript}\textsubscript{\textbf{G}}                                             & Obbligatorio             & Capitolato     \\
+        \textbf{R5V}                          & I microservizi devono essere scritti utilizzando l'ultima versione di \textit{TypeScript}\textsubscript{\textbf{G}}                                             & Obbligatorio             & Capitolato     \\
         \textbf{R6V}                          & Deve essere usato \textit{DynamoDb}\textsubscript{\textbf{G}} per lo storage dei dati                                                                  & Obbligatorio             & Capitolato     \\
         \textbf{R7V}                          & Deve essere usato \textit{Stripe}\textsubscript{\textbf{G}} come servizio esterno per il pagamento                                                     & Obbligatorio             & Capitolato     \\
         \textbf{R8V}                          & Vanno definiti test di unità per ogni microservizio, distribuito su \textit{AWS}\textsubscript{\textbf{G}}                                             & Obbligatorio             & Capitolato     \\
@@ -175,7 +175,7 @@ Ogni requisito è composto dalla seguente struttura:
         \textbf{R1P}                          & Rapido caricamento delle pagine                                                                                                                                                                                            & Obbligatorio             & Capitolato     \\
         R1.1P                                 & Le pagine devono essere pre-caricate lato server attraverso la tecnologia \textit{Server-side Rendering (SSR)}\textsubscript{\textbf{G}}                                                                                   & Desiderabile             & Capitolato     \\
         R1.2P                                 & Le pagine statiche, o parti statiche di esse, devono essere renderizzate in un momento precedente alla richiesta (\textit{Static Generation (SSG)}\textsubscript{\textbf{G}}), come al momento del build dell'applicazione & Desiderabile             & Capitolato     \\
-        \textbf{R2P}                          & L'elaborazione dei filtri deve ragionevolmente veloce                                                                                                                                                                      & Obbligatorio             & Interno        \\
+        \textbf{R2P}                          & L'elaborazione dei filtri deve essere ragionevolmente veloce                                                                                                                                                                      & Obbligatorio             & Interno        \\
         \rowcolor{white}\caption{Requisiti prestazionali}
     \end{longtable}
 \end{center}
