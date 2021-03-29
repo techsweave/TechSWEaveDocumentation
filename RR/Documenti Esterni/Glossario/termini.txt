@@ -42,7 +42,7 @@ framework
 Front-end
 ____________________G____________________ 
 GitHub 
-gRPC a Rest
+gRPC 
 ____________________H____________________ 
 heat-map
 HTML
@@ -82,6 +82,7 @@ ____________________R____________________
 RFID
 React
 Responsabile di Progetto
+RFID
 ____________________S____________________ 
 server-less 
 Server-side Rendering 
