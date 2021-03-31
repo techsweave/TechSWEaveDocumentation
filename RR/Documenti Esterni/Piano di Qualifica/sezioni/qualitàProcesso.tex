@@ -4,122 +4,138 @@ I processi di tale standard sono poi stati semplificati e adattati alle esigenze
 \subsection{Processi primari}
 \subsubsection{Analisi dei Requisiti}
 \subsubsubsection{Metriche}
-\textbf{PROS (Percentuale di requisiti obbligatori soddisfatti):} indica la percentuale di requisiti obbligatori soddisfatti.
+\textbf{MPR01 - PROS (Percentuale di requisiti obbligatori soddisfatti):} indica la percentuale di requisiti obbligatori soddisfatti.
 \begin{itemize}
-    \item \textbf{metodo di misura}: valore percentuale: $PROS = \frac{requisiti \ obbligatori \ soddisfatti}{requisiti \ obbligatori \ totali} * 100$
-    \item \textbf{valore preferibile}: 100\%;
-    \item \textbf{valore accettabile}: 100\%;
+    \item \textbf{Codice:} MPR01;
+    \item \textbf{Metodo di misura}: valore percentuale: $PROS = \frac{requisiti \ obbligatori \ soddisfatti}{requisiti \ obbligatori \ totali} * 100$
+    \item \textbf{Valore preferibile}: 100\%;
+    \item \textbf{Valore accettabile}: 100\%.
 \end{itemize}
-\textbf{PRS (Percentuale di requisiti soddisfatti):} indica la percentuale di requisiti soddisfatti.
+\textbf{MPR02 - PRS (Percentuale di requisiti soddisfatti):} indica la percentuale di requisiti soddisfatti.
 \begin{itemize}
-    \item \textbf{metodo di misura}: valore percentuale: $PRS = \frac{requisiti \ soddisfatti}{requisiti \ totali} * 100$
-    \item \textbf{valore preferibile}: 100\%;
-    \item \textbf{valore accettabile}: 75\%;
+    \item \textbf{Codice:} MPR02;
+    \item \textbf{Metodo di misura}: valore percentuale: $PRS = \frac{requisiti \ soddisfatti}{requisiti \ totali} * 100$
+    \item \textbf{Valore preferibile}: 100\%;
+    \item \textbf{Valore accettabile}: 75\%.
 \end{itemize}
 \subsubsection{Progettazione dell'architettura}
 \subsubsubsection{Metriche}
-\textbf{SFIN (Structural Fan-in):} indica il numero di componenti che utilizzano un dato modulo. Un valore alto indica un alto riuso della componente.
+\textbf{MPR03 - SFIN (Structural Fan-in):} indica il numero di componenti che utilizzano un dato modulo. Un valore alto indica un alto riuso della componente.
 \begin{itemize}
-    \item \textbf{metodo di misura}: valore intero: conteggio delle componenti;
-    \item \textbf{valore preferibile}: $\geq 1$;
-    \item \textbf{valore accettabile}: $\geq 0$.
+    \item \textbf{Codice:} MPR03;
+    \item \textbf{Metodo di misura}: valore intero: conteggio delle componenti;
+    \item \textbf{Valore preferibile}: $\geq 1$;
+    \item \textbf{Valore accettabile}: $\geq 0$.
 \end{itemize}
-\textbf{SFOUT (Structural Fan-out):} indica il numero di componenti utilizzate dalla componente in esame. Un valore alto indica un alto accoppiamento della componente.
+\textbf{MPR04 - SFOUT (Structural Fan-out):} indica il numero di componenti utilizzate dalla componente in esame. Un valore alto indica un alto accoppiamento della componente.
 \begin{itemize}
-    \item \textbf{metodo di misura}: valore intero: conteggio delle componenti;
-    \item \textbf{valore preferibile}: = 0;
-    \item \textbf{valore accettabile}: $\leq 6$.
+    \item \textbf{Codice:} MPR04;
+    \item \textbf{Metodo di misura}: valore intero: conteggio delle componenti;
+    \item \textbf{Valore preferibile}: = 0;
+    \item \textbf{Valore accettabile}: $\leq 6$.
 \end{itemize}
 \subsubsection{Progettazione di dettaglio}
 \subsubsubsection{Metriche}
-\textbf{CBO (accoppiamento tra le classi di oggetti):} una classe è accoppiata ad un'altra se usa metodi o variabili definiti in quest'ultima.
+\textbf{MPR05 - CBO (accoppiamento tra le classi di oggetti):} una classe è accoppiata ad un'altra se usa metodi o variabili definiti in quest'ultima.
 \begin{itemize}
-    \item \textbf{metodo di misura}: valore intero: CBO;
-    \item \textbf{valore preferibile}: $0 \leq CBO \leq 1$;
-    \item \textbf{valore accettabile}: $0 \leq CBO \leq 6$.
+    \item \textbf{Codice:} MPR05;
+    \item \textbf{Metodo di misura}: valore intero: CBO;
+    \item \textbf{Valore preferibile}: $0 \leq CBO \leq 1$;
+    \item \textbf{Valore accettabile}: $0 \leq CBO \leq 6$.
 \end{itemize}
 \subsection{Processi di supporto}
 \subsubsection{Pianificazione}
 \subsubsubsection{Metriche}
-\textbf{BAC (Budget at Completion):} budget totale disponibile per il progetto.
+\textbf{MPR06 - BAC (Budget at Completion):} budget totale disponibile per il progetto.
 \begin{itemize}
-    \item \textbf{metodo di misura}: numero intero;
-    \item \textbf{valore preferibile}: pari al preventivo;
-    \item \textbf{valore accettabile}: valore preventivo$ - 5\% \leq BAC \leq$ valore preventivo + 5\%.
+    \item \textbf{Codice:} MPR06;
+    \item \textbf{Metodo di misura}: numero intero;
+    \item \textbf{Valore preferibile}: pari al preventivo;
+    \item \textbf{Valore accettabile}: valore preventivo$ - 5\% \leq BAC \leq$ valore preventivo + 5\%.
 \end{itemize}
-\textbf{AC (Actual Cost:} somma spesa fino al momento del calcolo.
+\textbf{MPR07 - AC (Actual Cost:} somma spesa fino al momento del calcolo.
 \begin{itemize}
-    \item \textbf{metodo di misura}: numero intero;
-    \item \textbf{valore preferibile}: $0 \leq AC \leq PV$;
-    \item \textbf{valore accettabile}: $0 \leq AC \leq$ budget totale.
+    \item \textbf{Codice:} MPR07;
+    \item \textbf{Metodo di misura}: numero intero;
+    \item \textbf{Valore preferibile}: $0 \leq AC \leq PV$;
+    \item \textbf{Valore accettabile}: $0 \leq AC \leq$ budget totale.
 \end{itemize}
-\textbf{EV (Earned Value):} valore del lavoro svolto fino al momento del calcolo, cioè il denaro guadagnato fino a quel momento.
+\textbf{MPR08 - EV (Earned Value):} valore del lavoro svolto fino al momento del calcolo, cioè il denaro guadagnato fino a quel momento.
 Serve per il calcolo di SV e CV, metriche spiegate successivamente.
 \begin{itemize}
-    \item \textbf{metodo di misura}: BAC * (\% di lavoro svolto);
-    \item \textbf{valore preferibile}: $\geq$ 0;
-    \item \textbf{valore accettabile}: $\geq$ 0.
+    \item \textbf{Codice:} MPR08;
+    \item \textbf{Metodo di misura}: BAC * (\% di lavoro svolto);
+    \item \textbf{Valore preferibile}: $\geq$ 0;
+    \item \textbf{Valore accettabile}: $\geq$ 0.
 \end{itemize}
-\textbf{PV (Planned Value):} valore del lavoro pianificato al momento del calcolo, cioè il denaro che ci si aspetta di guadagnare in quel momento.
+\textbf{MPR09 - PV (Planned Value):} valore del lavoro pianificato al momento del calcolo, cioè il denaro che ci si aspetta di guadagnare in quel momento.
 Serve per il calcolo di SV e CV, metriche spiegate successivamente.
 \begin{itemize}
-    \item \textbf{metodo di misura}: BAC * (\% di lavoro pianificato);
-    \item \textbf{valore preferibile}: $\geq$ 0;
-    \item \textbf{valore accettabile}: $\geq$ 0.
+    \item \textbf{Codice:} MPR09;
+    \item \textbf{Metodo di misura}: BAC * (\% di lavoro pianificato);
+    \item \textbf{Valore preferibile}: $\geq$ 0;
+    \item \textbf{Valore accettabile}: $\geq$ 0.
 \end{itemize}
-\textbf{SV (Schedule Variance):} indica l'aniticipo o il ritardo nello svolgimento del progetto rispetto alla pianificazione.
+\textbf{MPR10 - SV (Schedule Variance):} indica l'aniticipo o il ritardo nello svolgimento del progetto rispetto alla pianificazione.
 \begin{itemize}
-    \item \textbf{metodo di misura}: SV = EV - PV;
-    \item \textbf{valore preferibile}: > 0;
-    \item \textbf{valore accettabile}: 0.
+    \item \textbf{Codice:} MPR10;
+    \item \textbf{Metodo di misura}: SV = EV - PV;
+    \item \textbf{Valore preferibile}: > 0;
+    \item \textbf{Valore accettabile}: 0.
 \end{itemize}
-\textbf{CV (Cost Variance):} differenza tra il costo del lavoro completato e quello pianificato. Si sta rispettando il budget se il valore di questa \textbf{metodo di misura} 
+\textbf{MPR11 - CV (Cost Variance):} differenza tra il costo del lavoro completato e quello pianificato. Si sta rispettando il budget se il valore di questa \textbf{metodo di misura} 
 è positivo.
 \begin{itemize}
-    \item \textbf{metodo di misura}: CV = EV - AC;
-    \item \textbf{valore preferibile}: > 0;
-    \item \textbf{valore accettabile}: $\geq$ 0.
+    \item \textbf{Codice:} MPR11;
+    \item \textbf{Metodo di misura}: CV = EV - AC;
+    \item \textbf{Valore preferibile}: > 0;
+    \item \textbf{Valore accettabile}: $\geq$ 0.
 \end{itemize}
 \subsubsection{Verifica}
 \subsubsubsection{Metriche}
-\textbf{CC (Code Coverage):} indica il numero di righe di codice sottoposte ai test di verifica durante la loro esecuzione. Per linee di codice totali 
+\textbf{MPR12 - CC (Code Coverage):} indica il numero di righe di codice sottoposte ai test di verifica durante la loro esecuzione. Per linee di codice totali 
 si intende tutte quelle appartenenti all'unità sottoposta al test.
 \begin{itemize}
-    \item \textbf{metodo di misura}: valore percentuale: CC = $\frac{linee \ di \ codice \ testate}{linee \ di \ codice \ totali * 100}$;
-    \item \textbf{valore preferibile}: 100\%;
-    \item \textbf{valore accettabile}: 75\%.
+    \item \textbf{Codice:} MPR12;
+    \item \textbf{Metodo di misura}: valore percentuale: CC = $\frac{linee \ di \ codice \ testate}{linee \ di \ codice \ totali * 100}$;
+    \item \textbf{Valore preferibile}: 100\%;
+    \item \textbf{Valore accettabile}: 75\%.
 \end{itemize}
 \subsubsection{Documentazione}
 \subsubsubsection{Metriche}
-\textbf{Indice di Gunning fog:} misura la facilità di lettura e di comprensione di un testo. Il numero risultante è un indicatore del numero di anni 
+\textbf{MPR13 - Indice di Gunning fog:} misura la facilità di lettura e di comprensione di un testo. Il numero risultante è un indicatore del numero di anni 
 di educazione formale della quale una persona necessita al fine di leggere il testo con facilità.
 Ha dei limiti, uno di questi è la sua definizione di parola complessa, intesa come una parola di
 tre o più sillabe eccetto alcuni suffissi comuni.
 \begin{itemize}
-    \item \textbf{metodo di misura}: valore intero: I\textsubscript{GF} = $(0.4 *\frac{numero \ di \ parole}{numero \ di \ frasi} + 100 * \frac{numero \ di \ parole \ complesse}{numero \ di \ frasi})$;
-    \item \textbf{valore preferibile}: $\leq$ 12;
-    \item \textbf{valore accettabile}: $\leq$ 16.
+    \item \textbf{Codice:} MPR13;
+    \item \textbf{Metodo di misura}: valore intero: I\textsubscript{GF} = $(0.4 *\frac{numero \ di \ parole}{numero \ di \ frasi} + 100 * \frac{numero \ di \ parole \ complesse}{numero \ di \ frasi})$;
+    \item \textbf{Valore preferibile}: $\leq$ 12;
+    \item \textbf{Valore accettabile}: $\leq$ 16.
 \end{itemize}
-\textbf{Indice di Gulpease:} è un indice di leggibilità di un testo tarato sulla lingua italiana. 
+\textbf{MPR14 - Indice di Gulpease:} è un indice di leggibilità di un testo tarato sulla lingua italiana. 
 Ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. 
 \begin{itemize}
-    \item \textbf{metodo di misura}: valore intero da 0 a 100: I\textsubscript{G} = 89 $+ \frac{300*numero \ di \ frasi \ - \ 10*numero \ di \ lettere}{numero \ di \ parole}$;
-    \item \textbf{valore preferibile}: 80 < I\textsubscript{G} < 100;
-    \item \textbf{valore accettabile}: 40 < I\textsubscript{G} < 100.
+    \item \textbf{Codice:} MPR14;
+    \item \textbf{Metodo di misura}: valore intero da 0 a 100: I\textsubscript{G} = 89 $+ \frac{300*numero \ di \ frasi \ - \ 10*numero \ di \ lettere}{numero \ di \ parole}$;
+    \item \textbf{Valore preferibile}: 80 < I\textsubscript{G} < 100;
+    \item \textbf{Valore accettabile}: 40 < I\textsubscript{G} < 100.
 \end{itemize}
-\textbf{Correttezza ortografica:} la documentazione non deve contenere errori grammaticali o ortografici. 
+\textbf{MPR15 - Correttezza ortografica:} la documentazione non deve contenere errori grammaticali o ortografici. 
 \begin{itemize}
-    \item \textbf{metodo di misura}: valore intero: numero di errori per documento;
-    \item \textbf{valore preferibile}: 0;
-    \item \textbf{valore accettabile}: 0.
+    \item \textbf{Codice:} MPR15;
+    \item \textbf{Metodo di misura}: valore intero: numero di errori per documento;
+    \item \textbf{Valore preferibile}: 0;
+    \item \textbf{Valore accettabile}: 0.
 \end{itemize}
 \subsection{Processi organizzativi}
 \subsubsection{Gestione della qualità}
 \subsubsubsection{Metriche}
-\textbf{PMS (Percentuale di metriche soddisfatte):} indica la percentuale delle metriche che raggiungono dei valori accettabili.
+\textbf{MPR16 - PMS (Percentuale di metriche soddisfatte):} indica la percentuale delle metriche che raggiungono dei valori accettabili.
 \begin{itemize}
-    \item \textbf{metodo di misura}: valore percentuale: PMS = $\frac{numero \ di \ metriche \ soddisfatte}{numero \ di \ metriche \ totali} * 100$ ;
-    \item \textbf{valore preferibile}: $\geq$ 80\%;
-    \item \textbf{valore accettabile}: $\geq$ 60\%.
+    \item \textbf{Codice:} MPR16;
+    \item \textbf{Metodo di misura}: valore percentuale: PMS = $\frac{numero \ di \ metriche \ soddisfatte}{numero \ di \ metriche \ totali} * 100$ ;
+    \item \textbf{Valore preferibile}: $\geq$ 80\%;
+    \item \textbf{Valore accettabile}: $\geq$ 60\%.
 \end{itemize}
 \newpage
