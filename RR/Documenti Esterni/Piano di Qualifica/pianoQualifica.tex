@@ -49,6 +49,8 @@ urlcolor=blue}
 \setlength{\headheight}{35pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
+\counterwithin{table}{subsection}
+
 \begin{document}
 \begin{titlepage}
     \begin{center}
@@ -99,6 +101,10 @@ urlcolor=blue}
     %INDICE
     \newpage
     \tableofcontents
+    \newpage
+    %indice tabelle
+    \newpage
+    \listoftables
     \newpage
     % CORPO DEL DOCUMENTO
     \input{sezioni/introduzione.tex}
