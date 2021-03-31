@@ -103,27 +103,17 @@ si intende tutte quelle appartenenti all'unità sottoposta al test.
 \end{itemize}
 \subsubsection{Documentazione}
 \subsubsubsection{Metriche}
-\textbf{MPR13 - Indice di Gunning fog:} misura la facilità di lettura e di comprensione di un testo. Il numero risultante è un indicatore del numero di anni 
-di educazione formale della quale una persona necessita al fine di leggere il testo con facilità.
-Ha dei limiti, uno di questi è la sua definizione di parola complessa, intesa come una parola di
-tre o più sillabe eccetto alcuni suffissi comuni.
-\begin{itemize}
-    \item \textbf{Codice:} MPR13;
-    \item \textbf{Metodo di misura}: valore intero: I\textsubscript{GF} = $(0.4 *\frac{numero \ di \ parole}{numero \ di \ frasi} + 100 * \frac{numero \ di \ parole \ complesse}{numero \ di \ frasi})$;
-    \item \textbf{Valore preferibile}: $\leq$ 12;
-    \item \textbf{Valore accettabile}: $\leq$ 16.
-\end{itemize}
-\textbf{MPR14 - Indice di Gulpease:} è un indice di leggibilità di un testo tarato sulla lingua italiana. 
+\textbf{MPR13 - Indice di Gulpease:} è un indice di leggibilità di un testo tarato sulla lingua italiana. 
 Ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico. 
 \begin{itemize}
-    \item \textbf{Codice:} MPR14;
+    \item \textbf{Codice:} MPR13;
     \item \textbf{Metodo di misura}: valore intero da 0 a 100: I\textsubscript{G} = 89 $+ \frac{300*numero \ di \ frasi \ - \ 10*numero \ di \ lettere}{numero \ di \ parole}$;
     \item \textbf{Valore preferibile}: 80 < I\textsubscript{G} < 100;
     \item \textbf{Valore accettabile}: 40 < I\textsubscript{G} < 100.
 \end{itemize}
-\textbf{MPR15 - Correttezza ortografica:} la documentazione non deve contenere errori grammaticali o ortografici. 
+\textbf{MPR14 - Correttezza ortografica:} la documentazione non deve contenere errori grammaticali o ortografici. 
 \begin{itemize}
-    \item \textbf{Codice:} MPR15;
+    \item \textbf{Codice:} MPR14;
     \item \textbf{Metodo di misura}: valore intero: numero di errori per documento;
     \item \textbf{Valore preferibile}: 0;
     \item \textbf{Valore accettabile}: 0.
@@ -131,9 +121,9 @@ Ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in s
 \subsection{Processi organizzativi}
 \subsubsection{Gestione della qualità}
 \subsubsubsection{Metriche}
-\textbf{MPR16 - PMS (Percentuale di metriche soddisfatte):} indica la percentuale delle metriche che raggiungono dei valori accettabili.
+\textbf{MPR15 - PMS (Percentuale di metriche soddisfatte):} indica la percentuale delle metriche che raggiungono dei valori accettabili.
 \begin{itemize}
-    \item \textbf{Codice:} MPR16;
+    \item \textbf{Codice:} MPR15;
     \item \textbf{Metodo di misura}: valore percentuale: PMS = $\frac{numero \ di \ metriche \ soddisfatte}{numero \ di \ metriche \ totali} * 100$ ;
     \item \textbf{Valore preferibile}: $\geq$ 80\%;
     \item \textbf{Valore accettabile}: $\geq$ 60\%.
