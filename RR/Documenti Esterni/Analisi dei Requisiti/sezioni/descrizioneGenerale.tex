@@ -1,0 +1,42 @@
+\section{Descrizione generale}
+\subsection{Obiettivi del prodotto}
+L'obiettivo del progetto è quello di realizzare un prototipo di un servizio di e-commerce con architettura serverless basato principalmente su tecnologie \textit{AWS}\textsubscript{\textbf{G}}. Il sito deve consentire a un ipotetico venditore di vendere e gestire i proprio prodotti all'interno della piattaforma. Deve permettere ai clienti dell'e-commerce di registrarsi, avendo così un account personale, di ricercare i prodotti e, una volta in possesso di un account, di acquistare i prodotti in vendita all'interno della piattaforma. I clienti possono inoltre visualizzare lo storico dei propri ordini.
+\subsection{Funzioni del prodotto}
+Il prodotto propone diverse funzionalità a seconda del utente in utilizzo della piattaforma.
+\begin{itemize}
+    \item \textit{Cliente}: un cliente può ricercare e filtrare prodotti di suo interesse, aggiungerli al carrello e, se autenticato attraverso un servizio di autenticazione esterno, può procedere al checkout e quindi all'acquisto. Può inoltre visualizzare lo storico degli ordini;
+    \item \textit{Venditore}: può gestire tutti i prodotti del catalogo, aggiungendone di nuovi, modificando o rimuovendo quelli già presenti. Per ogni articolo fornisce inoltre delle  informazioni:
+    \begin{itemize}
+        \item nome;
+        \item prezzo;
+        \item descrizione e caratteristiche;
+        \item categoria;
+        \item altri attributi in relazione al tipo di prodotto;
+        \item tag di ricerca, per aiutare i clienti a trovarlo.
+    \end{itemize}
+    \item \textit{Admin}: L'admin è colui che rilascia e getisce la piattaforma software. Ha inoltre il compito di gestire le integrazioni con sistemi di terze parti. Questa gestione sarà permessa dall'utilizzo della piattaforma \textit{Amazon CloudWatch}\textsubscript{\textbf{G}}.
+\end{itemize}
+\subsection{Caratteristiche degli utenti}
+I tipi di utenti sono divisi in tre categorie:
+\begin{itemize}
+    \item clienti;
+    \item venditore;
+    \item admin.
+\end{itemize}
+I clienti e il venditore devono avere conoscenze minime, ossia l'utilizzo di un browser web. Il venditore inoltre deve avere una competenza minima sulla gestione della vendita sulla piattaforma e una buona conoscenza del funzionamento dell'IVA. L'admin deve avere competenze per gestire al meglio l'intera piattaforma.
+\subsection{Macro architetture del progetto}
+Il progetto è caratterizzato da alcune macro architetture:
+\subsubsection{EmporioLambda - Backend}
+Il backend si occupa d'implementare la business-logic della piattaforma, andando a gestire i dati del sistema, come i dati relativi agli utenti, i prodotti, gli ordini e lo stato del carrello. 
+\subsubsection{EmporioLambda - Frontend}
+Il frontend si occupa di gestire la UI\textsubscript{\textbf{G}} che consiste in una serie di pagine web visualizzabili attraverso i vari browser. Le pagine devono essere precaricate lato server per permettere una renderizzazione più veloce.
+\subsubsection{EmporioLambda - Integration}
+È la parte di sistema dedicata alla gestione di componenti di terze parti, come i servizi utilizzati per il pagamento e per l'accesso al proprio account.
+\subsubsection{EmporioLambda - Monitoring}
+Sono gli strumenti impiegati degli admin per gestire la piattaforma e il rapporto con gli strumenti di terze parti.
+
+
+
+
+
+

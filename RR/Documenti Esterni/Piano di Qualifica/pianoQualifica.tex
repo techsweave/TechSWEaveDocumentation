@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
 \usepackage{hyperref}
+\usepackage{longtable}
 \hypersetup{pdfborder = {0 0 0},
 colorlinks,
 citecolor=black,
@@ -16,7 +17,6 @@ urlcolor=blue}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,italian]{babel}
-\usepackage{layouts}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 
@@ -39,18 +39,15 @@ urlcolor=blue}
 \setcounter{tocdepth}{4}
 %fine creazione comando
 
-
 %Comandi di impaginazione uguale per tutti i documenti
 \pagestyle{fancy}
-\lhead{\includegraphics[scale=0.2]{../../../Images/logo.png}}
+\lhead{\includegraphics[scale=0.2]{../../../Images/logo}}
 %Titolo del documento
-\rhead{\large Norme di Progetto}
+\rhead{\large Piano di Qualifica}
 %\rfoot{\thepage}
 \cfoot{Pagina \thepage{} di \pageref{LastPage}}
 \setlength{\headheight}{35pt}
 \renewcommand{\footrulewidth}{0.4pt}
-
-
 
 \begin{document}
 \begin{titlepage}
@@ -59,28 +56,29 @@ urlcolor=blue}
         \vspace{20px}
         \textcolor{logo}{\hrulefill}\\
         \vspace{20px}
-        \textbf{\huge\textcolor{logo}{Studio di fattibilità}}\\
+        \textbf{\huge\textcolor{logo}{Piano di Qualifica}}\\
         \vspace{10px}
         \textcolor{logo}{\hrulefill}\\
         \vspace{40px}
         \textbf{\Large Informazioni sul documento}\\
         \vspace{20px}
         \begin{tabular}{p{100px} | p{100px}}
-            \textbf{Versione} & 0.7\\
-            \textbf{Responsabile} & Manuel Varo\\
-            \textbf{Redattori} & Nicolò Giaccone \newline Samuele De Simone\\
-            \textbf{Verificatore} & Amedeo Meggiolaro\\
+            \textbf{Versione} & 0.0.3\\
+            \textbf{Responsabile} & Samuele de Simone\\
+            \textbf{Redattori} & Marco Barbaresco \newline Tito Scutari\\
+            \textbf{Verificatore} & \\
             \textbf{Destinatari} & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave\\
             \textbf{Stato} & Da approvare\\
-            \textbf{Uso} & Interno\\
+            \textbf{Uso} & Esterno\\
         \end{tabular}\\
         \vspace{60px}
         \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
 
     \end{center}
     \end{titlepage}
-    \begin{center}
 
+    %DIARIO DELLE MODIFICHE
+    \begin{center}
         \textbf{\Large Diario delle modifiche}\\
         \vspace{10px}
         \begin{table}[h!]
@@ -89,25 +87,26 @@ urlcolor=blue}
         \renewcommand{\arraystretch}{1.8}
         \begin{tabular}{p{150px} p{90px} p{50px} p{60px} p{45px}}
             \rowcolor{logo!70} \textbf{Modifica} & \textbf{Autore} & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione}\\
-            Prima stesura documento & Nicolò Giaccone & Analista & 11/03/2021 & 0.1\\
-            Revisione struttura \newline Aggiunta capitolati C2, C5 & Samuele De Simone & Analista & 11/03/2021 & 0.2\\
-            Aggiunta capitolato C6 & Tito Scutari & Analista & 11/03/2021 & 0.3 \\
-            Aggiunta dei capitolati C3 e C4 & Nicolò Giaccone & Analista & 11/03/2021 & 0.5\\
-            Revisione capitolato C6 & Samuele De Simone & Analista & 12/03/2021 & 0.5.1 \\
-            Aggiunta capitolato C1 & Simone Urbani & Analista & 12/03/2021 & 0.6 \\
-            Aggiunta capitolato C7 & Samuele De Simone& Analista & 12/03/2021 & 0.7 \\
+            Prima stesura documento & Marco Barbaresco & Analista & 2021-03-18 & 0.0.1 \\
+            Aggiunta sezione 1 & Marco Barbaresco & Analista & 2021-03-19 & 0.0.2 \\
+            Aggiunta sezione 2 & Marco Barbaresco & Analista & 2021-03-21 & 0.0.2 \\
+            Aggiunta sezione 3 & Marco Barbaresco & Analista & 2021-03-22 & 0.0.3 \\
+
         \end{tabular}
     \end{table}
     \end{center}
-    \newpage
-\tableofcontents
-\newpage
 
-\input{Capitolati/C2.tex}
-\input{Capitolati/C1.tex}
-\input{Capitolati/C3.tex}
-\input{Capitolati/C4.tex}
-\input{Capitolati/C5.tex}
-\input{Capitolati/C6.tex}
-\input{Capitolati/C7.tex}
+    %INDICE
+    \newpage
+    \tableofcontents
+    \newpage
+    % CORPO DEL DOCUMENTO
+    \input{sezioni/introduzione.tex}
+    \input{sezioni/qualitàProcesso.tex}
+    \input{sezioni/qualitàProdotto.tex}
+    \input{sezioni/specificaTest.tex}
+    \input{sezioni/standardQualità.tex}
+    \input{sezioni/resocontoAttivitàVerifica.tex}
+    \input{sezioni/valutazioniMiglioramento.tex}
+ 
 \end{document}
