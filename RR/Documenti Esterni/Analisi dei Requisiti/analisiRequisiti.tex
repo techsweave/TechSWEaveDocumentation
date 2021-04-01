@@ -50,7 +50,7 @@ urlcolor=blue}
 \setlength{\headheight}{35pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-
+\counterwithin{table}{subsection}
 
 
 \begin{document}
@@ -67,12 +67,12 @@ urlcolor=blue}
         \textbf{\Large Informazioni sul documento}\\
         \vspace{20px}
         \begin{tabular}{p{100px} | p{100px}}
-            \textbf{Versione}     & 0.0.2                                                                      \\
-            \textbf{Responsabile} & Samuele De Simone                                                          \\
+            \textbf{Versione}     & 1.0.0                                                                      \\
+            \textbf{Responsabile} & Simone Urbani                                                              \\
             \textbf{Redattori}    & Samuele De Simone \newline Nicolò Giaccone \newline Simone Urbani          \\
-            \textbf{Verificatore} & Amedeo Meggiolaro                                                          \\
+            \textbf{Verificatore} & Marco Barbaresco                                                           \\
             \textbf{Destinatari}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave \\
-            \textbf{Stato}        & Da approvare                                                               \\
+            \textbf{Stato}        & Approvato                                                                  \\
             \textbf{Uso}          & Esterno                                                                    \\
         \end{tabular}\\
         \vspace{60px}
@@ -89,16 +89,22 @@ urlcolor=blue}
         \centering
         \rowcolors{2}{logo!10}{logo!40}
         \renewcommand{\arraystretch}{1.8}
-        \begin{tabular}{p{150px} p{90px} p{50px} p{60px} p{45px}}
-            \rowcolor{logo!70} \textbf{Modifica}                          & \textbf{Autore}   & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione} \\
-            Prima stesura documento                                       & Nicolò Giaccone   & Analista       & 2021-03-17    & 0.0.1             \\
-            Aggiunta sezioni introduzione \newline e descrizione generale & Nicolò Giaccone   & Analista       & 2021-03-18    & 0.0.2             \\
-            Aggiunti da UC1 a UC6                                         & Nicolò Giaccone   & Analista       & 2021-03-19    & 0.0.3             \\
-            Aggiunti da UC7 a UC13                                        & Samuele De Simone & Analista       & 2021-03-19    & 0.0.4             \\
-            Aggiunti da UC14 a UC16                                       & Samuele De Simone & Analista       & 2021-03-20    & 0.0.5             \\
-            Aggiunti da UC17 a UC22                                       & Nicolò Giaccone   & Analista       & 2021-03-21    & 0.0.6             \\
-            Revisione sezione attori e da UC7 a UC16                      & Nicolò Giaccone   & Analista       & 2021-03-22    & 0.0.7             \\
-            Aggiunta tabella requisiti                                    & Simone Urbani     & Analista       & 2021-02-23    & 0.0.8             \\
+        \begin{tabular}{p{160px} p{90px} p{60px} p{60px} p{50px}}
+            \rowcolor{logo!70} \textbf{Modifica}                 & \textbf{Autore}                            & \textbf{Ruolo}                 & \textbf{Data} & \textbf{Versione} \\
+            Validazione                                          & Simone Urbani                              & Responsabile                   & 2021-03-28    & 1.0.0             \\
+            Verifica documento                                   & Amedeo Meggiolaro                          & Verificatore                   & 2021-03-27    & 0.1.0             \\
+            Correzioni requisiti                                 & Simone Urbani                              & Analista                       & 2021-03-26    & 0.0.11            \\
+            Correzioni aggiuntive casi d'uso                     & Nicolò Giaccone                            & Analista                       & 2021-03-26    & 0.0.10            \\
+            Correzioni casi d'uso                                & Samuele De Simone \newline Nicolò Giaccone & Responsabile \newline Analista & 2021-03-25    & 0.0.9             \\
+            Aggiunte tabelle requisiti                           & Simone Urbani                              & Analista                       & 2021-03-25    & 0.0.8             \\
+            Correzione sezione attori e da UC7 a UC16            & Nicolò Giaccone                            & Analista                       & 2021-03-24    & 0.0.7             \\
+            Aggiunti da UC23 a UC28                              & Samuele De Simone                          & Responsabile                   & 2021-03-23    & 0.0.6             \\
+            Aggiunti da UC17 a UC22                              & Nicolò Giaccone                            & Analista                       & 2021-03-22    & 0.0.6             \\
+            Aggiunti da UC14 a UC16                              & Samuele De Simone                          & Responsabile                   & 2021-03-22    & 0.0.5             \\
+            Aggiunti da UC9 a UC13                               & Samuele De Simone                          & Responsabile                   & 2021-03-19    & 0.0.4             \\
+            Aggiunti da UC1 a UC8                                & Nicolò Giaccone                            & Analista                       & 2021-03-19    & 0.0.3             \\
+            Aggiunta sezioni introduzione e descrizione generale & Nicolò Giaccone                            & Analista                       & 2021-03-18    & 0.0.2             \\
+            Prima stesura documento                              & Nicolò Giaccone                            & Analista                       & 2021-03-17    & 0.0.1             \\
         \end{tabular}
     \end{table}
 \end{center}
