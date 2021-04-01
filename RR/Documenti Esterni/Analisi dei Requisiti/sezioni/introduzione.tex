@@ -1,26 +1,33 @@
 \section{Introduzione}
-    \subsection{Scopo del documento}
-    Il documento ha lo scopo di descrivere in maniera dettagliata i requisiti individuati per il prodotto. Tali requisiti sono stati identificati dall'analisi del capitolato\textsubscript{\textbf{G}} \textbf{C2} e degli incontri con il proponente \textit{Red Babel}.
-    \subsection{Scopo del prodotto}
-    Lo scopo del prodotto è lo sviluppo di una piattaforma e-commerce basata sulle tecnologie \textit{server-less}\textsubscript{\textbf{G}}. L'interfaccia web sarà sviluppata con il framework\textsubscript{\textbf{G}} Next.js\textsubscript{\textbf{G}}, la parte di back-end\textsubscript{\textbf{G}} sarà sviluppata attraverso la piattaforma AWSLambda\textsubscript{\textbf{G}}, con l'utilizzo del Server-less framework\textsubscript{\textbf{G}}. Il linguaggio utilizzato per lo sviluppo dell'intera piattaforma è il Typescript\textsubscript{\textbf{G}}. Il pagamento sarà interamente gestito da un applicazione terza, Stripe\textsubscript{\textbf{G}}.
-    \subsection{Glossario}
-    Con l'intento di evitare possibili ambiguità dovute al linguaggio utilizzato nei documenti formali, viene fornito il \textit{Glossario v1.0.0}. In questo documento vengono definiti e descritti tutti i termini con un significato particolare. Per facilitarne l'individuazione, i termini saranno contrassegnati da una '\textbf{G}' a pedice.
-    \subsection{Riferimenti}
-    \subsubsection{Normativi}
-    \begin{itemize}
-        \item \textit{Norme di progetto v1.0.0};
-        \item \textbf{Capitolato d'appalto C2 - EmporioLambda}:\\ \href{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C2.pdf}{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C2.pdf};
-        \item \textit{Verbale esterno 2021-03-17}
-        \item \textit{Verbale esterno 2021-03-25}
-    \end{itemize}
-    \subsubsection{Informativi}
-    \begin{itemize}
-        \item \textit{Studio di fattibilità v1.0.0};
-        \item \textbf{Capitolato d'appalto C2 - EmporioLambda}:\\ \href{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C2.pdf}{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C2.pdf};
-        \item \textbf{Slide del corso Ingegneria del Software, A.A. 2020/21}: \\ \href{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L07.pdf}{Analisi dei Requisiti}; \\ \href{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi%20Use%20Case_4x4.pdf}{Diagrammi dei casi d'uso};
-        \item \textbf{Software Engineering - Ian Sommerville - 10th Edition 2014}\\
-        Chapter 4: Requirements engineering;
-        \item \textbf{Sito informativo sull'utilizzo delle tecnologie server-less}:\\ \href{https://aws.amazon.com/training/ramp-up-guides/}{https://aws.amazon.com/training/ramp-up-guides/};
-        \item \textbf{Sito informativo sull'utilizzo e l'implementazione di Amazon Cognito}:\\ \href{https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html}{https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html}.
-        %Da aggiornare con i siti che useremo per comprendere al meglio le tecnologie usate
-    \end{itemize}
+\subsection{Scopo del documento}
+Il documento ha lo scopo di descrivere in maniera dettagliata i requisiti individuati per il prodotto. Tali requisiti sono stati identificati dall'analisi del capitolato\textsubscript{\textbf{G}} \textbf{C2} e degli incontri con il proponente \textit{Red Babel}.
+\subsection{Scopo del prodotto}
+L'obiettivo del progetto è quello di realizzare una piattaforma e-commerce basata su tecnologie serverless. Il prodotto dovrà poter essere utilizzato da un generico commerciante con la minima interazione tecnica tramite account AWS Merchant\textsubscript{\textbf{G}}. Inoltre dovranno essere implementate delle funzioni irrinunciabili per tutte le categorie di utenti che ne faranno uso:
+\begin{itemize}
+    \item clienti;
+    \item commercianti;
+    \item admin.
+\end{itemize}
+\subsection{Glossario}
+All'interno del documento sono presenti termini che potrebbero risultare ambigui a seconda del contesto. Al fine di evitare possibili incomprensioni
+e rendere chiari agli stakeholders\textsubscript{\textbf{G}} i termini utilizzati, viene fornito un \textit{Glossario v1.0.0.} contenente i suddetti termini
+e la loro spiegazione. Nella seguente documentazione tali termini saranno individuabili tramite una '\textbf{G}' a pedice.
+\subsection{Riferimenti}
+\subsubsection{Normativi}
+\begin{itemize}
+    \item \textit{Norme di progetto v1.0.0};
+    \item \textbf{Capitolato d'appalto C2 - EmporioLambda}:\\ \href{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C2.pdf}{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C2.pdf};
+    \item \textit{Verbale esterno 2021-03-17}
+    \item \textit{Verbale esterno 2021-03-25}
+\end{itemize}
+\subsubsection{Informativi}
+\begin{itemize}
+    \item \textit{Studio di fattibilità v1.0.0};
+    \item \textbf{Capitolato d'appalto C2 - EmporioLambda}:\\ \href{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C2.pdf}{https://www.math.unipd.it/~tullio/IS-1/2020/Progetto/C2.pdf};
+    \item \textbf{Slide del corso Ingegneria del Software, A.A. 2020/21}: \\ \href{https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L07.pdf}{Analisi dei Requisiti}; \\ \href{https://www.math.unipd.it/~rcardin/swea/2021/Diagrammi%20Use%20Case_4x4.pdf}{Diagrammi dei casi d'uso};
+    \item \textbf{Software Engineering - Ian Sommerville - 10th Edition 2014}\\
+          Chapter 4: Requirements engineering;
+    \item \textbf{Sito informativo sull'utilizzo delle tecnologie server-less}:\\ \href{https://aws.amazon.com/training/ramp-up-guides/}{https://aws.amazon.com/training/ramp-up-guides/};
+    \item \textbf{Sito informativo sull'utilizzo e l'implementazione di Amazon Cognito}:\\ \href{https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html}{https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html}.
+          %Da aggiornare con i siti che useremo per comprendere al meglio le tecnologie usate
+\end{itemize}
