@@ -6,17 +6,17 @@
     \item \textbf{Commitenti:} \textit{Prof. Tullio Vardanega, Prof. Riccardo Cardin};
 \end{itemize}
 \subsection{Descrizione del capitolato}
-Il capitolato richiede la realizzazione di una piattaforma e-commerce 
-basata interamente sulle tecnologie serverless che possa essere utilizzata 
-dal proponente come prototipo da mostrare ad altre aziende. EmporioLambda 
-deve poter essere utilizzato da un ipotetico commerciante con il minimo 
-quantitativo di configurazione manuale tramite account AWS Merchant\textsubscript{\textbf{G}}. 
-Il capitolato prevede che vengano fornite alcune funzioni irrinunciabili 
+Il capitolato richiede la realizzazione di una piattaforma e-commerce
+basata interamente sulle tecnologie serverless che possa essere utilizzata
+dal proponente come prototipo da mostrare ad altre aziende. EmporioLambda
+deve poter essere utilizzato da un ipotetico commerciante con il minimo
+quantitativo di configurazione manuale tramite account AWS Merchant\textsubscript{\textbf{G}}.
+Il capitolato prevede che vengano fornite alcune funzioni irrinunciabili
 per tutte le categorie di utenti che ne faranno uso: clienti, commercianti, admin.
 \subsection{Finalità del progetto}
-EmporioLambda dovrà consistere di 4 moduli: 
+EmporioLambda dovrà consistere di 4 moduli:
 \begin{itemize}
-    \item \textbf{EmporioLambda-frontend:} si occupa di gestire le pagine richieste dall’utente. Il compito di questo modulo è pre-renderizzare le pagine in HTML sul server ad ogni richiesta. Dovrà essere implementato utilizzando Next.js\textsubscript{\textbf{G}} e TypeScript\textsubscript{\textbf{G}};
+    \item \textbf{EmporioLambda-frontend:} si occupa di gestire le pagine richieste dall’utente. Il compito di questo modulo è pre-renderizzare le pagine in HTML\textsubscript{\textbf{G}} sul server ad ogni richiesta. Dovrà essere implementato utilizzando Next.js\textsubscript{\textbf{G}} e TypeScript\textsubscript{\textbf{G}};
     \item \textbf{EmporioLambda-backend:} si occupa di gestire i servizi dell’applicazione e cioè gestire la business-logic, i dati relativi ad utenti, prodotti ed ordini, lo stato del carrello. Dovrà essere implementato utilizzando Serverless Framework\textsubscript{\textbf{G}}, TypeScript e AWS Lambda\textsubscript{\textbf{G}};
     \item \textbf{EmporioLambda-integration:} rappresenta tutti i servizi di terze parti che interagiscono con \\EmporioLambda-backend. Dovrà essere implementato utilizzando Serverless Framework e TypeScript;
     \item \textbf{EmporioLambda-monitoring:} rappresenta gli strumenti impiegati dagli admin per monitorare lo stato dell’applicazione. Dovrà essere implementato con Amazon CloudWatch\textsubscript{\textbf{G}}.
@@ -24,10 +24,11 @@ EmporioLambda dovrà consistere di 4 moduli:
 \subsection{Tecnologie interessate}
 Il proponente impone l’utilizzo di diverse tecnologie e linguaggi:
 \begin{itemize}
-    \item \textbf{AWS Lambda:} AWS Lambda è una piattaforma di elaborazione serverless basata su eventi fornita da Amazon come parte di Amazon Web Services. È un servizio di elaborazione che esegue il codice in risposta agli eventi e automaticamente gestisce le risorse di calcolo necessarie per l'esecuzione di quel codice;
-    \item \textbf{Serverless Framework:} Serverless Framework è un framework Web gratuito e open source scritto utilizzando Node.js. Serverless è il primo framework sviluppato per la creazione di applicazioni su AWS Lambda;
-    \item \textbf{Next.js:} Next.js è un framework web di sviluppo front-end React open source che abilita funzionalità come il rendering lato server e la generazione di siti web statici per applicazioni web basate su React. Fornisce possibilità di integrazione con Typescript;
-    \item \textbf{TypeScript:} TypeScript è un Super-set di JavaScript. Il linguaggio estende la sintassi di JavaScript in modo che qualunque programma scritto in JavaScript sia anche in grado di funzionare con TypeScript senza nessuna modifica. Nel progetto è richiesto l'impiego dell'ultima versione di TypeScript;
+    \item \textbf{Architettura serverless:} Un'architettura serverless è un’applicazione di progettazione che include servizi "Backend as aService\textsubscript{\textbf{G}}" (BaaS) di terze parti, codice personalizzato e container temporanei su una piattaforma di esecuzione "Function as a Service\textsubscript{\textbf{G}}" (FaaS). Le architetture Serverless potrebbero trarre beneficio dalla riduzione dei costi delle operazioni, complessità e tempi di consegna. Essi sono sistemi basati su cloud di eventi, dove lo sviluppo di applicazioni è basato esclusivamente su una combinazione di servizi di terze parti, logica lato client e chiamate a procedure presenti nel cloud.
+    \item \textbf{AWS Lambda:} AWS Lambda è una piattaforma di elaborazione serverless basata su eventi fornita da Amazon come parte di Amazon Web Services\textsubscript{\textbf{G}}. È un servizio di elaborazione che esegue il codice in risposta agli eventi e automaticamente gestisce le risorse di calcolo necessarie per l'esecuzione di quel codice;
+    \item \textbf{Serverless Framework:} Serverless Framework è un framework Web gratuito e open source\textsubscript{\textbf{G}} scritto utilizzando Node.js. Serverless è il primo framework sviluppato per la creazione di applicazioni su AWS Lambda;
+    \item \textbf{Next.js:} Next.js è un framework web di sviluppo frontend React\textsubscript{\textbf{G}} open source che abilita funzionalità come il rendering lato server e la generazione di siti web statici per applicazioni web basate su React. Fornisce possibilità di integrazione con Typescript;
+    \item \textbf{TypeScript:} TypeScript è un Super-set di JavaScript\textsubscript{\textbf{G}}. Il linguaggio estende la sintassi di JavaScript in modo che qualunque programma scritto in JavaScript sia anche in grado di funzionare con TypeScript senza nessuna modifica. Nel progetto è richiesto l'impiego dell'ultima versione di TypeScript;
     \item \textbf{ESLint:} strumento che permette di verificare che il codice TypeScript scritto rispetti correttamente la sintassi di linguaggio;
     \item \textbf{Stripe:} fornisce un’infrastruttura che permette a privati e aziende di inviare e ricevere pagamenti via internet.
 \end{itemize}
@@ -41,21 +42,21 @@ Per l'implementazione delle varie funzionalità richieste nel capitolato il prop
     \item \textbf{Amazon CoudWatch:} Amazon CloudWatch è un servizio di monitoraggio e osservabilità creato per ingegneri, sviluppatori, ingegneri responsabili dell'affidabilità del sito e manager IT DevOps;
     \item \textbf{Datadog:} Datadog è un servizio di monitoraggio per applicazioni su scala cloud, che fornisce il monitoraggio di server, database, strumenti e servizi, attraverso una piattaforma di analisi dei dati basata su SaaS. Alternativa a AWS CloudWatch;
     \item \textbf{AWS S3:} AWS S3, acronimo di Amazon Web Services Amazon Simple Storage, è un servizio Web di memorizzazione offerto da Amazon Web Services;
-    \item \textbf{GitHub:} software di controllo di versione distribuito; 
+    \item \textbf{GitHub:} software di controllo di versione distribuito;
     \item \textbf{GitLab}: software di controllo di versione distribuito. Alternativa a GitHub.
 \end{itemize}
 \subsection{Aspetti positivi}
 \begin{itemize}
-    \item L’argomento del capitolato è di interesse per tutti i membri del gruppo;
-    \item Le tecnologie coinvolte nello sviluppo del progetto sono innovative e di interesse per tutti i membri del gruppo;
-    \item Sia l’azienda che la sua proposta appaiono moderne e meritevoli di attenzioni, padroneggiare le tecnologie richieste dal capitolato significherebbe investire in formazione concreta e non in un progetto didattico fine a sé stesso;
-    \item La chiarezza dell’esposizione del capitolato, riscontrati sia nel documento che nel video di presentazione.
+    \item l’argomento del capitolato è di interesse per tutti i membri del gruppo;
+    \item le tecnologie coinvolte nello sviluppo del progetto sono innovative e di interesse per tutti i membri del gruppo;
+    \item sia l’azienda che la sua proposta appaiono moderne e meritevoli di attenzioni, padroneggiare le tecnologie richieste dal capitolato significherebbe investire in formazione concreta e non in un progetto didattico fine a sé stesso;
+    \item la chiarezza dell’esposizione del capitolato, riscontrati sia nel documento che nel video di presentazione.
 \end{itemize}
 \subsection{Criticità e fattori di rischio}
 \begin{itemize}
-    \item L’apprendimento delle tecnologie coinvolte, dato il loro numero e complessità, potrebbe richiedere molto tempo in quanto nessuno dei membri del gruppo dispone di esperienza pregressa con la maggior parte di esse;
-    \item Occorre tenere in considerazione la limitatezza delle risorse di cui il gruppo dispone, in particolar modo del tempo materiale, e la costante penalizzazione sul piano organizzativo e gestionale che comporta la situazione pandemica in essere;
-    \item Il proponente ha residenza all’estero e la comunicazione potrebbe rivelarsi più problematica rispetto a quella con un’azienda locale.
+    \item l’apprendimento delle tecnologie coinvolte, dato il loro numero e complessità, potrebbe richiedere molto tempo in quanto nessuno dei membri del gruppo dispone di esperienza pregressa con la maggior parte di esse;
+    \item occorre tenere in considerazione la limitatezza delle risorse di cui il gruppo dispone, in particolar modo del tempo materiale, e la costante penalizzazione sul piano organizzativo e gestionale che comporta la situazione pandemica in essere;
+    \item il proponente ha residenza all’estero e la comunicazione potrebbe rivelarsi più problematica rispetto a quella con un’azienda locale.
 \end{itemize}
 \subsection{Conclusioni}
 Le tecnologie richieste per la realizzazione della proposta di RedBabel hanno fin da subito suscitato l’interesse dei membri del gruppo. Nel dettaglio, la possibilità di approfondire paradigmi e tecnologie che esulano o che non vengono approfonditi dal programma di studi della Laurea Triennale, come la programmazione funzionale asincrona e l’architettura serverless, ha ricoperto un ruolo fondamentale nel designare questo capitolato come uno dei preferibili. Sarebbe inoltre inopportuno trascurare il fatto che, facendo parte dei gruppi del secondo lotto del corso didattico di Ingegneria del Software, il gruppo TechSWEave ha avuto possibilità limitate nella scelta del capitolato. Alla luce di queste considerazioni e nonostante le difficoltà che potrebbero presentarsi e la complessità percepita per lo sviluppo del software richiesto, il gruppo TechSWEave ha deciso di optare per la realizzazione di questo capitolato, fiducioso del fatto che i punti non ancora completamente chiari saranno adeguatamente sviluppati e compresi in sinergia con il proponente. Questo dovrà ovviamente andare di pari passo con la consapevolezza, da parte di ciascun membro del gruppo, della necessità di impegnarsi al proprio meglio al fine di apprendere e padroneggiare l’uso delle tecnologie che questo progetto impone.
