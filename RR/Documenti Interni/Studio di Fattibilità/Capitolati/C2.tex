@@ -10,56 +10,51 @@ Il capitolato richiede la realizzazione di una piattaforma e-commerce
 basata interamente sulle tecnologie serverless che possa essere utilizzata 
 dal proponente come prototipo da mostrare ad altre aziende. EmporioLambda 
 deve poter essere utilizzato da un ipotetico commerciante con il minimo 
-quantitativo di configurazione manuale tramite account AWS Merchant. 
+quantitativo di configurazione manuale tramite account AWS Merchant\textsubscript{\textbf{G}}. 
 Il capitolato prevede che vengano fornite alcune funzioni irrinunciabili 
-per tutte le categorie di utenti che ne faranno uso: clienti, commercianti,
- admin.
+per tutte le categorie di utenti che ne faranno uso: clienti, commercianti, admin.
 \subsection{Finalità del progetto}
 EmporioLambda dovrà consistere di 4 moduli: 
 \begin{itemize}
-    \item \textbf{EmporioLambda-frontend:} si occupa di gestire le pagine richieste dall’utente. Il compito di questo modulo è pre-renderizzare le pagine in HTML sul server ad ogni richiesta. Dovrà essere implementato utilizzando Next.js e TypeScript;
-    \item \textbf{EmporioLambda-backend:} si occupa di gestire i servizi dell’applicazione e cioè gestire la business-logic, i dati relativi ad utenti, prodotti ed ordini, lo stato del carrello. Dovrà essere implementato utilizzando Serverless Framework, TypeScript e AWS Lambda;
+    \item \textbf{EmporioLambda-frontend:} si occupa di gestire le pagine richieste dall’utente. Il compito di questo modulo è pre-renderizzare le pagine in HTML sul server ad ogni richiesta. Dovrà essere implementato utilizzando Next.js\textsubscript{\textbf{G}} e TypeScript\textsubscript{\textbf{G}};
+    \item \textbf{EmporioLambda-backend:} si occupa di gestire i servizi dell’applicazione e cioè gestire la business-logic, i dati relativi ad utenti, prodotti ed ordini, lo stato del carrello. Dovrà essere implementato utilizzando Serverless Framework\textsubscript{\textbf{G}}, TypeScript e AWS Lambda\textsubscript{\textbf{G}};
     \item \textbf{EmporioLambda-integration:} rappresenta tutti i servizi di terze parti che interagiscono con \\EmporioLambda-backend. Dovrà essere implementato utilizzando Serverless Framework e TypeScript;
-    \item \textbf{EmporioLambda-monitoring:} rappresenta gli strumenti impiegati dagli admin per monitorare lo stato dell’applicazione. Dovrà essere implementato con Amazon CloudWatch.
+    \item \textbf{EmporioLambda-monitoring:} rappresenta gli strumenti impiegati dagli admin per monitorare lo stato dell’applicazione. Dovrà essere implementato con Amazon CloudWatch\textsubscript{\textbf{G}}.
 \end{itemize}
 \subsection{Tecnologie interessate}
-Il proponente richiede l’utilizzo delle seguenti tecnologie:
+Il proponente impone l’utilizzo di diverse tecnologie e linguaggi:
 \begin{itemize}
-    \item \textbf{Architettura serverless:} Un'architettura serverless è un’applicazione di progettazione che include servizi "Backend as aServiceG" (BaaS) di terze parti, codice personalizzato e container temporanei su una piattaforma di esecuzione "Function as a ServiceG" (FaaS). Le architetture Serverless potrebbero trarre beneficio dalla riduzione dei costi delle operazioni, complessità e tempi di consegna. Essi sono sistemi basati su cloud di eventi, dove lo sviluppo di applicazioni è basato esclusivamente su una combinazione di servizi di terze parti, logica lato client e chiamate a procedure presenti nel cloud.
-    \item \textbf{AWS Lambda:} WS Lambda è una piattaforma di elaborazione serverless basata su eventi fornita da Amazon come parte di Amazon Web Services. È un servizio di elaborazione che esegue il codice in risposta agli eventi e automaticamente gestisce le risorse di calcolo necessarie per l'esecuzione di quel codice.
-    \item \textbf{Serverless Framework:} Serverless Framework è un framework Web gratuito e open source scritto utilizzando Node.js. Serverless è il primo framework sviluppato per la creazione di applicazioni su AWS Lambda.
-    \item \textbf{Next.js:} Next.js è un framework web di sviluppo front-end React open source che abilita funzionalità come il rendering lato server e la generazione di siti web statici per applicazioni web basate su React. Fornisce possibilità di integrazione con Typescript.
-    \item \textbf{Typescript:} TypeScript è un Super-set di JavaScript. Il linguaggio estende la sintassi di JavaScript in modo che qualunque programma scritto in JavaScript sia anche in grado di funzionare con TypeScript senza nessuna modifica.
-    \item \textbf{ESLint:} Strumento che permette di verificare che il codice TypeScript scritto rispetti correttamente la sintassi di linguaggio.
-    \item \textbf{HTML:} Html, acronimo di hyper-text mark-up language, permette di disporre gli elementi all’interno di una pagina Web, ma è sempre più utilizzato anche per la realizzazione di contenuti e applicazioni mobile.
-    \item \textbf{CSS:} CSS, acronimo di cascade style sheet, è un linguaggio usato per definire la formattazione di documenti HTML, XHTML e XML, ad esempio i siti web e relative pagine web.
-    \item \textbf{Amazon CoudWatch:} Amazon CloudWatch è un servizio di monitoraggio e osservabilità creato per ingegneri, sviluppatori, ingegneri responsabili dell'affidabilità del sito e manager IT DevOps.
-    \item \textbf{Identity manager:} Sistema in grado di consentire alle organizzazioni di facilitare - e al tempo stesso controllare - gli accessi degli utenti ad applicazioni e dati critici, proteggendo contestualmente i dati personali da accessi non autorizzati.
-    \item \textbf{AWS Amazon Cognito:} Amazon Cognito permette di aggiungere strumenti di registrazione degli utenti, accesso e controllo degli accessi alle app Web e per dispositivi mobili.
-    \item \textbf{Payment service:} Offre servizi online ad enti, negozi e commercianti per accettare pagamenti elettronici con una varietà di metodi di pagamento, tra cui carta di credito, pagamenti basati su banca come addebito diretto, trasferimento bancario e trasferimento bancario in tempo reale basato sul modello di Banca online.
-    \item \textbf{Stripe:} Fornisce un’infrastruttura che permette a privati e aziende di inviare e ricevere pagamenti via internet.
+    \item \textbf{AWS Lambda:} AWS Lambda è una piattaforma di elaborazione serverless basata su eventi fornita da Amazon come parte di Amazon Web Services. È un servizio di elaborazione che esegue il codice in risposta agli eventi e automaticamente gestisce le risorse di calcolo necessarie per l'esecuzione di quel codice;
+    \item \textbf{Serverless Framework:} Serverless Framework è un framework Web gratuito e open source scritto utilizzando Node.js. Serverless è il primo framework sviluppato per la creazione di applicazioni su AWS Lambda;
+    \item \textbf{Next.js:} Next.js è un framework web di sviluppo front-end React open source che abilita funzionalità come il rendering lato server e la generazione di siti web statici per applicazioni web basate su React. Fornisce possibilità di integrazione con Typescript;
+    \item \textbf{TypeScript:} TypeScript è un Super-set di JavaScript. Il linguaggio estende la sintassi di JavaScript in modo che qualunque programma scritto in JavaScript sia anche in grado di funzionare con TypeScript senza nessuna modifica. Nel progetto è richiesto l'impiego dell'ultima versione di TypeScript;
+    \item \textbf{ESLint:} strumento che permette di verificare che il codice TypeScript scritto rispetti correttamente la sintassi di linguaggio;
+    \item \textbf{Stripe:} fornisce un’infrastruttura che permette a privati e aziende di inviare e ricevere pagamenti via internet.
 \end{itemize}
-Nel capitolato sono citate altre tecnologie che il proponente consiglia o indica come interessanti, ma di cui non impone l'utilizzo:
+Per l'implementazione delle varie funzionalità richieste nel capitolato il proponente consiglia diverse tecnologie, a volte lasciando libertà sulla scelta tra le possibili alternative fornite:
 \begin{itemize}
-    \item \textbf{AWS S3:} AWS S3, acronimo di Amazon Web Services Amazon Simple Storage, è un servizio Web di memorizzazione offerto da Amazon Web Services;
-    \item \textbf{Auth0:} Piattaforma di autenticazione e autorizzazione;
-    \item \textbf{Datadog:} Datadog è un servizio di monitoraggio per applicazioni su scala cloud, che fornisce il monitoraggio di server, database, strumenti e servizi, attraverso una piattaforma di analisi dei dati basata su SaaS;
+    \item \textbf{AWS DynamoDB:} Amazon DynamoDB è un database che supporta i modelli di dati di tipo documento e di tipo chiave-valore che offre prestazioni di pochi millisecondi a qualsiasi scala. Si tratta di un database durevole, multiregione, multiattivo e completamente gestito che offre sicurezza, backup e ripristino integrati e memorizzazione nella cache in memoria per applicazioni Internet;
     \item \textbf{AWS CloudFormation:} AWS CloudFormation offre un modo semplice per modellare una raccolta di risorse AWS e di terze parti, effettuarne il provisioning in modo rapido e coerente e gestirle in tutto il loro ciclo di vita, trattando l'infrastruttura come codice;
     \item \textbf{AWS API Gateway:} Amazon API Gateway è un servizio che semplifica per gli sviluppatori la creazione, la pubblicazione, la manutenzione, il monitoraggio e la protezione delle API su qualsiasi scala;
-    \item \textbf{AWS DynamoDB:} Amazon DynamoDB è un database che supporta i modelli di dati di tipo documento e di tipo chiave-valore che offre prestazioni di pochi millisecondi a qualsiasi scala. Si tratta di un database durevole, multiregione, multiattivo e completamente gestito che offre sicurezza, backup e ripristino integrati e memorizzazione nella cache in memoria per applicazioni Internet;
-    \item \textbf{Content management system:} Un content management system, in acronimo CMS, è uno strumento software, installato su un server web, il cui compito è facilitare la gestione dei contenuti di siti web, svincolando il webmaster da conoscenze tecniche specifiche di programmazione Web.
+    \item \textbf{AWS Amazon Cognito:} Amazon Cognito permette di aggiungere strumenti di registrazione degli utenti, accesso e controllo degli accessi alle app Web e per dispositivi mobili;
+    \item \textbf{Auth0:} piattaforma di autenticazione e autorizzazione. Alternativa a AWS Cognito;
+    \item \textbf{Amazon CoudWatch:} Amazon CloudWatch è un servizio di monitoraggio e osservabilità creato per ingegneri, sviluppatori, ingegneri responsabili dell'affidabilità del sito e manager IT DevOps;
+    \item \textbf{Datadog:} Datadog è un servizio di monitoraggio per applicazioni su scala cloud, che fornisce il monitoraggio di server, database, strumenti e servizi, attraverso una piattaforma di analisi dei dati basata su SaaS. Alternativa a AWS CloudWatch;
+    \item \textbf{AWS S3:} AWS S3, acronimo di Amazon Web Services Amazon Simple Storage, è un servizio Web di memorizzazione offerto da Amazon Web Services;
+    \item \textbf{GitHub:} software di controllo di versione distribuito; 
+    \item \textbf{GitLab}: software di controllo di versione distribuito. Alternativa a GitHub.
 \end{itemize}
 \subsection{Aspetti positivi}
 \begin{itemize}
-    \item L’argomento del capitolato è di interesse per tutti i membri del gruppo.
-    \item Le tecnologie coinvolte nello sviluppo del progetto sono innovative e di interesse per tutti i membri del gruppo.
-    \item Sia l’azienda che la sua proposta appaiono moderne e meritevoli di attenzioni, padroneggiare le tecnologie richieste dal capitolato significherebbe investire in formazione concreta e non in un progetto didattico fine a sé stesso.
+    \item L’argomento del capitolato è di interesse per tutti i membri del gruppo;
+    \item Le tecnologie coinvolte nello sviluppo del progetto sono innovative e di interesse per tutti i membri del gruppo;
+    \item Sia l’azienda che la sua proposta appaiono moderne e meritevoli di attenzioni, padroneggiare le tecnologie richieste dal capitolato significherebbe investire in formazione concreta e non in un progetto didattico fine a sé stesso;
     \item La chiarezza dell’esposizione del capitolato, riscontrati sia nel documento che nel video di presentazione.
 \end{itemize}
 \subsection{Criticità e fattori di rischio}
 \begin{itemize}
-    \item L’apprendimento delle tecnologie coinvolte, dato il loro numero e complessità, potrebbe richiedere molto tempo in quanto nessuno dei membri del gruppo dispone di esperienza pregressa con la maggior parte di esse.
-    \item Occorre tenere in considerazione la limitatezza delle risorse di cui il gruppo dispone, in particolar modo del tempo materiale, e la costante penalizzazione sul piano organizzativo e gestionale che comporta la situazione pandemica in essere.
+    \item L’apprendimento delle tecnologie coinvolte, dato il loro numero e complessità, potrebbe richiedere molto tempo in quanto nessuno dei membri del gruppo dispone di esperienza pregressa con la maggior parte di esse;
+    \item Occorre tenere in considerazione la limitatezza delle risorse di cui il gruppo dispone, in particolar modo del tempo materiale, e la costante penalizzazione sul piano organizzativo e gestionale che comporta la situazione pandemica in essere;
     \item Il proponente ha residenza all’estero e la comunicazione potrebbe rivelarsi più problematica rispetto a quella con un’azienda locale.
 \end{itemize}
 \subsection{Conclusioni}

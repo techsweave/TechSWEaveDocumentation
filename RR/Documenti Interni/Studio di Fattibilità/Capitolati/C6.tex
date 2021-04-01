@@ -1,57 +1,57 @@
 \section{Capitolato C6 - RGP: Realtime Gaming Platform}
 \subsection{Informazioni}
 \begin{itemize}
-    \item \textbf{Nome:} \textit{Realtime Gaming Platform}; 
+    \item \textbf{Nome:} \textit{Realtime Gaming Platform};
     \item \textbf{Proponente:} \textit{Zero12};
     \item \textbf{Committente:} \textit{Prof. Tullio Vardanega, Prof. Riccardo Cardin};
 \end{itemize}
 \subsection{Descrizione}
-Il progetto prevede la realizzazione di un gioco ascorrimento verticale giocabile due modalit\`a: single player e multiplayer. Il gioco tuttavia non prevede interazione fra gli attori dei giocatori ma semplicemente una sincronizzazione dei nemici power up e altre componenti in modo che la sfida sia la medesima.
-\subsection{Finalit\`a progetto}
+Il progetto prevede la realizzazione di un gioco a scorrimento verticale giocabile in due modalità: single player e multiplayer. Il gioco tuttavia non prevede interazione fra gli attori dei giocatori ma semplicemente una sincronizzazione dei nemici, dei power up e di altre componenti in modo che la sfida sia la medesima.
+\subsection{Finalità progetto}
 Il progetto richiede:
 \begin{itemize}
-    \item Ricerca della soluzione AWS piu adatta;
-    \item Sviluppo della componente server e della sincronizzazione per la modalita multiplayer;
-    \item Sviluppo del gioco per mobile, scegliendo una piattaforma tra iOS e android.
+    \item Ricerca della soluzione AWS\textsubscript{\textbf{G}} piu adatta;
+    \item Sviluppo della componente server e della sincronizzazione per la modalità multiplayer;
+    \item Sviluppo del gioco per mobile, scegliendo una piattaforma tra iOS e Android.
 \end{itemize}
-Sono inoltre richiesti i seguenti materiali prima di procedere allo sviluppo:
+Prima di procedere allo sviluppo occorre soddisfare le seguenti richieste:
 \begin{itemize}
     \item Scelta servizio AWS;
     \item Schema architettura cloud;
-    \item Documentazione dell'API;
-    \item Piano di test unit\`a;
+    \item Documentazione dell'API\textsubscript{\textbf{G}};
+    \item Piano di test unità.
 \end{itemize}
-Infine i seguenti materiali sono da consegnare al termine dello svilippo
+Al termine dello sviluppo si dovrà consegnare:
 \begin{itemize}
     \item Report sulle scelte della tecnologia AWS;
     \item Configurazione dell'architettura cloud (con eventualmente codice sorgente);
-    \item codice sorgente dell'app.
+    \item Codice sorgente dell'app.
 \end{itemize}
-Le parti di codice sono da consegnare mediante repository GIT.
+Il codice dovrà essere consegnato mediante repository GIT.
 \subsection{Tecnologie impiegate}
 \begin{itemize}
-    \item \textbf{AWS}, soluzioni dedicate all'hosting per l'architettura serverless:
-    \begin{itemize}
-        \item \textbf{GameLift}, apposito per il gaming
-        \item \textbf{Appsync}, alternativa generica
-    \end{itemize}
-    \item \textbf{NodeJS}, environment per eseguire Javascript fuori dal browser, da utilizzare se il servizio AWS impiegato richiede scrittura di codice.
-    \item Linguaggi di programmazione per lo sviluppo mobile: 
-    \begin{itemize}
-        \item \textbf{Swift} per iOS
-        \item \textbf{Kotlin} per android
-    \end{itemize}
+    \item \textbf{AWS:} occorre scegliere la soluzione dedicate all'hosting per l'architettura serverless tra:
+          \begin{itemize}
+              \item \textbf{GameLift:} soluzione di hosting\textsubscript{\textbf{G}} di server di giochi che distribuisce, gestisce e dimensiona i server cloud per giochi multigiocatore;
+              \item \textbf{Appsync:} soluzione alternativa generica.
+          \end{itemize}
+    \item \textbf{NodeJS}: environment per eseguire Javascript esternamente al browser;
+    \item Linguaggi di programmazione per lo sviluppo mobile:
+          \begin{itemize}
+              \item \textbf{Swift:} per iOS;
+              \item \textbf{Kotlin:} per Android.
+          \end{itemize}
 \end{itemize}
 \subsection{Aspetti positivi}
 \begin{itemize}
     \item Le tecnologie impiegate sono moderne e molto diffuse;
-    \item Lo sviluppo mobile \`e attualmente molto rilevante.
+    \item Lo sviluppo mobile è attualmente molto rilevante.
 \end{itemize}
-\subsection{Criticit\`a e fattori di rischio}
+\subsection{Criticità e fattori di rischio}
 \begin{itemize}
-    \item Scelta obbligata fra android e iOS;
+    \item Scelta obbligata fra Android e iOS;
     \item Poca dimestichezza del team con lo sviluppo mobile;
-    \item Alcuni aspetti dello sviluppo del gioco, come parti grafiche, regole e attori potrebbero essere necessari per svolgere il testing ma dispendiosi da implementare e poco rilevanti rispetto agli scopi del progetto.
+    \item Alcuni aspetti dello sviluppo del gioco, come parti grafiche, regole e attori potrebbero richiedere molto tempo nonostante siano poco rilevanti rispetto agli scopi del progetto.
 \end{itemize}
 \subsection{Conclusioni}
-Il capitolato \`e stato scartato perch\'e la parte mobile e dello sviluppo del gioco in se \`e parsa poco stimolante e potenzialmente insidiosa. Inoltre per quanto riguarda le tecnologia AWS altri capitolati ne proponevano un uso piu approfondito e interessante.
+Il capitolato è stato scartato perchè la parte di sviluppo mobile e di sviluppo del gioco in sè è parsa potenzialmente insidiosa. Inoltre, per quanto riguarda le tecnologia AWS, altri capitolati ne proponevano un uso più approfondito e interessante.
