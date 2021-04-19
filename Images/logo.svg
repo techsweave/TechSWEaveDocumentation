@@ -1,0 +1,61 @@
+<svg id="Livello_2" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" width="47.95mm" height="47.95mm" viewBox="0 0 135.91 135.91">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #1761a0;
+      }
+
+      .cls-1 {
+        stroke-width: 4.95px;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-width: 1.14px;
+      }
+
+      .cls-3 {
+        fill: #e78200;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #1761a0;
+      }
+
+      .cls-5 {
+        font-size: 15px;
+        font-family: ProductSans-Regular, Product Sans;
+      }
+
+      .cls-6 {
+        letter-spacing: -0.08em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-9 {
+        letter-spacing: -0.02em;
+      }
+    </style>
+  </defs>
+  <title>logo</title>
+  <circle class="cls-1" cx="67.95" cy="67.95" r="65.48"/>
+  <polygon class="cls-2" points="45.11 51.51 36.07 51.51 31.55 59.33 36.07 67.16 45.11 67.16 49.63 59.33 45.11 51.51"/>
+  <polygon class="cls-3" points="58.84 59.13 49.8 59.13 45.29 66.96 49.8 74.79 58.84 74.79 63.36 66.96 58.84 59.13"/>
+  <polygon class="cls-4" points="72.42 51.3 63.38 51.3 58.86 59.13 63.38 66.96 72.42 66.96 76.94 59.13 72.42 51.3"/>
+  <polygon class="cls-2" points="72.42 35.65 63.38 35.65 58.86 43.48 63.38 51.3 72.42 51.3 76.94 43.48 72.42 35.65"/>
+  <polygon class="cls-3" points="85.77 27.82 76.73 27.82 72.21 35.65 76.73 43.48 85.77 43.48 90.28 35.65 85.77 27.82"/>
+  <polygon class="cls-2" points="86.17 43.58 77.13 43.58 72.61 51.41 77.13 59.23 86.17 59.23 90.69 51.41 86.17 43.58"/>
+  <polygon class="cls-2" points="85.77 59.33 76.73 59.33 72.21 67.16 76.73 74.99 85.77 74.99 90.28 67.16 85.77 59.33"/>
+  <polygon class="cls-4" points="99.29 51.51 90.25 51.51 85.74 59.33 90.25 67.16 99.29 67.16 103.81 59.33 99.29 51.51"/>
+  <text class="cls-5" transform="translate(25.88 95.43)"><tspan class="cls-6">T</tspan><tspan class="cls-7" x="6.9" y="0">e</tspan><tspan x="15.02" y="0">ch</tspan><tspan class="cls-8" x="30.97" y="0">S</tspan><tspan x="39.12" y="0">W</tspan><tspan class="cls-9" x="52.95" y="0">E</tspan><tspan class="cls-8" x="60.85" y="0">a</tspan><tspan class="cls-9" x="68.35" y="0">v</tspan><tspan x="75.6" y="0">e</tspan></text>
+</svg>
