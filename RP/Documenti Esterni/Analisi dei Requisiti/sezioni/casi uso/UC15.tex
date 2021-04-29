@@ -1,14 +1,17 @@
-\subsection{UC15: Logout}
+\subsection{UC15: Scelta della categoria}
 \label{sec:UC15}
 \begin{itemize}
-    \item \textbf{Descrizione:} sezione per effettuare il logout;
-    \item \textbf{Attore Primario:} utente autenticato;
-    \item \textbf{Attore Secondario:} servizio di autenticazione esterno;
-    \item \textbf{Precondizione:} l'utente (cliente o venditore) si trova in una qualsiasi pagina della piattaforma;
-    \item \textbf{Input:} l'utente clicca il bottone apposito per effettuare il logout;
-    \item \textbf{Postcondizione:} l'utente diventa non autenticato, uscendo dalla sessione.
+    \item \textbf{Descrizione:} l'utente sceglie una specifica categoria di prodotti da ricercare;
+    \item \textbf{Attore Primario:} utente non autenticato;
+    \item \textbf{Precondizione:} l'utente si trova in una pagina che consente la divisione in categorie;
+    \item \textbf{Input:} selezione della categoria;
+    \item \textbf{Postcondizione:} la categoria di ricerca cambia secondo la scelta dell'utente;
     \item \textbf{Scenario Principale:}
           \begin{itemize}
-              \item l'utente autenticato clicca il bottone per effettuare il logout ed esce dalla sessione corrente.
+              \item l'utente vuole ricercare un prodotto appartenente ad una determinata categoria.
+          \end{itemize}
+    \item \textbf{Inclusioni:}
+          \begin{itemize}
+              \item viene visualizzata una pagina con tutti i risultati della ricerca (\hyperref[sec:UC7]{\underline{UC7}}).
           \end{itemize}
 \end{itemize}

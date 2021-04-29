@@ -1,9 +1,17 @@
-\subsection{UC19: Annullamento checkout}
+\subsection{UC19: Visualizzazione profilo}
 \label{sec:UC19}
 \begin{itemize}
-    \item \textbf{Descrizione:} visualizzazione di un errore per un fallimento nella fase di pagamento;
-    \item \textbf{Attore Primario:} Stripe;
-    \item \textbf{Precondizione:} il cliente ha inserito i dati del pagamento;
-    \item \textbf{Input:} Stripe ritorna un errore nel risultato del pagamento;
-    \item \textbf{Postcondizione:} viene visualizzato un messaggio di errore, successivamente il cliente viene reindirizzato alla sezione del checkout.
+    \item \textbf{Descrizione:} l'utente vuole visualizzare le informazioni del proprio profilo;
+    \item \textbf{Attore Primario:} utente autenticato;
+    \item \textbf{Attore Secondario:} servizio di autenticazione esterno;
+    \item \textbf{Precondizione:} l'utente di trova all'interno della piattaforma;
+    \item \textbf{Input:} pressione dell'apposito bottone;
+    \item \textbf{Postcondizione:} l'utente viene reindirizzato alla pagina del suo profilo.
+    \item \textbf{Scenario Principale:} l'utente entra nel proprio profilo e visualizza le proprie informazioni:
+          \begin{itemize}
+              \item nome;
+              \item cognome;
+              \item e-mail;
+              \item indirizzi.
+          \end{itemize}
 \end{itemize}

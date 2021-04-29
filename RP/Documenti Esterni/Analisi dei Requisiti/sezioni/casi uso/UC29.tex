@@ -1,15 +1,25 @@
-\subsection{UC29: Applicazione filtri}
+\subsection{UC29: Modifica di un prodotto}
 \label{sec:UC29}
 \begin{itemize}
-    \item \textbf{Descrizione:} l'utente filtra i prodotti in base alle loro caratteristiche;
-    \item \textbf{Attore Primarilo:} utente generico
-    \item \textbf{Precondizione:} l'utente si trova all'interno della pagina con la lista dei prodotti (\hyperref[sec:UC7]{\underline{UC7}});
-    \item \textbf{Input:} selezione del filtro desiderato;
-    \item \textbf{Postcondizione:} la pagina si aggiorna secondo i filtri selezionati;
+    \item \textbf{Descrizione:} sezione per modificare un prodotto del negozio;
+    \item \textbf{Attore Primario:} venditore autenticato;
+    \item \textbf{Precondizione:} il venditore si trova nella sezione per gestire i prodotti;
+    \item \textbf{Input:} il venditore modifica i dati che ritiene opportuni relativi al prodotto da modificare;
+    \item \textbf{Postcondizione:} il prodotto è stato modificato;
     \item \textbf{Scenario Principale:}
           \begin{itemize}
-              \item l'utente si trova all'interno della pagina con la lista dei prodotti;
-              \item l'utente seleziona i filtri da applicare;
-              \item la pagina con la lista dei prodotti si aggiorna con i prodotti filtrati.
+              \item il venditore si trova nella sezione per gestire i prodotti;
+              \item il venditore decide di modificare un prodotto ed entra in questa sezione;
+              \item modifica i dati che preferisce, tra quelli elencati:
+                    \begin{itemize}
+                        \item il nome del prodotto;
+                        \item il prezzo di vendita;
+                        \item la descrizione del prodotto;
+                        \item la quantità disponibile in magazzino;
+                        \item l'immagine che lo descrive;
+                        \item la categoria del prodotto
+                        \item l'eventuale sconto.
+                    \end{itemize}
+              \item conferma le modifiche.
           \end{itemize}
 \end{itemize}

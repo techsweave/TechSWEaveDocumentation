@@ -1,13 +1,20 @@
-\subsection{UC17: Contatta il venditore}
+\subsection{UC17: Gestione profilo}
 \label{sec:UC17}
 \begin{itemize}
-    \item \textbf{Descrizione:} l'utente vuole contattare il venditore;
-    \item \textbf{Attore Primario:} utente autenticato
-    \item \textbf{Precondizione:} l'utente si trova in una pagina che permette di contattare il venditore;
-    \item \textbf{Input:} pressione dell'apposito bottone;
-    \item \textbf{Postcondizione:} l'utente può contattare il venditore;
+    \item \textbf{Descrizione:} l'utente vuole gestire il proprio profilo;
+    \item \textbf{Attore Primario:} utente autenticato;
+    \item \textbf{Attore Secondario:} servizio di autenticazione esterno;
+    \item \textbf{Precondizione:} l'utente si trova all'interno del proprio profilo
+    \item \textbf{Postcondizione:} l'utente può modificare il proprio profilo
     \item \textbf{Scenario Principale:}
           \begin{itemize}
-              \item l'utente contatta il venditore tramite questa sezione.
+              \item  l'utente può modificare:
+                    \begin{itemize}
+                        \item nome;
+                        \item cognome;
+                        \item username;
+                        \item password;
+                        \item indirizzi.
+                    \end{itemize}
           \end{itemize}
 \end{itemize}

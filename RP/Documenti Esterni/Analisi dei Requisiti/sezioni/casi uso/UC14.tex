@@ -1,20 +1,8 @@
-\subsection{UC14: Gestione profilo}
+\subsection{UC14 Visualizzazione errore quantità superata di un prodotto nel carrello}
 \label{sec:UC14}
 \begin{itemize}
-    \item \textbf{Descrizione:} l'utente vuole gestire il proprio profilo;
-    \item \textbf{Attore Primario:} utente autenticato;
-    \item \textbf{Attore Secondario:} servizio di autenticazione esterno;
-    \item \textbf{Precondizione:} l'utente si trova all'interno del proprio profilo
-    \item \textbf{Postcondizione:} l'utente può modificare il proprio profilo
-    \item \textbf{Scenario Principale:}
-          \begin{itemize}
-              \item  l'utente può modificare:
-                    \begin{itemize}
-                        \item nome;
-                        \item cognome;
-                        \item username;
-                        \item password;
-                        \item indirizzi.
-                    \end{itemize}
-          \end{itemize}
+    \item \textbf{Descrizione:} la quantità inserita dall'utente supera quella disponibile in magazzino;
+    \item \textbf{Attore primario:} utente non autenticato;
+    \item \textbf{Precondizione:} l'utente si trova all'interno del carrello;
+    \item \textbf{Postcondizione:} viene visualizzato il messaggio di errore.
 \end{itemize}
