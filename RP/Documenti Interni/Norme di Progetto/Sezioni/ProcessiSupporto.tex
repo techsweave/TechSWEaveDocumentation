@@ -14,14 +14,14 @@ Le attese, riguardo il processo in questione, sono le seguenti:
 \subsubsection{Ciclo di vita di un documento}
 Ogni documento attraversa le seguenti fasi del ciclo di vita:
 \begin{itemize}
-    \item \textbf{Creazione:} il documento viene creato utilizzano un template situato nella cartella \textit{Template} del repository remoto, con la prima pagina e l'intestazione della tabella contenente il diario nelle modifiche;
+    \item \textbf{Creazione:} il documento viene creato utilizzando un template situato nella cartella \textit{Template} del repository remoto, con la prima pagina e l'intestazione della tabella contenente il diario nelle modifiche;
     \item \textbf{Strutturazione:} si inizia a popolare il diario delle modifiche nella seconda pagina e viene creato l'indice;
     \item \textbf{Stesura:} il corpo del documento viene scritto da più membri del gruppo usando un metodo incrementale, a ogni modifica viene aggiornato il diario delle modifiche.
     \item \textbf{Revisione:} ogni singola sezione del corpo del documento viene regolarmente rivista da almeno un membro del gruppo, che deve essere obbligatoriamente diverso dal redattore della parte in verifica; se necessario, la verifica può essere svolta da più persone: in questo caso può partecipare anche chi ha scritto la sezione in verifica a patto che non si occupi della parte da esso redatta;
-    \item \textbf{Approvazione:} terminata la revisione, il Responsabile di Progetto\textsubscript{\textbf{G}} stabilisce la validità del documento, che solo a questo punto può essere considerato completo e può essere quindi rilasciato.
+    \item \textbf{Approvazione:} terminata la revisione, il \textit{Responsabile di Progetto}\textsubscript{\textbf{G}} stabilisce la validità del documento, che solo a questo punto può essere considerato completo e può essere quindi rilasciato.
 \end{itemize}
 \subsubsection{Template}
-Il gruppo ha creato un Template con \LaTeX\textsubscript{\textbf{G}} per uniformare velocemente la struttura grafica e lo stile di tutti i documenti, in modo che tutti si possano concentrare sulla stesura del corpo del documento. Il template permette di adottare automaticamente le conformità previste dalle \textit{Norme di Progetto}.
+Il gruppo ha creato un Template con \LaTeX\textsubscript{\textbf{G}} per uniformare velocemente la struttura grafica e lo stile di tutti i documenti, in modo che tutti si possano concentrare sulla stesura del corpo del documento. Il template permette di adottare automaticamente le conformità previste dalle \textit{Norme di Progetto v2.0.0}.
 \subsubsection{Struttura di un documento}
 \subsubsubsection{Prima pagina}
 Il frontespizio è la prima pagina del documento e contiene:
@@ -50,7 +50,7 @@ Ogni documento presenta un registro delle modifiche, sotto forma di tabella, che
     \item \textbf{Versione:} la versione del documento dopo la modifica.
 \end{itemize}
 \subsubsubsection{Indice}
-L’indice delle sezioni fornisce al fruitore una visione complessiva della struttura del documento, permette di orientarsi tra i contenuti e d'individuare la posizione delle varie parti. Ogni documento presenta un indice dei contenuti, subito dopo il registro delle modifiche; dove necessario, sono presenti anche un indice delle illustrazioni e uno delle tabelle presenti nel documento.
+L’indice delle sezioni fornisce al fruitore una visione complessiva della struttura del documento, permette di orientarsi tra i contenuti e d'individuare la posizione delle varie parti. Ogni documento presenta un indice dei contenuti, subito dopo il registro delle modifiche; dove necessario, sono presenti anche un indice delle illustrazioni e uno delle tabelle contenute nel documento.
 \subsubsubsection{Contenuto principale}
 Le pagine sono così strutturate:
 \begin{itemize}
@@ -74,22 +74,32 @@ Ogni verbale viene denominato con il formato:
 \begin{center}
     \textbf{Verbale\_AAAAMMGG} \\
 \end{center}
-e mantenuto nella \textit{Directory} Documenti esterni se è relativo a una riunione esterna, nella \textit{Directory} Documenti interni, se si riferisce a una riunione interna
+e mantenuto nella \textit{directory} Documenti esterni se è relativo a una riunione esterna, nella \textit{directory} Documenti interni, se si riferisce a una riunione interna
 \subsubsection{Norme tipografiche}
 \subsubsubsection{Convenzioni sui nomi dei file}
 I nomi dei file utilizzano la convenzione camelCase\textsubscript{\textbf{G}}, sono senza le proposizioni e non ci sono lettere accentate.
+Alla fine del file è indicata la versione, indicata con v[X][Y][Z] e separata dal nome del file con un '\_'.
 Ad esempio sono corretti:
 \begin{itemize}
-    \item analisiRequisiti;
-    \item studioFattibilita;
-    \item normeProgetto.
+    \item analisiRequisiti\_v1.0.0;
+    \item studioFattibilita\_v1.0.0;
+    \item normeProgetto\_v2.0.0 .
 \end{itemize}
 Mentre non sono corretti:
 \begin{itemize}
     \item AnalisiDeiRequisiti;
     \item studio\_fattibilità;
+    \item studio\_fattibilità 1.0.0;
     \item normeprogetto.
 \end{itemize}
+
+Mentre per le citazioni ai file all'interno di altri documenti utilizziamo la convenzione di chiamare i nomi effettivi del documento, ad esempio:
+\begin{itemize}
+    \item Analisi dei Requisiti v1.0.0;
+    \item Studio di Fattibilità v1.0.0;
+    \item Norme di Progetto v1.0.0 .
+\end{itemize}
+
 \subsubsection{Stili del testo}
 
 \subsubsubsection{Glossario}
@@ -101,7 +111,7 @@ Mentre non sono corretti:
 
 \subsubsubsection{Elenchi puntati}
 Ogni voce di un elenco termina con ";", tranne l'ultima che termina con ".". I sotto elenchi rispettano le stesse regole, essendo una funzione analoga. Se le voci sono della forma \textit{termine: descrizione}, i termini vanno in grassetto.
-\subsubsubsection{Formati dei dati}
+\subsubsubsection{Formato delle date}
 Le date vengono indicate usando il formato
 \begin{center}
     \textbf{[AAAA]-[MM]-[GG]}
@@ -118,7 +128,7 @@ Ogni tabella è contrassegnata da una didascalia descrittiva del contenuto, post
 \end{center}
 dove \textbf{[X]} indica il numero assoluto della tabella all’interno del documento; a questo il testo della didascalia. A questa prassi fanno eccezione le tabelle del registro delle modifiche, che non hanno la didascalia.
 \subsubsubsection{Grafici UML}
-I grafici in linguaggio UML\textsubscript{\textbf{G}}, usati per la modellazione dei casi\textsubscript{\textbf{G}} e per i diagrammi della progettazione\textsubscript{\textbf{G}}, sono inseriti come immagini.
+I grafici in linguaggio UML\textsubscript{\textbf{G}}, usati per la modellazione dei casi d'uso\textsubscript{\textbf{G}} e per i diagrammi della progettazione\textsubscript{\textbf{G}}, sono inseriti come immagini.
 \subsubsection{Strumenti di stesura}
 \subsubsubsection{\LaTeX}
 Per la stesura dei documenti, il gruppo ha scelto \LaTeX\textsubscript{\textbf{G}}, un linguaggio compilato basato sul programma di composizione tipografica \TeX, al fine di produrre documenti coerenti, ordinati, templetizzati e stesi in modo collaborativo.
@@ -133,7 +143,7 @@ Il processo ha lo scopo di andare a ordinare il software e la documentazione. Tu
 \subsubsection{Descrizione}
 La gestione della configurazione raggruppa e organizza tutti gli strumenti necessari all'organizzazione della produzione di documenti, diagrammi e codice, ma anche di quello necessari al versionamento e al coordinamento del gruppo.
 \subsubsection{Versionamento}
-\subsubsubsection{Codice di versione}
+\subsubsubsection{Codice di versione - da rivedere secondo le richieste di Tullio}
 La storia di un documento è ricostruibile attraverso le sue versioni, consultabili nella tabella presente all'inizio di ogni documento. Le versioni sono identificate da un codice a tre cifre nel formato:
 \begin{center}
     \textbf{\large [X].[Y].[Z]}\\
@@ -145,44 +155,87 @@ dove:
     \item \textbf{\large Z:} indica una versione in fase di elaborazione da parte dei \textit{Redattori}, che ne incrementano il valore a ogni modifica; la numerazione inizia da 0 e riparte da tale valore a ogni incremento di \textbf{X} o \textbf{Y}.
 \end{itemize}
 \subsubsubsection{Tecnologie adottate}
-Il versionamento è stato gestito attraverso il sistema di versionamento distribuito Git, con due repository\textsubscript{\textbf{G}} situate in GitHub.
+Il versionamento è stato gestito attraverso il sistema di versionamento distribuito \textit{Git}\textsubscript{\textbf{G}}, con tre repository\textsubscript{\textbf{G}} situate in \textit{GitHub}\textsubscript{\textbf{G}}.
 \subsubsubsection{Repository}
-Le due repository create dal gruppo TechSWEave sono le seguenti:
+I repository creati dal gruppo TechSWEave sono i seguenti:
 \begin{itemize}
-    \item \textbf{\href{https://github.com/techsweave/TechSWEave.git}{TechSWEave}}: per il versionamento del codice;
+    \item \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}}: per il versionamento del codice, lato backend;
+    \item \textbf{\href{https://github.com/techsweave/eml-fe.git}{eml-fe}}: per il versionamento del codice, lato frontend;
     \item \textbf{\href{https://github.com/techsweave/TechSWEaveDocumentation.git}{TechSWEaveDocumentation}}: per il versionamento dei documenti redatti.
 \end{itemize}
-Per una maggiore chiarezza nell'organizzazione si è deciso di tenere separato la documentazione dal codice.
-\subsubsubsection{Struttura del repository}
-Per ognuno dei due repository, esiste una versione \textbf{remota} e una \textbf{locale}, con la medesima struttura:
+Per una maggiore chiarezza nell'organizzazione si è deciso di tenere separato la documentazione dal codice. Inoltre per facilitare lo sviluppo parallelo della piattaforma si è deciso di dividere il repository del codice in due repository distinti uno lato frontend e uno lato backend.
+\subsubsubsection{Struttura dei repository}
+Per ognuno dei repository, esiste una versione \textbf{remota} e una \textbf{locale}, con la medesima struttura:
 \begin{itemize}
     \item \textbf{Remoto:} presente su \textit{GitHub}, contiene tutti i prodotti condivisi dai membri del gruppo;
     \item \textbf{Locale:} lanciando da terminale il comando {\fontfamily{qcr}\selectfont git clone [URLrepository]}, ogni componente del gruppo ha in locale sul suo PC una copia del repository su cui lavorare.
 \end{itemize}
-Il repository \textbf{\href{https://github.com/techsweave/TechSWEave.git}{TechSWEave}} non ha ancora una struttura in quanto la scrittura di codice non è richiesta per la \textit{Revisione dei Requisiti}.
-Il repository  \textbf{\href{https://github.com/techsweave/TechSWEaveDocumentation.git}{TechSWEaveDocumentation}} ha invece la seguente struttura:
+La struttura del singolo repository è la seguente:
 \begin{itemize}
-    \item \textbf{Template:} la cartella la cui interno è presente un template del documento che ogni \textit{redattore} può utilizzare per produrre i file;
-    \item \textbf{Images:} la cartella contenente immagini e grafici da inserire poi nei documenti;
-    \item \textbf{RR:} la cartella contenente tutti i documenti che dovranno essere presentati alla \textit{Revisione dei Requisiti} divisi in \textit{esterni} e \textit{interni}, la stessa divisione verrà adottata anche per le altre revisioni quelli \textit{Revisioni di Progettazione} \textbf{RP}, \textit{Revisione di Qualità} \textbf{RQ} e \textit{Revisione di Avanzamento} \textbf{RA}.
+    \item Il repository \textbf{\href{https://github.com/techsweave/eml-fe.git}{eml-fe}} ha la seguente struttura divisa per varie \textit{directory}:
+          \begin{itemize}
+              \item \textbf{types:} \textit{directory} contenente le interfacce dei tipi che saranno utilizzate per mappare le risposte delle chiamate \textit{lambda};
+              \item \textbf{styles:} \textit{directory} contenente i fogli di stile, scritti in \textit{css}\textsubscript{\textbf{G}}, utilizzati per la grafica della piattaforma;
+              \item \textbf{public:} \textit{directory} contenente le immagini reletive alla parte grafica della piattaforma;
+              \item \textbf{pages:} \textit{directory} contenente le varie pagine dell'e-commerce, divise per sotto \textit{directory} relative alle signole pagine. Ogni \textit{directory} contiene il file \textit{index.tsx} che struttura le singole pagine del sito;
+              \item \textbf{components:} \textit{directory} contenente i vari componenti \textit{HTML}\textsubscript{\textbf{G}} da inserire nelle varie pagine seguendo le \textit{best practicies} indicate da \textit{Next.js}\textsubscript{\textbf{G}}.
+          \end{itemize}
+    \item Il repository \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}} ha la seguente struttura:
+
+          La directory \textbf{src} contiene tutto l'effettivo codice diviso in sotto \textit{directory}:
+          \begin{itemize}
+              \item \textbf{functions:} \textit{directory} contenente le funzioni lambda che verranno richiamate dal frontend\textsubscript{\textbf{G}};
+              \item \textbf{libs:} \textit{directory} contenente alcune librerie esterne utilizzate da tutte le funzioni;
+              \item \textbf{models:} \textit{directory} contenente i modelli dei database utilizzati dalla piattaforma nella sotto \textit{directory} \textbf{database} e gli schemi di risposta delle funzioni lambda sotto \textit{directory} \textbf{schema}.
+          \end{itemize}
+
+    \item Il repository  \textbf{\href{https://github.com/techsweave/TechSWEaveDocumentation.git}{TechSWEaveDocumentation}} ha la seguente struttura divisa per varie \textit{directory}:
+          \begin{itemize}
+              \item \textbf{Template:} la cartella la cui interno è presente un template del documento che ogni \textit{redattore} può utilizzare per produrre i file;
+              \item \textbf{Images:} la cartella contenente immagini e grafici da inserire poi nei documenti;
+              \item \textbf{RR:} la cartella contenente tutti i documenti che dovranno essere presentati alla \textit{Revisione dei Requisiti} divisi in \textit{esterni} e \textit{interni}, la stessa divisione verrà adottata anche per le altre revisioni del progetto. \textit{Revisione di Qualità} \textbf{RQ} e \textit{Revisione di Avanzamento} \textbf{RA}.
+          \end{itemize}
 \end{itemize}
 La divisione dei file in base alle revisioni favorisce l'organizzazione dei documenti e una veloce stesura degli stessi.\\
-I file presenti all'interno del repository sono:
+I file presenti all'interno del singolo repository sono:
 \begin{itemize}
-    \item i file {\fontfamily{qcr}\selectfont .tex} ossia i sorgenti dei documenti scritti in \LaTeX;
-    \item i file {\fontfamily{qcr}\selectfont .pdf} i documenti che verranno poi consegnati a committenti e proponenti;
-    \item le immagini e i grafici che verranno poi usati nei documenti.
+    \item Il repository TechSWEave contiene i seguenti tipi di file:
+          \begin{itemize}
+              \item i file {\fontfamily{qcr}\selectfont .tex} ossia i sorgenti dei documenti scritti in \LaTeX;
+              \item le immagini e i grafici che verranno poi usati nei documenti.
+          \end{itemize}
+    \item Il repository eml-fe contiene i seguenti tipi di file:
+          \begin{itemize}
+              \item i file {\fontfamily{qcr}\selectfont .ts} file scritti in \textit{Typescript}\textsubscript{\textbf{G}};
+              \item i file {\fontfamily{qcr}\selectfont .tsx} file scritti in \textit{Typescript}, che supportano la sintassi \textit{jsx}\textsubscript{\textbf{G}};
+              \item i file {\fontfamily{qcr}\selectfont .css} i fogli di stile utilizzati per la grafica dell'e-commerce;
+              \item le immagini utilizzate per l'estetica del sito.
+          \end{itemize}
+    \item Il repository eml-be contiene i seguenti tipi di file:
+          \begin{itemize}
+              \item i file {\fontfamily{qcr}\selectfont .ts} file scritti in \textit{Typescript};
+              \item i file {\fontfamily{qcr}\selectfont .yml} file scritti in \textit{YAML}\textsubscript{\textbf{G}}, ossia file di configurazione;
+          \end{itemize}
 \end{itemize}
 Il file {\fontfamily{qcr}\selectfont .gitignore} è il file che impedisce il versionamento di determinati file, sono stati tolti dal versionamento i file non necessari.
-\subsubsubsection{Comandi GitHub}
-L'approccio al versionamento scelto è stato quello dello sviluppo per \textit{feature}\textsubscript{\textbf{G}}, questo ha fatto si che il lavoro sia stato diviso in vari branch:
+\subsubsubsection{Utilizzo GitHub}
+\textbf{Documentazione:}
+L'approccio al versionamento dei documenti scelto è stato quello dello sviluppo per \textit{feature}\textsubscript{\textbf{G}}, questo ha fatto si che il lavoro sia stato diviso in vari branch\textsubscript{\textbf{G}}:
 \begin{itemize}
-    \item \textbf{Master:} il branch principale in cui sono presenti i documenti finali approvati dal \textit{Responsabile di Progetto};
-    \item \textbf{Develop:} il branch dove sono presenti i documenti terminati ma che devono essere ancora approvati dal \textit{Responsabile di Progetto}\textsubscript{\textbf{G}};
-    \item Ogni documento, durante la sua redazione, appartiene a un singolo branch nominato con lo stesso nome del documento. Il documento rimarrà all'interno del proprio branch fino a che non è stato verificato dal \textit{Verificatore}\textsubscript{\textbf{G}}.
+    \renewcommand\labelitemi{-}
+    \item \textbf{Master:} il branch principale, in cui sono presenti i documenti finali approvati dal \textit{Responsabile di Progetto};
+    \item \textbf{Develop:} il branch dove sono presenti i documenti terminati ma che devono essere ancora approvati dal \textit{Responsabile di Progetto};
+    \item Ogni documento, durante la sua redazione, appartiene a un singolo branch nominato con lo stesso nome del documento. Il documento rimarrà all'interno del proprio branch fino a che non è stato verificato dal \textit{Verificatore}.
+\end{itemize}
+\textbf{Codifica:} Anche per la codifica si è scelto un approccio dello sviluppo per \textit{feature}\textsubscript{\textbf{G}}, che ha permesso la suddivisione dei due repository in vari branch:
+\begin{itemize}
+    \renewcommand\labelitemi{-}
+    \item \textbf{Main:} il branch principale, in cui è presente il codice finale approvato da tutti i membri, sia backend che frontend;
+    \item \textbf{Develop:} il branch in cui sono presenti le modifiche del codice, una volta che i membri del sotto-gruppo (backend o frontend) l'hanno approvato.
 \end{itemize}
 Si è scelto un approccio per \textit{feature}, per facilitare l'organizzazione e lo sviluppo parallelo dei documenti. Per raggiungere quest'obbiettivo ogni componente del gruppo deve:
 \begin{itemize}
+    \renewcommand\labelitemi{-}
     \item dalla propria repository locale deve posizionarsi nel branch corretto attraverso l'apposito comando;
     \item una volta arrivato nel branch corretto, il componente si deve mettere in pari con le eventuali modifiche apportate ai documenti;
     \item svolgere il compito assegnato, come la scrittura di nuovo materiale o la modifica di quello già esistente, attraverso l'editor predisposto (\textit{Visual Studio Code});
@@ -191,13 +244,24 @@ Si è scelto un approccio per \textit{feature}, per facilitare l'organizzazione 
     \item caricare le modifiche nel repository remoto.
 \end{itemize}
 \subsubsubsection{Modifiche}
+\textbf{Documentazione:}
 Tutti i membri possono modificare tutti i documenti tranne quelli presenti all'interno del ramo master, per i quali è richiesta una \textit{pull request}\textsubscript{\textbf{G}}, che deve essere approvata da almeno un componente del gruppo.
 Per modifiche maggiori sui contenuti o modifiche alla struttura si deve:
 \begin{itemize}
-    \item presentare la modifica che si vuole effettuare al responsabile motivando tale modifica;
-    \item una volta accetta dal responsabile si può procedere con la modifica.
+    \renewcommand\labelitemi{-}
+    \item presentare la modifica che si vuole effettuare al \textit{Responsabile di Progetto} motivando tale modifica;
+    \item una volta accetta dal \textit{Responsabile di Progetto} si può procedere con la modifica.
 \end{itemize}
-Per le modifiche minori come correzioni grammaticali e sintattiche si possono fare modifiche autonome, ma che devono comunque essere tracciate attraverso appositi commit autoesplicativi.
+Per le modifiche minori come correzioni grammaticali e sintattiche si possono fare modifiche autonome, ma che devono comunque essere tracciate attraverso appositi commit autoesplicativi. \\
+\\\textbf{Codifica:}
+I membri possono modificare tutto il codice seguendo determinate regole:
+\begin{itemize}
+    \renewcommand\labelitemi{-}
+    \item informare i membri del team della modifica che si vuole apportare, creando un apposita issue;
+    \item creare un nuovo branch relativo alla modifica, partendo dal branch develop;
+    \item effettuare le proprie modifiche;
+    \item una volte terminate le modifiche, effettua una \textit{pull request} sul branch develop, che dovrà essere accetta da  altri membri del team.
+\end{itemize}
 \subsection{Gestione della Qualità}
 \subsubsection{Scopo}
 Il processo di gestione della qualità ha lo scopo di garantire che il prodotto finale soddisfi gli obbiettivi di qualità e i requisiti richiesti dal proponente, attraverso un corretto controllo dei processi e dei prodotti.
