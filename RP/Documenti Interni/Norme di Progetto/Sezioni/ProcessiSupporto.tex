@@ -8,7 +8,7 @@ Questa sezione contiene le norme per la corretta stesura, verifica e approvazion
 \subsubsection{Aspettative}
 Le attese, riguardo il processo in questione, sono le seguenti:
 \begin{itemize}
-    \item individuazione di una struttura comune a tutti i prodotti del processo, nell’arco del ciclo di vita del software\textsubscript{\textbf{G}};
+    \item individuazione di una struttura comune a tutti i prodotti del processo, nell'arco del ciclo di vita del software\textsubscript{\textbf{G}};
     \item collezione di tutte le norme comuni per la stesura di documenti ufficiali.
 \end{itemize}
 \subsubsection{Ciclo di vita di un documento}
@@ -44,13 +44,13 @@ Il frontespizio è la prima pagina del documento e contiene:
 Ogni documento presenta un registro delle modifiche, sotto forma di tabella, che tiene traccia di tutte le modifiche significative apportate al documento durante le fasi del suo ciclo di vita. Ogni voce della tabella riporta:
 \begin{itemize}
     \item \textbf{Modifica:} una sintetica descrizione della modifica apportata;
-    \item \textbf{Autore:} il nome dell’autore della modifica;
-    \item \textbf{Ruolo:} il ruolo ricoperto dall’autore quando ha eseguito la modifica;
+    \item \textbf{Autore:} il nome dell'autore della modifica;
+    \item \textbf{Ruolo:} il ruolo ricoperto dall'autore quando ha eseguito la modifica;
     \item \textbf{Data:} la data in cui è stata apportata tale modifica;
     \item \textbf{Versione:} la versione del documento dopo la modifica.
 \end{itemize}
 \subsubsubsection{Indice}
-L’indice delle sezioni fornisce al fruitore una visione complessiva della struttura del documento, permette di orientarsi tra i contenuti e d'individuare la posizione delle varie parti. Ogni documento presenta un indice dei contenuti, subito dopo il registro delle modifiche; dove necessario, sono presenti anche un indice delle illustrazioni e uno delle tabelle contenute nel documento.
+L'indice delle sezioni fornisce al fruitore una visione complessiva della struttura del documento, permette di orientarsi tra i contenuti e d'individuare la posizione delle varie parti. Ogni documento presenta un indice dei contenuti, subito dopo il registro delle modifiche; dove necessario, sono presenti anche un indice delle illustrazioni e uno delle tabelle contenute nel documento.
 \subsubsubsection{Contenuto principale}
 Le pagine sono così strutturate:
 \begin{itemize}
@@ -90,7 +90,7 @@ Mentre non sono corretti:
     \item AnalisiDeiRequisiti;
     \item studio\_fattibilità;
     \item studio\_fattibilità 1.0.0;
-    \item normeprogetto.
+    \item normeProgetto.
 \end{itemize}
 
 Mentre per le citazioni ai file all'interno di altri documenti utilizziamo la convenzione di chiamare i nomi effettivi del documento, ad esempio:
@@ -122,11 +122,11 @@ Tutte le sigle sono indicate con le iniziali di ogni parola maiuscole, tranne pe
 \subsubsubsection{Immagini}
 Le figure presenti nei documenti sono tutte centrate rispetto al testo e accompagnate da una opportuna didascalia.
 \subsubsubsection{Tabelle}
-Ogni tabella è contrassegnata da una didascalia descrittiva del contenuto, posta sopra di essa centrata rispetto alla pagina.  Nella didascalia di ogni tabella viene indicato l’identificativo
+Ogni tabella è contrassegnata da una didascalia descrittiva del contenuto, posta sopra di essa centrata rispetto alla pagina.  Nella didascalia di ogni tabella viene indicato l'identificativo
 \begin{center}
     \textbf{Tabella [X]}
 \end{center}
-dove \textbf{[X]} indica il numero assoluto della tabella all’interno del documento; a questo il testo della didascalia. A questa prassi fanno eccezione le tabelle del registro delle modifiche, che non hanno la didascalia.
+dove \textbf{[X]} indica il numero assoluto della tabella all'interno del documento; a questo il testo della didascalia. A questa prassi fanno eccezione le tabelle del registro delle modifiche, che non hanno la didascalia.
 \subsubsubsection{Grafici UML}
 I grafici in linguaggio UML\textsubscript{\textbf{G}}, usati per la modellazione dei casi d'uso\textsubscript{\textbf{G}} e per i diagrammi della progettazione\textsubscript{\textbf{G}}, sono inseriti come immagini.
 \subsubsection{Strumenti di stesura}
@@ -150,9 +150,25 @@ La storia di un documento è ricostruibile attraverso le sue versioni, consultab
 \end{center}
 dove:
 \begin{itemize}
-    \item \textbf{\large X:} rappresenta la versione del documento approvata dal \textit{Responsabile di progetto}, che ne autorizza l'incremento. La numerazione parte da 0;
-    \item \textbf{\large Y:} indica la versione approvata dal \textit{Verificatore}, che autorizza l’incremento del numero della versione; la numerazione inizia da 0, e riparte da questo valore a ogni incremento di \textbf{X};
-    \item \textbf{\large Z:} indica una versione in fase di elaborazione da parte dei \textit{Redattori}, che ne incrementano il valore a ogni modifica; la numerazione inizia da 0 e riparte da tale valore a ogni incremento di \textbf{X} o \textbf{Y}.
+    \item \textbf{\large X:} rappresenta una versione con modifiche, rispetto alla precedente, sostanziali e generalmente non retro-compatibili:
+          \begin{itemize}
+              \item parte da 0, può solo aumentare;
+              \item viene incrementato solamente a seguito di modifiche maggiori e/o non retro-compatibili;
+              \item deve essere approvata dal \textit{Responsabile di Progetto};
+          \end{itemize}
+    \item \textbf{\large Y:} rappresenta una versione con modifiche, rispetto alla precedente, anche maggiori ma sempre retro-compatibili:
+          \begin{itemize}
+              \item parte da 0;
+              \item viene incrementato con l'aggiunta di nuove funzionalità nel caso di software o capitoli nel caso di documentazione, che siano sempre retro-compatibili;
+              \item si resetta ad ogni incremento di X;
+              \item deve essere approvata dai \textit{Verificatori};
+          \end{itemize}
+    \item \textbf{\large Z:} rappresenta una versione con modifiche, rispetto alla precedente, minori e retro-compatibili:
+          \begin{itemize}
+              \item parte da 0;
+              \item viene incrementato con l'aggiunta a seguito a seguito di modifiche minori e retro-compatibili;
+              \item si resetta ad ogni incremento di Y.
+          \end{itemize}
 \end{itemize}
 \subsubsubsection{Tecnologie adottate}
 Il versionamento è stato gestito attraverso il sistema di versionamento distribuito \textit{Git}\textsubscript{\textbf{G}}, con tre repository\textsubscript{\textbf{G}} situate in \textit{GitHub}\textsubscript{\textbf{G}}.
@@ -176,8 +192,8 @@ La struttura del singolo repository è la seguente:
           \begin{itemize}
               \item \textbf{types:} \textit{directory} contenente le interfacce dei tipi che saranno utilizzate per mappare le risposte delle chiamate \textit{lambda};
               \item \textbf{styles:} \textit{directory} contenente i fogli di stile, scritti in \textit{css}\textsubscript{\textbf{G}}, utilizzati per la grafica della piattaforma;
-              \item \textbf{public:} \textit{directory} contenente le immagini reletive alla parte grafica della piattaforma;
-              \item \textbf{pages:} \textit{directory} contenente le varie pagine dell'e-commerce, divise per sotto \textit{directory} relative alle signole pagine. Ogni \textit{directory} contiene il file \textit{index.tsx} che struttura le singole pagine del sito;
+              \item \textbf{public:} \textit{directory} contenente le immagini relative alla parte grafica della piattaforma;
+              \item \textbf{pages:} \textit{directory} contenente le varie pagine dell'e-commerce, divise per sotto \textit{directory} relative alle singole pagine. Ogni \textit{directory} contiene il file \textit{index.tsx} che struttura le singole pagine del sito;
               \item \textbf{components:} \textit{directory} contenente i vari componenti \textit{HTML}\textsubscript{\textbf{G}} da inserire nelle varie pagine seguendo le \textit{best practicies} indicate da \textit{Next.js}\textsubscript{\textbf{G}}.
           \end{itemize}
     \item Il repository \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}} ha la seguente struttura:
@@ -252,8 +268,9 @@ Per modifiche maggiori sui contenuti o modifiche alla struttura si deve:
     \item presentare la modifica che si vuole effettuare al \textit{Responsabile di Progetto} motivando tale modifica;
     \item una volta accetta dal \textit{Responsabile di Progetto} si può procedere con la modifica.
 \end{itemize}
-Per le modifiche minori come correzioni grammaticali e sintattiche si possono fare modifiche autonome, ma che devono comunque essere tracciate attraverso appositi commit autoesplicativi. \\
-\\\textbf{Codifica:}
+Per le modifiche minori come correzioni grammaticali e sintattiche si possono fare modifiche autonome, ma che devono comunque essere tracciate attraverso appositi commit autoesplicativi.\\
+\vspace{0px}\\
+\textbf{Codifica:}
 I membri possono modificare tutto il codice seguendo determinate regole:
 \begin{itemize}
     \renewcommand\labelitemi{-}
@@ -314,7 +331,7 @@ dove
     \item \textbf{[Numero]} indica l'identificativo numerico a due cifre per la metrica; la numerazione inizia da 1.
 \end{itemize}
 Tutte le metriche esposte nella documentazione del progetto faranno fede a queste regole di denominazione.
-Il gruppo \emph{TechSWEave} si riserva di integrare l’elenco delle metriche esposto nel presente documento e nel \emph{Piano di Qualifica 1.0.0} qualora, durante le attività successive del progetto, emergesse la necessità di adottarne di nuove.
+Il gruppo \emph{TechSWEave} si riserva di integrare l'elenco delle metriche esposto nel presente documento e nel \textit{Piano di Qualifica 1.0.0} qualora, durante le attività successive del progetto, emergesse la necessità di adottarne di nuove.
 \subsection{Verifica}
 \subsubsection{Scopo}
 L'obbiettivo della verifica è quello di realizzare prodotti corretti, coesi\textsubscript{\textbf{G}} e completi. La verifica si applica sia al codice che ai documenti.
@@ -336,7 +353,7 @@ Il processo di analisi si divide in due tipologie: statica e dinamica.
     \item \textbf{Analisi statica}\\
           La verifica statica si occupa di verificare documenti e codice per quanto concerne la loro correttezza (assenza di errori e difetti), il rispetto delle regole e la coesione\textsubscript{\textbf{G}} dei componenti. L'analisi statica può essere effettuata seguendo metodi manuali di lettura (eseguiti da persone) e metodi formali (eseguiti da macchine). I metodi manuali di lettura sono i seguenti due:
           \begin{itemize}
-              \item \textbf{Walktrough}: i \textit{Verificatori} analizzano i prodotti nella loro totalità per cercare anomalie, si fa una lettura completa perché non si conosco i principali difetti e la loro locazione;
+              \item \textbf{Walkthrough}: i \textit{Verificatori} analizzano i prodotti nella loro totalità per cercare anomalie, si fa una lettura completa perché non si conosco i principali difetti e la loro locazione;
               \item \textbf{Inspection}: attraverso liste di controllo i \textit{Verificatori} andranno a cercare determinate tipologie di errori in specifiche parti del prodotto.
           \end{itemize}
     \item \textbf{Analisi dinamica}\\
@@ -379,7 +396,7 @@ I test del software sono di vario tipo, ognuno dei quali ha un diverso scopo e a
 \subsubsection{Strumenti}
 Gli strumenti utilizzati per la verifica sono
 \subsubsubsection{Verifica ortografica}
-Viene utilizzata la verifica ortografica in tempo reale, attraverso l'apposita estensione di Visual Studio Code.
+Viene utilizzata la verifica ortografica in tempo reale, attraverso l'apposita estensione di Visual Studio Code: \textit{Code Spell Checker} che avvisa con dei warning in presenza di errori.
 
 \subsubsubsection{Validazione W3C}
 \begin{itemize}
