@@ -1,17 +1,10 @@
-\subsection{UC12: Scelta della categoria}
+
+\subsection{UC12: Rimozione di un prodotto dal carrello}
 \label{sec:UC12}
 \begin{itemize}
-    \item \textbf{Descrizione:} l'utente sceglie una specifica categoria di prodotti da ricercare;
-    \item \textbf{Attore Primario:} utente generico;
-    \item \textbf{Precondizione:} l'utente si trova in una pagina che consente la divisione in categorie;
-    \item \textbf{Input:} selezione della categoria;
-    \item \textbf{Postcondizione:} la categoria di ricerca cambia secondo la scelta dell'utente;
-    \item \textbf{Scenario Principale:}
-          \begin{itemize}
-              \item l'utente vuole ricercare un prodotto appartenente ad una determinata categoria.
-          \end{itemize}
-    \item \textbf{Inclusioni:}
-          \begin{itemize}
-              \item viene visualizzata una pagina con tutti i risultati della ricerca (\hyperref[sec:UC8]{\underline{UC8}}).
-          \end{itemize}
+    \item \textbf{Descrizione:} sezione per rimuovere un prodotto dal carrello;
+    \item \textbf{Attore Primario:} utente non autenticato, utente autenticato;
+    \item \textbf{Precondizione:} l'utente è nella pagina del carrello (\hyperref[sec:UC11]{\underline{UC11}});
+    \item \textbf{Input:} l'utente seleziona il prodotto da rimuovere dal carrello;
+    \item \textbf{Postcondizione:} viene rimosso il prodotto selezionato;
 \end{itemize}
