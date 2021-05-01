@@ -5,25 +5,47 @@ In questa appendice vengono esposti gli esiti delle attività di verifica svolte
 L'analisi statica dei documenti è stata eseguita mediante Walkthrough\textsubscript{\textbf{G}}. In questo modo sarà possibile applicare Inspection\textsubscript{\textbf{G}} successivamente.
 \subsection{Revisione di progettazione}
 \subsubsection{Analisi statica dei documenti}
-L'analisi statica della documentazione ha seguito il procedimento descritto nella sezione §B.1.1., la quale ha garantito un'attività di Inspection\textsubscript{\textbf{G}} più mirata.
+L'analisi statica della documentazione ha seguito il procedimento descritto nella sezione §B.1.1., la quale ha garantito un'attività di Inspection\textsubscript{\textbf{G}} più mirata.\\
+Come supporto alla stesura della documentazione il gruppo ha deciso di utilizzare il plugin \textit{Code Spell Check} per l'editor \textit{Visual Studio Code}. Questo ha permesso un maggior controllo e
+una riduzione significativa degli errori.
+\subsubsection{Analisi statica del codice}
+La stesura del codice è supportata da \textit{ESLint v7.24.0}, linter per il linguaggio TypeScript. Questo ha aiutato nella stesura di codice di codice uniforme e sintatticamente corretto.
 \subsection{Metriche}
-\subsection{Verifica con indice di Gulpease}
-
+Alcune metriche verranno calcolate successivamente con l'avanzare del progetto.\\
+I dati riportati nel seguito fanno riferimento a:
+\begin{itemize}
+    \item \textbf{A:} fase di analisi;
+    \item \textbf{PA:} fase di progettazione architetturale;
+    \item \textbf{PD:} fase di progettazione di dettaglio;
+    \item \textbf{VC:} fase di validazione e collaudo.
+\end{itemize}
+\subsubsection{MPR04 - EAC (Estimate at Completion)}
+\subsubsection{MPR05 - VAC (Variance at Completion)}
+\subsubsection{MPR06 - AC (Actual Cost)}
+\subsubsection{MPR07 - SV (Schedule Variance)}
+\subsubsection{MPR08 - CV (Cost Variance)}
+\subsubsection{MPR10 - Indice di Gulpease}
+\subsubsubsection{Andamento complessivo}
 \begin{center}
     \centering
     \rowcolors{2}{logo!10}{logo!40}
     \renewcommand{\arraystretch}{1.8}
     \label{tab:IndiciGulpease}
     \begin{longtable}[!h]{p{150px} p{50px} p{50px} p{50px}}
-        \caption{Esiti verifica con Gulpease}                                                  \\
-        \rowcolor{logo!70}   \textbf{Documento} & \textbf{RR} & \textbf{RP}  & \textbf{Esito} \\
-        \textit{Norme di Progetto}              & 68           & x            & Superato       \\
-        \textit{Piano di Progetto}              & 73           & x            & Superato       \\
-        \textit{Analisi dei Requisiti}          & 71           & x            & Superato       \\
-        \textit{Piano di Qualifica}             & 69           & x            & Superato       \\
-        \textit{Studio di Fattibilità}          & 74           & x            & Superato       \\
-        \textit{Verbali interni (media)}        & 67           & x            & Superato       \\
-        \textit{Verbali esterni (media)}        & 71           & x            & Superato       \\
+        \caption{Esiti verifica con Gulpease}                                                \\
+        \rowcolor{logo!70}   \textbf{Documento} & \textbf{RR} & \textbf{RP} & \textbf{Esito} \\
+        \textit{Norme di Progetto}              & 68          & x           & Superato       \\
+        \textit{Piano di Progetto}              & 73          & x           & Superato       \\
+        \textit{Analisi dei Requisiti}          & 71          & 66          & Superato       \\
+        \textit{Piano di Qualifica}             & 69          & x           & Superato       \\
+        \textit{Studio di Fattibilità}          & 74          & /           & Superato       \\
+        \textit{Verbali interni (media)}        & 67          & x           & Superato       \\
+        \textit{Verbali esterni (media)}        & 71          & x           & Superato       \\
         \rowcolor{white}
     \end{longtable}
 \end{center}
+\subsubsubsection{Andamento per documento}
+Grafici per documento.
+\subsubsection{MPR11 - Correttezza ortografica}
+\subsubsection{MPR12 - PMS (Percentuale di metriche soddisfatte)}
+\newpage
