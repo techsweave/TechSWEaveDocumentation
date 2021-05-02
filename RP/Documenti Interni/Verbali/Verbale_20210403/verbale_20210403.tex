@@ -1,0 +1,123 @@
+\documentclass[a4paper]{article}
+\usepackage{titlesec}
+\usepackage{geometry}
+\geometry{hmargin={2cm,2cm}, vmargin={3.5cm,3.5cm}}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\hypersetup{pdfborder = {0 0 0},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=blue}
+\definecolor{logo}{RGB}{20,99,163}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{comment}
+\usepackage{longtable}
+
+% creazione comando subsubsubsection
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\titleformat{\subsubsubsection}
+    {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+    \titlespacing*{\subsubsubsection}
+    {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\def\toclevel@subsubsubsection{4}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%fine creazione comando
+
+
+%Comandi di impaginazione uguale per tutti i documenti
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.2]{../../../../Images/logo.png}}
+%Titolo del documento
+\rhead{\large Verbale Interno del 2021-04-03}
+%\rfoot{\thepage}
+\cfoot{Pagina \thepage{} di \pageref{LastPage}}
+\setlength{\headheight}{45pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \includegraphics{../../../../Images/logo.png}\\
+        \vspace{20px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{20px}
+        \textbf{\huge\textcolor{logo}{Verbale Interno del 2021-04-03}}\\
+        \vspace{10px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{40px}
+        \textbf{\Large Informazioni sul documento}\\
+        \vspace{20px}
+        \begin{tabular}{p{100px} | p{100px}}
+            \textbf{Versione}     & 1.0.0                                                                      \\
+            \textbf{Responsabile} & Amedeo Meggiolaro                                                          \\
+            \textbf{Redattore}    & Nicolò Giaccone                                                            \\
+            \textbf{Verificatore} & Samuele De Simone                                                          \\
+            \textbf{Destinatari}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave \\
+            \textbf{Stato}        & Approvato                                                                  \\
+            \textbf{Uso}          & Interno                                                                    \\
+        \end{tabular}\\
+        \vspace{60px}
+        \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
+
+    \end{center}
+\end{titlepage}
+
+
+%INDICE
+\newpage
+\tableofcontents
+\newpage
+
+\section{Informazioni riunione}
+\begin{itemize}
+    \item Data e ora: 2021-04-03 ore 09:30-10:30.
+    \item Luogo: Canale Discord del gruppo tramite videochiamata.
+    \item Partecipanti interni: Samuele De Simone, Manuel Varo, Tito Scutari, Nicolò Giaccone, Amedeo Meggiolaro, Marco Barbaresco.
+    \item Partecipanti esterni: nessuno.
+    \item Segretario: Amedeo Meggiolaro.
+\end{itemize}
+\section{Argomenti della riunione}
+\begin{itemize}
+    \item Organizzazione settimana: il team ha deciso i compiti da svolgere in preparazione alla presentazione:
+          \begin{itemize}
+              \item ha deciso come svolgere la presentazione;
+              \item ha suddiviso gli argomenti della presentazione tra i vari membri del team;
+          \end{itemize}
+    \item Revisione dei documenti: il gruppo ha deciso di rivedere i documenti per apportare eventuali modifiche incrementali.
+\end{itemize}
+\section{Resoconto}
+\begin{center}
+    \textbf{\Large Resoconto riunione}\\
+    \vspace{10px}
+    \begin{table}[h!]
+        \centering
+        \rowcolors{2}{logo!10}{logo!40}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{p{150px} p{150px}}
+            \rowcolor{logo!70} \textbf{Quesito} & \textbf{Soluzione}                                                                       \\
+            Organizzazione della settimana      & Il gruppo ha scelto i compiti da svolgere nella settimana di incremento                  \\
+            Revisione dei documenti             & Il gruppo ha scelto di rivedere i documenti redatti per apportare verifiche incrementali \\
+        \end{tabular}
+    \end{table}
+\end{center}
+
+\newpage
+\input{valutazioniMiglioramento.tex}
+
+\end{document}
