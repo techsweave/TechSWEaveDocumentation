@@ -40,13 +40,13 @@ Per il calcolo delle metriche di questa sezione vengono utilizzati i seguenti va
 \begin{itemize}
     \item \textbf{Codice:} MPR04;
     \item \textbf{Metodo di misura}: numero intero;
-    \item \textbf{Valore preferibile}: $EAC \leq$ valore preventivo;
+    \item \textbf{Valore preferibile}: $EAC \leq BAC$;
     \item \textbf{Valore accettabile}: $BAC -5\% \leq EAC \leq BAC +5\%.$
 \end{itemize}
 \textbf{MPR05 - VAC (Variance at Completion):} indica la spesa effettivamente sostenuta in percentuale.
 \begin{itemize}
     \item \textbf{Codice:} MPR05;
-    \item \textbf{Metodo di misura}: $\frac{valore preventivo - EAC}{100}$;
+    \item \textbf{Metodo di misura}: $\frac{BAC - EAC}{100}$;
     \item \textbf{Valore preferibile}: $\geq 0$;
     \item \textbf{Valore accettabile}: $\geq 0$.
 \end{itemize}
@@ -61,14 +61,14 @@ Per il calcolo delle metriche di questa sezione vengono utilizzati i seguenti va
 \begin{itemize}
     \item \textbf{Codice:} MPR07;
     \item \textbf{Metodo di misura}: SV = EV - PV;
-    \item \textbf{Valore preferibile}: > 0;
+    \item \textbf{Valore preferibile}: $\geq 0$;
     \item \textbf{Valore accettabile}: 0.
 \end{itemize}
-\textbf{MPR08 - CV (Cost Variance):} differenza tra il costo del lavoro completato e quello pianificato. Si sta rispettando il budget se il valore di questa \textbf{metodo di misura}
+\textbf{MPR08 - BV (Budget Variance):} differenza tra il costo del lavoro pianificato e quello sostenuto alla data corrente.
 è positivo.
 \begin{itemize}
     \item \textbf{Codice:} MPR08;
-    \item \textbf{Metodo di misura}: CV = EV - AC;
+    \item \textbf{Metodo di misura}: CV = PV - AC;
     \item \textbf{Valore preferibile}: > 0;
     \item \textbf{Valore accettabile}: $\geq$ 0.
 \end{itemize}
