@@ -13,7 +13,7 @@
     \item \textbf{Attore Secondario:} Stripe\textsubscript{\textbf{G}}, gestore di pagamenti di terze parti;
     \item \textbf{Precondizione:} il cliente si trova nel carrello (\hyperref[sec:UC11]{\underline{UC11}}) e ha già inserito almeno un prodotto oppure si trova nella pagina del prodotto (\hyperref[sec:UC4]{\underline{UC4}});
     \item \textbf{Input:} il cliente clicca il bottone per iniziare il checkout;
-    \item \textbf{Postcondizione:} l'ordine viene emesso e aggiunto alla lista degli ordini di quel cliente; i prodotti acquistati vengono rimossi dal carrello e viene diminuita la rispettiva quantità dal deposito del venditore; il cliente viene reindirizzato alla pagina di riepilogo dell'ordine (\hyperref[sec:UC21]{\underline{UC21}})
+    \item \textbf{Postcondizione:} l'ordine viene emesso e aggiunto alla lista degli ordini di quel cliente; i prodotti acquistati vengono rimossi dal carrello e viene diminuita la rispettiva quantità dal deposito del venditore; il cliente viene reindirizzato alla pagina di riepilogo dell'ordine (\hyperref[sec:UC21]{\underline{UC21}});
     \item \textbf{Scenario Principale:}
           \begin{itemize}
               \item il cliente clicca il bottone per effettuare il checkout;
@@ -27,7 +27,7 @@
           \begin{itemize}
               \item  il cliente esce dalla pagina senza causare modifiche al carrello;
           \end{itemize}
-    \item Il pagamento non è andato a buon fine
+    \item Il pagamento non è andato a buon fine:
           \begin{itemize}
               \item L'utente ritorna al carrello \hyperref[sec:UC36]{\underline{UC36}}.
           \end{itemize}
@@ -40,7 +40,7 @@
     \item \textbf{Attore Primario:} cliente autenticato;
     \item \textbf{Precondizione:} il cliente si trova nella fase di checkout;
     \item \textbf{Input:} il cliente inserisce i dati richiesti dalla pagina;
-    \item \textbf{Postcondizione:} si procede con la fase successiva del checkout (\hyperref[sec:UC21.2]{\underline{UC21.2}})
+    \item \textbf{Postcondizione:} si procede con la fase successiva del checkout (\hyperref[sec:UC21.2]{\underline{UC21.2}});
     \item \textbf{Scenario Principale:} il cliente inserisce negli appositi spazi i dati per completare l'indirizzo di fatturazione.
 \end{itemize}
 \subsubsection{UC21.2: Inserimento dell'indirizzo di spedizione}
@@ -58,7 +58,7 @@
 \begin{itemize}
     \item \textbf{Descrizione:} Sezione per l'inserimento dei dati di pagamento;
     \item \textbf{Attore Primario:} cliente autenticato;
-    \item \textbf{Attore Secondario:} Stripe
+    \item \textbf{Attore Secondario:} Stripe;
     \item \textbf{Precondizione:} il cliente si trova nella piattaforma di Stripe per completare il checkout;
     \item \textbf{Input:} il cliente inserisce i dati richiesti dalla pagina;
     \item \textbf{Postcondizione:} il cliente ha inserito i dati per il pagamento;
