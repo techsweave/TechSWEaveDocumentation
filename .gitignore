@@ -10,3 +10,4 @@ __latexindent_temp.tex
 *.lof
 *.lot
 .vscode
+*.py
