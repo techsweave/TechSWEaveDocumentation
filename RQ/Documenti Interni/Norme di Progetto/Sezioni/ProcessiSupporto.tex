@@ -1,0 +1,428 @@
+\section{Processi di Supporto}
+\subsection{Documentazione}
+Ogni attività significativa per lo sviluppo del progetto viene documentata.
+\subsubsection{Scopo}
+Lo scopo di questa sezione è di annotare le norme che regolano il processo di documentazione durante tutto il ciclo di vita del software, in modo che tutti i documenti risultino coerenti e validi.
+\subsubsection{Descrizione}
+Questa sezione contiene le norme per la corretta stesura, verifica e approvazione di tutti i documenti prodotti dal gruppo. Ogni membro è tenuto a rispettare tutto ciò che è esposto.
+\subsubsection{Aspettative}
+Le attese, riguardo il processo in questione, sono le seguenti:
+\begin{itemize}
+    \item individuazione di una struttura comune a tutti i prodotti del processo, nell'arco del ciclo di vita del software\textsubscript{\textbf{G}};
+    \item collezione di tutte le norme comuni per la stesura di documenti ufficiali.
+\end{itemize}
+\subsubsection{Ciclo di vita di un documento}
+Ogni documento attraversa le seguenti fasi del ciclo di vita:
+\begin{itemize}
+    \item \textbf{Creazione:} il documento viene creato utilizzando un template situato nella cartella \textit{Template} del repository remoto, con la prima pagina e l'intestazione della tabella contenente il diario nelle modifiche;
+    \item \textbf{Strutturazione:} si inizia a popolare il diario delle modifiche nella seconda pagina e viene creato l'indice;
+    \item \textbf{Stesura:} il corpo del documento viene scritto da più membri del gruppo usando un metodo incrementale, a ogni modifica viene aggiornato il diario delle modifiche.
+    \item \textbf{Revisione:} ogni singola sezione del corpo del documento viene regolarmente rivista da almeno un membro del gruppo, che deve essere obbligatoriamente diverso dal redattore della parte in verifica; se necessario, la verifica può essere svolta da più persone: in questo caso può partecipare anche chi ha scritto la sezione in verifica a patto che non si occupi della parte da esso redatta;
+    \item \textbf{Approvazione:} terminata la revisione, il \textit{Responsabile di Progetto}\textsubscript{\textbf{G}} stabilisce la validità del documento, che solo a questo punto può essere considerato completo e può essere quindi rilasciato.
+\end{itemize}
+\subsubsection{Template}
+Il gruppo ha creato un Template con \LaTeX\textsubscript{\textbf{G}} per uniformare velocemente la struttura grafica e lo stile di tutti i documenti, in modo che tutti si possano concentrare sulla stesura del corpo del documento. Il template permette di adottare automaticamente le conformità previste dalle \textit{Norme di Progetto v2.0.0}.
+\subsubsection{Struttura di un documento}
+\subsubsubsection{Prima pagina}
+Il frontespizio è la prima pagina del documento e contiene:
+\begin{itemize}
+    \item \textbf{Logo del gruppo:} posto in alto in centro;
+    \item \textbf{Titolo del documento:} in centro alla pagina;
+    \item \textbf{e-mail del gruppo:} appena sotto al titolo del documento.
+    \item \textbf{Informazioni sul documento:}
+          \begin{itemize}
+              \item \textbf{Versione:} indica la versione corrente del documento;
+              \item \textbf{Responsabile:} il nome del \textit{Responsabile di Progetto}\textsubscript{\textbf{G}} che deve approvare il documento;
+              \item \textbf{Redattori:} i membri del gruppo che si occupano della stesura del documento;
+              \item \textbf{Verificatore:} i membri del gruppo che si occupano di verificare l'operato dei \textit{Redattori}\textsubscript{\textbf{G}};
+              \item \textbf{Destinatari:} i destinatari del documento;
+              \item \textbf{Stato:} indica se il documento è stato approvato dal \textit{Responsabile di Progetto};
+              \item \textbf{Uso:} indica se il documento è a uso interno o esterno.
+          \end{itemize}
+\end{itemize}
+\subsubsubsection{Diario delle modifiche}
+Ogni documento presenta un registro delle modifiche, sotto forma di tabella, che tiene traccia di tutte le modifiche significative apportate al documento durante le fasi del suo ciclo di vita. Ogni voce della tabella riporta:
+\begin{itemize}
+    \item \textbf{Modifica:} una sintetica descrizione della modifica apportata;
+    \item \textbf{Autore:} il nome dell'autore della modifica;
+    \item \textbf{Ruolo:} il ruolo ricoperto dall'autore quando ha eseguito la modifica;
+    \item \textbf{Data:} la data in cui è stata apportata tale modifica;
+    \item \textbf{Versione:} la versione del documento dopo la modifica.
+\end{itemize}
+\subsubsubsection{Indice}
+
+L'indice delle sezioni fornisce al fruitore una visione complessiva della struttura del documento, permette di orientarsi tra i contenuti e d'individuare la posizione delle varie parti. Ogni documento presenta un indice dei contenuti, subito dopo il registro delle modifiche; dove necessario, sono presenti anche un indice delle illustrazioni e uno delle tabelle contenute nel documento.
+
+\subsubsubsection{Contenuto principale}
+Le pagine sono così strutturate:
+\begin{itemize}
+    \item in alto a sinistra è presente il logo del gruppo;
+    \item in alto a destra è presente il titolo del documento;
+    \item una riga divide il contenuto dalla intestazione;
+    \item il contenuto è tra l'intestazione e il piè di pagina;
+    \item un'altra riga divide il contenuto dal piè di pagina;
+    \item in basso in centro è presente il numero di pagina corrente.
+\end{itemize}
+\subsubsubsection{Verbali}
+I verbali vengono prodotti da un componente del gruppo in occasione d'incontri tra i membri con o senza la presenza di esterni. È prevista un'unica stesura. I verbali seguono la struttura degli altri documenti, ma contengono un'introduzione che contiene:
+\begin{itemize}
+    \item \textbf{Data e ora:} data e orario in cui è iniziata la riunione;
+    \item \textbf{Luogo:} luogo o applicazione in cui si è svolta la riunione;
+    \item \textbf{Partecipanti interni:} elenco dei partecipanti del gruppo presenti alla riunione;
+    \item \textbf{Partecipanti esterni:} elenco dei partecipanti esterni al gruppo presenti alla riunione;
+    \item \textbf{Segretario:} il membro del gruppo che prende appunti sulla riunione e fa un resoconto.
+\end{itemize}
+Ogni verbale viene denominato con il formato:
+\begin{center}
+    \textbf{Verbale\_AAAAMMGG} \\
+\end{center}
+e mantenuto nella \textit{directory} Documenti esterni se è relativo a una riunione esterna, nella \textit{directory} Documenti interni, se si riferisce a una riunione interna
+\subsubsection{Norme tipografiche}
+\subsubsubsection{Convenzioni sui nomi dei file}
+I nomi dei file utilizzano la convenzione camelCase\textsubscript{\textbf{G}}, sono senza le proposizioni e non ci sono lettere accentate.
+Alla fine del file è indicata la versione, indicata con v[X][Y][Z] e separata dal nome del file con un '\_'.
+Ad esempio sono corretti:
+\begin{itemize}
+    \item analisiRequisiti\_v1.0.0;
+    \item studioFattibilita\_v1.0.0;
+    \item normeProgetto\_v2.0.0 .
+\end{itemize}
+Mentre non sono corretti:
+\begin{itemize}
+    \item AnalisiDeiRequisiti;
+    \item studio\_fattibilità;
+    \item studio\_fattibilità 1.0.0;
+    \item normeProgetto.
+\end{itemize}
+
+Mentre per le citazioni ai file all'interno di altri documenti utilizziamo la convenzione di chiamare i nomi effettivi del documento, ad esempio:
+\begin{itemize}
+    \item Analisi dei Requisiti v1.0.0;
+    \item Studio di Fattibilità v1.0.0;
+    \item Norme di Progetto v1.0.0 .
+\end{itemize}
+
+\subsubsection{Stili del testo}
+
+\subsubsubsection{Glossario}
+\begin{itemize}
+    \item Ogni termine nel \textit{Glossario v2.0.0} viene marcato con una \textbf{G} maiuscola a pedice;
+    \item Se la voce è presente ripetutamente nello stesso paragrafo non è necessario marcarla a ogni occorrenza, basta farlo alla prima occorrenza;
+    \item Se la voce è presente come singolo termine in elenchi puntati non è necessario marcarlo.
+\end{itemize}
+
+\subsubsubsection{Elenchi puntati}
+Ogni voce di un elenco termina con ";", tranne l'ultima che termina con ".". I sotto elenchi rispettano le stesse regole, essendo una funzione analoga. Se le voci sono della forma \textit{termine: descrizione}, i termini vanno in grassetto.
+\subsubsubsection{Formato delle date}
+Le date vengono indicate usando il formato
+\begin{center}
+    \textbf{[AAAA]-[MM]-[GG]}
+\end{center}
+\subsubsubsection{Sigle}
+Tutte le sigle sono indicate con le iniziali di ogni parola maiuscole, tranne per le proposizioni, congiunzioni e articoli.
+\subsubsection{Elementi grafici}
+\subsubsubsection{Immagini}
+Le figure presenti nei documenti sono tutte centrate rispetto al testo e accompagnate da una opportuna didascalia.
+\subsubsubsection{Tabelle}
+Ogni tabella è contrassegnata da una didascalia descrittiva del contenuto, posta sopra di essa centrata rispetto alla pagina.  Nella didascalia di ogni tabella viene indicato l'identificativo
+\begin{center}
+    \textbf{Tabella [X]}
+\end{center}
+dove \textbf{[X]} indica il numero assoluto della tabella all'interno del documento; a questo il testo della didascalia. A questa prassi fanno eccezione le tabelle del registro delle modifiche, che non hanno la didascalia.
+\subsubsubsection{Grafici UML}
+I grafici in linguaggio UML\textsubscript{\textbf{G}}, usati per la modellazione dei casi d'uso\textsubscript{\textbf{G}} e per i diagrammi della progettazione\textsubscript{\textbf{G}}, sono inseriti come immagini.
+\subsubsection{Strumenti di stesura}
+\subsubsubsection{\LaTeX}
+Per la stesura dei documenti, il gruppo ha scelto \LaTeX\textsubscript{\textbf{G}}, un linguaggio compilato basato sul programma di composizione tipografica \TeX, al fine di produrre documenti coerenti, ordinati, templetizzati e stesi in modo collaborativo.
+\subsubsubsection{Draw.io}
+Per la produzione di grafici UML è stato scelto il programma \textit{Draw.io}.
+\begin{center}
+    \href{https://www.draw.io/}{https://www.draw.io/}\\
+\end{center}
+\subsection{Gestione della configurazione}
+\subsubsection{Scopo}
+Il processo ha lo scopo di andare a ordinare il software e la documentazione. Tutto quello che è stato configurato si trova in un posto preciso e conosciuto, con una denominazione e uno stato ben definiti. Ogni modifica deve rispettare determinate norme e deve essere sottoposta a versionamento.
+\subsubsection{Descrizione}
+La gestione della configurazione raggruppa e organizza tutti gli strumenti necessari all'organizzazione della produzione di documenti, diagrammi e codice, ma anche di quello necessari al versionamento e al coordinamento del gruppo.
+\subsubsection{Versionamento}
+\subsubsubsection{Codice di versione - da rivedere secondo le richieste di Tullio}
+La storia di un documento è ricostruibile attraverso le sue versioni, consultabili nella tabella presente all'inizio di ogni documento. Le versioni sono identificate da un codice a tre cifre nel formato:
+\begin{center}
+    \textbf{\large [X].[Y].[Z]}\\
+\end{center}
+dove:
+\begin{itemize}
+
+    \item \textbf{\large X:} rappresenta una versione con modifiche, rispetto alla precedente, sostanziali e generalmente non retro-compatibili:
+          \begin{itemize}
+              \item parte da 0, può solo aumentare;
+              \item viene incrementato solamente a seguito di modifiche maggiori e/o non retro-compatibili;
+              \item deve essere approvata dal \textit{Responsabile di Progetto};
+          \end{itemize}
+    \item \textbf{\large Y:} rappresenta una versione con modifiche, rispetto alla precedente, anche maggiori ma sempre retro-compatibili:
+          \begin{itemize}
+              \item parte da 0;
+              \item viene incrementato con l'aggiunta di nuove funzionalità nel caso di software o capitoli nel caso di documentazione, che siano sempre retro-compatibili;
+              \item si resetta ad ogni incremento di X;
+              \item deve essere approvata dai \textit{Verificatori};
+          \end{itemize}
+    \item \textbf{\large Z:} rappresenta una versione con modifiche, rispetto alla precedente, minori e retro-compatibili:
+          \begin{itemize}
+              \item parte da 0;
+              \item viene incrementato con l'aggiunta a seguito a seguito di modifiche minori e retro-compatibili;
+              \item si resetta ad ogni incremento di Y.
+          \end{itemize}
+
+\end{itemize}
+\subsubsubsection{Tecnologie adottate}
+Il versionamento è stato gestito attraverso il sistema di versionamento distribuito \textit{Git}\textsubscript{\textbf{G}}, con tre repository\textsubscript{\textbf{G}} situate in \textit{GitHub}\textsubscript{\textbf{G}}.
+\subsubsubsection{Repository}
+I repository creati dal gruppo TechSWEave sono i seguenti:
+\begin{itemize}
+    \item \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}}: per il versionamento del codice, lato backend;
+    \item \textbf{\href{https://github.com/techsweave/eml-fe.git}{eml-fe}}: per il versionamento del codice, lato frontend;
+    \item \textbf{\href{https://github.com/techsweave/TechSWEaveDocumentation.git}{TechSWEaveDocumentation}}: per il versionamento dei documenti redatti.
+\end{itemize}
+Per una maggiore chiarezza nell'organizzazione si è deciso di tenere separato la documentazione dal codice. Inoltre per facilitare lo sviluppo parallelo della piattaforma si è deciso di dividere il repository del codice in due repository distinti uno lato frontend e uno lato backend.
+\subsubsubsection{Struttura dei repository}
+Per ognuno dei repository, esiste una versione \textbf{remota} e una \textbf{locale}, con la medesima struttura:
+\begin{itemize}
+    \item \textbf{Remoto:} presente su \textit{GitHub}, contiene tutti i prodotti condivisi dai membri del gruppo;
+    \item \textbf{Locale:} lanciando da terminale il comando {\fontfamily{qcr}\selectfont git clone [URLrepository]}, ogni componente del gruppo ha in locale sul suo PC una copia del repository su cui lavorare.
+\end{itemize}
+La struttura del singolo repository è la seguente:
+\begin{itemize}
+    \item Il repository \textbf{\href{https://github.com/techsweave/eml-fe.git}{eml-fe}} ha la seguente struttura divisa per varie \textit{directory}:
+          \begin{itemize}
+              \item \textbf{types:} \textit{directory} contenente le interfacce dei tipi che saranno utilizzate per mappare le risposte delle chiamate \textit{lambda};
+              \item \textbf{styles:} \textit{directory} contenente i fogli di stile, scritti in \textit{css}\textsubscript{\textbf{G}}, utilizzati per la grafica della piattaforma;
+              \item \textbf{public:} \textit{directory} contenente le immagini relative alla parte grafica della piattaforma;
+              \item \textbf{pages:} \textit{directory} contenente le varie pagine dell'e-commerce, divise per sotto \textit{directory} relative alle singole pagine. Ogni \textit{directory} contiene il file \textit{index.tsx} che struttura le singole pagine del sito;
+              \item \textbf{components:} \textit{directory} contenente i vari componenti \textit{HTML}\textsubscript{\textbf{G}} da inserire nelle varie pagine seguendo le \textit{best practicies} indicate da \textit{Next.js}\textsubscript{\textbf{G}}.
+          \end{itemize}
+    \item Il repository \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}} ha la seguente struttura:
+
+          La directory \textbf{src} contiene tutto l'effettivo codice diviso in sotto \textit{directory}:
+          \begin{itemize}
+              \item \textbf{functions:} \textit{directory} contenente le funzioni lambda che verranno richiamate dal frontend\textsubscript{\textbf{G}};
+              \item \textbf{libs:} \textit{directory} contenente alcune librerie esterne utilizzate da tutte le funzioni;
+              \item \textbf{models:} \textit{directory} contenente i modelli dei database utilizzati dalla piattaforma nella sotto \textit{directory} \textbf{database} e gli schemi di risposta delle funzioni lambda sotto \textit{directory} \textbf{schema}.
+          \end{itemize}
+
+    \item Il repository  \textbf{\href{https://github.com/techsweave/TechSWEaveDocumentation.git}{TechSWEaveDocumentation}} ha la seguente struttura divisa per varie \textit{directory}:
+          \begin{itemize}
+              \item \textbf{Template:} la cartella la cui interno è presente un template del documento che ogni \textit{redattore} può utilizzare per produrre i file;
+              \item \textbf{Images:} la cartella contenente immagini e grafici da inserire poi nei documenti;
+              \item \textbf{RR:} la cartella contenente tutti i documenti che dovranno essere presentati alla \textit{Revisione dei Requisiti} divisi in \textit{esterni} e \textit{interni}, la stessa divisione verrà adottata anche per le altre revisioni del progetto. \textit{Revisione di Qualità} \textbf{RQ} e \textit{Revisione di Avanzamento} \textbf{RA}.
+          \end{itemize}
+\end{itemize}
+La divisione dei file in base alle revisioni favorisce l'organizzazione dei documenti e una veloce stesura degli stessi.\\
+I file presenti all'interno del singolo repository sono:
+\begin{itemize}
+    \item Il repository TechSWEave contiene i seguenti tipi di file:
+          \begin{itemize}
+              \item i file {\fontfamily{qcr}\selectfont .tex} ossia i sorgenti dei documenti scritti in \LaTeX;
+              \item le immagini e i grafici che verranno poi usati nei documenti.
+          \end{itemize}
+    \item Il repository eml-fe contiene i seguenti tipi di file:
+          \begin{itemize}
+              \item i file {\fontfamily{qcr}\selectfont .ts} file scritti in \textit{Typescript}\textsubscript{\textbf{G}};
+              \item i file {\fontfamily{qcr}\selectfont .tsx} file scritti in \textit{Typescript}, che supportano la sintassi \textit{jsx}\textsubscript{\textbf{G}};
+              \item i file {\fontfamily{qcr}\selectfont .css} i fogli di stile utilizzati per la grafica dell'e-commerce;
+              \item le immagini utilizzate per l'estetica del sito.
+          \end{itemize}
+    \item Il repository eml-be contiene i seguenti tipi di file:
+          \begin{itemize}
+              \item i file {\fontfamily{qcr}\selectfont .ts} file scritti in \textit{Typescript};
+              \item i file {\fontfamily{qcr}\selectfont .yml} file scritti in \textit{YAML}\textsubscript{\textbf{G}}, ossia file di configurazione;
+          \end{itemize}
+\end{itemize}
+Il file {\fontfamily{qcr}\selectfont .gitignore} è il file che impedisce il versionamento di determinati file, sono stati tolti dal versionamento i file non necessari.
+\subsubsubsection{Utilizzo GitHub}
+\textbf{Documentazione:}
+L'approccio al versionamento dei documenti scelto è stato quello dello sviluppo per \textit{feature}\textsubscript{\textbf{G}}, questo ha fatto si che il lavoro sia stato diviso in vari branch\textsubscript{\textbf{G}}:
+\begin{itemize}
+    \renewcommand\labelitemi{-}
+    \item \textbf{Master:} il branch principale, in cui sono presenti i documenti finali approvati dal \textit{Responsabile di Progetto};
+    \item \textbf{Develop:} il branch dove sono presenti i documenti terminati ma che devono essere ancora approvati dal \textit{Responsabile di Progetto};
+    \item Ogni documento, durante la sua redazione, appartiene a un singolo branch nominato con lo stesso nome del documento. Il documento rimarrà all'interno del proprio branch fino a che non è stato verificato dal \textit{Verificatore}.
+\end{itemize}
+\textbf{Codifica:} Anche per la codifica si è scelto un approccio dello sviluppo per \textit{feature}\textsubscript{\textbf{G}}, che ha permesso la suddivisione dei due repository in vari branch:
+\begin{itemize}
+    \renewcommand\labelitemi{-}
+    \item \textbf{Main:} il branch principale, in cui è presente il codice finale approvato da tutti i membri, sia backend che frontend;
+    \item \textbf{Develop:} il branch in cui sono presenti le modifiche del codice, una volta che i membri del sotto-gruppo (backend o frontend) l'hanno approvato.
+\end{itemize}
+Si è scelto un approccio per \textit{feature}, per facilitare l'organizzazione e lo sviluppo parallelo dei documenti. Per raggiungere quest'obbiettivo ogni componente del gruppo deve:
+\begin{itemize}
+    \renewcommand\labelitemi{-}
+    \item dalla propria repository locale deve posizionarsi nel branch corretto attraverso l'apposito comando;
+    \item una volta arrivato nel branch corretto, il componente si deve mettere in pari con le eventuali modifiche apportate ai documenti;
+    \item svolgere il compito assegnato, come la scrittura di nuovo materiale o la modifica di quello già esistente, attraverso l'editor predisposto (\textit{Visual Studio Code});
+    \item una volta terminato il proprio lavoro si deve aggiungere all'area di staging\textsubscript{\textbf{G}}, attraverso l'apposito comando;
+    \item eseguire il comando per andare a fare il commit delle modifiche fatte, corredandole con un messaggio identificativo;
+    \item caricare le modifiche nel repository remoto.
+\end{itemize}
+\subsubsubsection{Modifiche}
+\textbf{Documentazione:}
+Tutti i membri possono modificare tutti i documenti tranne quelli presenti all'interno del ramo master, per i quali è richiesta una \textit{pull request}\textsubscript{\textbf{G}}, che deve essere approvata da almeno un componente del gruppo.
+Per modifiche maggiori sui contenuti o modifiche alla struttura si deve:
+\begin{itemize}
+    \renewcommand\labelitemi{-}
+    \item presentare la modifica che si vuole effettuare al \textit{Responsabile di Progetto} motivando tale modifica;
+    \item una volta accetta dal \textit{Responsabile di Progetto} si può procedere con la modifica.
+\end{itemize}
+Per le modifiche minori come correzioni grammaticali e sintattiche si possono fare modifiche autonome, ma che devono comunque essere tracciate attraverso appositi commit autoesplicativi.\\
+\vspace{0px}\\
+\textbf{Codifica:}
+I membri possono modificare tutto il codice seguendo determinate regole:
+\begin{itemize}
+    \renewcommand\labelitemi{-}
+    \item informare i membri del team della modifica che si vuole apportare, creando un apposita issue;
+    \item creare un nuovo branch relativo alla modifica, partendo dal branch develop;
+    \item effettuare le proprie modifiche;
+    \item una volte terminate le modifiche, effettua una \textit{pull request} sul branch develop, che dovrà essere accetta da  altri membri del team.
+\end{itemize}
+\subsection{Gestione della Qualità}
+\subsubsection{Scopo}
+Il processo di gestione della qualità ha lo scopo di garantire che il prodotto finale soddisfi gli obbiettivi di qualità e i requisiti richiesti dal proponente, attraverso un corretto controllo dei processi e dei prodotti.
+\subsubsection{Descrizione}
+L'esposizione approfondita della gestione della qualità si trova nel \textit{Piano di Qualifica v2.0.0}, nel quale sono descritte le modalità utilizzate per garantire la qualità nello sviluppo del progetto. Tale documento contiene i seguenti punti:
+\begin{itemize}
+    \item sono esposti gli standard utilizzati;
+    \item sono indicati i processi d'interesse negli standard;
+    \item sono specificati gli attributi del software.
+\end{itemize}
+Per ogni processo vengono descritti:
+\begin{itemize}
+    \item gli obbiettivi da raggiungere;
+    \item gli standard da applicare;
+    \item le metriche da utilizzare.
+\end{itemize}
+Lo scopo è di controllare e migliorare i processi e i risultati. \\
+A ogni prodotto viene associato:
+\begin{itemize}
+    \item gli obbiettivi prefissati;
+    \item le metriche utilizzate.
+\end{itemize}
+In questo modo si vuole ottenere software e documentazione di qualità soddisfacente.
+\subsubsection{Attività}
+Le attività principali del processo di gestione della qualità sono:
+\begin{itemize}
+    \item \textbf{Pianificazione:} fissare degli obbiettivi di qualità, stabilire le strategie per raggiungerli e di conseguenza collocare le persone e le risorse nel modo migliore;
+    \item \textbf{Valutazione:} attuare quanto pianificato, misurando e monitorando i risultati;
+    \item \textbf{Reazione:} adattare le proprie strategie, criteri e piani sulla base dei risultati ottenuti, comprendendo dove sia necessario apportare miglioramenti.
+\end{itemize}
+\subsubsection{Strumenti}
+Gli strumenti predefiniti per la qualità sono:
+\begin{itemize}
+    \item quelli forniti dallo standard \textbf{ISO-9126}\textsubscript{\textbf{G}};
+    \item le metriche.
+\end{itemize}
+\subsubsection{Denominazione delle metriche}
+Per la denominazione metriche\textsubscript{\textbf{G}} si è deciso di adottare il formato
+\begin{center}
+    \textbf{M[Categoria][Numero]}
+\end{center}
+dove
+\begin{itemize}
+    \item \textbf{M} indica che ci si sta riferendo a una metrica;
+    \item \textbf{[Categoria]} specifica a quale categoria appartiene la metrica tra:\begin{itemize}
+              \item \textbf{PD} per i prodotti;
+              \item \textbf{PR} per i processi;
+              \item \textbf{TS} per i test;
+          \end{itemize}
+    \item \textbf{[Numero]} indica l'identificativo numerico a due cifre per la metrica; la numerazione inizia da 1.
+\end{itemize}
+Tutte le metriche esposte nella documentazione del progetto faranno fede a queste regole di denominazione.
+
+\subsubsection{Standard utilizzati}
+Lo standard utilizzato dal gruppo \textit{TechSWEave} è riportato nell'apposita appendice \hyperref[sec:A]{§A}.
+
+\subsection{Verifica}
+\subsubsection{Scopo}
+L'obbiettivo della verifica è quello di realizzare prodotti corretti, coesi\textsubscript{\textbf{G}} e completi. La verifica si applica sia al codice che ai documenti.
+\subsubsection{Descrizione}
+La verifica prende in input un file prodotto e, attraverso analisi e test, va a verificare che quanto fatto rispetti le aspettative.
+\subsubsection{Aspettative}
+Il corretto svolgimento del processo di verifica rispetta i seguenti punti:
+\begin{itemize}
+    \item viene effettuato seguendo procedure definite e consolidate;
+    \item si usano criteri chiari e affidabili per verificare;
+    \item i prodotti passano attraverso fasi successive, ognuna delle quali è sottoposta a verifica;
+    \item al termine della verifica il prodotto diventa stabile;
+    \item una volta completata permette il passaggio alla fase di validazione.
+\end{itemize}
+\subsubsection{Attività}
+\subsubsubsection{Analisi}
+Il processo di analisi si divide in due tipologie: statica e dinamica.
+\begin{itemize}
+    \item \textbf{Analisi statica}\\
+          La verifica statica si occupa di verificare documenti e codice per quanto concerne la loro correttezza (assenza di errori e difetti), il rispetto delle regole e la coesione\textsubscript{\textbf{G}} dei componenti. L'analisi statica può essere effettuata seguendo metodi manuali di lettura (eseguiti da persone) e metodi formali (eseguiti da macchine). I metodi manuali di lettura sono i seguenti due:
+          \begin{itemize}
+              \item \textbf{Walkthrough}: i \textit{Verificatori} analizzano i prodotti nella loro totalità per cercare anomalie, si fa una lettura completa perché non si conosco i principali difetti e la loro locazione;
+              \item \textbf{Inspection}: attraverso liste di controllo i \textit{Verificatori} andranno a cercare determinate tipologie di errori in specifiche parti del prodotto.
+          \end{itemize}
+    \item \textbf{Analisi dinamica}\\
+          L'analisi dinamica è una tecnica di analisi di un prodotto software, che ne richiede l'esecuzione per poterlo verificare. Viene effettuata tramite test che verificano che il prodotto sia privo di anomalie, che rispetti le aspettative e che funzioni correttamente.
+\end{itemize}
+
+\subsubsubsection{Test}
+I test sono il fondamento dell'analisi dinamica, in quanto hanno lo scopo di verificare il corretto funzionamento del codice e che sia conforme all'\textit{Analisi dei Requisiti v2.0.0}.
+Per ogni test devono essere definiti i seguenti parametri:
+\begin{itemize}
+    \item \textbf{ambiente}: sistema hardware e software sul quale verrà eseguito il test;
+    \item \textbf{stato iniziale}: lo stato iniziale dal quale il test viene eseguito;
+    \item \textbf{input}: input inserito;
+    \item \textbf{output}: output atteso;
+    \item \textbf{istruzioni aggiuntive}: ulteriori informazioni sull'esecuzione del test e su come devono essere interpretati i dati.
+\end{itemize}
+Dei test ben scritti devono:
+\begin{itemize}
+    \item essere ripetibili;
+    \item specificare l'ambiente d'esecuzione;
+    \item identificare input e output richiesti;
+    \item avvertire in caso di effetti non desiderati;
+    \item fornire informazioni sui risultati dell'esecuzione in forma di file {\fontfamily{qcr}\selectfont .log}.
+\end{itemize}
+I test del software sono di vario tipo, ognuno dei quali ha un diverso scopo e ambito di verifica.
+\begin{itemize}
+    \item \textbf{Test di unità}\\
+          I test d'unita si eseguono su piccoli moduli di codice detti unità. Questi test si concentrano sul testare la correttezza di queste unità, vengono forniti in input dei dati e si controlla che l'output sia quello desiderato. I test di unità hanno anche lo scopo di verificare la correttezza del codice scritto. Questi test possono essere fatti con l'utilizzo di driver\textsubscript{\textbf{G}} e di stub\textsubscript{\textbf{G}}.
+    \item \textbf{Test d'integrazione}\\
+          Dopo aver superato i test di unità, le varie unità vengono unite in agglomerati di dimensioni sempre maggiori. Questi test si concentrano sulle interfacce tra i componenti. Un agglomerato che supera un test d'integrazione costituisce un unità per un agglomerato di dimensioni maggiori, fino a raggiungere le dimensioni totali del sistema.
+    \item \textbf{Test di sistema}
+          I test di sistema vanno a testare il sistema nella sua interezza. Si verificano le interazioni tra le parti, che il comportamento dello stesso rispetti quanto atteso e verifica la copertura di tutte le funzionalità. Questi test vanno a evidenziare errate supposizioni che diversi sviluppatori fanno su parti di codice prodotto da altri.\\
+          In questa fase ci si assicura anche che l'applicazione rispetti tutti i vincoli e le specifiche presenti all'interno dell'\textit{Analisi dei requisiti v2.0.0}.
+    \item \textbf{Test di regressione}\\
+          Sono test che vengono effettuati in seguito alla modifica del sistema, consistono nella riesecuzione dei test esistenti. Questi test hanno lo scopo di garantire il funzionamento degli elementi precedentemente funzionanti. Questi test sono fortemente automatizzabili.
+    \item \textbf{Test di accettazione}\\
+          Detti anche "test di collaudo" hanno la stessa funzione dei test di sistema, solo che questi vengono eseguiti insieme ai committenti, per verificare la correttezza del prodotto e il soddisfacimento dei clienti. Una volta superato il test di accettazione il prodotto è pronto per essere rilasciato.
+
+\end{itemize}
+\subsubsection{Strumenti}
+Gli strumenti utilizzati per la verifica sono
+\subsubsubsection{Verifica ortografica}
+Viene utilizzata la verifica ortografica in tempo reale, attraverso l'apposita estensione di Visual Studio Code: \textit{Code Spell Checker} che avvisa con dei warning in presenza di errori.
+
+\subsubsubsection{Validazione W3C}
+\begin{itemize}
+    \item Per la validazione delle pagine di markup HTML viene utilizzato lo strumento offerto dal W3C\textsubscript{\textbf{G}}, raggiungibile al seguente indirizzo:\\
+          \href{https://validator.w3.org/}{https://validator.w3.org/}
+    \item Per la validazione dei fogli di stile CSS viene utilizzato lo strumento offerto da W3C, raggiungibile al seguente indirizzo:\\
+          \href{https://jigsaw.w3.org/css-validator/}{https://jigsaw.w3.org/css-validator/}
+
+\end{itemize}
+\subsection{Validazione}
+\subsubsection{Scopo}
+Il processo di validazione consiste di decidere se il prodotto soddisfa il compito per cui è stato generato. L'esito positivo di tale processo ci garantisce che il software rispetti i requisiti e che soddisfi i bisogni del committente.
+\subsubsection{Descrizione}
+Tale processo consiste nel ricercare gli oggetti da validare e valutane i risultati rispetto le aspettative previste.
+\subsubsection{Attività}
+Le attività per attuare il processo di validazione sono:
+\begin{itemize}
+    \item identificare gli oggetti da validare;
+    \item identificare una strategia con delle procedute di validazione in cui le procedure di verifica possano essere riutilizzate;
+    \item attuare la strategia;
+    \item valutare che i risultati rispettino le aspettative.
+\end{itemize}

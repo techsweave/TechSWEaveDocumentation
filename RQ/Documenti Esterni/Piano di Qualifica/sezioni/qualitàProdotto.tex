@@ -1,0 +1,105 @@
+\section{Qualità di prodotto}
+Per valutare la qualità di prodotto il gruppo  \textit{TechSWEave} ha selezionato lo standard ISO/IEC 9126\textsubscript{\textbf{G}}.\\
+Il modello di qualità scelto espone le caratteristiche di qualità del prodotto con una lista di attributi. Di seguito sono riportati quelli che il 
+gruppo ha deciso di selezionare, omettendo quelli ritenuti meno importanti nel contesto del progetto.
+\subsection{Funzionalità}
+Una funzionalità è la capacità di un prodotto software di offrire gli strumenti necessari allo svolgimento di funzioni prestabilite, definite 
+nell'\textit{Analisi dei Requisiti v2.0.0.}
+\subsubsection{Obiettivi}
+\begin{itemize}
+    \item \textbf{Adeguatezza:} capacità del prodotto software di fornire un insieme di funzioni in grado
+    di soddisfare gli obiettivi esposti nell’\textit{Analisi dei Requisiti 2.0.0};
+    \item \textbf{Accuratezza:} capacità del prodotto software di fornire i risultati desiderati con la precisione richiesta;
+    \item \textbf{Conformità:} il prodotto deve aderire agli standard scelti dal gruppo.
+\end{itemize}
+\subsubsection{Metriche}
+\textbf{MPD01 - Completezza dell'implementazione:} misura la completezza del prodotto in percentuale.
+\begin{itemize}
+    \item \textbf{Codice:} MPD01;
+    \item \textbf{Metodo di misura}: valore percentuale: C = $1-\frac{N\textsubscript{FNI}}{N\textsubscript{FI}}*100$ \\
+    \\dove N\textsubscript{FNI} indica il numero di funzionalità non implementate e N\textsubscript{FI} indica il numero di funzionalità 
+    individuate dall'analisi;
+    \item \textbf{Valore preferibile}: 100\%;
+    \item \textbf{Valore accettabile}: 100\%.
+\end{itemize}
+\subsection{Affidabilità}
+È la capacità del prodotto software di mantenere il livello di prestazioni
+desiderato anche a fronte di anomalie dovute a errori di analisi, progettazione e sviluppo del codice.
+\subsubsection{Obiettivi}
+\begin{itemize}
+    \item \textbf{Maturità:} capacità del prodotto software di evitare errori e risultati non corretti durante l’esecuzione;
+    \item \textbf{Tolleranza agli errori:} capacità del prodotto software di conservare il livello di prestazioni 
+    anche in caso di malfunzionamenti o di uso inappropriato del prodotto.
+\end{itemize}
+\subsubsection{Metriche}
+\textbf{MPD02 - Densità errori:} indica la capacità del prodotto di resistere a malfunzionamenti.
+\begin{itemize}
+    \item \textbf{Codice:} MPD02;
+    \item \textbf{Metodo di misura}: valore percentuale: M = $\frac{N\textsubscript{ER}}{N\textsubscript{TE}}*100$ \\
+    \\dove N\textsubscript{ER} indica il numero di errori rilevati e N\textsubscript{TE} indica il numero di test eseguiti;
+    \item \textbf{Valore preferibile}: 0\%;
+    \item \textbf{Valore accettabile}: $\leq$ 10\%.
+\end{itemize}
+\subsection{Usabilità}
+È la capacità del prodotto software di essere compreso, appreso, usato e gradito dall’utente quando usato nel contesto per cui è stato progettato.
+\subsubsection{Obiettivi}
+\begin{itemize}
+    \item \textbf{Comprensibilità:} l'utente deve poter comprendere facilmente i concetti base del prodotto software;
+    \item \textbf{Apprendibilità:} l'utente deve poter imparare facilmente a usare il software;
+    \item \textbf{Attrattività:} il prodotto deve essere piacevole da usare.
+\end{itemize}
+\subsubsection{Metriche}
+\textbf{MPD03 - Facilità di utilizzo:} indica la facilità con cui l'utente riesce a ottenere l'informazione che sta cercando.
+\begin{itemize}
+    \item \textbf{Codice:} MPD03;
+    \item \textbf{Metodo di misura}: numero di click necessari per arrivare alla pagina di checkout;
+    \item \textbf{Valore preferibile}: $\leq$ 10;
+    \item \textbf{Valore accettabile}: $\leq$ 15.
+\end{itemize}
+\textbf{MPD04 - Facilità di apprendimento:} indica la facilità con cui l'utente riesce a imparare l'utilizzo delle funzionalità del prodotto.
+\begin{itemize}
+    \item \textbf{Codice:} MPD04;
+    \item \textbf{Metodo di misura}: minuti necessari a raggiungere la pagina di checkout;
+    \item \textbf{Valore preferibile}: $\leq$ 3;
+    \item \textbf{Valore accettabile}: $\leq$ 5.
+\end{itemize}
+\textbf{MPD05 - Profondità della gerarchia:} indica la profondità del sito.
+\begin{itemize}
+    \item \textbf{Codice:} MPD05;
+    \item \textbf{Metodo di misura}: livello di profondità delle pagine;
+    \item \textbf{Valore preferibile}: $\leq$ 4;
+    \item \textbf{Valore accettabile}: $\leq$ 7.
+\end{itemize}
+\subsection{Manutenibilità}
+È la capacità del software di essere modificato mediante correzioni e miglioramenti.
+\subsubsection{Obiettivi}
+\begin{itemize}
+    \item \textbf{Analizzabilità:} indica la difficoltà incontrata nel diagnosticare un errore nel prodotto;
+    \item \textbf{Modificabilità:} indica la facilità di apportare modifiche al prodotto;
+    \item \textbf{Stabilità:} indica la capacità del software di evitare effetti indesiderati dovuti alle modifiche apportate.
+\end{itemize}
+\subsubsection{Metriche}
+\textbf{MPD06 - Facilità di comprensione:} la facilità con cui l'utente riesce a comprendere il codice può essere rappresentata dal numero di linee di 
+commento nel codice.
+\begin{itemize}
+    \item \textbf{Codice:} MPD06;
+    \item \textbf{Metodo di misura}: R = $\frac{N\textsubscript{LCOM}}{N\textsubscript{LCOD}}$ \\
+    \\dove N\textsubscript{LCOM} indica il numero di linee di commento e N\textsubscript{LCOD} indica le linee di codice;
+    \item \textbf{Valore preferibile}: $\geq$ 0.20;
+    \item \textbf{Valore accettabile}: $\geq$ 0.10.
+\end{itemize}
+\textbf{MPD07 - Semplicità delle funzioni:} indica la semplicità di un metodo in base al numero di parametri passati allo stesso.
+\begin{itemize}
+    \item \textbf{Codice:} MPD07;
+    \item \textbf{Metodo di misura}: numero di parametri del metodo;
+    \item \textbf{Valore preferibile}: $\leq$ 3;
+    \item \textbf{Valore accettabile}: $\leq$ 6.
+\end{itemize}
+\textbf{MPD08 - Semplicità delle classi:} indica la semplicità di una classe in base al numero di metodi della stessa.
+\begin{itemize}
+    \item \textbf{Codice:} MPD08;
+    \item \textbf{Metodo di misura}: numero di metodi della classe;
+    \item \textbf{Valore preferibile}: $\leq$ 8;
+    \item \textbf{Valore accettabile}: $\leq$ 15.
+\end{itemize}
+
