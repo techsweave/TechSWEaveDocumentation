@@ -1,0 +1,127 @@
+\documentclass[a4paper]{article}
+\usepackage{titlesec}
+\usepackage{geometry}
+\geometry{hmargin={2cm,2cm}, vmargin={3.5cm,3.5cm}}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\hypersetup{pdfborder = {0 0 0},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=blue}
+\definecolor{logo}{RGB}{20,99,163}
+\newcommand{\sectionbreak}{\clearpage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{grffile}
+\usepackage{longtable}
+%l'indice delle sezioni e immagini parte dalla sezione in cui si trovano 
+\usepackage{chngcntr}
+\usepackage{marvosym}
+\counterwithin{table}{section}
+\counterwithin{figure}{subsection}
+
+% creazione comando subsubsubsection
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+    \titlespacing*{\subsubsubsection}
+    {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\def\toclevel@subsubsubsection{4}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%fine creazione comando
+
+
+%Comandi di impaginazione uguale per tutti i documenti
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.2]{../../../Images/logo}}
+%Titolo del documento
+\rhead{\large Piano di Progetto}
+%\rfoot{\thepage}
+\cfoot{Pagina \thepage{} di \pageref{LastPage}}
+\setlength{\headheight}{45pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \includegraphics{../Images/logo.png}\\
+        \vspace{20px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{20px}
+        \textbf{\huge\textcolor{logo}{Maintainer's manual}}\\
+        \vspace{10px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{40px}
+        \textbf{\Large About}\\
+        \vspace{20px}
+        \begin{tabular}{p{100px} | p{100px}}
+            \textbf{Version}     & 2.0.0                                                                     \\
+            \textbf{Manager} & Marco Barbaresco                                                              \\
+            \textbf{Writers}    & Amedeo Meggiolaro \newline Tito Scutari \newline Marco Barbaresco          \\
+            \textbf{Verifier} & Nicolò Giaccone \newline Manuel Varo                                      \\
+            \textbf{List of distribution}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin \newline TechSWEave \\
+            \textbf{State}        & Approvato                                                                 \\
+            \textbf{Use}          & Esterno                                                                   \\
+        \end{tabular}\\
+        \vspace{60px}
+        \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
+
+    \end{center}
+\end{titlepage}
+
+%DIARIO DELLE MODIFICHE
+\begin{center}
+    \textbf{\Large Change diary}\\
+    \vspace{10px}
+    \begin{table}[h!]
+        \centering
+        \rowcolors{2}{logo!10}{logo!40}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{p{150px} p{90px} p{80px} p{60px} p{45px}}
+            \rowcolor{logo!70} \textbf{Changes}                          & \textbf{Author}   & \textbf{Role} & \textbf{Date} & \textbf{Version} \\
+            Initial draft                                       & Meggiolaro Amedeo       & Analista       & 2021-05-10    & 0.0.1             \\
+        \end{tabular}
+    \end{table}
+\end{center}
+
+% %INDICE
+% \newpage
+% \tableofcontents
+% \newpage
+% %INDICE DELLE FIGURE
+% \newpage
+% \listoffigures
+% \newpage
+% %INDICE DELLE TABELLE
+% \newpage
+% \listoftables
+% \newpage
+% CORPO DEL DOCUMENTO
+\input{sections/introduction.tex}
+\input{sections/frontend.tex}
+\input{sections/backend.tex}
+\input{sections/setup.tex}
+\appendix
+\input{sections/glossary.tex}
+
+\end{document}
+
+
