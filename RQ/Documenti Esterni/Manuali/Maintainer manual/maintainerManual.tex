@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
 \usepackage{hyperref}
+\usepackage{longtable}
 \hypersetup{pdfborder = {0 0 0},
 colorlinks,
 citecolor=black,
@@ -18,9 +19,6 @@ urlcolor=blue}
 \usepackage[english,italian]{babel}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-\usepackage{grffile}
-\usepackage{longtable}
-%l'indice delle sezioni e immagini parte dalla sezione in cui si trovano 
 \usepackage{chngcntr}
 \usepackage{marvosym}
 \counterwithin{table}{section}
@@ -45,24 +43,22 @@ urlcolor=blue}
 \setcounter{tocdepth}{4}
 %fine creazione comando
 
-
 %Comandi di impaginazione uguale per tutti i documenti
 \pagestyle{fancy}
-\lhead{\includegraphics[scale=0.2]{../../../Images/logo}}
+\lhead{\includegraphics[scale=0.2]{../../../../Images/logo.png}}
 %Titolo del documento
-\rhead{\large Piano di Progetto}
+\rhead{\large Maintainer's manual}
 %\rfoot{\thepage}
 \cfoot{Pagina \thepage{} di \pageref{LastPage}}
 \setlength{\headheight}{45pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-
-
+\counterwithin{table}{subsection}
 
 \begin{document}
 \begin{titlepage}
     \begin{center}
-        \includegraphics{../../../../Images/logo}\\
+        \includegraphics{../../../../Images/logo.png}\\
         \vspace{20px}
         \textcolor{logo}{\hrulefill}\\
         \vspace{20px}
@@ -102,19 +98,19 @@ urlcolor=blue}
     \end{table}
 \end{center}
 
-% %INDICE
-% \newpage
-% \tableofcontents
-% \newpage
-% %INDICE DELLE FIGURE
-% \newpage
-% \listoffigures
-% \newpage
-% %INDICE DELLE TABELLE
-% \newpage
-% \listoftables
-% \newpage
-% CORPO DEL DOCUMENTO
+%INDICE
+\newpage
+\tableofcontents
+\newpage
+%INDICE DELLE FIGURE
+\newpage
+\listoffigures
+\newpage
+%INDICE DELLE TABELLE
+\newpage
+\listoftables
+\newpage
+%CORPO DEL DOCUMENTO
 \input{sections/introduction.tex}
 \input{sections/frontend.tex}
 \input{sections/backend.tex}
