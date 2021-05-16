@@ -70,18 +70,57 @@ The functionalities provided by the platform permitted to identify the following
 \begin{itemize}
     \item \textbf{Carts};
     \item \textbf{Checkout};
-    \item \textbf{Products};
-    \item \textbf{Orders}.
+    \item \textbf{Products}.
 \end{itemize}
 The architecture is based on the following microservices:
 \begin{itemize}
     \item \textbf{Carts service};
     \item \textbf{Checkout service};
-    \item \textbf{Products service};
-    \item \textbf{Orders service}.
+    \item \textbf{Products service}.
 \end{itemize}
 Microservices are independently deployable and allow for more team autonomy, CONTINUARE **********
+
 \subsection{Microservices structure}
 Inserire testo se serve
+\subsubsection{Carts service}
+\begin{figure}[!h]
+    \vspace{5px}
+    \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/cartService.png}
+    \centering
+    \caption{Carts service}
+\end{figure}
+This microservice allows the user to:
+\begin{itemize}
+    \item Add a product to the cart;
+    \item Remove a product from the cart;
+    \item Modify the quantity of the items in the cart;
+    \item View the items in the cart.
+\end{itemize}
+
+\subsubsection{Checkout service}
+\begin{figure}[!h]
+    \vspace{5px}
+    \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/checkoutService.png}
+    \centering
+    \caption{Checkout service}
+\end{figure}
+This microservice allows the user to checkout by paying for the items purchased, through the Stripe\textsubscript{\textbf{G}} external service.
+
+\subsubsection{Products service}
+\begin{figure}[!h]
+    \vspace{5px}
+    \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/productService.png}
+    \centering
+    \caption{Products service}
+\end{figure}
+This microservice allows the user to:
+\begin{itemize}
+    \item Create a new product;
+    \item Delete a product;
+    \item View the product details;
+    \item Find a specific product using filters;
+    \item Modify informations about a product.
+\end{itemize}
+
 \subsection{Class diagrams}
 \subsection{Sequence diagrams}
