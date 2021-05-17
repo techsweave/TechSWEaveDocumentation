@@ -56,7 +56,7 @@ The architecture is based on the following microservices:
     \item \textbf{Products service}.
 \end{itemize}
 Microservices are independently deployable and allow for more team autonomy, CONTINUARE **********
-
+\pagebreak
 \subsection{Microservices structure}
 Inserire testo se serve
 \subsubsection{Carts service}
@@ -73,7 +73,7 @@ This microservice allows the user to:
     \item Modify the quantity of the items in the cart;
     \item View the items in the cart.
 \end{itemize}
-
+\pagebreak
 \subsubsection{Checkout service}
 \begin{figure}[!h]
     \vspace{5px}
@@ -82,7 +82,7 @@ This microservice allows the user to:
     \caption{Checkout service}
 \end{figure}
 This microservice allows the user to checkout by paying for the items purchased, through the Stripe\textsubscript{\textbf{G}} external service.
-
+\pagebreak
 \subsubsection{Products service}
 \begin{figure}[!h]
     \vspace{5px}
@@ -98,6 +98,19 @@ This microservice allows the user to:
     \item Find a specific product using filters;
     \item Modify informations about a product.
 \end{itemize}
+\pagebreak
+\subsubsection{Images service}
+\begin{figure}[!h]
+    \vspace{5px}
+    \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/imageService.png}
+    \centering
+    \caption{Images service}
+\end{figure}
+This microservice allows the user to:
+\begin{itemize}
+    \item Update the image of a product.
+\end{itemize}
 
 \subsection{Class diagrams}
 \subsection{Sequence diagrams}
+The following sequence diagrams describe the main operations that can be carried out inside the platform:
