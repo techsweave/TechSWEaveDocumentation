@@ -168,6 +168,14 @@ Un caso d'uso è un diagramma, accompagnato da una descrizione testuale aggiunti
     \item \textbf{Input (se presenti)}: valore o oggetto che l'attore porta nel sistema;
     \item \textbf{Output (se presenti)}: valore o oggetto risultato di un'azione di un attore.
 \end{itemize}
+\subsubsubsection{Metriche}
+\begin{itemize}
+    \item \textbf{MPR01 - PROS (Percentuale di requisiti obbligatori soddisfatti):} indica la percentuale di requisiti obbligatori soddisfatti.\\
+    MPR01 - PROS (Percentuale di requisiti obbligatori soddisfatti): indica la percentuale di requisiti obbligatori soddisfatti.
+    \\\textbf{Metodo di misura}:\\valore percentuale: $PROS = \frac{requisiti \ obbligatori \ soddisfatti}{requisiti \ obbligatori \ totali} * 100$
+    \item \textbf{MPR02 - PRS (Percentuale di requisiti soddisfatti):}indica la percentuale di requisiti soddisfatti.\\
+    \\\textbf{Metodo di misura}:\\valore percentuale: $PRS = \frac{requisiti \ soddisfatti}{requisiti \ totali} * 100$
+\end{itemize}
 \subsection{Progettazione}
 \subsubsection{Scopo}
 La fase di progettazione ha come scopo la ricerca di una soluzione architetturale in grado di soddisfare i requisiti degli \textit{stakeholders}\textsubscript{\textbf{G}}, esposti nel documento \textit{Analisi dei Requisiti v1.0.0}.
@@ -215,7 +223,11 @@ Nello specifico:
 \subsubsection{Test}
 Durante la fase di progettazione devono essere definiti test opportuni, in coerenza con le richieste dei proponenti.
 Tali test devono poter individuare errori o anomalie nell'architettura, logica o codice dell'applicazione.
-
+\subsubsection{Metriche}
+\begin{itemize}
+    \item \textbf{CBO (accoppiamento tra le classi di oggetti):} una classe è accoppiata ad un'altra se usa metodi o variabili definiti in quest'ultima.\\
+    \\\textbf{Metodo di misura}: valore intero.
+\end{itemize}
 \subsection{Codifica}
 \subsubsection{Scopo}
 La fase di codifica ha come scopo la stesura del codice stesso, e quindi dell'effettiva realizzazione del prodotto.

@@ -1,0 +1,110 @@
+% Qualità di processo
+% Processi primari
+% Analisi dei requisiti
+Di seguito sono descritte le varie metriche impiegate.
+
+\subsubsection{Metriche}
+\begin{itemize}
+    \item \textbf{MPR01 - PROS (Percentuale di requisiti obbligatori soddisfatti):} indica la percentuale di requisiti obbligatori soddisfatti.\\
+    MPR01 - PROS (Percentuale di requisiti obbligatori soddisfatti): indica la percentuale di requisiti obbligatori soddisfatti.
+    \\\textbf{Metodo di misura}:\\valore percentuale: $PROS = \frac{requisiti \ obbligatori \ soddisfatti}{requisiti \ obbligatori \ totali} * 100$
+    \item \textbf{MPR02 - PRS (Percentuale di requisiti soddisfatti):}indica la percentuale di requisiti soddisfatti.\\
+    \\\textbf{Metodo di misura}:\\valore percentuale: $PRS = \frac{requisiti \ soddisfatti}{requisiti \ totali} * 100$
+\end{itemize}
+
+% Progettazione di dettaglio
+\subsubsection{Metriche}
+\begin{itemize}
+    \item \textbf{CBO (accoppiamento tra le classi di oggetti):} una classe è accoppiata ad un'altra se usa metodi o variabili definiti in quest'ultima.\\
+    \\\textbf{Metodo di misura}: valore intero.
+\end{itemize}
+
+% Processi di supporto
+% Pianificazione
+\subsubsection{Metriche}
+Per il calcolo delle metriche di questa sezione vengono utilizzati i seguenti valori di utilità:
+\begin{itemize}
+    \item \textbf{BAC (Budget At Completion):} il valore del preventivo di periodo;
+    \item \textbf{EV (Earned Value):}  il valore del lavoro svolto fino al momento del calcolo, cioè il denaro guadagnato fino a quel momento;
+    \item \textbf{PV (Planned Value):} il valore del lavoro pianificato al momento del calcolo, cioè il denaro che ci si aspetta di guadagnare in quel momento.
+\end{itemize}
+\begin{itemize}
+    \item \textbf{MPR04 - EAC (Estimate at Completion):} rappresenta il nuovo preventivo sul totale alla fine di un periodo.\\
+    \\\textbf{Metodo di misura}: valore intero;
+    \item \textbf{MPR05 - VAC (Variance at Completion):} indica la spesa effettivamente sostenuta in percentuale.\\
+    \\\textbf{Metodo di misura}: $\frac{BAC - EAC}{100}$;
+    \item \textbf{MPR06 - AC (Actual Cost):} somma spesa fino al momento del calcolo.\\
+    \item Metodo di calcolo: valore intero;
+    \item \textbf{MPR07 - SV (Schedule Variance):} indica l'anticipo o il ritardo nello svolgimento del progetto rispetto alla pianificazione.\\
+    \\\textbf{Metodo di misura}: SV = EV - PV;
+    \item \textbf{MPR08 - BV (Budget Variance):} differenza tra il costo del lavoro pianificato e quello sostenuto alla data corrente.\\
+    \\\textbf{Metodo di misura}: CV = PV - AC.
+\end{itemize}
+
+% Verifica
+\subsubsection{Metriche}
+\begin{itemize}
+    \item \textbf{MPR09 - CC (Code Coverage):} indica il numero di righe di codice sottoposte ai test di verifica durante la loro esecuzione. Per linee di codice totali
+    si intende tutte quelle appartenenti all'unità sottoposta al test.\\
+    \\\textbf{Metodo di misura}: valore percentuale: CC = $\frac{linee \ di \ codice \ testate}{linee \ di \ codice \ totali * 100}$
+\end{itemize}
+
+% Documentazione
+\subsubsection{Metriche}
+\begin{itemize}
+    \item \textbf{MPR10 - Indice di Gulpease:}  è un indice di leggibilità di un testo tarato sulla lingua italiana. Ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico.\\
+    \\\textbf{Metodo di misura}: valore intero da 0 a 100: I\textsubscript{G} = 89 $+ \frac{300*numero \ di \ frasi \ - \ 10*numero \ di \ lettere}{numero \ di \ parole}$
+    \item \textbf{MPR11 - Correttezza ortografica:}  la documentazione non deve contenere errori ortografici o grammaticali.\\
+    \\\textbf{Metodo di misura}: valore intero: numero di errori per documento.
+\end{itemize}
+
+% Processi organizzativi
+% Gestione della qualità
+\subsubsection{Metriche}
+\begin{itemize}
+    \item \textbf{MPR12 - PMS (Percentuale di metriche soddisfatte):} indica la percentuale delle metriche che raggiungono dei valori accettabili.\\
+    \\\textbf{Metodo di misura}: valore percentuale: PMS = $\frac{numero \ di \ metriche \ soddisfatte}{numero \ di \ metriche \ totali} * 100$ 
+\end{itemize}
+
+% -------------------------------------------------------------------
+
+% Qualità di Prodotto
+% Funzionalità
+\subsubsection{Metriche per la funzionalit\`a}
+\begin{itemize}
+    \item \textbf{MPD01 - Completezza dell'implementazione:} misura la completezza del prodotto in percentuale.\\
+    \\\textbf{Metodo di misura}: valore percentuale: C = $1-\frac{N\textsubscript{FNI}}{N\textsubscript{FI}}*100$ \\
+    \\dove N\textsubscript{FNI} indica il numero di funzionalità non implementate e N\textsubscript{FI} indica il numero di funzionalità 
+    individuate dall'analisi.
+\end{itemize}
+
+% Affidabilità
+\subsubsection{Metriche per l'affidabilit\`a}
+\begin{itemize}
+    \item \textbf{MPD02 - Densità errori:} indica la capacità del prodotto di resistere a malfunzionamenti.\\
+    \\\textbf{Metodo di misura}: valore percentuale: M = $\frac{N\textsubscript{ER}}{N\textsubscript{TE}}*100$ \\
+    \\dove N\textsubscript{ER} indica il numero di errori rilevati e N\textsubscript{TE} indica il numero di test eseguiti.
+\end{itemize}
+ 
+% Usabilità
+\subsubsection{Metriche per l'usabilit\`a}
+\begin{itemize}
+    \item \textbf{MPD03 - Facilità di utilizzo:} indica la facilità con cui l'utente riesce a ottenere l'informazione che sta cercando.\\
+    \\\textbf{Metodo di misura}: numero di click necessari per arrivare alla pagina di checkout;
+    \item \textbf{MPD04 - Facilità di apprendimento:} indica la facilità con cui l'utente riesce a imparare l'utilizzo delle funzionalità del prodotto.\\
+    \\\textbf{Metodo di misura}: minuti necessari a raggiungere la pagina di checkout;
+    \item \textbf{MPD05 - Profondità della gerarchia:} indica la profondità del sito.\\
+    \\\textbf{Metodo di misura}: livello di profondità delle pagine.
+\end{itemize}
+
+% Manutenibilità
+\subsubsection{Metriche per la manutenibilit\`a}
+\begin{itemize}
+    \item \textbf{MPD06 - Facilità di comprensione:} la facilità con cui l'utente riesce a comprendere il codice può essere rappresentata dal numero di linee di commento nel codice.\\
+    \\\textbf{Metodo di misura}: R = $\frac{N\textsubscript{LCOM}}{N\textsubscript{LCOD}}$ \\
+    \\dove N\textsubscript{LCOM} indica il numero di linee di commento e N\textsubscript{LCOD} indica le linee di codice;
+    \item \textbf{MPD07 - Semplicità delle funzioni:} indica la semplicità di un metodo in base al numero di parametri passati allo stesso.\\
+    \\\textbf{Metodo di misura}: numero di parametri del metodo;
+    \item \textbf{MPD08 - Semplicità delle classi:}  indica la semplicità di una classe in base al numero di metodi della stessa.\\
+    \\\textbf{Metodo di misura}: numero di metodi della classe.
+\end{itemize}
