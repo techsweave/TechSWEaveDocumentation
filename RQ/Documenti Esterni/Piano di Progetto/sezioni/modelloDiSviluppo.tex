@@ -174,3 +174,28 @@ Tutti i requisiti sono reperibili all'interno del documento \textit{Analisi dei 
 \end{longtable}
 \counterwithin{table}{subsection}
 \renewcommand{\arraystretch}{1}
+\subsubsection{Incrementi per la fase di validazione e collaudo}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{logo!40}{logo!10}
+\arrayrulecolor{white}
+\begin{longtable}{
+    >{\centering}p{0.15\textwidth}
+    >{\raggedright}p{0.40\textwidth}
+    >{\centering}p{0.15\textwidth}
+    >{\centering}p{0.15\textwidth}
+    }
+
+    \caption{Tabella di Tracciamento}                                                                                            \\
+    \rowcolor{white}                                                                                                             \\
+    \rowcolor{logo!70}
+    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi} & \centering\textbf{Casi d'uso} & \centering\textbf{Requisiti}
+    \tabularnewline
+    \endfirsthead
+    \rowcolor{white}\caption[]{(continua)}                                                                                       \\
+    \rowcolor{logo!70}
+    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi} & \centering\textbf{Casi d'uso} & \centering\textbf{Requisiti}
+    \tabularnewline
+    \endhead
+\end{longtable}
+\counterwithin{table}{subsection}
+\renewcommand{\arraystretch}{1}
