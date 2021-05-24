@@ -49,7 +49,7 @@ Questa fase comincia il giorno successivo alla presentazione e la sua fine coinc
 Le attività di questa fase sono:
 \begin{itemize}
     \item \textbf{Incremento e verifica:} in cui i documenti precedentemente redatti vengono aggiornati e migliorati;
-    \item \textbf{Technology Baseline\textsubscript{\textbf{G}}:} viene fatta un'analisi ad alto livello per comprendere appieno le tecnologie coinvolte, scegliendo l'architettura del codice e i design pattern\textsubscript{\textbf{G}} che saranno adoperati per lo sviluppo. Viene codificato il Proof of Concept\textsubscript{\textbf{G}} che sarà presentato o condiviso tramite repository con committente e proponente per verificare il corretto sviluppo del software.
+    \item \textbf{Technology Baseline\textsubscript{\textbf{G}}:} viene fatta un'analisi ad alto livello per comprendere appieno le tecnologie coinvolte, scegliendo l'architettura del codice e i design pattern\textsubscript{\textbf{G}} che saranno adoperati per lo sviluppo. Viene codificato il Proof of Concept\textsubscript{\textbf{G}} che sarà presentato o condiviso tramite repositori con committente e proponente per verificare il corretto sviluppo del software.
 \end{itemize}
 \begin{figure}[!ht]
     \caption{Diagramma di Gantt dell'attività di progettazione architetturale}
@@ -69,7 +69,6 @@ Le attività di questa fase sono suddivisi in sei incrementi di sviluppo, per og
               \item documentali;
           \end{itemize}
     \item periodo;
-    \item ruoli attivi;
     \item attività previste;
     \item diagrammi di Gantt
 \end{itemize}
@@ -85,19 +84,28 @@ Gli obbiettivi che il gruppo di pone di soddisfare in questo periodo sono i segu
 \subsubsubsection{Periodo}
 Il gruppo ritiene che per il raggiungimento degli obbiettivi serviranno tre giorni di lavoro;\\
 Il periodo interessato sarà dal 2021/05/10 al 2021/05/12
-\subsubsubsection{Ruoli Attivi}
-Per la realizzazione di questi obbiettivi il gruppo ritiene che saranno attivi i seguenti ruoli:
-\begin{itemize}
-    \item \textit{Responsabile di progetto};
-    \item \textit{Amministratore di progetto};
-    \item \textit{Analista};
-    \item \textit{Progettista};
-    \item \textit{Programmatore};
-    \item \textit{Verificatore}.
-\end{itemize}
 
 \subsubsubsection{Attività previste}
 Per soddisfare gli obbiettivi preposti il gruppo ritiene di dover svolgere le seguenti attività:
+\begin{itemize}
+    \item\textbf{integrazione strumenti:}+integrazione degli strumenti necessari allo
+          sviluppo del prodotto secondo gli standard qualitativi scelti;
+    \item\textbf{analisi delle tecnologie:} studio delle tecnologie necessarie per lo sviluppo software;
+    \item \textbf{verifica:} rilevazione delle metriche di qualità di prodotto e di processo;
+    \item \textbf{ampliamento della documentazione:}
+          \begin{itemize}
+              \item estensione delle normative di progettazione e codifica;
+              \item aggiornamento delle metriche e degli obbiettivi di qualità per quanto concerne il prodotto software;
+              \item registrazione degli esiti di verifica;
+              \item registrazione dell'andamento degli obbiettivi di qualità;
+              \item aggiornamento dell'analisi dei rischi e della sua attualizzazione
+              \item aggiornamento del \textit{Glossario v3.0.0};
+              \item calcolo del consuntivo di periodo;
+              \item calcolo del preventivo a finire rispetto alla fase;
+              \item calcolo del preventivo a finire rispetto al completamento del progetto.
+          \end{itemize}
+\end{itemize}
+
 \subsubsubsection{Diagrammi di Gantt}
 
 \subsubsection{Incremento 7}
@@ -105,26 +113,48 @@ Per soddisfare gli obbiettivi preposti il gruppo ritiene di dover svolgere le se
 Gli obbiettivi che il gruppo di pone di soddisfare in questo periodo sono i seguenti:
 \begin{itemize}
     \item Miglioramento della struttura delle funzioni Lambda, con l'aggiunta dei filtri di ricerca;
-    \item  Miglioramento delle chiamate \textit{API GATEWAY} nel frontend per ottenere le informazioni delle funzioni lambda;
+    \item Miglioramento delle chiamate \textit{API GATEWAY} nel frontend per ottenere le informazioni delle funzioni lambda;
     \item Inizio della stesura della documentazione legata al prodotto software;
     \item Incremento della documentazione per verifica e miglioramento continuo.
 \end{itemize}
 \subsubsubsection{Periodo}
 Il gruppo ritiene che per il raggiungimento degli obbiettivi serviranno cinque giorni di lavoro;\\
 Il periodo interessato sarà dal 2021/05/13 al 2021/05/17
-\subsubsubsection{Ruoli Attivi}
-Per la realizzazione di questi obbiettivi il gruppo ritiene che saranno attivi i seguenti ruoli:
-\begin{itemize}
-    \item \textit{Responsabile di progetto};
-    \item \textit{Amministratore di progetto};
-    \item \textit{Analista};
-    \item \textit{Progettista};
-    \item \textit{Programmatore};
-    \item \textit{Verificatore}.
-\end{itemize}
 
 \subsubsubsection{Attività previste}
 Per soddisfare gli obbiettivi preposti il gruppo ritiene di dover svolgere le seguenti attività:
+\begin{itemize}
+    \item \textbf{codifica:}
+          \begin{itemize}
+              \item implementazione dei casi d'uso UC15- Scelta della categoria e UC35 - Applicazione dei filtri;\\ requisiti:
+                    \begin{itemize}
+                        \item R10F;                                                                   \item R10.1F
+                        \item R10.2F;
+                        \item R10.3F;
+                        \item R10.5F;
+                        \item R10.6F.
+                    \end{itemize}
+          \end{itemize}
+    \item \textbf{pianificazione:} revisione della modalità di pianificazione gestendola attraverso gli incrementi;
+    \item \textbf{progettazione di dettaglio:} inizio della stesura dell'\textit{Allegato Tecnico}:
+          \begin{itemize}
+              \item esposizione delle tecnologie;
+              \item individuazione dei design pattern e della struttura del codice.
+          \end{itemize}
+    \item \textbf{verifica:} rilevazione delle metriche di qualità di prodotto e di processo;
+    \item \textbf{ampliamento della documentazione:}
+          \begin{itemize}
+              \item inizio stesura \textit{Manuale Sviluppatore v1.0.0} per le funzionalità complete;
+              \item inizio stesura \textit{Manuale Utente v1.0.0} per le funzionalità complete;
+              \item registrazione degli esiti di verifica;
+              \item registrazione dell'andamento degli obbiettivi di qualità;
+              \item aggiornamento dell'analisi dei rischi e della sua attualizzazione
+              \item aggiornamento del \textit{Glossario v3.0.0};
+              \item calcolo del consuntivo di periodo;
+              \item calcolo del preventivo a finire rispetto alla fase;
+              \item calcolo del preventivo a finire rispetto al completamento del progetto.
+          \end{itemize}
+\end{itemize}
 \subsubsubsection{Diagrammi di Gantt}
 
 \subsubsection{Incremento 8}
@@ -139,19 +169,37 @@ Gli obbiettivi che il gruppo di pone di soddisfare in questo periodo sono i segu
 \subsubsubsection{Periodo}
 Il gruppo ritiene che per il raggiungimento degli obbiettivi serviranno tre giorni di lavoro;\\
 Il periodo interessato sarà dal 2021/05/18 al 2021/05/20
-\subsubsubsection{Ruoli Attivi}
-Per la realizzazione di questi obbiettivi il gruppo ritiene che saranno attivi i seguenti ruoli:
-\begin{itemize}
-    \item \textit{Responsabile di progetto};
-    \item \textit{Amministratore di progetto};
-    \item \textit{Analista};
-    \item \textit{Progettista};
-    \item \textit{Programmatore};
-    \item \textit{Verificatore}.
-\end{itemize}
 
 \subsubsubsection{Attività previste}
 Per soddisfare gli obbiettivi preposti il gruppo ritiene di dover svolgere le seguenti attività:
+\begin{itemize}
+    \item \textbf{codifica:} ristrutturazione del codice per rispettare le indicazioni fornite dai proponenti;\\ requisiti:
+          \begin{itemize}
+              \item R8Q;
+              \item R1v;
+              \item R2v;
+              \item R4v.
+          \end{itemize}
+    \item \textbf{configurazione linter:} riconfigurazione del linter \textit{eslint} rispettando le indicazioni fornite dai proponenti. Aggiunta del linter ai sistemi di \textit{continuous integration};
+    \item \textbf{progettazione di dettaglio}: incremento della stesura dell'\textit{Allegato Tecnico}:
+          \begin{itemize}
+              \item aggiunta dei digrammi delle classi;
+              \item aggiunta dei digrammi di sequenza.
+          \end{itemize}
+    \item \textbf{verifica:} rilevazione delle metriche di qualità di prodotto e di processo;
+    \item \textbf{ampliamento della documentazione:}
+          \begin{itemize}
+              \item inizio stesura \textit{Manuale Sviluppatore v1.0.0} per le funzionalità complete;
+              \item inizio stesura \textit{Manuale Utente v1.0.0} per le funzionalità complete;
+              \item registrazione degli esiti di verifica;
+              \item registrazione dell'andamento degli obbiettivi di qualità;
+              \item aggiornamento dell'analisi dei rischi e della sua attualizzazione
+              \item aggiornamento del \textit{Glossario v3.0.0};
+              \item calcolo del consuntivo di periodo;
+              \item calcolo del preventivo a finire rispetto alla fase;
+              \item calcolo del preventivo a finire rispetto al completamento del progetto.
+          \end{itemize}
+\end{itemize}
 \subsubsubsection{Diagrammi di Gantt}
 
 \subsubsection{Incremento 9}
@@ -166,19 +214,61 @@ Gli obbiettivi che il gruppo di pone di soddisfare in questo periodo sono i segu
 \subsubsubsection{Periodo}
 Il gruppo ritiene che per il raggiungimento degli obbiettivi serviranno due giorni di lavoro;\\
 Il periodo interessato sarà dal 2021/05/20 al 2021/05/21
-\subsubsubsection{Ruoli Attivi}
-Per la realizzazione di questi obbiettivi il gruppo ritiene che saranno attivi i seguenti ruoli:
-\begin{itemize}
-    \item \textit{Responsabile di progetto};
-    \item \textit{Amministratore di progetto};
-    \item \textit{Analista};
-    \item \textit{Progettista};
-    \item \textit{Programmatore};
-    \item \textit{Verificatore}.
-\end{itemize}
 
 \subsubsubsection{Attività previste}
 Per soddisfare gli obbiettivi preposti il gruppo ritiene di dover svolgere le seguenti attività:
+\begin{itemize}
+    \item \textbf{codifica:}
+          \begin{itemize}
+              \item implementazione del caso d'uso UC3 - Autenticazione esterna;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R4F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC10 - Registrazione esterna;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R12F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC17 - Gestione profilo;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R15F;
+                        \item R15.1F;
+                        \item R15.2F;
+                        \item R15.3F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC19 - Visualizzazione profilo;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R17F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC37 - Gestione credenziali;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R33F;
+                        \item R33.1F;
+                        \item R33.2F.
+                    \end{itemize}
+          \end{itemize}
+    \item \textbf{progettazione di dettaglio}: incremento della stesura dell'\textit{Allegato Tecnico}:
+          \begin{itemize}
+              \item aggiunta dei digrammi di attività.
+          \end{itemize}
+    \item \textbf{verifica:} rilevazione delle metriche di qualità di prodotto e di processo;
+    \item \textbf{ampliamento della documentazione:}
+          \begin{itemize}
+              \item inizio stesura \textit{Manuale Sviluppatore v1.0.0} per le funzionalità complete;
+              \item inizio stesura \textit{Manuale Utente v1.0.0} per le funzionalità complete;
+              \item registrazione degli esiti di verifica;
+              \item registrazione dell'andamento degli obbiettivi di qualità;
+              \item aggiornamento dell'analisi dei rischi e della sua attualizzazione
+              \item aggiornamento del \textit{Glossario v3.0.0};
+              \item calcolo del consuntivo di periodo;
+              \item calcolo del preventivo a finire rispetto alla fase;
+              \item calcolo del preventivo a finire rispetto al completamento del progetto.
+          \end{itemize}
+\end{itemize}
 \subsubsubsection{Diagrammi di Gantt}
 
 \subsubsection{Incremento 10}
@@ -193,19 +283,79 @@ Gli obbiettivi che il gruppo di pone di soddisfare in questo periodo sono i segu
 \subsubsubsection{Periodo}
 Il gruppo ritiene che per il raggiungimento degli obbiettivi serviranno tre giorni di lavoro;\\
 Il periodo interessato sarà dal 2021/05/22 al 2021/05/24
-\subsubsubsection{Ruoli Attivi}
-Per la realizzazione di questi obbiettivi il gruppo ritiene che saranno attivi i seguenti ruoli:
-\begin{itemize}
-    \item \textit{Responsabile di progetto};
-    \item \textit{Amministratore di progetto};
-    \item \textit{Analista};
-    \item \textit{Progettista};
-    \item \textit{Programmatore};
-    \item \textit{Verificatore}.
-\end{itemize}
 
 \subsubsubsection{Attività previste}
 Per soddisfare gli obbiettivi preposti il gruppo ritiene di dover svolgere le seguenti attività:
+\begin{itemize}
+    \item \textbf{codifica:}
+          \begin{itemize}
+              \item implementazione del caso d'uso UC4 - Visualizzazione dettagli di un prodotto;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R5F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC5 - Aggiunta di un prodotto al carrello;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R6F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC11 - Visualizzazione dei prodotti inseriti nel carrello;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R13.5F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC12 - Rimozione di un prodotto dal carrello;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R13.2F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC21 - Checkout;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R19F;
+                        \item R19.1F;
+                        \item R19.2F;
+                        \item R19.3F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC22 -  Annullamento checkout;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R20F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC23 -  Riepilogo ordine;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R21F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC24 - Visualizzazione degli ordini effettuati;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R22F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC36 -  Errore nel pagamento;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R19.4F.
+                    \end{itemize}
+          \end{itemize}
+    \item \textbf{progettazione di dettaglio}: incremento della stesura dell'\textit{Allegato Tecnico}:
+          \begin{itemize}
+              \item aggiunta dei digrammi di attività.
+          \end{itemize}
+    \item \textbf{verifica:} rilevazione delle metriche di qualità di prodotto e di processo;
+    \item \textbf{ampliamento della documentazione:}
+          \begin{itemize}
+              \item stesura \textit{Manuale Sviluppatore v1.0.0} per le funzionalità complete;
+              \item stesura \textit{Manuale Utente v1.0.0} per le funzionalità complete;
+              \item registrazione degli esiti di verifica;
+              \item registrazione dell'andamento degli obbiettivi di qualità;
+              \item aggiornamento dell'analisi dei rischi e della sua attualizzazione
+              \item aggiornamento del \textit{Glossario v3.0.0};
+              \item calcolo del consuntivo di periodo;
+              \item calcolo del preventivo a finire rispetto alla fase;
+              \item calcolo del preventivo a finire rispetto al completamento del progetto.
+          \end{itemize}
+\end{itemize}
 \subsubsubsection{Diagrammi di Gantt}
 
 \subsubsection{Incremento 11}
@@ -218,21 +368,39 @@ Gli obbiettivi che il gruppo di pone di soddisfare in questo periodo sono i segu
     \item Incremento della documentazione per verifica e miglioramento continuo.
 \end{itemize}
 \subsubsubsection{Periodo}
-Il gruppo ritiene che per il raggiungimento degli obbiettivi serviranno 2 giorni di lavoro;\\
+Il gruppo ritiene che per il raggiungimento degli obbiettivi serviranno due giorni di lavoro;\\
 Il periodo interessato sarà dal 2021/05/24 al 2021/05/25
-\subsubsubsection{Ruoli Attivi}
-Per la realizzazione di questi obbiettivi il gruppo ritiene che saranno attivi i seguenti ruoli:
-\begin{itemize}
-    \item \textit{Responsabile di progetto};
-    \item \textit{Amministratore di progetto};
-    \item \textit{Analista};
-    \item \textit{Progettista};
-    \item \textit{Programmatore};
-    \item \textit{Verificatore}.
-\end{itemize}
 
 \subsubsubsection{Attività previste}
 Per soddisfare gli obbiettivi preposti il gruppo ritiene di dover svolgere le seguenti attività:
+\begin{itemize}
+    \item \textbf{codifica:} \begin{itemize}
+              \item \item completamento implementazione homepage;\\ requisiti:
+                    \begin{itemize}
+                        \item R1.1F;                                                                   \item R10.1F
+                        \item R1.2F.
+                    \end{itemize}
+              \item implementazione dei casi d'uso UC6 - Ricerca dei prodotti;\\ requisiti:
+                    \begin{itemize}
+                        \item R7F.
+                    \end{itemize}
+              \item implementazione dei casi d'uso UC7 - Visualizzazione della lista dei prodotti;\\ requisiti:
+                    \begin{itemize}
+                        \item R8F.
+                    \end{itemize}
+          \end{itemize}
+    \item \textbf{verifica:} rilevazione delle metriche di qualità di prodotto e di processo;
+    \item \textbf{ampliamento della documentazione:}
+          \begin{itemize}
+              \item registrazione degli esiti di verifica;
+              \item registrazione dell'andamento degli obbiettivi di qualità;
+              \item aggiornamento dell'analisi dei rischi e della sua attualizzazione
+              \item aggiornamento del \textit{Glossario v3.0.0};
+              \item calcolo del consuntivo di periodo;
+              \item calcolo del preventivo a finire rispetto alla fase;
+              \item calcolo del preventivo a finire rispetto al completamento del progetto.
+          \end{itemize}
+\end{itemize}
 \subsubsubsection{Diagrammi di Gantt}
 
 \subsubsection{Incremento 12}
@@ -248,19 +416,96 @@ Gli obbiettivi che il gruppo di pone di soddisfare in questo periodo sono i segu
 \subsubsubsection{Periodo}
 Il gruppo ritiene che per il raggiungimento degli obbiettivi serviranno quattro giorni di lavoro;\\
 Il periodo interessato sarà dal 2021/05/25 al 2021/05/28
-\subsubsubsection{Ruoli Attivi}
-Per la realizzazione di questi obbiettivi il gruppo ritiene che saranno attivi i seguenti ruoli:
-\begin{itemize}
-    \item \textit{Responsabile di progetto};
-    \item \textit{Amministratore di progetto};
-    \item \textit{Analista};
-    \item \textit{Progettista};
-    \item \textit{Programmatore};
-    \item \textit{Verificatore}.
-\end{itemize}
 
 \subsubsubsection{Attività previste}
 Per soddisfare gli obbiettivi preposti il gruppo ritiene di dover svolgere le seguenti attività:
+\begin{itemize}
+    \item \textbf{codifica:}
+          \begin{itemize}
+              \item implementazione del caso d'uso UC25 - Visualizzazione della lista dei clienti;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R23F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC26 - Visualizzazione della lista degli ordini;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R24F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC28 -  Aggiunta di un prodotto;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R26F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC29 - Modifica di un prodotto;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R27F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC30 - Rimozione di un prodotto;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R28F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC31 -  Aggiunta di una categoria;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R29F.
+                    \end{itemize}
+              \item implementazione del caso d'uso UC32 -  Rimozione di una categoria;\\
+                    requisiti:
+                    \begin{itemize}
+                        \item R30F.
+                    \end{itemize}
+          \end{itemize}
+    \item \textbf{verifica:} rilevazione delle metriche di qualità di prodotto e di processo;
+    \item \textbf{ampliamento della documentazione:}
+          \begin{itemize}
+              \item registrazione degli esiti di verifica;
+              \item registrazione dell'andamento degli obbiettivi di qualità;
+              \item aggiornamento dell'analisi dei rischi e della sua attualizzazione
+              \item aggiornamento del \textit{Glossario v3.0.0};
+              \item calcolo del consuntivo di periodo;
+              \item calcolo del preventivo a finire rispetto alla fase;
+              \item calcolo del preventivo a finire rispetto al completamento del progetto.
+          \end{itemize}
+\end{itemize}
+\subsubsubsection{Diagrammi di Gantt}
+
+\subsubsection{Incremento 13}
+\subsubsubsection{Obbiettivi}
+Gli obbiettivi che il gruppo di pone di soddisfare in questo periodo sono i seguenti:
+\begin{itemize}
+    \item Preparazione per la \textit{Revisione di Qualifica};
+    \item Correzione del codice secondo le indicazioni ricevute durante la \textit{Product Baseline} e con il proponente;
+    \item Correzione dell'\textbf{Allegato Tecnico};
+    \item Incremento della documentazione per verifica e miglioramento continuo.
+\end{itemize}
+\subsubsubsection{Periodo}
+Il gruppo ritiene che per il raggiungimento degli obbiettivi serviranno tre giorni di lavoro;\\
+Il periodo interessato sarà dal 2021/05/29 al 2021/05/31
+
+\subsubsubsection{Attività previste}
+Per soddisfare gli obbiettivi preposti il gruppo ritiene di dover svolgere le seguenti attività:
+\begin{itemize}
+    \item\textbf{codifica:}
+    \item \begin{itemize}
+              \item correzione in base alle indicazioni ricevute durante la \textit{Product Baseline};
+              \item correzione in base alle indicazioni ricevute dal proponente.
+          \end{itemize}
+    \item \textbf{verifica:} rilevazione delle metriche di qualità di prodotto e di processo;
+    \item \textbf{ampliamento della documentazione:}
+          \begin{itemize}
+              \item registrazione degli esiti di verifica;
+              \item registrazione dell'andamento degli obbiettivi di qualità;
+              \item aggiornamento dell'analisi dei rischi e della sua attualizzazione
+              \item aggiornamento del \textit{Glossario v3.0.0};
+              \item calcolo del consuntivo di periodo;
+              \item calcolo del preventivo a finire rispetto alla fase;
+              \item calcolo del preventivo a finire rispetto al completamento del progetto.
+          \end{itemize}
+\end{itemize}
+
 \subsubsubsection{Diagrammi di Gantt}
 
 
