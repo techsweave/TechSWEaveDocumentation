@@ -20,7 +20,7 @@ Ogni requisito è composto dalla seguente struttura:
     \item \textbf{Importanza:} riporta l'importanza del requisito:
           \begin{itemize}
               \item obbligatorio: requisito irrinunciabile per gli stakeholders\textsubscript{\textbf{G}};
-              \item desiderabile: requisito non strettamente necessario ma a valore aggiunto riconoscibile;
+              \item desiderabile: requisito non strettamente necessario ma con valore aggiunto riconoscibile;
               \item facoltativo: requisito relativamente utile oppure contrattabile in un secondo momento durante lo sviluppo.
           \end{itemize}
     \item \textbf{Descrizione:} descrizione del requisito, meno ambigua possibile;
@@ -110,10 +110,9 @@ Ogni requisito è composto dalla seguente struttura:
         \textbf{R29F}                         & Il venditore deve poter aggiungere una nuova categoria                                                                                              & Obbligatorio             & \hyperref[sec:UC31]{UC31}                      \\
         \textbf{R30F}                         & Il venditore deve poter rimuovere una categoria                                                                                                     & Obbligatorio             & \hyperref[sec:UC32]{UC32}                      \\
         \textbf{R31F}                         & L'utente deve poter visualizzare un errore se inserisce dei dati sbagliati durante l'autenticazione                                                 & Obbligatorio             & \hyperref[sec:UC33]{UC33}                      \\
-        \textbf{R32F}                         & Deve essere sviluppato un componente,\newline il \textit{BFF}\textsubscript{\textbf{G}}, che gestisca la comunicazione tra front-end e microservizi & Obbligatorio             & Capitolato                                     \\
-        \textbf{R33F}                         & L'utente deve poter modificare le proprie credenziali                                                                                               & Obbligatorio             & Capitolato                                     \\
-        R33.1F                                & L'utente deve poter modificare il proprio username                                                                                                  & Obbligatorio             & \hyperref[sec:UC37.1]{UC37.1}                  \\
-        R33.2F                                & L'utente deve poter cambiare la propria password                                                                                                    & Obbligatorio             & \hyperref[sec:UC37.2]{UC37.2}                  \\
+        \textbf{R32F}                         & L'utente deve poter modificare le proprie credenziali                                                                                               & Obbligatorio             & Capitolato, UC37                               \\
+        R32.1F                                & L'utente deve poter modificare il proprio username                                                                                                  & Obbligatorio             & \hyperref[sec:UC37.1]{UC37.1}                  \\
+        R32.2F                                & L'utente deve poter cambiare la propria password                                                                                                    & Obbligatorio             & \hyperref[sec:UC37.2]{UC37.2}                  \\
     \end{longtable}
 \end{center}
 
@@ -130,7 +129,7 @@ Ogni requisito è composto dalla seguente struttura:
         \textbf{R2Q}                          & Deve essere fornito un manuale che descriva l'installazione e l'esecuzione della piattaforma \textit{EmporioLambda}                                                             & Obbligatorio             & Capitolato                   \\
         \textbf{R3Q}                          & La documentazione (\textbf{R1Q}, \textbf{R2Q}) deve essere scritta in lingua inglese                                                                                            & Obbligatorio             & Verbale                      \\
         \textbf{R4Q}                          & Il codice deve essere ospitato su un repository pubblico su \textit{GitHub}\textsubscript{\textbf{G}} o \textit{GitLab}\textsubscript{\textbf{G}}                               & Obbligatorio             & Capitolato                   \\
-        \textbf{R5Q}                          & Il software sviluppato deve essere coerente con quanto descritto nel documento \textit{Norme di Progetto v2.0.0}                                                                & Obbligatorio             & Interno                      \\
+        \textbf{R5Q}                          & Il software sviluppato deve essere coerente con quanto descritto nel documento \textit{Norme di Progetto v3.0.0}                                                                & Obbligatorio             & Interno                      \\
         \textbf{R6Q}                          & Tutto il codice (commenti, nomi di variabili, ecc...), i commit di \textit{Git}, i nomi di cartelle e tutto quello che riguarda il codice deve essere scritto in lingua inglese & Obbligatorio             & Capitolato                   \\
         \textbf{R7Q}                          & Non vanno usate chiamate di \textit{callback}\textsubscript{\textbf{G}}, \newline ma solo funzioni \textit{await/async}\textsubscript{\textbf{G}}                               & Obbligatorio             & Capitolato, \newline Verbale \\
         \textbf{R8Q}                          & Durante l'attività di sviluppo deve essere utilizzato \textit{ESLint}\textsubscript{\textbf{G}} per il controllo del codice                                                     & Obbligatorio             & Capitolato                   \\
