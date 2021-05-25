@@ -24,43 +24,72 @@ Tutti i requisiti sono reperibili all'interno del documento \textit{Analisi dei 
 \rowcolors{2}{logo!40}{logo!10}
 \arrayrulecolor{white}
 \begin{longtable}{
-    >{\centering}p{0.50\textwidth}
-    >{\raggedright}p{0.28\textwidth}
-    >{\raggedright}p{0.29\textwidth}
-    >{\centering}p{0.50\textwidth}
+    >{\centering}p{0.15\textwidth}
+    >{\raggedright}p{0.40\textwidth}
+    >{\centering}p{0.15\textwidth}
+    >{\centering}p{0.15\textwidth}
     }
 
-    \caption{Tabella di tracciamento progettazione architetturale} \\
-    \rowcolor{white}                                               \\
+    \caption{Tabella di tracciamento progettazione architetturale}                                                                \\
+    \rowcolor{white}                                                                                                              \\
     \rowcolor{logo!70}
-    \centering\textbf{Incremento} & \centering\textbf{Requisiti}
+    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi}  & \centering\textbf{Casi d'uso} & \centering\textbf{Requisiti}
     \tabularnewline
     \endfirsthead
-    \rowcolor{white}\caption[]{(continua)}                         \\
+    \rowcolor{white}\caption[]{(continua)}                                                                                        \\
     \rowcolor{logo!70}
-    \centering\textbf{Incremento} & \centering\textbf{Requisiti}
+    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi}  & \centering\textbf{Casi d'uso} & \centering\textbf{Requisiti}
     \tabularnewline
     \endhead
 
     %Incremento 1 ---------------------------------------------------------
-    Incremento 1 - Homepage       & R1F                            \\ R1.3F
+    Incremento 1                  &
+    \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item creazione della homepage;
+        \item aggiunta del bottone per accedere direttamente al carrello.
+    \end{itemize}     & Nessun caso d'uso implementato & R1F                                                          \\ R1.3F
     \tabularnewline
 
     %Incremento 2 ---------------------------------------------------------
-    Incremento 2 - Login          & R2F                            \\ R3F \\ R3.1F \\ R3.2F \\
-    R11                                                            \\ R14F \\ R16F \\ R31F
+    Incremento 2                  &
+    \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item implementazione di registrazione e accesso tramite \textit{Amazon Cognito};
+        \item aggiunta del bottone per accedere alla pagina di registrazione e autenticazione.
+    \end{itemize}     & UC1                                                                                           \\ UC2 \\  UC9 \\ UC16 \\ UC18 \\ UC33                  & R2F                          \\ R3F \\ R3.1F \\ R3.2F \\
+    R11F                                                                                                                          \\ R14F \\ R16F \\ R31F
     \tabularnewline
 
     %Incremento 3 ---------------------------------------------------------
-    Incremento 3 - Prodotto       & R5F                            \\ R5.1F \\ R5.3F \\ R5.4F \\ R5.6F \\ R8F
+    Incremento 3                  &
+    \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item creazione della lista dei prodotti;
+        \item aggiunta del bottone per accedere alla lista dei prodotti;
+        \item aggiunta delle chiamate \textit{Lambda} per prendere i dati dal backend;
+        \item aggiunta della pagina di dettaglio per ogni prodotto della piattaforma.
+    \end{itemize}     & UC4                                                                                           \\ UC7                              & R5F                          \\ R5.1F \\ R5.3F \\ R5.4F \\ R5.6F \\ R8F
     \tabularnewline
 
     %Incremento 4 ---------------------------------------------------------
-    Incremento 4 - Carrello       & R13.1F
+    Incremento 4                  & \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item creazione del carrello con visualizzazione dei prodotti in esso inseriti.
+    \end{itemize}     & UC11                           & R13.1F
     \tabularnewline
 
     %Incremento 5 ---------------------------------------------------------
-    Incremento 5 - Checkout       & R19F                           \\ R19.3F \\ R19.4F \\ R20F
+    Incremento 5                  & \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item implementazione del servizio di pagamento \textit{Stripe};
+        \item aggiunta del bottone per effettuare il checkout.
+    \end{itemize}     & UC21                                                                                          \\ UC22                           & R19F                         \\ R19.3F \\ R19.4F \\ R20F
     \tabularnewline
 \end{longtable}
 \counterwithin{table}{subsection}
@@ -77,15 +106,15 @@ Tutti i requisiti sono reperibili all'interno del documento \textit{Analisi dei 
     >{\centering}p{0.15\textwidth}
     }
 
-    \caption{Tabella di tracciamento per la codifica di dettaglio}                                                                                                                                                           \\
-    \rowcolor{white}                                                                                                                                                                                                         \\
+    \caption{Tabella di tracciamento per la codifica di dettaglio}                                                                 \\
+    \rowcolor{white}                                                                                                               \\
     \rowcolor{logo!70}
-    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi}                                               & \centering\textbf{Casi d'uso}                                               & \centering\textbf{Requisiti}
+    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi}  & \centering\textbf{Casi d'uso}  & \centering\textbf{Requisiti}
     \tabularnewline
     \endfirsthead
-    \rowcolor{white}\caption[]{(continua)}                                                                                                                                                                                   \\
+    \rowcolor{white}\caption[]{(continua)}                                                                                         \\
     \rowcolor{logo!70}
-    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi}                                               & \centering\textbf{Casi d'uso}                                               & \centering\textbf{Requisiti}
+    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi}  & \centering\textbf{Casi d'uso}  & \centering\textbf{Requisiti}
     \tabularnewline
     \endhead
 
@@ -96,7 +125,7 @@ Tutti i requisiti sono reperibili all'interno del documento \textit{Analisi dei 
         \renewcommand\labelitemi{-}
         \item Preparazione alle attività di progettazione e codifica di dettaglio;
         \item Incremento della documentazione per verifica e miglioramento continuo.
-    \end{itemize}     & Durante questo incremento non verranno aggiunte nuove funzionalità software & Durante questo incremento non verranno aggiunte nuove funzionalità software
+    \end{itemize}     & Nessun caso d'uso implementato & Nessun caso d'uso implementato
     \tabularnewline
 
     %Incremento 7 ---------------------------------------------------------
@@ -110,7 +139,7 @@ Tutti i requisiti sono reperibili all'interno del documento \textit{Analisi dei 
         \item Incremento della documentazione per verifica e miglioramento continuo.
     \end{itemize}
 
-                                  & UC15                                                                                                                                                                                     \\ UC35                                                                 & R10F                                                                                                       \\ R10.1F \\ R10.2F \\ R10.3F \\ R10.5F\\ R10.6F
+                                  & UC15                                                                                           \\ UC35                                                                 & R10F                                                                                                       \\ R10.1F \\ R10.2F \\ R10.3F \\ R10.5F\\ R10.6F
     \tabularnewline
 
     %Incremento 8 ---------------------------------------------------------
@@ -124,7 +153,7 @@ Tutti i requisiti sono reperibili all'interno del documento \textit{Analisi dei 
         \item Correzione della documentazione in base alla RP;
         \item Incremento della documentazione per verifica e miglioramento continuo.
     \end{itemize}
-                                  & Nessun caso d'uso implementato                                              & R8Q                                                                                                        \\ R1V \\ R2V \\ R4V    \tabularnewline
+                                  & Nessun caso d'uso implementato & R8Q                                                           \\ R1V \\ R2V \\ R4V    \tabularnewline
 
     %Incremento 9 ---------------------------------------------------------
     Incremento 9                  &
@@ -136,8 +165,8 @@ Tutti i requisiti sono reperibili all'interno del documento \textit{Analisi dei 
         \item Implementazione lato frontend;
         \item Incremento della documentazione per verifica e miglioramento continuo.
     \end{itemize}
-                                  & UC3                                                                                                                                                                                      \\ UC10                                                                                                                                                                 \\ UC17                                                                                                                                                                                  \\ UC19  \\ UC37
-                                  & R4F                                                                                                                                                                                      \\ R12F \\ R15F                                                                                                                                                                                     \\ R15.1F \\ R15.2F \\ R15.3F \\ R17F \\ R33F \\ R33.1F \\ R33.2F
+                                  & UC3                                                                                            \\ UC10                                                                                                                                                                 \\ UC17                                                                                                                                                                                  \\ UC19  \\ UC37
+                                  & R4F                                                                                            \\ R12F \\ R15F                                                                                                                                                                                     \\ R15.1F \\ R15.2F \\ R15.3F \\ R17F \\ R33F \\ R33.1F \\ R33.2F
     \tabularnewline
 
     %Incremento 10 ---------------------------------------------------------
@@ -148,7 +177,7 @@ Tutti i requisiti sono reperibili all'interno del documento \textit{Analisi dei 
         \item Completamento carrello;
         \item Completamento pagina PDP;
         \item Incremento della documentazione per verifica e miglioramento continuo.
-    \end{itemize}     & UC4                                                                                                                                                                                      \\ UC5 \\ UC11                                                                                                                                                                                     \\ UC12 \\ UC21 \\ UC22 \\ UC23 \\ UC24 \\ UC36 & R5F \\ R6F \\ R13F  \\ R13.2F \\ R13.5F \\ R13.6F \\ R19F \\ R19.1F \\ R19.2F \\ R19.3F \\ R19.4F \\ R20F \\ R21F \\ R22F
+    \end{itemize}    & UC4                                                                                            \\ UC5 \\ UC11                                                                                                                                                                                     \\ UC12 \\ UC21 \\ UC22 \\ UC23 \\ UC24 \\ UC36 & R5F \\ R6F \\ R13F  \\ R13.2F \\ R13.5F \\ R13.6F \\ R19F \\ R19.1F \\ R19.2F \\ R19.3F \\ R19.4F \\ R20F \\ R21F \\ R22F
     \tabularnewline
     %Incremento 11 ---------------------------------------------------------
     Incremento 11                 & \vspace{-15px}
@@ -158,7 +187,7 @@ Tutti i requisiti sono reperibili all'interno del documento \textit{Analisi dei 
         \item Completamento PLP;
         \item Implementazione ricerca di un prodotto;
         \item Incremento della documentazione per verifica e miglioramento continuo.
-    \end{itemize}     & UC6                                                                                                                                                                                      \\ UC7 & R1.1F \\ R1.2F \\ R7F \\ R8F
+    \end{itemize}    & UC6                                                                                            \\ UC7 & R1.1F \\ R1.2F \\ R7F \\ R8F
     \tabularnewline
     %Incremento 12 ---------------------------------------------------------
     Incremento 12                 & \vspace{-15px}
@@ -169,7 +198,7 @@ Tutti i requisiti sono reperibili all'interno del documento \textit{Analisi dei 
         \item Aggiunta visualizzazione elenco clienti e ordini ricevuti;
         \item Aggiunta sezione per la gestione di un prodotto;
         \item Incremento della documentazione per verifica e miglioramento continuo.
-    \end{itemize}     & UC25                                                                                                                                                                                     \\ UC26 \\ UC28 \\ UC29 \\ UC30 \\ UC31 \\ UC32 & R23F \\ R24F \\ R26F \\ R27F \\ R28F \\ R29F \\ R30F
+    \end{itemize}    & UC25                                                                                           \\ UC26 \\ UC28 \\ UC29 \\ UC30 \\ UC31 \\ UC32 & R23F \\ R24F \\ R26F \\ R27F \\ R28F \\ R29F \\ R30F
     \tabularnewline
     %Incremento 13 ---------------------------------------------------------
     Incremento 13                 &
@@ -180,7 +209,7 @@ Tutti i requisiti sono reperibili all'interno del documento \textit{Analisi dei 
         \item Correzione del codice secondo le indicazioni ricevute durante la \textit{Product Baseline} e con il proponente;
         \item Correzione dell'\textbf{Allegato Tecnico};
         \item Incremento della documentazione per verifica e miglioramento continuo.
-    \end{itemize}    & Durante questo incremento non verranno aggiunte nuove funzionalità software & Durante questo incremento non verranno aggiunte nuove funzionalità software
+    \end{itemize}    & Nessun caso d'uso implementato & Nessun caso d'uso implementato
     \tabularnewline
 \end{longtable}
 \counterwithin{table}{subsection}
