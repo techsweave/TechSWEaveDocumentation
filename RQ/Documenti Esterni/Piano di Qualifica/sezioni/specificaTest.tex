@@ -2,6 +2,32 @@
 Per garantire qualità del prodotto è necessario stabilire delle metriche per l’esecuzione e per il soddisfacimento dei test.
 Il gruppo \textit{TechSWEave} ha optato per l'adozione del \textit{Modello a V}\textsubscript{\textbf{G}} di sviluppo del software, che
 prevede lo sviluppo dei test in parallelo alle attività di analisi e progettazione.\\
+Ogni test è definito con l'ausilio della seguente dicitura:\\
+\begin{center}
+    T[TIPO][ID]
+\end{center}
+Per indicare il tipo di test vengono utilizzate le seguenti diciture:
+\begin{itemize}
+    \item \textbf{A:} eseguiti per verificare che il prodotto soddisfi le richieste del proponente;
+    \item \textbf{S:} eseguiti quando il sistema viene installato per verificare che raggiunga gli obiettivi fissati;
+    \item \textbf{I:} eseguiti per verificare il funzionamento di un gruppo di moduli;
+    \item \textbf{U:} eseguiti per verificare il funzionamento delle singole unità del software.
+\end{itemize}
+I test di accettazione utilizzano utilizzano le ulteriori diciture a seguire:
+\begin{itemize}
+    \item Obbligatorio (O)
+    \item Desiderabile (D)
+    \item Facoltativo (F)
+\end{itemize}
+E assumono le seguenti importanze:
+\begin{itemize}
+    \item Funzionale (F)
+    \item Vincolo (V)
+    \item Qualità (Q)
+    \item Prestazionale (P)
+\end{itemize}
+L'ID è un identificativo numerico progressivo per i test di unità, integrazione e regressione. Per i test di sistema e 
+indica il codice del rispettivo requisito presente nel documento \textit{Analisi dei Requisiti v3.0.0.}.\\
 Per definire in modo conciso lo stato dei test, vengono utilizzate le seguenti diciture:
 \begin{itemize}
     \item \textbf{I:} indica che il test è stato implementato;
@@ -13,13 +39,6 @@ Inoltre, per definire l'esito dei test implementati, vengono utilizzate le segue
     \item \textbf{NS:} indica che il test non soddisfa la richiesta.
 \end{itemize}
 \subsection{Tipi di test}
-Ci sono quattro tipologie di test:
-\begin{itemize}
-    \item \textbf{Test di Accettazione [TA]:} eseguiti per verificare che il prodotto soddisfi le richieste del proponente;
-    \item \textbf{Test di Sistema [TS]:} eseguiti quando il sistema viene installato per verificare che raggiunga gli obiettivi fissati;
-    \item \textbf{Test di Integrazione [TI]:} eseguiti per verificare il funzionamento di un gruppo di moduli;
-    \item \textbf{Test di Unit\`a [TU]:} eseguiti per verificare il funzionamento delle singole unit\`a del software.
-\end{itemize}
 \subsubsection{Test di unità}
 Questa sezione sarà redatta con l'avanzare del progetto.
 \subsubsection{Test di integrazione}
@@ -27,20 +46,6 @@ Questa sezione sarà redatta con l'avanzare del progetto.
 \subsubsection{Test di sistema}
 Questa sezione sarà redatta con l'avanzare del progetto.
 \subsubsection{Test di accettazione}
-I test di accettazione vengono svolti per verificare che il programma soddisfi i requisiti, i quali sono divisi nelle seguenti categorie:
-\begin{itemize}
-    \item Obbligatorio (O)
-    \item Desiderabile (D)
-    \item Facoltativo (F)
-\end{itemize}
-E assumono le seguenti importanze:
-\begin{itemize}
-    \item Funzionale (F)
-    \item Vincolo (V)
-    \item Qualit\`a (Q)
-    \item Prestazionale (P)
-\end{itemize}
-\newpage
 La seguente tabella illustra i test di accettazione da eseguire sul sistema, ogni test ha un nome che identifica tipologia, categoria e importanza e un numero che lo associa a un requisito.
 
 \begin{center}
