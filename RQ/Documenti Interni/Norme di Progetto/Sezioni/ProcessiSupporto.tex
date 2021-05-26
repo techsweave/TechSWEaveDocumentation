@@ -21,7 +21,7 @@ Ogni documento attraversa le seguenti fasi del ciclo di vita:
     \item \textbf{Approvazione:} terminata la revisione, il \textit{Responsabile di Progetto}\textsubscript{\textbf{G}} stabilisce la validità del documento, che solo a questo punto può essere considerato completo e può essere quindi rilasciato.
 \end{itemize}
 \subsubsection{Template}
-Il gruppo ha creato un Template con \LaTeX\textsubscript{\textbf{G}} per uniformare velocemente la struttura grafica e lo stile di tutti i documenti, in modo che tutti si possano concentrare sulla stesura del corpo del documento. Il template permette di adottare automaticamente le conformità previste dalle \textit{Norme di Progetto v2.0.0}.
+Il gruppo ha creato un Template con \LaTeX\textsubscript{\textbf{G}} per uniformare velocemente la struttura grafica e lo stile di tutti i documenti, in modo che tutti si possano concentrare sulla stesura del corpo del documento. Il template permette di adottare automaticamente le conformità previste dalle \textit{Norme di Progetto v3.0.0.}.
 \subsubsection{Struttura di un documento}
 \subsubsubsection{Prima pagina}
 Il frontespizio è la prima pagina del documento e contiene:
@@ -85,7 +85,7 @@ Ad esempio sono corretti:
 \begin{itemize}
     \item analisiRequisiti\_v1.0.0;
     \item studioFattibilita\_v1.0.0;
-    \item normeProgetto\_v2.0.0 .
+    \item normeProgetto\_v3.0.0. .
 \end{itemize}
 Mentre non sono corretti:
 \begin{itemize}
@@ -106,7 +106,7 @@ Mentre per le citazioni ai file all'interno di altri documenti utilizziamo la co
 
 \subsubsubsection{Glossario}
 \begin{itemize}
-    \item Ogni termine nel \textit{Glossario v2.0.0} viene marcato con una \textbf{G} maiuscola a pedice;
+    \item Ogni termine nel \textit{Glossario v3.0.0.} viene marcato con una \textbf{G} maiuscola a pedice;
     \item Se la voce è presente ripetutamente nello stesso paragrafo non è necessario marcarla a ogni occorrenza, basta farlo alla prima occorrenza;
     \item Se la voce è presente come singolo termine in elenchi puntati non è necessario marcarlo.
 \end{itemize}
@@ -294,7 +294,7 @@ I membri possono modificare tutto il codice seguendo determinate regole:
 \subsubsection{Scopo}
 Il processo di gestione della qualità ha lo scopo di garantire che il prodotto finale soddisfi gli obbiettivi di qualità e i requisiti richiesti dal proponente, attraverso un corretto controllo dei processi e dei prodotti.
 \subsubsection{Descrizione}
-L'esposizione approfondita della gestione della qualità si trova nel \textit{Piano di Qualifica v2.0.0}, nel quale sono descritte le modalità utilizzate per garantire la qualità nello sviluppo del progetto. Tale documento contiene i seguenti punti:
+L'esposizione approfondita della gestione della qualità si trova nel \textit{Piano di Qualifica v3.0.0.}, nel quale sono descritte le modalità utilizzate per garantire la qualità nello sviluppo del progetto. Tale documento contiene i seguenti punti:
 \begin{itemize}
     \item sono esposti gli standard utilizzati;
     \item sono indicati i processi d'interesse negli standard;
@@ -379,7 +379,7 @@ Il processo di analisi si divide in due tipologie: statica e dinamica.
 \end{itemize}
 
 \subsubsubsection{Test}
-I test sono il fondamento dell'analisi dinamica, in quanto hanno lo scopo di verificare il corretto funzionamento del codice e che sia conforme all'\textit{Analisi dei Requisiti v2.0.0}.
+I test sono il fondamento dell'analisi dinamica, in quanto hanno lo scopo di verificare il corretto funzionamento del codice e che sia conforme all'\textit{Analisi dei Requisiti v3.0.0}.
 Per ogni test devono essere definiti i seguenti parametri:
 \begin{itemize}
     \item \textbf{ambiente}: sistema hardware e software sul quale verrà eseguito il test;
@@ -452,7 +452,13 @@ Devono essere rispettati i seguenti punti:
     \item valutare che i risultati rispettino le aspettative.
 \end{itemize}
 \subsubsection{Attività}
-\subsubsubsection{Validazione dei documenti}
+La validazione si compone di due attività:
+\begin{itemize}
+    \item \textbf{Test di validazione e di sistema:} insieme dei test eseguiti internamente al gruppo;
+    \item \textbf{Collaudo:} attività di controllo che si svolge con la presenza del committente \textit{RedBabel} durante
+          la \textit{Revisione di Accettazione}. Dimostra la conformità del prodotto software secondo quanto stabilito nell'\textit{Analisi dei Requisiti v3.0.0.}
+\end{itemize}
+\subsubsection{Validazione dei documenti}
 Il \textit{Responsabile di Progetto} procede nel modo seguente:
 \begin{itemize}
     \item crea la issue in GitHub nella sezione "TO DO";
@@ -462,7 +468,7 @@ Il \textit{Responsabile di Progetto} procede nel modo seguente:
     \item sposta l'issue in "DONE" aprovando il documento;
     \item avverte i redattori incaricati di aggiornare il Piano di Qualifica.
 \end{itemize}
-\subsubsubsection{Validazione del codice}
+\subsubsection{Validazione del codice}
 Il \textit{Verificatore} incaricato procede nel modo seguente:
 \begin{itemize}
     \item crea la issue in GitHub nella sezione "TO DO";
@@ -470,8 +476,21 @@ Il \textit{Verificatore} incaricato procede nel modo seguente:
     \item esegue i test previsti;
     \item sposta l'issue in "DONE";
 \end{itemize}
+\subsubsection{Responsabilià dei test}
+I soggetti coinvolti nell'ambito dei test di validazione sono il \textit{Responsabile di Progetto}, i
+\textit{Verificatori} e i \textit{Progettisti}. In particolare:
+\begin{itemize}
+    \item \textbf{Progettisti:} pianificano e implementano i test; per garantire imparzialità nei test stessi occorre che
+          i tali figure siano diverse da coloro che hanno progettato o implementato la porzione di codice da testare;
+    \item \textbf{Verificatori:} eseguono il test sul prodotto software, ne tracciano i risultati e
+          aggiornano il \textit{Piano di Qualifica}.
+    \item \textbf{Responsabile di Progetto:} valuta i risultati ottenuti e decide di procedere con:
+          \begin{itemize}
+              \item \textbf{accettazione}, se il risultato ottenuto dal test risulta sufficientemente buono;
+              \item \textbf{ripetizione}, se il risultato non è accettabile;
+          \end{itemize}
+\end{itemize}
 \subsubsubsection{Codice identificativo dei test}
-% nomenclatura dei test
 \label{Codice test}
 Ogni test è definito con l'ausilio della seguente dicitura:\\
 \begin{center}
@@ -486,16 +505,26 @@ Per indicare il tipo di test vengono utilizzate le seguenti diciture:
 \end{itemize}
 I test di accettazione utilizzano utilizzano le ulteriori diciture a seguire:
 \begin{itemize}
-    \item Obbligatorio (O)
-    \item Desiderabile (D)
-    \item Facoltativo (F)
+    \item \textbf{O:} Obbligatorio;
+    \item \textbf{D:} Desiderabile;
+    \item \textbf{F:} Facoltativo;
 \end{itemize}
 E assumono le seguenti importanze:
 \begin{itemize}
-    \item Funzionale (F)
-    \item Vincolo (V)
-    \item Qualità (Q)
-    \item Prestazionale (P)
+    \item \textbf{F:} Funzionale;
+    \item \textbf{V:} Vincolo;
+    \item \textbf{Q:} Qualità;
+    \item \textbf{P:} Prestazionale;
 \end{itemize}
-L'ID è un identificativo numerico progressivo per i test di unità, integrazione e regressione. Per i test di sistema e 
-indica il codice del rispettivo requisito presente nel documento \textit{Analisi dei Requisiti v3.0.0.}
+L'ID è un identificativo numerico progressivo per i test di unità, integrazione e regressione. Per i test di sistema e
+indica il codice del rispettivo requisito presente nel documento \textit{Analisi dei Requisiti v3.0.0.}\\
+Per definire in modo conciso lo stato dei test, vengono utilizzate le seguenti diciture:
+\begin{itemize}
+    \item \textbf{I:} indica che il test è stato implementato;
+    \item \textbf{NI:} indica che il test non è stato implementato.
+\end{itemize}
+Inoltre, per definire l'esito dei test implementati, vengono utilizzate le seguenti diciture:
+\begin{itemize}
+    \item \textbf{S:} indica che il test soddisfa la richiesta;
+    \item \textbf{NS:} indica che il test non soddisfa la richiesta.
+\end{itemize}
