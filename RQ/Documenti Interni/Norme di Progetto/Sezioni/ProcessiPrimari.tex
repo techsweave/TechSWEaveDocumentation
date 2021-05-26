@@ -27,20 +27,11 @@ Tale rapporto permette di arrivare ad un contratto fra le parti per:
     \item assicurare una verifica continua;
     \item accordarsi sulla qualifica del prodotto.
 \end{itemize}
-\subsubsection{Studio di fattibilità}
-Il \textit{Responsabile di Progetto}\textsubscript{\textbf{G}} ha il compito di convocare i membri del gruppo per discutere dei capitolati d'appalto disponibili, effettuando una prima analisi del materiale proposto. Per ogni capitolato gli \textit{Analisti}\textsubscript{\textbf{G}} provvedono poi a redigere uno \textit{Studio di Fattibilità} in cui viene analizzato ulteriormente il materiale disponibile.
-\\Lo \textit{Studio di Fattibiltà} comprende i seguenti punti:
-\begin{itemize}
-    \item \textbf{Informazioni generali}: informazioni di base quali titolo del capitolato, nome del proponente e del committente;
-    \item \textbf{Descrizione del capitolato}: breve sintesi delle caratteristiche del prodotto da sviluppare;
-    \item \textbf{Finalità del progetto}: le finalità richieste dal capitolato d'appalto;
-    \item \textbf{Tecnologie interessate}: elenco delle tecnologie da utilizzare per la realizzazione del progetto;
-    \item \textbf{Aspetti positivi}: elenco di motivi per cui il gruppo reputa interessante il progetto proposto;
-    \item \textbf{Aspetti critici}: elenco di motivi per cui il gruppo reputa rischioso o di difficile attuazione il progetto proposto;
-    \item \textbf{Conclusioni}: valutazione finale con cui viene dichiarata l'intenzione del gruppo di accettare o rifiutare il capitolato.
-\end{itemize}
-\subsubsection{Altra documentazione fornita}
-Al fine di conseguire un metodo di tracciamento, in modo da assicurarne la trasparenza durante tutto il ciclo di vita del progetto, è necessario fornire al proponente \textit{RedBabel} e ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin i documenti a seguire.
+\subsubsection{Materiale fornito}
+Al fine di conseguire un metodo di tracciamento in modo da assicurarne la trasparenza durante tutto il ciclo di vita del progetto, è necessario fornire al proponente \textit{RedBabel} e ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin i documenti a seguire.
+\subsubsubsection{Analisi dei Requisiti}
+Contiene l'analisi dei casi d'uso e dei requisiti (diretti ed indiretti, espliciti e non). Tale documento punta ad evitare
+l'insorgere di ambiguità riguardanti il capitolato e definire nel dettaglio le funzionalità del prodotto.
 \subsubsubsection{Piano di Progetto}
 Il \textit{Responsabile}\textsubscript{\textbf{G}}, con il supporto degli \textit{Amministratori}\textsubscript{\textbf{G}}, redige il \textit{Piano di Progetto} da seguire durante il progetto.
 \\Questo documento è strutturato nel modo seguente:
@@ -57,7 +48,26 @@ I \textit{Verificatori} redigono un documento chiamato \textit{Piano di Qualific
     \item \textbf{Qualità di processo}: vengono individuati dei processi dagli standard e fissate delle metriche\textsubscript{\textbf{G}} per misurarli;
     \item \textbf{Qualità di prodotto}: vengono individuati gli attributi principali del prodotto, definiti degli obiettivi per raggiungerli e delle metriche\textsubscript{\textbf{G}} per misurarli;
     \item \textbf{Specifiche dei test}: definiscono dei test che il prodotto deve passare per garantire il soddisfacimento dei requisiti;
-    \item \textbf{Resoconto delle attività di verifica}: vengono descritti i risultati delle metriche\textsubscript{\textbf{G}} calcolate in forma di resoconto;
+    \item \textbf{Resoconto delle attività di verifica}: vengono riportati e descritti i risultati delle metriche\textsubscript{\textbf{G}} calcolate in forma di resoconto;
+\end{itemize}
+\subsubsubsection{Glossario}
+Questo documento contiene una definizione dei termini utilizzati nella documentazione che potrebbero risultare ambigui a seconda del contesto in cui si trovano.
+\subsubsubsection{Proof of Concept e Technology Baseline}
+Nell'ambito della Progettazione architetturale, definiscono una panoramica ad alto livello dell'applicazione che il gruppo
+TechSWEave realizzerà e delle tecnologie impiegate (vedi \ref{Periodi della progettazione}).
+\subsubsubsection{Product Baseline}
+Nell'ambito dell'attività di Progettazione di dettaglio, definisce l'insieme di classi, metodi, attributi e scelte implementative a livello tecnico (vedi \ref{Periodi della progettazione}).
+\subsubsection{Studio di Fattibilità}
+Il \textit{Responsabile di Progetto}\textsubscript{\textbf{G}} ha il compito di convocare i membri del gruppo per discutere dei capitolati d'appalto disponibili, effettuando una prima analisi del materiale proposto. Per ogni capitolato gli \textit{Analisti}\textsubscript{\textbf{G}} provvedono poi a redigere uno \textit{Studio di Fattibilità} in cui viene analizzato ulteriormente il materiale disponibile.
+\\Lo \textit{Studio di Fattibiltà} comprende i seguenti punti:
+\begin{itemize}
+    \item \textbf{Informazioni generali}: informazioni di base quali titolo del capitolato, nome del proponente e del committente;
+    \item \textbf{Descrizione del capitolato}: breve sintesi delle caratteristiche del prodotto da sviluppare;
+    \item \textbf{Finalità del progetto}: le finalità richieste dal capitolato d'appalto;
+    \item \textbf{Tecnologie interessate}: elenco delle tecnologie da utilizzare per la realizzazione del progetto;
+    \item \textbf{Aspetti positivi}: elenco di motivi per cui il gruppo reputa interessante il progetto proposto;
+    \item \textbf{Aspetti critici}: elenco di motivi per cui il gruppo reputa rischioso o di difficile attuazione il progetto proposto;
+    \item \textbf{Conclusioni}: valutazione finale con cui viene dichiarata l'intenzione del gruppo di accettare o rifiutare il capitolato.
 \end{itemize}
 \subsubsection{Strumenti}
 Di seguito è riportato l'elenco degli strumenti impiegati dal gruppo per il processo di fornitura.
@@ -212,6 +222,7 @@ Un'architettura di buona qualità ha come caratteristiche misurabili e osservabi
 \end{itemize}
 Le sue componenti devono essere semplici, coese nel raggiungimento degli obiettivi, incapsulate e con un basso livello di accoppiamento.
 \subsubsubsection{Periodi della progettazione}
+\label{Periodi della progettazione}
 L'attività di progettazione si divide in due parti:\\\\
 \textbf{Progettazione architetturale:} vengono scelte le tecnologie e definite le specifiche dell'architettura e le componenti del sistema. Al termine di questo periodo
 si ottiene la \textit{Technology Baseline}\textsubscript{\textbf{G}}, che contiene:
@@ -246,7 +257,7 @@ Nello specifico:
 \subsubsubsection{Test}
 Durante la fase di progettazione devono essere definiti test opportuni, in coerenza con le richieste dei proponenti.
 Tali test devono poter individuare errori o anomalie nell'architettura, logica o codice dell'applicazione.\\
-% I test progettati dovranno rispettare le convenzioni di nomenclatura specificate in \S 
+I test progettati dovranno rispettare le convenzioni di nomenclature specificate in \ref{Codice test}.
 \subsubsubsection{Metriche}
 \begin{itemize}
     \item \textbf{MPR03 - CBO (accoppiamento tra le classi di oggetti):} una classe è accoppiata ad un'altra se usa metodi o variabili definiti in quest'ultima.\\
