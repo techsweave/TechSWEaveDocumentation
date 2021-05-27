@@ -109,8 +109,9 @@ I suoi compiti sono i seguenti:
     \item analizzare il fronte applicativo, gli utenti e i casi d’uso;
     \item redigere lo \textit{Studio di Fattibilità v1.0.0} e l’\textit{Analisi dei Requisiti v3.0.0}.
 \end{itemize}
-\textbf{Progettista}
-Il \textit{Progettista}\textsubscript{\textbf{G}} ha il compito di sviluppare una soluzione che soddisfi i bisogni individuati, il suo scopo è quello di produrre un'architettura che modelli il problema a partire da un insieme di requisiti.\\
+\textbf{Progettista}\\
+Il \textit{Progettista}\textsubscript{\textbf{G}} ha il compito di sviluppare una soluzione che soddisfi i bisogni individuati, il suo scopo è quello di produrre un'architettura che modelli il problema a partire da un insieme di requisiti.
+\newline
 I suoi compiti sono i seguenti:
 \begin{itemize}
     \item effettuare scelte efficienti riguardo alle tecnologie da utilizzare per lo sviluppo del progetto;
@@ -119,7 +120,8 @@ I suoi compiti sono i seguenti:
     \item limitare il più possibile il grado di accoppiamento tra le varie componenti.
 \end{itemize}
 \textbf{Programmatore}\\
-Il \textit{Programmatore}\textsubscript{\textbf{G}} è la figura incaricata alla codifica del progetto. Egli deve implementare l’architettura prodotta dal \textit{Progettista} in modo che aderisca alle specifiche, ed è responsabile della manutenzione del codice.\\
+Il \textit{Programmatore}\textsubscript{\textbf{G}} è la figura incaricata alla codifica del progetto. Egli deve implementare l’architettura prodotta dal \textit{Progettista} in modo che aderisca alle specifiche, ed è responsabile della manutenzione del codice.
+\newline
 
 I suoi compiti sono i seguenti:
 \begin{itemize}
@@ -128,7 +130,7 @@ I suoi compiti sono i seguenti:
     \item redigere il manuale utente.
 \end{itemize}
 \textbf{Verificatore}\\
-Il \textit{Verificatore}\textsubscript{\textbf{G}} si occupa di controllare il prodotto del lavoro svolto dagli altri membri del gruppo, sia esso codice o documentazione. Per le correzioni si affida agli standard definiti nelle \textit{Norme di Progetto v2.0.0}.\\
+Il \textit{Verificatore}\textsubscript{\textbf{G}} si occupa di controllare il prodotto del lavoro svolto dagli altri membri del gruppo, sia esso codice o documentazione. Per le correzioni si affida agli standard definiti nelle \textit{Norme di Progetto v3.0.0}.\\
 I suoi compiti sono i seguenti:
 \begin{itemize}
     \item ispezionare i prodotti in fase di revisione, avvalendosi delle tecniche e degli strumenti definiti nelle \textit{Norme di Progetto v3.0.0};
@@ -137,7 +139,7 @@ I suoi compiti sono i seguenti:
 \end{itemize}
 \subsubsubsection{Assegnazione dei compiti}
 
-La progressione nello svolgimento del progetto può essere vista come il completamento di una serie di compiti, ognuno con la sua scadenza temporale, i quali producono risultati utili alla realizzazione degli obiettivi posti. Tali compiti sono determinati a volte dalla contingenza, altre volte sono legati ai processi in atto. Per l’assegnazione dei compiti si è deciso di utilizzare il servizio di ticketing\textsubscript{\textbf{G}} offerto da \textit{GitHub}\textsubscript{\textbf{G}}, basato sul concetto di issue\textsubscript{\textbf{G}}. La figura che si occupa della gestione dei compiti è il \textit{Responsabile di Progetto}.\\
+La progressione nello svolgimento del progetto può essere vista come il completamento di una serie di compiti, ognuno con la sua scadenza temporale, i quali producono risultati utili alla realizzazione degli obiettivi posti. Tali compiti sono determinati a volte dalla contingenza, altre volte sono legati ai processi in atto. Per l’assegnazione dei compiti si è deciso di utilizzare il servizio di ticketing\textsubscript{\textbf{G}} offerto da \textit{GitHub}\textsubscript{\textbf{G}}, basato sul concetto d'issue\textsubscript{\textbf{G}}. La figura che si occupa della gestione dei compiti è il \textit{Responsabile di Progetto}.\\
 Egli:
 \begin{itemize}
     \item individua il compito da svolgere;
@@ -180,16 +182,28 @@ Per il calcolo delle metriche di questa sezione vengono utilizzati i seguenti va
     \item \textbf{PV (Planned Value):} il valore del lavoro pianificato al momento del calcolo, cioè il denaro che ci si aspetta di guadagnare in quel momento.
 \end{itemize}
 \begin{itemize}
-    \item \textbf{MPR04 - EAC (Estimate at Completion):} rappresenta il nuovo preventivo sul totale alla fine di un periodo.\\
-          \\\textbf{Metodo di misura}: valore intero;
-    \item \textbf{MPR05 - VAC (Variance at Completion):} indica la spesa effettivamente sostenuta in percentuale.\\
-          \\\textbf{Metodo di misura}: $\frac{BAC - EAC}{100}$;
-    \item \textbf{MPR06 - AC (Actual Cost):} somma spesa fino al momento del calcolo.\\
-    \item Metodo di calcolo: valore intero;
-    \item \textbf{MPR07 - SV (Schedule Variance):} indica l'anticipo o il ritardo nello svolgimento del progetto rispetto alla pianificazione.\\
-          \\\textbf{Metodo di misura}: SV = EV - PV;
-    \item \textbf{MPR08 - BV (Budget Variance):} differenza tra il costo del lavoro pianificato e quello sostenuto alla data corrente.\\
-          \\\textbf{Metodo di misura}: CV = PV - AC.
+    \item \textbf{MPR04 - EAC (Estimate at Completion):} rappresenta il nuovo preventivo sul totale alla fine di un periodo.
+          \begin{itemize}
+              \item
+                    \textbf{Metodo di misura}: valore intero;
+          \end{itemize}
+    \item \textbf{MPR05 - VAC (Variance at Completion):} indica la spesa effettivamente sostenuta in percentuale.
+          \begin{itemize}
+              \item \textbf{Metodo di misura}: $\frac{BAC - EAC}{100}$;
+          \end{itemize}
+    \item \textbf{MPR06 - AC (Actual Cost):} somma spesa fino al momento del calcolo.
+          \begin{itemize}
+              \item
+                    \textbf{Metodo di misura}: valore intero;
+          \end{itemize}
+    \item \textbf{MPR07 - SV (Schedule Variance):} indica l'anticipo o il ritardo nello svolgimento del progetto rispetto alla pianificazione.\begin{itemize}
+              \item
+                    \textbf{Metodo di misura}: SV = EV - PV;
+          \end{itemize}
+    \item \textbf{MPR08 - BV (Budget Variance):} differenza tra il costo del lavoro pianificato e quello sostenuto alla data corrente.\begin{itemize}
+              \item
+                    \textbf{Metodo di misura}: CV = PV - AC.
+          \end{itemize}
 \end{itemize}
 \subsection{Gestione infrastrutturale}
 \subsubsection{Scopo}
@@ -200,9 +214,9 @@ Gli strumenti utilizzati per l'attività di coordinamento sono i seguenti:
     \item \textbf{Discord:} strumento di messaggistica istantanea e di chiamate VOIP, utilizzato per le riunioni interne e per le sessioni di lavoro di gruppo;
     \item \textbf{Telegram:} strumento di messaggistica istantanea utilizzato per la comunicazione veloce tra i membri del team;
     \item \textbf{Slack:} strumento di messaggistica istantanea utilizzato per la comunicazione veloce con i proponenti e per organizzare le riunioni con gli stessi.
-    \item \textbf{Google Meet:} strumento di video-coferenze utilizzato per effettuare le riunioni con i proponenti;
-    \item \textbf{Zoom:} strumento di video-coferenze utilizzato per effettuare le riunioni con i committenti;
-    \item \textbf{Gmail:} strumento di posta eletrronica utilizzato per comunicare con i committenti;
+    \item \textbf{Google Meet:} strumento di videoconferenze utilizzato per effettuare le riunioni con i proponenti;
+    \item \textbf{Zoom:} strumento di videoconferenze utilizzato per effettuare le riunioni con i committenti;
+    \item \textbf{Gmail:} strumento di posta elettronica utilizzato per comunicare con i committenti;
     \item \textbf{Google Calendar:} strumento per la gestioni di eventi. Vieni utilizzato dal gruppo per poter organizzare al meglio il lavoro, vengono indicate le riunioni con la loro data e l'orario, scadenze importanti per lo sviluppo del progetto ed eventuali impegni da parte dei membri del team;
     \item \textbf{Google drive:} Strumento di storage cloud per la conservazione di dati. Il gruppo all'interno della proprio cartella drive salva i documenti completanti per ogni revisione di avanzamento. La cartella drive sarà poi inoltrata ai committenti che ne potranno consultare il contenuto.
 \end{itemize}
@@ -233,7 +247,7 @@ Una volta completato il periodo il team, in base alle valutazioni registrate, pr
 \subsubsection{Scopo}
 Questo processo ha lo scopo di mantenere il team competente sulle esigenze tecniche del progetto.
 \subsubsection{Formazione personale}
-I membri del gruppo devono provvedere alla propria formazione in maniera autonoma, studiando le tecnologie usate e colmando le proprie lacune.\\
+I membri del gruppo devono provvedere alla propria formazione in maniera autonoma, studiando le tecnologie usate e colmando le proprie lacune.
 \subsubsubsection{Documentazione}
 Il team per la redazione dei documenti ha studiato le seguenti tecnologie
 \begin{itemize}
