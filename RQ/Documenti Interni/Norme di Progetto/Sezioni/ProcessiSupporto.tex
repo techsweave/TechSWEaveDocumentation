@@ -152,7 +152,7 @@ Il processo ha lo scopo di andare a ordinare il software e la documentazione. Tu
 \subsubsection{Descrizione}
 La gestione della configurazione raggruppa e organizza tutti gli strumenti necessari all'organizzazione della produzione di documenti, diagrammi e codice, ma anche di quello necessari al versionamento e al coordinamento del gruppo.
 \subsubsection{Versionamento}
-\subsubsubsection{Codice di versione - da rivedere secondo le richieste di Tullio}
+\subsubsubsection{Codice di versione}
 La storia di un documento è ricostruibile attraverso le sue versioni, consultabili nella tabella presente all'inizio di ogni documento. Le versioni sono identificate da un codice a tre cifre nel formato:
 \begin{center}
     \textbf{\large [X].[Y].[Z]}\\
@@ -171,13 +171,14 @@ dove:
               \item parte da 0;
               \item viene incrementato con l'aggiunta di nuove funzionalità nel caso di software o capitoli nel caso di documentazione, che siano sempre retro-compatibili;
               \item si resetta ad ogni incremento di X;
-              \item deve essere approvata dai \textit{Verificatori};
+              \item deve essere approvata dai \textit{Verificatori}.
           \end{itemize}
-    \item \textbf{\large Z:} rappresenta una versione con modifiche, rispetto alla precedente, minori e retro-compatibili:
+    \item \textbf{\large Z:} rappresenta una versione con modifiche verificate, minori e retro-compatibili:
           \begin{itemize}
               \item parte da 0;
-              \item viene incrementato con l'aggiunta a seguito a seguito di modifiche minori e retro-compatibili;
-              \item si resetta ad ogni incremento di Y.
+              \item viene incrementato a seguito di modifiche o aggiunte minori e retro-compatibili;
+              \item si resetta ad ogni incremento di Y;
+              \item  \item deve essere approvata dai \textit{Verificatori}.
           \end{itemize}
 
 \end{itemize}
@@ -186,7 +187,16 @@ Il versionamento è stato gestito attraverso il sistema di versionamento distrib
 \subsubsubsection{Repository}
 I repository creati dal gruppo TechSWEave sono i seguenti:
 \begin{itemize}
-    \item \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}}: per il versionamento del codice, lato backend;
+    \item \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}}: repository contenitore per i sottomoduli dei vari microservizi;
+    \begin{itemize}
+    \item \textbf{\href{https://github.com/techsweave/logs.git}{carts}}: per il versionamento del codice relativo al microservizio carts;
+    \item \textbf{\href{https://github.com/techsweave/logs.git}{categories}}: per il versionamento del codice relativo al microservizio categories;
+    \item \textbf{\href{https://github.com/techsweave/logs.git}{logs}}: per il versionamento del codice relativo al microservizio logs;
+    \item \textbf{\href{https://github.com/techsweave/products.git}{orders}}: per il versionamento del codice relativo al microservizio orders;
+    \item \textbf{\href{https://github.com/techsweave/products.git}{products}}: per il versionamento del codice relativo al microservizio products;
+    \item \textbf{\href{https://github.com/techsweave/products.git}{tags}}: per il versionamento del codice relativo al microservizio tags;
+    \item \textbf{\href{https://github.com/techsweave/products.git}{utilities}}: per il versionamento del codice relativo al pacchetto utilities;
+    \end{itemize}
     \item \textbf{\href{https://github.com/techsweave/eml-fe.git}{eml-fe}}: per il versionamento del codice, lato frontend;
     \item \textbf{\href{https://github.com/techsweave/TechSWEaveDocumentation.git}{TechSWEaveDocumentation}}: per il versionamento dei documenti redatti.
 \end{itemize}
@@ -207,15 +217,12 @@ La struttura del singolo repository è la seguente:
               \item \textbf{pages:} \textit{directory} contenente le varie pagine dell'e-commerce, divise per sotto \textit{directory} relative alle singole pagine. Ogni \textit{directory} contiene il file \textit{index.tsx} che struttura le singole pagine del sito;
               \item \textbf{components:} \textit{directory} contenente i vari componenti \textit{HTML}\textsubscript{\textbf{G}} da inserire nelle varie pagine seguendo le \textit{best practicies} indicate da \textit{Next.js}\textsubscript{\textbf{G}}.
           \end{itemize}
-    \item Il repository \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}} ha la seguente struttura:
-
-          La directory \textbf{src} contiene tutto l'effettivo codice diviso in sotto \textit{directory}:
+    \item Il repository \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}} contiene tutto l'effettivo codice diviso in sottomoduli relativi ai microservizi e il paccetto utilites. Il codice sorgente  di ogni microservizio è diviso in due sotto\textit{directory}:
           \begin{itemize}
-              \item \textbf{functions:} \textit{directory} contenente le funzioni lambda che verranno richiamate dal frontend\textsubscript{\textbf{G}};
-              \item \textbf{libs:} \textit{directory} contenente alcune librerie esterne utilizzate da tutte le funzioni;
-              \item \textbf{models:} \textit{directory} contenente i modelli dei database utilizzati dalla piattaforma nella sotto \textit{directory} \textbf{database} e gli schemi di risposta delle funzioni lambda sotto \textit{directory} \textbf{schema}.
+              \item \textbf{functions:} \textit{directory} contenente le funzioni lambda che verranno richiamate;
+              \item \textbf{databse:} \textit{directory} contenente il database del microservizio;
           \end{itemize}
-
+          Questo repository contiene anche il codice relativo al pacchetto utilities, che consiste in codice condiviso dalle varie funzioni lambda dei vari microservizi.
     \item Il repository  \textbf{\href{https://github.com/techsweave/TechSWEaveDocumentation.git}{TechSWEaveDocumentation}} ha la seguente struttura divisa per varie \textit{directory}:
           \begin{itemize}
               \item \textbf{Template:} la cartella la cui interno è presente un template del documento che ogni \textit{redattore} può utilizzare per produrre i file;
@@ -238,7 +245,7 @@ I file presenti all'interno del singolo repository sono:
               \item i file {\fontfamily{qcr}\selectfont .css} i fogli di stile utilizzati per la grafica dell'e-commerce;
               \item le immagini utilizzate per l'estetica del sito.
           \end{itemize}
-    \item Il repository eml-be contiene i seguenti tipi di file:
+    \item I sottomoduli di eml-be contengono i seguenti tipi di file:
           \begin{itemize}
               \item i file {\fontfamily{qcr}\selectfont .ts} file scritti in \textit{Typescript};
               \item i file {\fontfamily{qcr}\selectfont .yml} file scritti in \textit{YAML}\textsubscript{\textbf{G}}, ossia file di configurazione;
