@@ -21,7 +21,7 @@ Ogni documento attraversa le seguenti fasi del ciclo di vita:
     \item \textbf{Approvazione:} terminata la revisione, il \textit{Responsabile di Progetto}\textsubscript{\textbf{G}} stabilisce la validità del documento, che solo a questo punto può essere considerato completo e può essere quindi rilasciato.
 \end{itemize}
 \subsubsection{Template}
-Il gruppo ha creato un Template con \LaTeX\textsubscript{\textbf{G}} per uniformare velocemente la struttura grafica e lo stile di tutti i documenti, in modo che tutti si possano concentrare sulla stesura del corpo del documento. Il template permette di adottare automaticamente le conformità previste dalle \textit{Norme di Progetto v2.0.0}.
+Il gruppo ha creato un Template con \LaTeX\textsubscript{\textbf{G}} per uniformare velocemente la struttura grafica e lo stile di tutti i documenti, in modo che tutti si possano concentrare sulla stesura del corpo del documento. Il template permette di adottare automaticamente le conformità previste dalle \textit{Norme di Progetto v3.0.0.}.
 \subsubsection{Struttura di un documento}
 \subsubsubsection{Prima pagina}
 Il frontespizio è la prima pagina del documento e contiene:
@@ -85,7 +85,7 @@ Ad esempio sono corretti:
 \begin{itemize}
     \item analisiRequisiti\_v1.0.0;
     \item studioFattibilita\_v1.0.0;
-    \item normeProgetto\_v2.0.0 .
+    \item normeProgetto\_v3.0.0. .
 \end{itemize}
 Mentre non sono corretti:
 \begin{itemize}
@@ -106,7 +106,7 @@ Mentre per le citazioni ai file all'interno di altri documenti utilizziamo la co
 
 \subsubsubsection{Glossario}
 \begin{itemize}
-    \item Ogni termine nel \textit{Glossario v2.0.0} viene marcato con una \textbf{G} maiuscola a pedice;
+    \item Ogni termine nel \textit{Glossario v3.0.0.} viene marcato con una \textbf{G} maiuscola a pedice;
     \item Se la voce è presente ripetutamente nello stesso paragrafo non è necessario marcarla a ogni occorrenza, basta farlo alla prima occorrenza;
     \item Se la voce è presente come singolo termine in elenchi puntati non è necessario marcarlo.
 \end{itemize}
@@ -142,9 +142,9 @@ Per la produzione di grafici UML è stato scelto il programma \textit{Draw.io}.
 \subsubsection{Metriche}
 \begin{itemize}
     \item \textbf{MPR10 - Indice di Gulpease:}  è un indice di leggibilità di un testo tarato sulla lingua italiana. Ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico.\\
-    \\\textbf{Metodo di misura}: valore intero da 0 a 100: I\textsubscript{G} = 89 $+ \frac{300*numero \ di \ frasi \ - \ 10*numero \ di \ lettere}{numero \ di \ parole}$
+          \\\textbf{Metodo di misura}: valore intero da 0 a 100: I\textsubscript{G} = 89 $+ \frac{300*numero \ di \ frasi \ - \ 10*numero \ di \ lettere}{numero \ di \ parole}$
     \item \textbf{MPR11 - Correttezza ortografica:}  la documentazione non deve contenere errori ortografici o grammaticali.\\
-    \\\textbf{Metodo di misura}: valore intero: numero di errori per documento.
+          \\\textbf{Metodo di misura}: valore intero: numero di errori per documento.
 \end{itemize}
 \subsection{Gestione della configurazione}
 \subsubsection{Scopo}
@@ -152,7 +152,7 @@ Il processo ha lo scopo di andare a ordinare il software e la documentazione. Tu
 \subsubsection{Descrizione}
 La gestione della configurazione raggruppa e organizza tutti gli strumenti necessari all'organizzazione della produzione di documenti, diagrammi e codice, ma anche di quello necessari al versionamento e al coordinamento del gruppo.
 \subsubsection{Versionamento}
-\subsubsubsection{Codice di versione - da rivedere secondo le richieste di Tullio}
+\subsubsubsection{Codice di versione}
 La storia di un documento è ricostruibile attraverso le sue versioni, consultabili nella tabella presente all'inizio di ogni documento. Le versioni sono identificate da un codice a tre cifre nel formato:
 \begin{center}
     \textbf{\large [X].[Y].[Z]}\\
@@ -163,21 +163,22 @@ dove:
     \item \textbf{\large X:} rappresenta una versione con modifiche, rispetto alla precedente, sostanziali e generalmente non retro-compatibili:
           \begin{itemize}
               \item parte da 0, può solo aumentare;
-              \item viene incrementato solamente a seguito di modifiche maggiori e/o non retro-compatibili;
+              \item viene incrementato solamente in seguito a modifiche maggiori e/o non retro-compatibili;
               \item deve essere approvata dal \textit{Responsabile di Progetto};
           \end{itemize}
     \item \textbf{\large Y:} rappresenta una versione con modifiche, rispetto alla precedente, anche maggiori ma sempre retro-compatibili:
           \begin{itemize}
               \item parte da 0;
               \item viene incrementato con l'aggiunta di nuove funzionalità nel caso di software o capitoli nel caso di documentazione, che siano sempre retro-compatibili;
-              \item si resetta ad ogni incremento di X;
-              \item deve essere approvata dai \textit{Verificatori};
+              \item si resetta a ogni incremento di X;
+              \item deve essere approvata dai \textit{Verificatori}.
           \end{itemize}
-    \item \textbf{\large Z:} rappresenta una versione con modifiche, rispetto alla precedente, minori e retro-compatibili:
+    \item \textbf{\large Z:} rappresenta una versione con modifiche verificate, minori e retro-compatibili:
           \begin{itemize}
               \item parte da 0;
-              \item viene incrementato con l'aggiunta a seguito a seguito di modifiche minori e retro-compatibili;
-              \item si resetta ad ogni incremento di Y.
+              \item viene incrementato in seguito a modifiche o aggiunte minori e retro-compatibili;
+              \item si resetta a ogni incremento di Y;
+              \item deve essere approvata dai \textit{Verificatori}.
           \end{itemize}
 
 \end{itemize}
@@ -186,7 +187,16 @@ Il versionamento è stato gestito attraverso il sistema di versionamento distrib
 \subsubsubsection{Repository}
 I repository creati dal gruppo TechSWEave sono i seguenti:
 \begin{itemize}
-    \item \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}}: per il versionamento del codice, lato backend;
+    \item \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}}: repository contenitore per i sottomoduli dei vari microservizi;
+          \begin{itemize}
+              \item \textbf{\href{https://github.com/techsweave/logs.git}{carts}}: per il versionamento del codice relativo al microservizio carts;
+              \item \textbf{\href{https://github.com/techsweave/logs.git}{categories}}: per il versionamento del codice relativo al microservizio categories;
+              \item \textbf{\href{https://github.com/techsweave/logs.git}{logs}}: per il versionamento del codice relativo al microservizio logs;
+              \item \textbf{\href{https://github.com/techsweave/products.git}{orders}}: per il versionamento del codice relativo al microservizio orders;
+              \item \textbf{\href{https://github.com/techsweave/products.git}{products}}: per il versionamento del codice relativo al microservizio products;
+              \item \textbf{\href{https://github.com/techsweave/products.git}{tags}}: per il versionamento del codice relativo al microservizio tags;
+              \item \textbf{\href{https://github.com/techsweave/products.git}{utilities}}: per il versionamento del codice relativo al pacchetto utilities;
+          \end{itemize}
     \item \textbf{\href{https://github.com/techsweave/eml-fe.git}{eml-fe}}: per il versionamento del codice, lato frontend;
     \item \textbf{\href{https://github.com/techsweave/TechSWEaveDocumentation.git}{TechSWEaveDocumentation}}: per il versionamento dei documenti redatti.
 \end{itemize}
@@ -201,21 +211,20 @@ La struttura del singolo repository è la seguente:
 \begin{itemize}
     \item Il repository \textbf{\href{https://github.com/techsweave/eml-fe.git}{eml-fe}} ha la seguente struttura divisa per varie \textit{directory}:
           \begin{itemize}
-              \item \textbf{types:} \textit{directory} contenente le interfacce dei tipi che saranno utilizzate per mappare le risposte delle chiamate \textit{lambda};
-              \item \textbf{styles:} \textit{directory} contenente i fogli di stile, scritti in \textit{css}\textsubscript{\textbf{G}}, utilizzati per la grafica della piattaforma;
+              \item \textbf{src} cartella generale contenete le sottocartelle:
+                    \begin{itemize}
+                        \item \textbf{types:} \textit{directory} contenente le interfacce dei tipi che saranno utilizzate per mappare le risposte delle chiamate \textit{lambda};
+                        \item \textbf{pages:} \textit{directory} contenente le varie pagine dell'e-commerce, divise per sotto \textit{directory} relative alle singole pagine. Ogni \textit{directory} contiene il file \textit{index.tsx} che struttura le singole pagine del sito;
+                        \item \textbf{components:} \textit{directory} contenente i vari componenti \textit{HTML}\textsubscript{\textbf{G}} da inserire nelle varie pagine seguendo le \textit{best practicies} indicate da \textit{Next.js}\textsubscript{\textbf{G}}.
+                    \end{itemize}
               \item \textbf{public:} \textit{directory} contenente le immagini relative alla parte grafica della piattaforma;
-              \item \textbf{pages:} \textit{directory} contenente le varie pagine dell'e-commerce, divise per sotto \textit{directory} relative alle singole pagine. Ogni \textit{directory} contiene il file \textit{index.tsx} che struttura le singole pagine del sito;
-              \item \textbf{components:} \textit{directory} contenente i vari componenti \textit{HTML}\textsubscript{\textbf{G}} da inserire nelle varie pagine seguendo le \textit{best practicies} indicate da \textit{Next.js}\textsubscript{\textbf{G}}.
           \end{itemize}
-    \item Il repository \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}} ha la seguente struttura:
-
-          La directory \textbf{src} contiene tutto l'effettivo codice diviso in sotto \textit{directory}:
+    \item Il repository \textbf{\href{https://github.com/techsweave/eml-be.git}{eml-be}} contiene tutto l'effettivo codice diviso in sotto moduli relativi ai microservizi e il pacchetto utilites. Il codice sorgente  di ogni microservizio è diviso in due sotto\textit{directory}:
           \begin{itemize}
-              \item \textbf{functions:} \textit{directory} contenente le funzioni lambda che verranno richiamate dal frontend\textsubscript{\textbf{G}};
-              \item \textbf{libs:} \textit{directory} contenente alcune librerie esterne utilizzate da tutte le funzioni;
-              \item \textbf{models:} \textit{directory} contenente i modelli dei database utilizzati dalla piattaforma nella sotto \textit{directory} \textbf{database} e gli schemi di risposta delle funzioni lambda sotto \textit{directory} \textbf{schema}.
+              \item \textbf{functions:} \textit{directory} contenente le funzioni lambda che verranno richiamate;
+              \item \textbf{databse:} \textit{directory} contenente il database del microservizio;
           \end{itemize}
-
+          Questo repository contiene anche il codice relativo al pacchetto utilities, che consiste in codice condiviso dalle varie funzioni lambda dei vari microservizi.
     \item Il repository  \textbf{\href{https://github.com/techsweave/TechSWEaveDocumentation.git}{TechSWEaveDocumentation}} ha la seguente struttura divisa per varie \textit{directory}:
           \begin{itemize}
               \item \textbf{Template:} la cartella la cui interno è presente un template del documento che ogni \textit{redattore} può utilizzare per produrre i file;
@@ -235,10 +244,9 @@ I file presenti all'interno del singolo repository sono:
           \begin{itemize}
               \item i file {\fontfamily{qcr}\selectfont .ts} file scritti in \textit{Typescript}\textsubscript{\textbf{G}};
               \item i file {\fontfamily{qcr}\selectfont .tsx} file scritti in \textit{Typescript}, che supportano la sintassi \textit{jsx}\textsubscript{\textbf{G}};
-              \item i file {\fontfamily{qcr}\selectfont .css} i fogli di stile utilizzati per la grafica dell'e-commerce;
               \item le immagini utilizzate per l'estetica del sito.
           \end{itemize}
-    \item Il repository eml-be contiene i seguenti tipi di file:
+    \item I sottomoduli di eml-be contengono i seguenti tipi di file:
           \begin{itemize}
               \item i file {\fontfamily{qcr}\selectfont .ts} file scritti in \textit{Typescript};
               \item i file {\fontfamily{qcr}\selectfont .yml} file scritti in \textit{YAML}\textsubscript{\textbf{G}}, ossia file di configurazione;
@@ -264,7 +272,7 @@ Si è scelto un approccio per \textit{feature}, per facilitare l'organizzazione 
 \begin{itemize}
     \renewcommand\labelitemi{-}
     \item dalla propria repository locale deve posizionarsi nel branch corretto attraverso l'apposito comando;
-    \item una volta arrivato nel branch corretto, il componente si deve mettere in pari con le eventuali modifiche apportate ai documenti;
+    \item una volta arrivato nel branch corretto, il componente si deve mettere in pari con le eventuali modifiche apportate;
     \item svolgere il compito assegnato, come la scrittura di nuovo materiale o la modifica di quello già esistente, attraverso l'editor predisposto (\textit{Visual Studio Code});
     \item una volta terminato il proprio lavoro si deve aggiungere all'area di staging\textsubscript{\textbf{G}}, attraverso l'apposito comando;
     \item eseguire il comando per andare a fare il commit delle modifiche fatte, corredandole con un messaggio identificativo;
@@ -294,7 +302,7 @@ I membri possono modificare tutto il codice seguendo determinate regole:
 \subsubsection{Scopo}
 Il processo di gestione della qualità ha lo scopo di garantire che il prodotto finale soddisfi gli obbiettivi di qualità e i requisiti richiesti dal proponente, attraverso un corretto controllo dei processi e dei prodotti.
 \subsubsection{Descrizione}
-L'esposizione approfondita della gestione della qualità si trova nel \textit{Piano di Qualifica v2.0.0}, nel quale sono descritte le modalità utilizzate per garantire la qualità nello sviluppo del progetto. Tale documento contiene i seguenti punti:
+L'esposizione approfondita della gestione della qualità si trova nel \textit{Piano di Qualifica v3.0.0.}, nel quale sono descritte le modalità utilizzate per garantire la qualità nello sviluppo del progetto. Tale documento contiene i seguenti punti:
 \begin{itemize}
     \item sono esposti gli standard utilizzati;
     \item sono indicati i processi d'interesse negli standard;
@@ -347,7 +355,7 @@ Lo standard utilizzato dal gruppo \textit{TechSWEave} è riportato nell'apposita
 \subsubsection{Metriche}
 \begin{itemize}
     \item \textbf{MPR12 - PMS (Percentuale di metriche soddisfatte):} indica la percentuale delle metriche che raggiungono dei valori accettabili.\\
-    \\\textbf{Metodo di misura}: valore percentuale: PMS = $\frac{numero \ di \ metriche \ soddisfatte}{numero \ di \ metriche \ totali} * 100$ 
+          \\\textbf{Metodo di misura}: valore percentuale: PMS = $\frac{numero \ di \ metriche \ soddisfatte}{numero \ di \ metriche \ totali} * 100$
 \end{itemize}
 
 \subsection{Verifica}
@@ -379,7 +387,7 @@ Il processo di analisi si divide in due tipologie: statica e dinamica.
 \end{itemize}
 
 \subsubsubsection{Test}
-I test sono il fondamento dell'analisi dinamica, in quanto hanno lo scopo di verificare il corretto funzionamento del codice e che sia conforme all'\textit{Analisi dei Requisiti v2.0.0}.
+I test sono il fondamento dell'analisi dinamica, in quanto hanno lo scopo di verificare il corretto funzionamento del codice e che sia conforme all'\textit{Analisi dei Requisiti v3.0.0}.
 Per ogni test devono essere definiti i seguenti parametri:
 \begin{itemize}
     \item \textbf{ambiente}: sistema hardware e software sul quale verrà eseguito il test;
@@ -399,17 +407,16 @@ Dei test ben scritti devono:
 I test del software sono di vario tipo, ognuno dei quali ha un diverso scopo e ambito di verifica.
 \begin{itemize}
     \item \textbf{Test di unità}\\
-          I test d'unita si eseguono su piccoli moduli di codice detti unità. Questi test si concentrano sul testare la correttezza di queste unità, vengono forniti in input dei dati e si controlla che l'output sia quello desiderato. I test di unità hanno anche lo scopo di verificare la correttezza del codice scritto. Questi test possono essere fatti con l'utilizzo di driver\textsubscript{\textbf{G}} e di stub\textsubscript{\textbf{G}}.
+          I test d'unita si eseguono su piccoli moduli di codice detti unità. Questi test si concentrano sul testare la correttezza di queste unità, vengono forniti in input dei dati e si controlla che l'output sia quello desiderato. I test di unità hanno anche lo scopo di verificare la correttezza del codice scritto. Questi test possono essere fatti con l'utilizzo di driver\textsubscript{\textbf{G}} e di stub\textsubscript{\textbf{G}};
     \item \textbf{Test d'integrazione}\\
-          Dopo aver superato i test di unità, le varie unità vengono unite in agglomerati di dimensioni sempre maggiori. Questi test si concentrano sulle interfacce tra i componenti. Un agglomerato che supera un test d'integrazione costituisce un unità per un agglomerato di dimensioni maggiori, fino a raggiungere le dimensioni totali del sistema.
+          Dopo aver superato i test di unità, le varie unità vengono unite in agglomerati di dimensioni sempre maggiori. Questi test si concentrano sulle interfacce tra i componenti. Un agglomerato che supera un test d'integrazione costituisce un unità per un agglomerato di dimensioni maggiori, fino a raggiungere le dimensioni totali del sistema;
     \item \textbf{Test di sistema}
           I test di sistema vanno a testare il sistema nella sua interezza. Si verificano le interazioni tra le parti, che il comportamento dello stesso rispetti quanto atteso e verifica la copertura di tutte le funzionalità. Questi test vanno a evidenziare errate supposizioni che diversi sviluppatori fanno su parti di codice prodotto da altri.\\
-          In questa fase ci si assicura anche che l'applicazione rispetti tutti i vincoli e le specifiche presenti all'interno dell'\textit{Analisi dei requisiti v2.0.0}.
+          In questa fase ci si assicura anche che l'applicazione rispetti tutti i vincoli e le specifiche presenti all'interno dell'\textit{Analisi dei requisiti v3.0.0};
     \item \textbf{Test di regressione}\\
-          Sono test che vengono effettuati in seguito alla modifica del sistema, consistono nella riesecuzione dei test esistenti. Questi test hanno lo scopo di garantire il funzionamento degli elementi precedentemente funzionanti. Questi test sono fortemente automatizzabili.
+          Sono test che vengono effettuati in seguito alla modifica del sistema, consistono nella riesecuzione dei test esistenti. Questi test hanno lo scopo di garantire il funzionamento degli elementi precedentemente funzionanti. Questi test sono fortemente automatizzabili;
     \item \textbf{Test di accettazione}\\
           Detti anche "test di collaudo" hanno la stessa funzione dei test di sistema, solo che questi vengono eseguiti insieme ai committenti, per verificare la correttezza del prodotto e il soddisfacimento dei clienti. Una volta superato il test di accettazione il prodotto è pronto per essere rilasciato.
-
 \end{itemize}
 \subsubsection{Strumenti}
 Gli strumenti utilizzati per la verifica sono
@@ -428,20 +435,104 @@ Viene utilizzata la verifica ortografica in tempo reale, attraverso l'apposita e
 \subsubsection{Metriche}
 \begin{itemize}
     \item \textbf{MPR09 - CC (Code Coverage):} indica il numero di righe di codice sottoposte ai test di verifica durante la loro esecuzione. Per linee di codice totali
-    si intende tutte quelle appartenenti all'unità sottoposta al test.\\
-    \\\textbf{Metodo di misura}: valore percentuale: CC = $\frac{linee \ di \ codice \ testate}{linee \ di \ codice \ totali * 100}$
+          si intende tutte quelle appartenenti all'unità sottoposta al test.\\
+          \\\textbf{Metodo di misura}: valore percentuale: CC = $\frac{linee \ di \ codice \ testate}{linee \ di \ codice \ totali * 100}$
 \end{itemize}
 
 \subsection{Validazione}
 \subsubsection{Scopo}
-Il processo di validazione consiste di decidere se il prodotto soddisfa il compito per cui è stato generato. L'esito positivo di tale processo ci garantisce che il software rispetti i requisiti e che soddisfi i bisogni del committente.
+Il processo di validazione consiste nel decidere se il prodotto soddisfa il compito per cui è stato creato. Terminata questa attività è
+garantito che il sistema rispetti i requisiti e che soddisfi i bisogni del committente.
 \subsubsection{Descrizione}
-Tale processo consiste nel ricercare gli oggetti da validare e valutane i risultati rispetto le aspettative previste.
-\subsubsection{Attività}
-Le attività per attuare il processo di validazione sono:
+Tale processo consiste nel prendere in esame il prodotto della fase di verifica e restituirlo con la garanzia che esso sia
+conforme ai requisiti e ai bisogni del committente.
+Sarà il \textit{Responsabile di Progetto} che avrà la responsabilità di controllare i risultati decidendo se:
+\begin{itemize}
+    \item accettare ed approvare il prodotto;
+    \item rigettare il documento, chiedendo un'ulteriore verifica del prodotto con nuove indicazioni.
+\end{itemize}
+\subsubsection{Aspettative}
+Devono essere rispettati i seguenti punti:
 \begin{itemize}
     \item identificare gli oggetti da validare;
     \item identificare una strategia con delle procedute di validazione in cui le procedure di verifica possano essere riutilizzate;
     \item attuare la strategia;
     \item valutare che i risultati rispettino le aspettative.
+\end{itemize}
+\subsubsection{Attività}
+La validazione si compone di due attività:
+\begin{itemize}
+    \item \textbf{Test di validazione e di sistema:} insieme dei test eseguiti internamente al gruppo;
+    \item \textbf{Collaudo:} attività di controllo che si svolge con la presenza del committente \textit{RedBabel} durante
+          la \textit{Revisione di Accettazione}. Dimostra la conformità del prodotto software secondo quanto stabilito nell'\textit{Analisi dei Requisiti v3.0.0.}
+\end{itemize}
+\subsubsection{Validazione dei documenti}
+Il \textit{Responsabile di Progetto} procede nel modo seguente:
+\begin{itemize}
+    \item crea la issue in GitHub nella sezione "TO DO";
+    \item sposta la issue in "IN PROGRESS"
+    \item se riscontra dei problemi, avverte il redattore e il verificatore. L'issue torna in "TO DO" in attesa delle correzioni. Quando queste vengono apportate
+          si torna al primo punto;
+    \item sposta l'issue in "DONE" approvando il documento;
+    \item avverte i redattori incaricati di aggiornare il Piano di Qualifica.
+\end{itemize}
+\subsubsection{Validazione del codice}
+Il \textit{Verificatore} incaricato procede nel modo seguente:
+\begin{itemize}
+    \item crea la issue in GitHub nella sezione "TO DO";
+    \item sposta la issue in "IN PROGRESS";
+    \item esegue i test previsti;
+    \item sposta l'issue in "DONE";
+\end{itemize}
+\subsubsection{Responsabilià dei test}
+I soggetti coinvolti nell'ambito dei test di validazione sono il \textit{Responsabile di Progetto}, i
+\textit{Verificatori} e i \textit{Progettisti}. In particolare:
+\begin{itemize}
+    \item \textbf{Progettisti:} pianificano e implementano i test; per garantire imparzialità nei test stessi occorre che
+          i tali figure siano diverse da coloro che hanno progettato o implementato la porzione di codice da testare;
+    \item \textbf{Verificatori:} eseguono il test sul prodotto software, ne tracciano i risultati e
+          aggiornano il \textit{Piano di Qualifica}.
+    \item \textbf{Responsabile di Progetto:} valuta i risultati ottenuti e decide di procedere con:
+          \begin{itemize}
+              \item \textbf{accettazione}, se il risultato ottenuto dal test risulta sufficientemente buono;
+              \item \textbf{ripetizione}, se il risultato non è accettabile;
+          \end{itemize}
+\end{itemize}
+\subsubsubsection{Codice identificativo dei test}
+\label{Codice test}
+Ogni test è definito con l'ausilio della seguente dicitura:\\
+\begin{center}
+    T[TIPO][ID]
+\end{center}
+Per indicare il tipo di test vengono utilizzate le seguenti diciture:
+\begin{itemize}
+    \item \textbf{A:} per i test di accettazione;
+    \item \textbf{S:} per i test di sistema;
+    \item \textbf{I:} per i test di integrazione;
+    \item \textbf{U:} per i test di unità.
+\end{itemize}
+I test di accettazione utilizzano utilizzano le ulteriori diciture a seguire:
+\begin{itemize}
+    \item \textbf{O:} Obbligatorio;
+    \item \textbf{D:} Desiderabile;
+    \item \textbf{F:} Facoltativo;
+\end{itemize}
+E assumono le seguenti importanze:
+\begin{itemize}
+    \item \textbf{F:} Funzionale;
+    \item \textbf{V:} Vincolo;
+    \item \textbf{Q:} Qualità;
+    \item \textbf{P:} Prestazionale;
+\end{itemize}
+L'ID è un identificativo numerico progressivo per i test di unità, integrazione e regressione. Per i test di sistema e
+indica il codice del rispettivo requisito presente nel documento \textit{Analisi dei Requisiti v3.0.0.}\\
+Per definire in modo conciso lo stato dei test, vengono utilizzate le seguenti diciture:
+\begin{itemize}
+    \item \textbf{I:} indica che il test è stato implementato;
+    \item \textbf{NI:} indica che il test non è stato implementato.
+\end{itemize}
+Inoltre, per definire l'esito dei test implementati, vengono utilizzate le seguenti diciture:
+\begin{itemize}
+    \item \textbf{S:} indica che il test soddisfa la richiesta;
+    \item \textbf{NS:} indica che il test non soddisfa la richiesta.
 \end{itemize}

@@ -11,3 +11,4 @@ __latexindent_temp.tex
 *.lot
 .vscode
 *.py
+*.synctex(busy)
