@@ -46,14 +46,18 @@ Stripe is a service that allows developers to integrate secure payment processin
 The functionalities provided by the platform permitted to identify the following domains:
 \begin{itemize}
     \item \textbf{Carts};
-    \item \textbf{Checkout};
-    \item \textbf{Products}.
+    \item \textbf{Products};
+    \item \textbf{Orders};
+    \item \textbf{Tags};
+    \item \textbf{Categories}.
 \end{itemize}
 The architecture is based on the following microservices:
 \begin{itemize}
     \item \textbf{Carts service};
-    \item \textbf{Checkout service};
-    \item \textbf{Products service}.
+    \item \textbf{Products service};
+    \item \textbf{Orders service};
+    \item \textbf{Tags service};
+    \item \textbf{Categories service}.
 \end{itemize}
 Microservices are independently deployable and allow for more team autonomy, CONTINUARE **********
 \pagebreak
@@ -71,17 +75,9 @@ This microservice allows the user to:
     \item Add a product to the cart;
     \item Remove a product from the cart;
     \item Modify the quantity of the items in the cart;
-    \item View the items in the cart.
+    \item View the items in the cart,
+    \item Check out.
 \end{itemize}
-\pagebreak
-\subsubsection{Checkout service}
-\begin{figure}[!h]
-    \vspace{5px}
-    \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/checkoutService.png}
-    \centering
-    \caption{Checkout service}
-\end{figure}
-This microservice allows the user to checkout by paying for the items purchased, through the Stripe\textsubscript{\textbf{G}} external service.
 \pagebreak
 \subsubsection{Products service}
 \begin{figure}[!h]
@@ -97,6 +93,53 @@ This microservice allows the user to:
     \item View the product details;
     \item Find a specific product using filters;
     \item Modify informations about a product.
+\end{itemize}
+\pagebreak
+\subsubsection{Orders service}
+\begin{figure}[!h]
+    \vspace{5px}
+    \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/orderService.png}
+    \centering
+    \caption{Orders service}
+\end{figure}
+This microservice allows the user to:
+\begin{itemize}
+    \item Create a new order;
+    \item Delete a order;
+    \item View the order details;
+    \item Find a specific order using filters.
+\end{itemize}
+\pagebreak
+\subsubsection{Tags service}
+\begin{figure}[!h]
+    \vspace{5px}
+    \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/tagsService.png}
+    \centering
+    \caption{Tags service}
+\end{figure}
+This microservice allows the user to:
+\begin{itemize}
+    \item Create a new tag;
+    \item Delete a tag;
+    \item View the tag details;
+    \item Find a specific tag using filters;
+    \item Modify informations about a tag.
+\end{itemize}
+\pagebreak
+\subsubsection{Categories service}
+\begin{figure}[!h]
+    \vspace{5px}
+    \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/categoriesService.png}
+    \centering
+    \caption{Categories service}
+\end{figure}
+This microservice allows the user to:
+\begin{itemize}
+    \item Create a new category;
+    \item Delete a category;
+    \item View the category details;
+    \item Find a specific category using filters;
+    \item Modify informations about a category.
 \end{itemize}
 \pagebreak
 \subsubsection{Images service}
