@@ -79,7 +79,7 @@ The architecture is based on the following microservices:
     \item \textbf{Tags service};
     \item \textbf{Categories service}.
 \end{itemize}
-Microservices are independently deployable and allow for more team autonomy, CONTINUARE **********
+Microservices are independently deployable and allow for more team autonomy, permitting to manage development in decentralized way.
 \pagebreak
 \subsection{Microservices structure}
 Inserire testo se serve
@@ -95,9 +95,14 @@ This microservice allows the user to:
     \item Add a product to the cart;
     \item Remove a product from the cart;
     \item Modify the quantity of the items in the cart;
-    \item View the items in the cart,
-    \item Check out.
+    \item View the items in the cart;
+    \item Delete the cart;
+    \item Check-out.
 \end{itemize}
+The Carts service allows the user to manage their shopping cart.
+To check the consistency of the data, functions are called from the SQS service to maintain consistency when a product is changed or deleted.
+In addition, these functions, through the use of the SES service, allow customers to be notified via email of the change in their cart.
+Stripe is used as an external service to manage checkout, which allows you to access the session for payment of the order. Once the checkout is complete, the createCheckout lambda sends a message through the SNS service with the order data in order to create the same through the appropriate service.
 \pagebreak
 \subsubsection{Products service}
 \begin{figure}[!h]
@@ -106,14 +111,18 @@ This microservice allows the user to:
     \centering
     \caption{Products service}
 \end{figure}
-This microservice allows the user to:
+This microservice allows the vendor to:
 \begin{itemize}
     \item Create a new product;
     \item Delete a product;
+    \item Modify some informations about a product.
+\end{itemize}
+This microservice also allows any user to:
+\begin{itemize}
     \item View the product details;
     \item Find a specific product using filters;
-    \item Modify informations about a product.
 \end{itemize}
+The Products service allows the vendor to manage the products of their store. It also allows any user to view them both in the list with the possibility of filtering them and in detail. When a product is deleted or modified, messages are sent via the SNS service, to update all the carts and report any changes to the product present in them. Furthermore, through an SQS queue, when an order is placed the quantity available for the purchased products is decreased.
 \pagebreak
 \subsubsection{Orders service}
 \begin{figure}[!h]
@@ -129,6 +138,8 @@ This microservice allows the user to:
     \item View the order details;
     \item Find a specific order using filters.
 \end{itemize}
+The Orders service allows the user to manage and place their orders.
+The order with the data received after checkout is created through an SQS queue. After the order has been paid for, messages are sent via the SNS service to decrease the quantity of products available.
 \pagebreak
 \subsubsection{Tags service}
 \begin{figure}[!h]
@@ -137,14 +148,18 @@ This microservice allows the user to:
     \centering
     \caption{Tags service}
 \end{figure}
-This microservice allows the user to:
+This microservice allows the vendor to:
 \begin{itemize}
     \item Create a new tag;
     \item Delete a tag;
-    \item View the tag details;
-    \item Find a specific tag using filters;
     \item Modify informations about a tag.
 \end{itemize}
+This microservice also allows any user to:
+\begin{itemize}
+    \item View the tag;
+    \item Find a specific tag using filters.
+\end{itemize}
+The Products service allows the vendor to manage the tags of their store. It also allows any user to view and filter them.
 \pagebreak
 \subsubsection{Categories service}
 \begin{figure}[!h]
@@ -153,14 +168,18 @@ This microservice allows the user to:
     \centering
     \caption{Categories service}
 \end{figure}
-This microservice allows the user to:
+This microservice allows the vendor to:
 \begin{itemize}
     \item Create a new category;
     \item Delete a category;
-    \item View the category details;
-    \item Find a specific category using filters;
     \item Modify informations about a category.
 \end{itemize}
+This microservice also allows any user to:
+\begin{itemize}
+    \item View the category;
+    \item Find a specific category using filters.
+\end{itemize}
+The Products service allows the vendor to manage the categories of their store. It also allows any user to view and filter them.
 \pagebreak
 \subsubsection{Images service}
 \begin{figure}[!h]
