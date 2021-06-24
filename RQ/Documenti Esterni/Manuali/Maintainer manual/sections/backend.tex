@@ -203,6 +203,7 @@ The following sequence diagrams describe the main operations that can be carried
     \centering
     \caption{sequence diagram for creating a product} 
 \end{figure}
+The diagram represents the sequence of operations necessary to create a product, the \textit{isVendor()} method is responsible for checking that the user who accesses the creation of the product is a seller and therefore has access to this functionality.
 \pagebreak
 \subsubsection{Remove product from cart}
 \begin{figure}[!h]
@@ -211,6 +212,7 @@ The following sequence diagrams describe the main operations that can be carried
     \centering
     \caption{sequence diagram for removing a product from the cart} 
 \end{figure}
+The diagram represents the sequence of operations required for any user to remove a product from the cart.
 \pagebreak
 \subsubsection{Create checkout}
 \begin{figure}[!h]
@@ -219,6 +221,7 @@ The following sequence diagrams describe the main operations that can be carried
     \centering
     \caption{sequence diagram for checking out} 
 \end{figure}
+The diagram represents the sequence of operations necessary for the checkout with consequent payment of the order. This feature is only available if the user is authenticated and uses Stripe as an external service to proceed with the payment of the order.
 \pagebreak
 \subsubsection{Scan tag}
 \begin{figure}[!h]
@@ -227,6 +230,7 @@ The following sequence diagrams describe the main operations that can be carried
     \centering
     \caption{sequence diagram for scanning a tag} 
 \end{figure}
+The diagram represents the sequence of operations necessary for the use of filters on tags, this feature can be used by any user.
 \pagebreak
 \subsubsection{Update category}
 \begin{figure}[!h]
@@ -235,6 +239,7 @@ The following sequence diagrams describe the main operations that can be carried
     \centering
     \caption{sequence diagram for updating a category} 
 \end{figure}
+The diagram represents the sequence of operations required to update a category. This function is only accessible by a vendor, for this reason there is the \textit{isVendor()} method to check that the user who accesses it is actually a vendor.
 \pagebreak
 \subsubsection{Get product}
 \begin{figure}[!h]
@@ -243,3 +248,4 @@ The following sequence diagrams describe the main operations that can be carried
     \centering
     \caption{sequence diagram for getting a product} 
 \end{figure}
+The diagram represents the sequence of operations necessary to obtain information regarding a product, this function is accessible to any user. The \textit{isVendor()} function checks the type of user and returns different product information depending on the case.
