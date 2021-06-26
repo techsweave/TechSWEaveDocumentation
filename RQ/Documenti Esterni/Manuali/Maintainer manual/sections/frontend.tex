@@ -18,4 +18,15 @@ Chakra UI is a React component library made with TypeScript and NextJS in mind. 
   \item \textbf{Used Version: 1.6.1}
   \item \textbf{Link: \url{https://chakra-ui.com/}}
 \end{itemize}
-
+\subsection{General description}
+The frontend structure is based on the use of an npm utilities-techsweave package produced by the backend, containing the interfaces and services useful for rendering the user interface. The interfaces of the microservices are imported by the "Models" file, while the methods made available by the microservices are imported by the "Services" file. These methods allow to call the lambda functions present within the backend to obtain the results necessary for the functioning of the user interface. To render the pages of the platform, the best practices of react and next are followed. The pages are composed through the use of components, html snippets that reproduce a specific part of the page itself.
+\subsection{Examples of functioning}
+\subsubsection{Use of a function}
+Calling the scanAsync method on an instance of the product class, the scan of the products in the database will be returned. These products will be passed to the frontend components to render the page and display the data taken from the database.
+\subsubsection{Rendering of a page}
+To render the detail page of a product, by using the getStaticProps function will be returned the data with the necessary product details. the various components are then inserted into the html code to produce the page:
+\begin{itemize}
+  \item \textbf{layout}, containing the general style of the page including header, footer and navbar;
+  \item \textbf{productDetail}, to render product details through images and texts;
+  \item \textbf{relatedProduct}, creates a list of products with the same category of the one currently displayed.
+\end{itemize}

@@ -8,7 +8,7 @@ dynamic web page content before the page is sent to the user’s web browser. Co
 represents a "JavaScript everywhere" paradigm, unifying web-application development around a single
 programming language, rather than different languages for server-side and client-side scripts.
 \begin{itemize}
-    \item \textbf{Used Version:}
+    \item \textbf{Used Version: 14.17.0}
     \item \textbf{Link: \url{https://nodejs.org/}}
 \end{itemize}
 \subsubsection{Serverless Framework}
@@ -16,7 +16,7 @@ The Serverless Framework is a free and open-source web framework written using N
 framework developed for building applications on AWS Lambda, a serverless computing platform provided
 by Amazon as a part of Amazon Web Services.
 \begin{itemize}
-    \item \textbf{Used Version:}
+    \item \textbf{Used Version: 2.48.0}
     \item \textbf{Link: \url{https://www.serverless.com/}}
 \end{itemize}
 \subsubsection{Amazon DynamoDB}
@@ -57,12 +57,34 @@ data availability, security, and performance.
 \begin{itemize}
     \item \textbf{Link: \url{https://aws.amazon.com/s3/}}
 \end{itemize}
+\subsubsubsection{Amazon SNS}
+Amazon Simple Notification Service (Amazon SNS) is a fully managed messaging service for both application-to-application (A2A) and application-to-person (A2P) communication.
+\begin{itemize}
+    \item \textbf{Link: \url{https://aws.amazon.com/sns/}}
+\end{itemize}
+\subsubsubsection{Amazon SQS}
+Amazon Simple Queue Service (SQS) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.
+\begin{itemize}
+    \item \textbf{Link: \url{https://aws.amazon.com/sqs/}}
+\end{itemize}
+\subsubsubsection{Amazon SES}
+Amazon Simple Email Service (SES) is a cost-effective, flexible, and scalable email service that enables developers to send mail from within any application.
+\begin{itemize}
+    \item \textbf{Link: \url{https://aws.amazon.com/ses/}}
+\end{itemize}
+\subsubsubsection{Amazon Cloudwatch}
+Amazon CloudWatch is a monitoring and observability service built for DevOps engineers, developers, site reliability engineers (SREs), and IT managers.
+\begin{itemize}
+    \item \textbf{Link: \url{https://aws.amazon.com/cloudwatch/}}
+\end{itemize}
 \subsubsubsection{Stripe}
 Stripe is a service that allows developers to integrate secure payment processing into their websites and applications.
 \begin{itemize}
+    \item \textbf{Used Version: 8.157.0}
     \item \textbf{Link: \url{https://stripe.com/en-it}}
 \end{itemize}
 \subsection{General description}
+The platform uses a microservices architecture; each service contains the code necessary for each lambda function, within the relative directory.
 The functionalities provided by the platform permitted to identify the following domains:
 \begin{itemize}
     \item \textbf{Carts};
@@ -180,20 +202,8 @@ This microservice also allows any user to:
     \item Find a specific category using filters.
 \end{itemize}
 The Products service allows the vendor to manage the categories of their store. It also allows any user to view and filter them.
-\pagebreak
-\subsubsection{Images service}
-\begin{figure}[!h]
-    \vspace{5px}
-    \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/imageService.png}
-    \centering
-    \caption{Images service}
-\end{figure}
-This microservice allows the user to:
-\begin{itemize}
-    \item Update the image of a product.
-\end{itemize}
 
-\subsection{Class diagrams}
+\pagebreak
 \subsection{Sequence diagrams}
 The following sequence diagrams describe the main operations that can be carried out inside the platform:
 \subsubsection{Create product}
@@ -203,7 +213,7 @@ The following sequence diagrams describe the main operations that can be carried
     \centering
     \caption{sequence diagram for creating a product} 
 \end{figure}
-The diagram represents the sequence of operations necessary to create a product, the \textit{isVendor()} method is responsible for checking that the user who accesses the creation of the product is a seller and therefore has access to this functionality.
+The diagram represents the sequence of operations necessary to create a product, the \textit{isVendor()} method is responsible for checking that the user who accesses the creation of the product is a vendor and therefore has access to this functionality.
 \pagebreak
 \subsubsection{Remove product from cart}
 \begin{figure}[!h]
@@ -230,7 +240,7 @@ The diagram represents the sequence of operations necessary for the checkout wit
     \centering
     \caption{sequence diagram for scanning a tag} 
 \end{figure}
-The diagram represents the sequence of operations necessary for the use of filters on tags, this feature can be used by any user.
+The diagram represents the sequence of operations required to scan the tags, using filters. this feature can be used by any user.
 \pagebreak
 \subsubsection{Update category}
 \begin{figure}[!h]
