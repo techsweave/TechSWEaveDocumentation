@@ -1,13 +1,13 @@
 \section{Frontend}
 \subsection{Technologies and libraries}
 \subsubsection{NextJS}
-NextJS is an open-source React framework created by Vercel. It supports TypeScript, static and server side rendering which improves the site's search engine optimization. It also supports dynamic routing of pages.
+NextJS is an open-source\textsubscript{\textbf{G}} React framework\textsubscript{\textbf{G}} created by Vercel. It supports TypeScript, static generation\textsubscript{\textbf{G}} and server-side rendering\textsubscript{\textbf{G}} which improves the site's search engine optimization. It also supports dynamic routing of pages.
 \begin{itemize}
   \item \textbf{Used Version: 10.2}
   \item \textbf{Link: \url{https://nextjs.org/}}
 \end{itemize}
 \subsubsection{React}
-React is an open-source, front end, Javascript library for building user interfaces, maintained by Facebook. It's component based and it supports TypeScript. Since is made for single-page development additional libraries are required for routing.
+React is an open-source\textsubscript{\textbf{G}}, frontend, Javascript library for building user interfaces, maintained by Facebook. It's component based and it supports TypeScript. Since is made for single-page development additional libraries are required for routing.
 \begin{itemize}
   \item \textbf{Used Version: 17.0.3}
   \item \textbf{Link: \url{https://reactjs.org/}}
@@ -19,7 +19,7 @@ Chakra UI is a React component library made with TypeScript and NextJS in mind. 
   \item \textbf{Link: \url{https://chakra-ui.com/}}
 \end{itemize}
 \subsection{General description}
-The frontend structure is based on the use of an npm utilities-techsweave package produced by the backend, containing the interfaces and services useful for rendering the user interface. The interfaces of the microservices are imported by the "Models" file, while the methods made available by the microservices are imported by the "Services" file. These methods allow to call the lambda functions present within the backend to obtain the results necessary for the functioning of the user interface. To render the pages of the platform, the best practices of react and next are followed. The pages are composed through the use of components, html snippets that reproduce a specific part of the page itself.
+The frontend\textsubscript{\textbf{G}} structure is based on the use of an npm utilities-techsweave package produced by the backend, containing the interfaces and services useful for rendering the user interface. The interfaces of the microservices are imported by the "Models" file, while the methods made available by the microservices are imported by the "Services" file. These methods allow to call the lambda functions present within the backend to obtain the results necessary for the functioning of the user interface. To render the pages of the platform, the best practices of react and next are followed. The pages are composed through the use of components, html snippets\textsubscript{\textbf{G}} that reproduce a specific part of the page itself.
 \subsection{Examples of functioning}
 \subsubsection{Use of a function}
 Calling the scanAsync method on an instance of the product class, the scan of the products in the database will be returned. These products will be passed to the frontend components to render the page and display the data taken from the database.
