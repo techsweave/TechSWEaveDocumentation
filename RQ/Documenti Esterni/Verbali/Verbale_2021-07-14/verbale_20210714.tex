@@ -43,7 +43,7 @@ urlcolor=blue}
 \pagestyle{fancy}
 \lhead{\includegraphics[scale=0.2]{../../../../Images/logo.png}}
 %Titolo del documento
-\rhead{\large Verbale Esterno del 2021-05-21}
+\rhead{\large Verbale Esterno del 2021-07-14}
 %\rfoot{\thepage}
 \cfoot{Pagina \thepage{} di \pageref{LastPage}}
 \setlength{\headheight}{45pt}
@@ -56,7 +56,7 @@ urlcolor=blue}
         \vspace{20px}
         \textcolor{logo}{\hrulefill}\\
         \vspace{20px}
-        \textbf{\huge\textcolor{logo}{Verbale Esterno del 2021-05-21}}\\
+        \textbf{\huge\textcolor{logo}{Verbale Esterno del 2021-07-14}}\\
         \vspace{10px}
         \textcolor{logo}{\hrulefill}\\
         \vspace{40px}
@@ -66,7 +66,7 @@ urlcolor=blue}
             \textbf{Versione}     & 1.0.0                                                                      \\
             \textbf{Responsabile} & Tito Scutari                                                               \\
             \textbf{Redattore}    & Marco Barbaresco                                                           \\
-            \textbf{Verificatore} & Amedeo Meggiolaro                                                          \\
+            \textbf{Verificatore} & Manuel Varo                                                                \\
             \textbf{Destinatari}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave \\
             \textbf{Stato}        & Approvato                                                                  \\
             \textbf{Uso}          & Esterno                                                                    \\
@@ -84,26 +84,32 @@ urlcolor=blue}
 
 \section{Informazioni riunione}
 \begin{itemize}
-    \item Data e ora: 2021-05-21 ore 17:30-18:00.
+    \item Data e ora: 2021-07-14 ore 16:00-16:40.
     \item Luogo: Google Meet fornito dai proponenti.
     \item Partecipanti interni: Samuele De Simone, Manuel Varo, Tito Scutari, Nicolò Giaccone, Amedeo Meggiolaro, Marco Barbaresco.
     \item Partecipanti esterni: Milo Ertola, Alessandro Maccagnan.
     \item Segretario: Marco Barbaresco.
 \end{itemize}
 \section{Argomenti affrontati}
-Durante l'incontro sono stati chiesti ai proponenti chiarimenti e consigli riguardo dettagli progettuali ed implementativi.\\
-I proponenti hanno esaminato alcuni file sorgente, indicandone pregi e difetti.
+Durante l'incontro il proponente \textit{Red Babel} è stato aggiornato sullo stato del progetto. È stato analizzato il modo in cui sono stati
+implementati i microservizi, che il proponente ha apprezzato, e in generale sono stati discusse alcune scelte progettuali ed implementative.
 \section{Verbale della riunione}
 \begin{itemize}
-    \item Aggiornamento del proponente sullo stato del progetto e sull'esito della \textit{Revisione di Progettazione};
-    \item Discussione sulle modalità di comunicazione (servizi Amazon SNS, SQS, SES) tra i vari microservizi;
-    \item Discussione sull'indipendenza dei vari microservizi
-    \item Esame del codice di alcune funzioni lambda;
-    \item Esame dello schema del database;
-    \item Discussione sull'importanza della reattività delle pagine del sito;
-    \item Discussione sulla struttura degli eventi, approccio in grado di rendere più indipendenti i microservizi;
-    \item Discussione sul versionamento dei prodotti nel database.
+    \item Aggiornamento del proponente sullo stato del progetto;
+    \item Discussione sulla data di consegna del materiale per la \textit{Revisione di Qualifica};
+    \item Discussione su quanti e quali microservizi sono stati implementati;
+    \item Discussione su come sono stati implementati i microservizi, in particolare il checkout e il carrello utente: il proponente apprezza e consiglia di sistemare
+          alcune finezze successivamente alla \textit{Revisione di Qualifica};
+    \item Discussione sull'indipendenza dei vari microservizi;
+    \item Esame del codice di alcune funzioni lambda e di alcuni file del frontend;
+    \item Discussione sull'utilizzo dei metodi getStaticProps(), getServerSideProps() e useEffect();
+    \item Discussione sull'utilizzo dei metodi foreach(), reduce() e map();
+    \item Discussione sul peso in MegaByte delle funzioni lambda;
+    \item Discussione sulla fattibilità di uno script aws-cli in grado di eseguire il setup automatico dell'applicazione: il proponente apprezza ma consiglia di limitarsi ad un
+          file readme narrativo caricato su GitHub insieme al codice;
+    \item Discussione su eventuali difficoltà riscontrate durante la progettazione e la codifica;
 \end{itemize}
+\newpage
 \section{Resoconto}
 \begin{center}
     \textbf{\Large Registro delle decisioni}\\
@@ -113,10 +119,10 @@ I proponenti hanno esaminato alcuni file sorgente, indicandone pregi e difetti.
         \rowcolors{2}{logo!10}{logo!40}
         \renewcommand{\arraystretch}{1.8}
         \begin{tabular}{p{200px} p{200px}}
-            \rowcolor{logo!70} \textbf{Codice} & \textbf{Decisione}                                                                                                  \\
-            VE\_2021\_05\_21.1                 & Utilizzo di Amazon SNS, SQS per comunicazioni tra microservizi. Utilizzo facoltativo e discrezionale di Amazon SES. \\
-            VE\_2021\_05\_21.2                 & Utilizzo di Amazon EventBridge come servizio bus di eventi serverless.                                              \\
-            VE\_2021\_05\_21.3                 & Utilizzo di codice SKU per il versionamento dei prodotti.
+            \rowcolor{logo!70} \textbf{Codice} & \textbf{Decisione}                                                                                                                                                                                           \\
+            VE\_2021\_07\_14.1                 & Utilizzo dei metodi useEffect() e getServerSideProps() limitato alle pagine in cui è strettamente indispensabile (possibilmente non nella homepage, nella product listing page e nella product detail page). \\
+            VE\_2021\_07\_14.2                 & Non utilizzare il metodo foreach() se possibile, in favore di reduce() e map().                                                                                                                              \\
+            VE\_2021\_07\_14.3                 & Per il setup dell'applicazione creare un file readme narrativo da caricare su GitHub insieme al codice.                                                                                                      \\
         \end{tabular}
     \end{table}
 \end{center}
