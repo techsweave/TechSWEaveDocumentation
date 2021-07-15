@@ -43,7 +43,7 @@ urlcolor=blue}
 \pagestyle{fancy}
 \lhead{\includegraphics[scale=0.2]{../../../../Images/logo.png}}
 %Titolo del documento
-\rhead{\large Verbale Interno del 2021-05-10}
+\rhead{\large Verbale Esterno del 2021-05-21}
 %\rfoot{\thepage}
 \cfoot{Pagina \thepage{} di \pageref{LastPage}}
 \setlength{\headheight}{45pt}
@@ -56,7 +56,7 @@ urlcolor=blue}
         \vspace{20px}
         \textcolor{logo}{\hrulefill}\\
         \vspace{20px}
-        \textbf{\huge\textcolor{logo}{Verbale Interno del 2021-05-08}}\\
+        \textbf{\huge\textcolor{logo}{Verbale Esterno del 2021-05-21}}\\
         \vspace{10px}
         \textcolor{logo}{\hrulefill}\\
         \vspace{40px}
@@ -66,17 +66,16 @@ urlcolor=blue}
             \textbf{Versione}     & 1.0.0                                                                      \\
             \textbf{Responsabile} & Tito Scutari                                                               \\
             \textbf{Redattore}    & Marco Barbaresco                                                           \\
-            \textbf{Verificatore} & Nicolò Giaccone                                                            \\
+            \textbf{Verificatore} & Amedeo Meggiolaro                                                          \\
             \textbf{Destinatari}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave \\
             \textbf{Stato}        & Approvato                                                                  \\
-            \textbf{Uso}          & Interno                                                                    \\
+            \textbf{Uso}          & Esterno                                                                    \\
         \end{tabular}\\
         \vspace{60px}
         \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
 
     \end{center}
 \end{titlepage}
-
 
 %INDICE
 \newpage
@@ -85,28 +84,26 @@ urlcolor=blue}
 
 \section{Informazioni riunione}
 \begin{itemize}
-    \item Data e ora: 2021-05-10 ore 18:00-19:30.
-    \item Luogo: Canale Discord del gruppo tramite videochiamata.
+    \item Data e ora: 2021-05-21 ore 17:30-18:00.
+    \item Luogo: Google Meet fornito dai proponenti.
     \item Partecipanti interni: Samuele De Simone, Manuel Varo, Tito Scutari, Nicolò Giaccone, Amedeo Meggiolaro, Marco Barbaresco.
-    \item Partecipanti esterni: nessuno.
+    \item Partecipanti esterni: Milo Ertola, Alessandro Maccagnan.
     \item Segretario: Marco Barbaresco.
 \end{itemize}
 \section{Argomenti affrontati}
-Durante l'incontro sono stati discussi il passaggio ad un'architettura a microservizi, la pianificazione per il periodo di progettazione di dettaglio ed è stato
-richiesto un incontro al proponente.
+Durante l'incontro sono stati chiesti ai proponenti chiarimenti e consigli riguardo dettagli progettuali ed implementativi.\\
+I proponenti hanno esaminato alcuni file sorgente, indicandone pregi e difetti.
 \section{Verbale della riunione}
 \begin{itemize}
-    \item Discussione sull'architettura a microservizi;
-    \item Brainstorming e visualizzazione collettiva di documentazione, guide e tutorial al fine di individuare i microservizi utili al progetto;
-    \item Pianificazione delle attività da svolgere in vista della \textit{Revisione di Qualifica};
-    \item Discussione sui requisiti che il prodotto dovrà soddisfare per la \textit{Revisione di Qualifica};
-    \item Discussione sul servizio da utilizzare come storage per le immagini;
-    \item Discussione su quale framework utilizzare per la realizzazione dell'interfaccia utente (Bootstrap, Material-UI, Tailwind): 
-    si è deciso di attendere l'incontro con i proponenti e chiedere se hanno delle preferenze;
-    \item Suddivisione dei ruoli e dei task per il periodo di progettazione di dettaglio;
-    \item Richiesta di incontro con il proponente \textit{Red Babel}.
+    \item Aggiornamento del proponente sullo stato del progetto e sull'esito della \textit{Revisione di Progettazione};
+    \item Discussione sulle modalità di comunicazione (servizi Amazon SNS, SQS, SES) tra i vari microservizi;
+    \item Discussione sull'indipendenza dei vari microservizi
+    \item Esame del codice di alcune funzioni lambda;
+    \item Esame dello schema del database;
+    \item Discussione sull'importanza della reattività delle pagine del sito;
+    \item Discussione sulla struttura degli eventi, approccio in grado di rendere più indipendenti i microservizi;
+    \item Discussione sul versionamento dei prodotti nel database.
 \end{itemize}
-\newpage
 \section{Resoconto}
 \begin{center}
     \textbf{\Large Registro delle decisioni}\\
@@ -116,12 +113,10 @@ richiesto un incontro al proponente.
         \rowcolors{2}{logo!10}{logo!40}
         \renewcommand{\arraystretch}{1.8}
         \begin{tabular}{p{200px} p{200px}}
-            \rowcolor{logo!70} \textbf{Codice} & \textbf{Decisione}                                                                                                                             \\
-            VI\_2021\_05\_10.1                 & Individuati i microservizi utili al progetto, rimandando la decisione sull'effettivo passaggio di architettura alla riunione con i proponenti. \\
-            VI\_2021\_05\_10.2                 & Individuati i requisiti che il prodotto dovrà soddisfare in vista della \textit{Revisione di Qualifica}.                                       \\
-            VI\_2021\_05\_10.3                 & Assegnati ruoli e task per il periodo di progettazione di dettaglio.                                                                           \\
-            VI\_2021\_05\_10.4                 & Utilizzo di Amazon S3 come servizio di storage.                                                                                                \\
-            VI\_2021\_05\_10.5                 & Viene richiesto al proponente, tramite piattaforma Slack, un incontro per il 2021-16-05.                                                       \\
+            \rowcolor{logo!70} \textbf{Codice} & \textbf{Decisione}                                                                                                                                                                           \\
+            VE\_2021\_05\_21.1                 & Utilizzo di Amazon SNS, SQS per comunicazioni tra microservizi. Utilizzo facoltativo e discrezionale di Amazon SES.\\
+            VE\_2021\_05\_21.2                 & Utilizzo di Amazon EventBridge come servizio bus di eventi serverless.\\
+            VE\_2021\_05\_21.3                 & Utilizzo di codice SKU per il versionamento dei prodotti.
         \end{tabular}
     \end{table}
 \end{center}
