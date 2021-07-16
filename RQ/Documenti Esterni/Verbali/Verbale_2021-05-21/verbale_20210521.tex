@@ -101,7 +101,7 @@ I proponenti hanno esaminato alcuni file sorgente, indicandone pregi e difetti.
     \item Esame del codice di alcune funzioni lambda;
     \item Esame dello schema del database;
     \item Discussione sull'importanza della reattività delle pagine del sito;
-    \item Discussione sulla struttura degli eventi, approccio in grado di rendere più indipendenti i microservizi;
+    \item Discussione sulla struttura degli eventi e su un approccio in grado di rendere più indipendenti i microservizi;
     \item Discussione sul versionamento dei prodotti nel database.
 \end{itemize}
 \section{Resoconto}
@@ -113,10 +113,11 @@ I proponenti hanno esaminato alcuni file sorgente, indicandone pregi e difetti.
         \rowcolors{2}{logo!10}{logo!40}
         \renewcommand{\arraystretch}{1.8}
         \begin{tabular}{p{200px} p{200px}}
-            \rowcolor{logo!70} \textbf{Codice} & \textbf{Decisione}                                                                                                  \\
-            VE\_2021\_05\_21.1                 & Utilizzo di Amazon SNS, SQS per comunicazioni tra microservizi. Utilizzo facoltativo e discrezionale di Amazon SES. \\
-            VE\_2021\_05\_21.2                 & Utilizzo di Amazon EventBridge come servizio bus di eventi serverless.                                              \\
-            VE\_2021\_05\_21.3                 & Utilizzo di codice SKU per il versionamento dei prodotti.
+            \rowcolor{logo!70} \textbf{Codice} & \textbf{Decisione}                                                      \\
+            VE\_2021\_05\_21.1                 & Utilizzo di Amazon SNS come servizio di messaggistica tra microservizi. \\
+            VE\_2021\_05\_21.2                 & Utilizzo di Amazon SQS come servizio di accodamento messaggi.           \\
+            VE\_2021\_05\_21.3                 & Utilizzo facoltativo e discrezionale di Amazon SES.                     \\
+            VE\_2021\_05\_21.4                 & Utilizzo di codice SKU per il versionamento dei prodotti.
         \end{tabular}
     \end{table}
 \end{center}
