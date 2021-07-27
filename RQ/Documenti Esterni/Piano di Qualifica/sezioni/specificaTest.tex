@@ -26,7 +26,7 @@ E assumono le seguenti importanze:
     \item \textbf{Q:} Qualità;
     \item \textbf{P:} Prestazionale;
 \end{itemize}
-L'ID è un identificativo numerico progressivo per i test di unità, integrazione e regressione. Per i test di sistema e 
+L'ID è un identificativo numerico progressivo per i test di unità, integrazione e regressione. Per i test di sistema e
 indica il codice del rispettivo requisito presente nel documento \textit{Analisi dei Requisiti v3.0.0.}.\\
 Per definire in modo conciso lo stato dei test, vengono utilizzate le seguenti diciture:
 \begin{itemize}
@@ -44,42 +44,38 @@ Questa sezione sarà redatta con l'avanzare del progetto.
 \subsubsection{Test di integrazione}
 Questa sezione sarà redatta con l'avanzare del progetto.
 \subsubsection{Test di sistema}
-Questa sezione sarà redatta con l'avanzare del progetto.
-\subsubsection{Test di accettazione}
-La seguente tabella illustra i test di accettazione da eseguire sul sistema, ogni test ha un nome che identifica tipologia, categoria e importanza e un numero che lo associa a un requisito.
-
 \begin{center}
     \centering
     \rowcolors{2}{logo!10}{logo!40}
     \renewcommand{\arraystretch}{1.8}
     \label{tab:TestAccettazione}
     \begin{longtable}[!h]{p{50px} p{245px} p{75px} p{50px}}
-        \caption{Test di accettazione}                                                                                                                                                                                         \\
-        \rowcolor{logo!70} \textbf{Test} & \textbf{Descrizione}                                                                                                                                               & \textbf{Esito} \\
-        TSOF1                            & Visualizzazione homepage: all'utente viene richiesto di: \begin{itemize} \item visualizzare i prodotti in evidenza e in offerta; \item accedere a barra di ricerca e menu; \item accedere al carrello. \end{itemize}                                                                                   & NI             \\
-        TSOF2                            & Autenticazione: all'utente vien richiesto di visualizzare la pagina di autenticazione.                                                                              & NI             \\
-        TSOF3                            & Autenticazione: all'utente viene richiesto di: \begin{itemize} \item inserire il proprio username; \item inserire la propria password. \end{itemize}                                                                                           & NI             \\
+        \caption{Test di accettazione}                                                                                                                                                                                          \\
+        \rowcolor{logo!70} \textbf{Test} & \textbf{Descrizione}                                                                                                                                                & \textbf{Esito} \\
+        TSOF1                            & Visualizzazione homepage: all'utente viene richiesto di: \begin{itemize} \item visualizzare i prodotti in evidenza e in offerta; \item accedere a barra di ricerca e menu; \item accedere al carrello. \end{itemize}                                                                                  & NI             \\
+        TSOF2                            & Autenticazione: all'utente viene richiesto di visualizzare la pagina di autenticazione.                                                                              & NI             \\
+        TSOF3                            & Autenticazione: all'utente viene richiesto di: \begin{itemize} \item inserire il proprio username; \item inserire la propria password. \end{itemize}                                                                                            & NI             \\
         TSOF4                            & Autenticazione: all'utente viene richiesto di autenticarsi tramite un servizio esterno.                                                                             & NI             \\
-        TSDF5.6                          & Visualizzazione dettagli: all'utente viene richiesto di visualizzare la disponibilità del prodotto.                      & NI             \\
-        TSFF5.7                          & Visualizzazione dettagli: all'utente viene richiesto di visualizzare l'eventuale sconto applicato.                       & NI             \\
+        TSDF5.6                          & Visualizzazione dettagli: all'utente viene richiesto di visualizzare la disponibilità del prodotto.                                                                 & NI             \\
+        TSFF5.7                          & Visualizzazione dettagli: all'utente viene richiesto di visualizzare l'eventuale sconto applicato.                                                                  & NI             \\
         TSOF6                            & Aggiungi a carrello: all'utente viene richiesto di aggiungere un prodotto al carrello.                                                                              & NI             \\
         TSOF7                            & Ricerca: all'utente viene richiesto di cercare dei prodotti tramite parola chiave.                                                                                  & NI             \\
         TSOF8                            & Lista: all'utente viene richiesto di visualizzare la lista dei prodotti e selezionarne pi\`u di uno.                                                                & NI             \\
-        TSDF9                            & Ordinamento lista: all'utente viene richiesto di: \begin{itemize} \item ordinare i prodotti per prezzo; \item ordinare i prodotti per nome. \end{itemize}                                                                                        & NI             \\
-        TSOF10                           & Filtri lista: all'utente viene richiesto di: \begin{itemize} \item impostare un prezzo minimo; \item impostare un prezzo massimo; \item modificare i filtri impostati; \item rimuovere i filtri impostati. \end{itemize}                                                                                               & NI             \\
-        TSFF10.3                         & Filtri lista: all'utente viene richiesto di filtrare per marca.                                                                                              & NI             \\
-        TSDF10.4                         & Filtri lista: all'utente viene richiesto di filtrare per categoria.                                                                                             & NI             \\
+        TSDF9                            & Ordinamento lista: all'utente viene richiesto di: \begin{itemize} \item ordinare i prodotti per prezzo; \item ordinare i prodotti per nome. \end{itemize}                                                                                         & NI             \\
+        TSOF10                           & Filtri lista: all'utente viene richiesto di: \begin{itemize} \item impostare un prezzo minimo; \item impostare un prezzo massimo; \item modificare i filtri impostati; \item rimuovere i filtri impostati. \end{itemize}                                                                                             & NI             \\
+        TSFF10.3                         & Filtri lista: all'utente viene richiesto di filtrare per marca.                                                                                                     & NI             \\
+        TSDF10.4                         & Filtri lista: all'utente viene richiesto di filtrare per categoria.                                                                                                 & NI             \\
         TSOF11                           & Registrazione: all'utente viene richiesto di registrarsi inserendo i propri dati.                                                                                   & NI             \\
         TSOF12                           & Registrazione: all'utente viene richiesto di registrarsi tramite un servizio esterno.                                                                               & NI             \\
-        TSOF13                           & Gestione carrello: all'utente viene richiesto di: \begin{itemize} \item visualizzare i prodotti nel carrello; \item rimuovere i prodotti nel carrello; \item visualizzare il totale; \item visualizzare le tasse totali. \end{itemize}                                                                                       & NI             \\
-        TSDF13.3                         & Gestione carrello: all'utente viene richiesto di cambiare la quantità dei prodotti presenti nel carrello.                                                          & NI             \\
-        TSDF13.4                         & Gestione carrello: l'utente deve visualizzare un avviso se la quantità presente in magazzino è minore di quella nel carrello.                                        & NI             \\
+        TSOF13                           & Gestione carrello: all'utente viene richiesto di: \begin{itemize} \item visualizzare i prodotti nel carrello; \item rimuovere i prodotti nel carrello; \item visualizzare il totale; \item visualizzare le tasse totali. \end{itemize}                                                                                        & NI             \\
+        TSDF13.3                         & Gestione carrello: all'utente viene richiesto di cambiare la quantità dei prodotti presenti nel carrello.                                                           & NI             \\
+        TSDF13.4                         & Gestione carrello: l'utente deve visualizzare un avviso se la quantità presente in magazzino è minore di quella nel carrello.                                       & NI             \\
         TSOF14                           & Reimpostare password: all'utente viene richiesto di reimpostare la password.                                                                                        & NI             \\
-        TSOF15                           & Modificare dati: all'utente viene richiesto di modificare i dati del proprio profilo, nel dettaglio: \begin{itemize} \item nome; \item cognome; \item indirizzo. \end{itemize}                                    & NI             \\
+        TSOF15                           & Modificare dati: all'utente viene richiesto di modificare i dati del proprio profilo, nel dettaglio: \begin{itemize} \item nome; \item cognome; \item indirizzo. \end{itemize}                                     & NI             \\
         TSOF16                           & Logout: all'utente viene richiesto di effettuare il logout.                                                                                                         & NI             \\
         TSOF17                           & Visualizzare profilo: all'utente viene richiesto di visualizzare il proprio profilo.                                                                                & NI             \\
         TSFF18                           & Contatta venditore: all'utente viene richiesto di contattare il venditore.                                                                                          & NI             \\
-        TSOF19                           & Checkout: all'utente viene richiesto di effettuare il checkout di un ordine, nel dettaglio: \begin{itemize} \item inserire i dati di pagamento; \item inserire l'indirizzo di fatturazione; \item inserire l'indirizzo di spedizione; \item visualizzare il risultato del pagamento. \end{itemize}                                             & NI             \\
+        TSOF19                           & Checkout: all'utente viene richiesto di effettuare il checkout di un ordine, nel dettaglio: \begin{itemize} \item inserire i dati di pagamento; \item inserire l'indirizzo di fatturazione; \item inserire l'indirizzo di spedizione; \item visualizzare il risultato del pagamento. \end{itemize}                                              & NI             \\
         TSOF20                           & Checkout: all'utente viene richiesto di annullare il checkout.                                                                                                      & NI             \\
         TSOF21                           & Riepilogo ordine: all'utente viene richiesto di visualizzare il riepilogo dell'ordine.                                                                              & NI             \\
         TSOF22                           & Lista ordini: all'utente viene richiesto di visualizzare la lista degli ordini effettuati.                                                                          & NI             \\
@@ -92,6 +88,55 @@ La seguente tabella illustra i test di accettazione da eseguire sul sistema, ogn
         TSOF29                           & Aggiunta di una categoria: al venditore viene richiesto di aggiungere una nuova categoria.                                                                          & NI             \\
         TSOF30                           & Rimozione di una categoria: al venditore viene richiesto di rimuovere una categoria.                                                                                & NI             \\
         TSOF31                           & Visualizzazione errore autenticazione: l'utente deve poter visualizzare un'errore di autenticazione se inserisce dei dati sbagliati al momento dell'autenticazione. & NI             \\
-        TSOF32                           & Gestione credenziali: all'utente viene richiesto di: \begin{itemize} \item modificare il proprio username; \item modificare la propria password.\end{itemize}                                                                                    & NI             \\
+        TSOF32                           & Gestione credenziali: all'utente viene richiesto di: \begin{itemize} \item modificare il proprio username; \item modificare la propria password.\end{itemize}                                                                                     & NI             \\
+    \end{longtable}
+\end{center}
+\subsubsection{Test di accettazione}
+La seguente tabella illustra i test di accettazione da eseguire sul sistema, ogni test ha un nome che identifica tipologia, categoria e importanza e un numero che lo associa a un requisito.
+\begin{center}
+    \centering
+    \rowcolors{2}{logo!10}{logo!40}
+    \renewcommand{\arraystretch}{1.8}
+    \label{tab:TestAccettazione}
+    \begin{longtable}[!h]{p{50px} p{245px} p{75px} p{50px}}
+        \caption{Test di accettazione}                                                                                                                                                                                          \\
+        \rowcolor{logo!70} \textbf{Test} & \textbf{Descrizione}                                                                                                                                                & \textbf{Esito} \\
+        TAOF1                            & Visualizzazione homepage: all'utente viene richiesto di: \begin{itemize} \item visualizzare i prodotti in evidenza e in offerta; \item accedere a barra di ricerca e menu; \item accedere al carrello. \end{itemize}                                                                                  & NI             \\
+        TAOF2                            & Autenticazione: all'utente viene richiesto di visualizzare la pagina di autenticazione.                                                                              & NI             \\
+        TAOF3                            & Autenticazione: all'utente viene richiesto di: \begin{itemize} \item inserire il proprio username; \item inserire la propria password. \end{itemize}                                                                                            & NI             \\
+        TAOF4                            & Autenticazione: all'utente viene richiesto di autenticarsi tramite un servizio esterno.                                                                             & NI             \\
+        TADF5.6                          & Visualizzazione dettagli: all'utente viene richiesto di visualizzare la disponibilità del prodotto.                                                                 & NI             \\
+        TAFF5.7                          & Visualizzazione dettagli: all'utente viene richiesto di visualizzare l'eventuale sconto applicato.                                                                  & NI             \\
+        TAOF6                            & Aggiungi a carrello: all'utente viene richiesto di aggiungere un prodotto al carrello.                                                                              & NI             \\
+        TAOF7                            & Ricerca: all'utente viene richiesto di cercare dei prodotti tramite parola chiave.                                                                                  & NI             \\
+        TAOF8                            & Lista: all'utente viene richiesto di visualizzare la lista dei prodotti e selezionarne pi\`u di uno.                                                                & NI             \\
+        TADF9                            & Ordinamento lista: all'utente viene richiesto di: \begin{itemize} \item ordinare i prodotti per prezzo; \item ordinare i prodotti per nome. \end{itemize}                                                                                         & NI             \\
+        TAOF10                           & Filtri lista: all'utente viene richiesto di: \begin{itemize} \item impostare un prezzo minimo; \item impostare un prezzo massimo; \item modificare i filtri impostati; \item rimuovere i filtri impostati. \end{itemize}                                                                                             & NI             \\
+        TAFF10.3                         & Filtri lista: all'utente viene richiesto di filtrare per marca.                                                                                                     & NI             \\
+        TADF10.4                         & Filtri lista: all'utente viene richiesto di filtrare per categoria.                                                                                                 & NI             \\
+        TAOF11                           & Registrazione: all'utente viene richiesto di registrarsi inserendo i propri dati.                                                                                   & NI             \\
+        TAOF12                           & Registrazione: all'utente viene richiesto di registrarsi tramite un servizio esterno.                                                                               & NI             \\
+        TAOF13                           & Gestione carrello: all'utente viene richiesto di: \begin{itemize} \item visualizzare i prodotti nel carrello; \item rimuovere i prodotti nel carrello; \item visualizzare il totale; \item visualizzare le tasse totali. \end{itemize}                                                                                        & NI             \\
+        TADF13.3                         & Gestione carrello: all'utente viene richiesto di cambiare la quantità dei prodotti presenti nel carrello.                                                           & NI             \\
+        TADF13.4                         & Gestione carrello: l'utente deve visualizzare un avviso se la quantità presente in magazzino è minore di quella nel carrello.                                       & NI             \\
+        TAOF14                           & Reimpostare password: all'utente viene richiesto di reimpostare la password.                                                                                        & NI             \\
+        TAOF15                           & Modificare dati: all'utente viene richiesto di modificare i dati del proprio profilo, nel dettaglio: \begin{itemize} \item nome; \item cognome; \item indirizzo. \end{itemize}                                     & NI             \\
+        TAOF16                           & Logout: all'utente viene richiesto di effettuare il logout.                                                                                                         & NI             \\
+        TAOF17                           & Visualizzare profilo: all'utente viene richiesto di visualizzare il proprio profilo.                                                                                & NI             \\
+        TAFF18                           & Contatta venditore: all'utente viene richiesto di contattare il venditore.                                                                                          & NI             \\
+        TAOF19                           & Checkout: all'utente viene richiesto di effettuare il checkout di un ordine, nel dettaglio: \begin{itemize} \item inserire i dati di pagamento; \item inserire l'indirizzo di fatturazione; \item inserire l'indirizzo di spedizione; \item visualizzare il risultato del pagamento. \end{itemize}                                              & NI             \\
+        TAOF20                           & Checkout: all'utente viene richiesto di annullare il checkout.                                                                                                      & NI             \\
+        TAOF21                           & Riepilogo ordine: all'utente viene richiesto di visualizzare il riepilogo dell'ordine.                                                                              & NI             \\
+        TAOF22                           & Lista ordini: all'utente viene richiesto di visualizzare la lista degli ordini effettuati.                                                                          & NI             \\
+        TAOF23                           & Lista clienti: al venditore viene richiesto di visualizzare la lista dei clienti.                                                                                   & NI             \\
+        TAOF24                           & Lista ordini: al venditore viene richiesto di visualizzare la lista degli ordini ricevuti.                                                                          & NI             \\
+        TAFF25                           & Contatta cliente: al venditore viene richiesto di contattare il cliente.                                                                                            & NI             \\
+        TAOF26                           & Aggiunta di un prodotto: al venditore viene richiesto di aggiungere un nuovo prodotto.                                                                              & NI             \\
+        TAOF27                           & Modifica di un prodotto: al venditore viene richiesto di modificare un nuovo prodotto.                                                                              & NI             \\
+        TAOF28                           & Rimozione di un prodotto: al venditore viene richiesto di rimuovere un nuovo prodotto.                                                                              & NI             \\
+        TAOF29                           & Aggiunta di una categoria: al venditore viene richiesto di aggiungere una nuova categoria.                                                                          & NI             \\
+        TAOF30                           & Rimozione di una categoria: al venditore viene richiesto di rimuovere una categoria.                                                                                & NI             \\
+        TAOF31                           & Visualizzazione errore autenticazione: l'utente deve poter visualizzare un'errore di autenticazione se inserisce dei dati sbagliati al momento dell'autenticazione. & NI             \\
+        TAOF32                           & Gestione credenziali: all'utente viene richiesto di: \begin{itemize} \item modificare il proprio username; \item modificare la propria password.\end{itemize}                                                                                     & NI             \\
     \end{longtable}
 \end{center}

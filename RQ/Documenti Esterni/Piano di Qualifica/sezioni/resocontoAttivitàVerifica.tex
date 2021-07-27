@@ -1,15 +1,37 @@
 \section{Resoconto delle attività di verifica}
 In questa appendice vengono esposti gli esiti delle attività di verifica svolte sui documenti e sul codice consegnati nelle varie revisioni.
 \subsection{Revisione dei requisiti}
-\subsubsection{Analisi statica dei documenti}
+\subsubsection{Revisione della documentazione}
+\subsubsubsection{Analisi statica dei documenti}
 L'analisi statica dei documenti è stata eseguita mediante Walkthrough\textsubscript{\textbf{G}}. In questo modo sarà possibile applicare Inspection\textsubscript{\textbf{G}} successivamente.
 \subsection{Revisione di progettazione}
-\subsubsection{Analisi statica dei documenti}
-L'analisi statica della documentazione ha seguito il procedimento descritto nella sezione §B.1.1., la quale ha garantito un'attività di Inspection\textsubscript{\textbf{G}} più mirata.\\
-Come supporto alla stesura della documentazione il gruppo ha deciso di utilizzare il plugin \textit{Code Spell Check} per l'editor \textit{Visual Studio Code}. Questo ha permesso un maggior controllo e
-una riduzione significativa degli errori.
-\subsubsection{Analisi statica del codice}
-La stesura del codice è supportata da \textit{ESLint v7.24.0}, linter per il linguaggio TypeScript. Questo ha aiutato nella stesura di codice di codice uniforme e sintatticamente corretto.
+\subsubsection{Revisione della documentazione}
+\subsubsubsection{Analisi statica dei documenti}
+L'analisi statica della documentazione ha seguito il procedimento descritto nella sezione §A.1.1.1, la quale ha garantito un'attività di Inspection\textsubscript{\textbf{G}} più mirata.\\
+Come supporto alla stesura della documentazione il gruppo ha deciso di utilizzare il seguente plugin per l'editor \textit{Visual Studio Code}:
+\begin{itemize}
+    \item \textbf{Code Spell Checker v1.10.2}: plugin che consente di individuare errori di scrittura in diverse lingue.
+\end{itemize}
+Questo ha permesso un maggior controllo e una riduzione significativa degli errori.
+\subsubsection{Revisione del codice}
+\subsubsubsection{Analisi statica del codice}
+La stesura del codice è supportata dal seguente software:
+\begin{itemize}
+    \item \textbf{ESLint v7.24.0}: linter per il linguaggio TypeScript.
+\end{itemize}
+L'utilizzo di ESLint ha aiutato nella stesura di codice di codice uniforme e sintatticamente corretto.
+\subsection{Revisione di qualifica}
+\subsubsection{Revisione della documentazione}
+L'analisi statica della documentazione ha seguito il procedimento descritto nella sezione §A.2.1.1.
+\subsubsection{Revisione del codice}
+\subsubsubsection{Analisi statica del codice}
+L'analisi statica del codice ha seguito il procedimento descritto nella sezione §A.2.2.1.
+\subsubsubsection{Analisi dinamica del codice}
+Durante il periodo di progettazione di dettaglio l'analisi dinamica del codice è stata eseguita mediante le due seguenti librerie di test:
+\begin{itemize}
+    \item \textbf{Chai v.4.3.4}: libreria utilizzata per i test all'interno del modulo backend\textsubscript{\textbf{G}};
+    \item \textbf{Jest v.27.0.6}: libreria utilizzata per i test all'interno del modulo frontend\textsubscript{\textbf{G}}.
+\end{itemize}
 \subsection{Metriche}
 Alcune metriche verranno calcolate successivamente con l'avanzare del progetto.\\
 I dati riportati nel seguito fanno riferimento a:
@@ -61,14 +83,14 @@ I dati riportati nel seguito fanno riferimento a:
     \begin{longtable}[!h]{p{100px} p{50px} p{50px} p{50px} p{50px} p{50px} p{50px}}
         \caption{Esiti verifica con Gulpease}                                                                                        \\
         \rowcolor{logo!70}   \textbf{Documento} & \textbf{A} & \textbf{C} & \textbf{PA} & \textbf{PD} & \textbf{VC} & \textbf{Esito} \\
-        \textit{Norme di Progetto}              & 68         & 68         & 72          &            &             & Superato       \\
-        \textit{Piano di Progetto}              & 73         & 73         & 69           &            &              & Superato       \\
-        \textit{Analisi dei Requisiti}          & 71         & 71         & 68          &            &           & Superato       \\
-        \textit{Piano di Qualifica}             & 69         & 69         & 69           &            &            & Superato       \\
-        \textit{Studio di Fattibilità}          & 74         & 74         & /           &            &            & Superato       \\
-        \textit{Glossario}                      & 49         & 49         & 49           &           &           & Superato       \\
-        \textit{Verbali interni (media)}        & 67         & 67         & 56           &           &           & Superato       \\
-        \textit{Verbali esterni (media)}        & 71         & 71         & 60           &           &            & Superato       \\
+        \textit{Norme di Progetto}              & 68         & 68         & 72          &             &             & Superato       \\
+        \textit{Piano di Progetto}              & 73         & 73         & 69          &             &             & Superato       \\
+        \textit{Analisi dei Requisiti}          & 71         & 71         & 68          &             &             & Superato       \\
+        \textit{Piano di Qualifica}             & 69         & 69         & 69          &             &             & Superato       \\
+        \textit{Studio di Fattibilità}          & 74         & 74         & /           &             &             & Superato       \\
+        \textit{Glossario}                      & 49         & 49         & 49          &             &             & Superato       \\
+        \textit{Verbali interni (media)}        & 67         & 67         & 56          &             &             & Superato       \\
+        \textit{Verbali esterni (media)}        & 71         & 71         & 60          &             &             & Superato       \\
         \rowcolor{white}
     \end{longtable}
 \end{center}
