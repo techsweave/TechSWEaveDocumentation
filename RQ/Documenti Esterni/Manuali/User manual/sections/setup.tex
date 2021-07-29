@@ -1,0 +1,29 @@
+\section{Setup}
+\subsection{Minimum requirements}
+To deploy the platform, you must have a valid AWS account to obtain the credentials to be included in the configuration of the serverless framework profile.\newline
+The system where the deployment will be carried out must have the following technologies installed:
+\begin{itemize}
+    \item aws-cli;
+    \item serverless;
+    \item nodeJS;
+    \item npm.
+\end{itemize}
+In order to access the platform, it will be necessary to use a browser, preferably updated to the latest version.
+\subsection{Deploy}
+To deploy the platform, follow these steps:
+\begin{itemize}
+    \item go to the folder downloaded from github;
+    \item run the ./deploy.sh command;
+    \item enter the data through which all aws services, the aws and serverless account will be configured.
+\end{itemize}
+\subsection{Creation of a vendor account}
+To create a vendor account, follow these steps:
+\begin{itemize}
+    \item go to the folder downloaded from github;
+    \item run the ./createVendor.sh command;
+    \item Enter the data through which the vendor account will be created.
+\end{itemize}
+\subsection{Testing}
+For static testing of the code, ESLint is used to check that the code meets certain standards.\newline
+For dynamic testing of the code chai is used, a library that provides functions for making assertions on the code.
+Jest was used for frontend testing.
