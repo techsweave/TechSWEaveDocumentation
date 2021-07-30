@@ -13,13 +13,13 @@ Per indicare il tipo di test vengono utilizzate le seguenti diciture:
     \item \textbf{I:} eseguiti per verificare il funzionamento di un gruppo di moduli;
     \item \textbf{U:} eseguiti per verificare il funzionamento delle singole unità del software.
 \end{itemize}
-I test di accettazione utilizzano utilizzano le ulteriori diciture a seguire:
+I test di sistema e accettazione utilizzano utilizzano le ulteriori diciture, riprese dal modo in cui vengono catalogati i requisiti all'interno dell'\textit{Analisi dei Requisiti v3.0.0.}:
 \begin{itemize}
     \item \textbf{O:} Obbligatorio;
     \item \textbf{D:} Desiderabile;
     \item \textbf{F:} Facoltativo;
 \end{itemize}
-E assumono le seguenti importanze:
+E assumono le seguenti importanze, anch'esse riprese dal modo in cui vengono catalogati i requisiti all'interno dell'\textit{Analisi dei Requisiti v3.0.0.}:
 \begin{itemize}
     \item \textbf{F:} Funzionale;
     \item \textbf{V:} Vincolo;
@@ -52,61 +52,172 @@ La seguente tabella illustra i test di sistema; ogni test ha un nome che identif
     \renewcommand{\arraystretch}{1.8}
     \label{tab:TestSistema}
     \begin{longtable}[!h]{p{60px} p{240px} p{35px} p{35px}}
-        \caption{Test di sistema}                                                                                                                                                                                                           \\
-        \rowcolor{logo!70} \textbf{Test} & \textbf{Descrizione}                                                                                                                                                & \textbf{Stato} & \textbf{Esito} \\
-        TSOF1                            & Visualizzazione homepage: all'utente viene richiesto di: \begin{itemize} \item visualizzare i prodotti in evidenza e in offerta; \item accedere a barra di ricerca e menu; \item accedere al carrello. \end{itemize}                                                                                  & NI             & /             \\
-        TSOF2                            & Autenticazione: all'utente viene richiesto di visualizzare la pagina di autenticazione.                                                                             & NI             & /             \\
-        TSOF3                            & Autenticazione: all'utente viene richiesto di: \begin{itemize} \item inserire il proprio username; \item inserire la propria password. \end{itemize}                                                                                            & NI             & /             \\
-        TSOF4                            & Autenticazione: all'utente viene richiesto di autenticarsi tramite un servizio esterno.                                                                             & NI             & /             \\
-        TSDF5.6                          & Visualizzazione dettagli: all'utente viene richiesto di visualizzare la disponibilità del prodotto.                                                                 & NI             & /             \\
-        TSFF5.7                          & Visualizzazione dettagli: all'utente viene richiesto di visualizzare l'eventuale sconto applicato.                                                                  & NI             & /             \\
-        TSOF6                            & Aggiungi a carrello: all'utente viene richiesto di aggiungere un prodotto al carrello.                                                                              & NI             & /             \\
-        TSOF7                            & Ricerca: all'utente viene richiesto di cercare dei prodotti tramite parola chiave.                                                                                  & NI             & /             \\
-        TSOF8                            & Lista: all'utente viene richiesto di visualizzare la lista dei prodotti e selezionarne pi\`u di uno.                                                                & NI             & /             \\
-        TSDF9                            & Ordinamento lista: all'utente viene richiesto di: \begin{itemize} \item ordinare i prodotti per prezzo; \item ordinare i prodotti per nome. \end{itemize}                                                                                         & NI             & /             \\
-        TSOF10                           & Filtri lista: all'utente viene richiesto di: \begin{itemize} \item impostare un prezzo minimo; \item impostare un prezzo massimo; \item modificare i filtri impostati; \item rimuovere i filtri impostati. \end{itemize}                                                                                             & NI             & /             \\
-        TSFF10.3                         & Filtri lista: all'utente viene richiesto di filtrare per marca.                                                                                                     & NI             & /             \\
-        TSDF10.4                         & Filtri lista: all'utente viene richiesto di filtrare per categoria.                                                                                                 & NI             & /             \\
-        TSOF11                           & Registrazione: all'utente viene richiesto di registrarsi inserendo i propri dati.                                                                                   & NI             & /             \\
-        TSOF12                           & Registrazione: all'utente viene richiesto di registrarsi tramite un servizio esterno.                                                                               & NI             & /             \\
-        TSOF13                           & Gestione carrello: all'utente viene richiesto di: \begin{itemize} \item visualizzare i prodotti nel carrello; \item rimuovere i prodotti nel carrello; \item visualizzare il totale; \item visualizzare le tasse totali. \end{itemize}                                                                                        & NI             & /             \\
-        TSDF13.3                         & Gestione carrello: all'utente viene richiesto di cambiare la quantità dei prodotti presenti nel carrello.                                                           & NI             & /             \\
-        TSDF13.4                         & Gestione carrello: l'utente deve visualizzare un avviso se la quantità presente in magazzino è minore di quella nel carrello.                                       & NI             & /             \\
-        TSOF14                           & Reimpostare password: all'utente viene richiesto di reimpostare la password.                                                                                        & NI             & /             \\
-        TSOF15                           & Modificare dati: all'utente viene richiesto di modificare i dati del proprio profilo, nel dettaglio: \begin{itemize} \item nome; \item cognome; \item indirizzo. \end{itemize}                                     & NI             & /             \\
-        TSOF16                           & Logout: all'utente viene richiesto di effettuare il logout.                                                                                                         & NI             & /             \\
-        TSOF17                           & Visualizzare profilo: all'utente viene richiesto di visualizzare il proprio profilo.                                                                                & NI             & /             \\
-        TSFF18                           & Contatta venditore: all'utente viene richiesto di contattare il venditore.                                                                                          & NI             & /             \\
-        TSOF19                           & Checkout: all'utente viene richiesto di effettuare il checkout di un ordine, nel dettaglio: \begin{itemize} \item inserire i dati di pagamento; \item inserire l'indirizzo di fatturazione; \item inserire l'indirizzo di spedizione; \item visualizzare il risultato del pagamento. \end{itemize}                                              & NI             & /             \\
-        TSOF20                           & Checkout: all'utente viene richiesto di annullare il checkout.                                                                                                      & NI             & /             \\
-        TSOF21                           & Riepilogo ordine: all'utente viene richiesto di visualizzare il riepilogo dell'ordine.                                                                              & NI             & /             \\
-        TSOF22                           & Lista ordini: all'utente viene richiesto di visualizzare la lista degli ordini effettuati.                                                                          & NI             & /             \\
-        TSOF23                           & Lista clienti: al venditore viene richiesto di visualizzare la lista dei clienti.                                                                                   & NI             & /             \\
-        TSOF24                           & Lista ordini: al venditore viene richiesto di visualizzare la lista degli ordini ricevuti.                                                                          & NI             & /             \\
-        TSFF25                           & Contatta cliente: al venditore viene richiesto di contattare il cliente.                                                                                            & NI             & /             \\
-        TSOF26                           & Aggiunta di un prodotto: al venditore viene richiesto di aggiungere un nuovo prodotto.                                                                              & NI             & /             \\
-        TSOF27                           & Modifica di un prodotto: al venditore viene richiesto di modificare un nuovo prodotto.                                                                              & NI             & /             \\
-        TSOF28                           & Rimozione di un prodotto: al venditore viene richiesto di rimuovere un nuovo prodotto.                                                                              & NI             & /             \\
-        TSOF29                           & Aggiunta di una categoria: al venditore viene richiesto di aggiungere una nuova categoria.                                                                          & NI             & /             \\
-        TSOF30                           & Rimozione di una categoria: al venditore viene richiesto di rimuovere una categoria.                                                                                & NI             & /             \\
-        TSOF31                           & Visualizzazione errore autenticazione: l'utente deve poter visualizzare un'errore di autenticazione se inserisce dei dati sbagliati al momento dell'autenticazione. & NI             & /             \\
-        TSOF32                           & Gestione credenziali: all'utente viene richiesto di: \begin{itemize} \item modificare il proprio username; \item modificare la propria password.\end{itemize}                                                                                     & NI             & /             \\
-    \end{longtable}
-\end{center}
-\pagebreak
-\subsubsection{Test di sistema}
-La seguente tabella illustra i test di sistema; ogni test ha un nome che identifica tipologia, categoria e importanza e un numero che lo associa a un requisito.
-\begin{center}
-    \centering
-    \rowcolors{2}{logo!10}{logo!40}
-    \renewcommand{\arraystretch}{1.8}
-    \label{tab:TestSistema}
-    \begin{longtable}[!h]{p{60px} p{240px} p{35px} p{35px}}
-        \caption{Test di sistema}                                                                                                                                                                                                           \\
-        \rowcolor{logo!70} \textbf{Test} & \textbf{Descrizione}                                                                                                                                                & \textbf{Stato} & \textbf{Esito} \\
-    
+        \caption{Test di sistema}                                                                                                                               \\
+        \rowcolor{logo!70}
+        \textbf{Test}   & \textbf{Descrizione}                                                                                & \textbf{Stato} & \textbf{Esito} \\
+        \textbf{TSOF1}  & L'utente deve poter visualizzare la home page                                                       & I              & S              \\
+        TSOF1.1         & L'utente deve poter vedere i prodotti in evidenza e in offerta                                      & I              & S              \\
+        TSOF1.2         & L'utente dalla home page deve poter accedere facilmente alla barra di ricerca e al menù             & I              & S              \\
+        TSOF1.3         & L'utente dalla home page deve poter accedere al carrello                                            & I              & S              \\
+        \textbf{TSOF2}  & L'utente deve poter visualizzare la pagina per l'autenticazione                                     & I              & S              \\
+        \textbf{TSOF3}  & L'utente deve poter autenticarsi tramite username e password                                        & I              & S              \\
+        TSOF3.1         & L'utente deve poter inserire il proprio username nella pagina di autenticazione                     & I              & S              \\
+        TSOF3.2         & L'utente deve poter inserire la propria password nella pagina di autenticazione                     & I              & S              \\
+        \textbf{TSDF4}  & L'utente deve poter autenticarsi tramite un servizio esterno                                        & NI             & /              \\
+        \textbf{TSOF5}  & L'utente deve poter visualizzare i dettagli di un prodotto                                          & I              & S              \\
+        TSOF5.1         & L'utente deve poter visualizzare il nome del prodotto                                               & I              & S              \\
+        TSOF5.2         & L'utente deve poter visualizzare una foto del prodotto                                              & I              & S              \\
+        TSOF5.3         & L'utente deve poter visualizzare una descrizione del prodotto                                       & I              & S              \\
+        TSOF5.4         & L'utente deve poter visualizzare il prezzo del prodotto                                             & I              & S              \\
+        TSOF5.5         & L'utente deve poter visualizzare le tasse del prodotto                                              & I              & S              \\
+        TSDF5.6         & L'utente deve poter visualizzare la disponibilità del prodotto                                      & I              & S              \\
+        TSFF5.7         & L'utente deve poter visualizzare l'eventuale sconto del prodotto                                    & I              & S              \\
+        TSOF5.8         & L'utente deve poter accedere al carrello dal dettaglio del prodotto                                 & I              & S              \\
+        TSDF5.9         & Il cliente deve poter procedere all'acquisto diretto del prodotto                                   & NI             & /              \\
+        \textbf{TSOF6}  & L'utente deve poter aggiungere un prodotto al carrello                                              & NI             & /              \\
+        \textbf{TSOF7}  & L'utente deve poter cercare i prodotti tramite parola chiave                                        & NI             & /              \\
+        \textbf{TSOF8}  & L'utente deve poter visualizzare la lista di prodotti                                               & I              & S              \\
+        TSOF8.1         & L'utente deve poter selezionare più prodotti                                                        & NI             & /              \\
+        \textbf{TSDF9}  & L'utente deve poter ordinare la lista di prodotti                                                   & NI             & /              \\
+        TSDF9.1         & L'utente deve poter ordinare i prodotti per prezzo                                                  & NI             & /              \\
+        TSDF9.2         & L'utente deve poter ordinare i prodotti per nome                                                    & NI             & /              \\
+        \textbf{TSOF10} & L'utente deve poter filtrare la lista di prodotti                                                   & I              & S              \\
+        TSOF10.1        & L'utente deve poter decidere un prezzo minimo                                                       & I              & S              \\
+        TSOF10.2        & L'utente deve poter decidere un prezzo massimo                                                      & I              & S              \\
+        TSFF10.3        & L'utente deve poter filtrare per marca                                                              & NI             & /              \\
+        TSDF10.4        & L'utente deve poter filtrare per categoria                                                          & NI             & /              \\
+        TSOF10.5        & L'utente deve poter modificare un filtro                                                            & I              & S              \\
+        TSOF10.6        & L'utente deve poter rimuovere i filtri                                                              & I              & S              \\
+        \textbf{TSOF11} & L'utente deve potersi registrare inserendo i propri dati                                            & I              & S              \\
+        TSOF11.1        & L'utente deve poter inserire il proprio nome                                                        & I              & S              \\
+        TSOF11.2        & L'utente deve poter inserire il proprio cognome                                                     & I              & S              \\
+        TSOF11.3        & L'utente deve poter inserire il proprio username                                                    & I              & S              \\
+        TSOF11.4        & L'utente deve poter inserire il proprio password                                                    & I              & S              \\
+        TSFF11.5        & L'utente deve poter inserire la propria data di nascita                                             & I              & S              \\
+        TSFF11.6        & L'utente deve poter inserire il proprio numero di telefono                                          & I              & S              \\
+        TSOF11.7        & L'utente deve poter inserire il proprio indirizzo                                                   & I              & S              \\
+        \textbf{TSDF12} & L'utente deve potersi registrare tramite un servizio esterno                                        & NI             & /              \\
+        \textbf{TSOF13} & L'utente deve poter gestire il carrello                                                             & I              & S              \\
+        TSOF13.1        & L'utente deve poter visualizzare i prodotti inseriti nel carrello                                   & I              & S              \\
+        TSOF13.2        & L'utente deve poter rimuovere i prodotti inseriti nel carrello                                      & I              & S              \\
+        TSDF13.3        & L'utente deve poter cambiare la quantità dei prodotti inseriti nel carrello                         & I              & S              \\
+        TSDF13.4        & L'utente deve essere avvisato se la quantità in magazzino è minore della quantità nel carrello      & I              & S              \\
+        TSOF13.5        & L'utente deve poter visualizzare il conto totale del carrello                                       & I              & S              \\
+        TSOF13.6        & L'utente deve poter visualizzare le tasse totali del carrello                                       & NI             & /              \\
+        \textbf{TSOF14} & Un utente che non riesce ad accedere deve poter reimpostare la password                             & I              & S              \\
+        \textbf{TSOF15} & Il cliente deve poter modificare i dati del proprio profilo                                         & I              & S              \\
+        TSOF15.1        & Il cliente deve poter modificare il proprio nome                                                    & I              & S              \\
+        TSOF15.2        & Il cliente deve poter modificare il proprio cognome                                                 & I              & S              \\
+        TSOF15.3        & Il cliente deve poter cambiare il proprio indirizzo                                                 & I              & S              \\
+        TSFF15.4        & Il cliente deve poter cambiare la propria data di nascita                                           & I              & S              \\
+        TSFF15.5        & Il cliente deve poter cambiare il proprio numero telefonico                                         & I              & S              \\
+        \textbf{TSOF16} & Il cliente deve poter effettuare il logout                                                          & I              & S              \\
+        \textbf{TSOF17} & Il cliente deve poter visualizzare i propri dati di profilo                                         & I              & S              \\
+        \textbf{TSFF18} & Il cliente deve poter contattare il venditore                                                       & NI             & /              \\
+        \textbf{TSOF19} & Il cliente deve poter effettuare il checkout di un ordine                                           & I              & S              \\
+        TSOF19.1        & Il cliente deve poter inserire i dati di pagamento                                                  & I              & S              \\
+        TSOF19.2        & Il cliente deve poter essere avvisato del mancato pagamento                                         & I              & S              \\
+        \textbf{TSOF20} & Il cliente deve poter annullare il checkout                                                         & I              & S              \\
+        \textbf{TSOF21} & Il cliente deve essere indirizzato al riepilogo una volta completato l'ordine                       & I              & S              \\
+        \textbf{TSOF22} & Il cliente deve poter visualizzare la lista degli ordini che ha effettuato                          & I              & S              \\
+        \textbf{TSOF23} & Il venditore deve poter visualizzare la lista di clienti                                            & NI             & /              \\
+        \textbf{TSOF24} & Il venditore deve poter visualizzare la lista degli ordini                                          & I              & S              \\
+        \textbf{TSFF25} & Il venditore deve poter contattare un cliente                                                       & NI             & /              \\
+        \textbf{TSOF26} & Il venditore deve poter aggiungere un nuovo prodotto                                                & I              & S              \\
+        \textbf{TSOF27} & Il venditore deve poter modificare un prodotto                                                      & I              & S              \\
+        \textbf{TSOF28} & Il venditore deve poter rimuovere un prodotto                                                       & I              & S              \\
+        \textbf{TSOF29} & Il venditore deve poter aggiungere una nuova categoria                                              & I              & S              \\
+        \textbf{TSOF30} & Il venditore deve poter rimuovere una categoria                                                     & NI             & /              \\
+        \textbf{TSOF31} & L'utente deve poter visualizzare un errore se inserisce dei dati sbagliati durante l'autenticazione & I              & S              \\
+        \textbf{TSOF32} & Il cliente deve poter modificare la propria password                                                & I              & S              \\
     \end{longtable}
 \end{center}
 \pagebreak
 \subsubsection{Test di accettazione}
 La seguente tabella illustra i test di accettazione da eseguire sul sistema, ogni test ha un nome che identifica tipologia, categoria e importanza e un numero che lo associa a un requisito.
+\begin{center}
+    \centering
+    \rowcolors{2}{logo!10}{logo!40}
+    \renewcommand{\arraystretch}{1.8}
+    \label{tab:TestAccettazione}
+    \begin{longtable}[!h]{p{60px} p{240px} p{35px} p{35px}}
+        \caption{Test di accettazione}                                                                                                                          \\
+        \rowcolor{logo!70}
+        \textbf{Test}   & \textbf{Descrizione}                                                                                & \textbf{Stato} & \textbf{Esito} \\
+        \textbf{TAOF1}  & L'utente deve poter visualizzare la home page                                                       & NI             & /              \\
+        TAOF1.1         & L'utente deve poter vedere i prodotti in evidenza e in offerta                                      & NI             & /              \\
+        TAOF1.2         & L'utente dalla home page deve poter accedere facilmente alla barra di ricerca e al menù             & NI             & /              \\
+        TAOF1.3         & L'utente dalla home page deve poter accedere al carrello                                            & NI             & /              \\
+        \textbf{TAOF2}  & L'utente deve poter visualizzare la pagina per l'autenticazione                                     & NI             & /              \\
+        \textbf{TAOF3}  & L'utente deve poter autenticarsi tramite username e password                                        & NI             & /              \\
+        TAOF3.1         & L'utente deve poter inserire il proprio username nella pagina di autenticazione                     & NI             & /              \\
+        TAOF3.2         & L'utente deve poter inserire la propria password nella pagina di autenticazione                     & NI             & /              \\
+        \textbf{TADF4}  & L'utente deve poter autenticarsi tramite un servizio esterno                                        & NI             & /              \\
+        \textbf{TAOF5}  & L'utente deve poter visualizzare i dettagli di un prodotto                                          & NI             & /              \\
+        TAOF5.1         & L'utente deve poter visualizzare il nome del prodotto                                               & NI             & /              \\
+        TAOF5.2         & L'utente deve poter visualizzare una foto del prodotto                                              & NI             & /              \\
+        TAOF5.3         & L'utente deve poter visualizzare una descrizione del prodotto                                       & NI             & /              \\
+        TAOF5.4         & L'utente deve poter visualizzare il prezzo del prodotto                                             & NI             & /              \\
+        TAOF5.5         & L'utente deve poter visualizzare le tasse del prodotto                                              & NI             & /              \\
+        TADF5.6         & L'utente deve poter visualizzare la disponibilità del prodotto                                      & NI             & /              \\
+        TAFF5.7         & L'utente deve poter visualizzare l'eventuale sconto del prodotto                                    & NI             & /              \\
+        TAOF5.8         & L'utente deve poter accedere al carrello dal dettaglio del prodotto                                 & NI             & /              \\
+        TADF5.9         & Il cliente deve poter procedere all'acquisto diretto del prodotto                                   & NI             & /              \\
+        \textbf{TAOF6}  & L'utente deve poter aggiungere un prodotto al carrello                                              & NI             & /              \\
+        \textbf{TAOF7}  & L'utente deve poter cercare i prodotti tramite parola chiave                                        & NI             & /              \\
+        \textbf{TAOF8}  & L'utente deve poter visualizzare la lista di prodotti                                               & NI             & /              \\
+        TAOF8.1         & L'utente deve poter selezionare più prodotti                                                        & NI             & /              \\
+        \textbf{TADF9}  & L'utente deve poter ordinare la lista di prodotti                                                   & NI             & /              \\
+        TADF9.1         & L'utente deve poter ordinare i prodotti per prezzo                                                  & NI             & /              \\
+        TADF9.2         & L'utente deve poter ordinare i prodotti per nome                                                    & NI             & /              \\
+        \textbf{TAOF10} & L'utente deve poter filtrare la lista di prodotti                                                   & NI             & /              \\
+        TAOF10.1        & L'utente deve poter decidere un prezzo minimo                                                       & NI             & /              \\
+        TAOF10.2        & L'utente deve poter decidere un prezzo massimo                                                      & NI             & /              \\
+        TAFF10.3        & L'utente deve poter filtrare per marca                                                              & NI             & /              \\
+        TADF10.4        & L'utente deve poter filtrare per categoria                                                          & NI             & /              \\
+        TAOF10.5        & L'utente deve poter modificare un filtro                                                            & NI             & /              \\
+        TAOF10.6        & L'utente deve poter rimuovere i filtri                                                              & NI             & /              \\
+        \textbf{TAOF11} & L'utente deve potersi registrare inserendo i propri dati                                            & NI             & /              \\
+        TAOF11.1        & L'utente deve poter inserire il proprio nome                                                        & NI             & /              \\
+        TAOF11.2        & L'utente deve poter inserire il proprio cognome                                                     & NI             & /              \\
+        TAOF11.3        & L'utente deve poter inserire il proprio username                                                    & NI             & /              \\
+        TAOF11.4        & L'utente deve poter inserire il proprio password                                                    & NI             & /              \\
+        TAFF11.5        & L'utente deve poter inserire la propria data di nascita                                             & NI             & /              \\
+        TAFF11.6        & L'utente deve poter inserire il proprio numero di telefono                                          & NI             & /              \\
+        TAOF11.7        & L'utente deve poter inserire il proprio indirizzo                                                   & NI             & /              \\
+        \textbf{TADF12} & L'utente deve potersi registrare tramite un servizio esterno                                        & NI             & /              \\
+        \textbf{TAOF13} & L'utente deve poter gestire il carrello                                                             & NI             & /              \\
+        TAOF13.1        & L'utente deve poter visualizzare i prodotti inseriti nel carrello                                   & NI             & /              \\
+        TAOF13.2        & L'utente deve poter rimuovere i prodotti inseriti nel carrello                                      & NI             & /              \\
+        TADF13.3        & L'utente deve poter cambiare la quantità dei prodotti inseriti nel carrello                         & NI             & /              \\
+        TADF13.4        & L'utente deve essere avvisato se la quantità in magazzino è minore della quantità nel carrello      & NI             & /              \\
+        TAOF13.5        & L'utente deve poter visualizzare il conto totale del carrello                                       & NI             & /              \\
+        TAOF13.6        & L'utente deve poter visualizzare le tasse totali del carrello                                       & NI             & /              \\
+        \textbf{TAOF14} & Un utente che non riesce ad accedere deve poter reimpostare la password                             & NI             & /              \\
+        \textbf{TAOF15} & Il cliente deve poter modificare i dati del proprio profilo                                         & NI             & /              \\
+        TAOF15.1        & Il cliente deve poter modificare il proprio nome                                                    & NI             & /              \\
+        TAOF15.2        & Il cliente deve poter modificare il proprio cognome                                                 & NI             & /              \\
+        TAOF15.3        & Il cliente deve poter cambiare il proprio indirizzo                                                 & NI             & /              \\
+        TAFF15.4        & Il cliente deve poter cambiare la propria data di nascita                                           & NI             & /              \\
+        TAFF15.5        & Il cliente deve poter cambiare il proprio numero telefonico                                         & NI             & /              \\
+        \textbf{TAOF16} & Il cliente deve poter effettuare il logout                                                          & NI             & /              \\
+        \textbf{TAOF17} & Il cliente deve poter visualizzare i propri dati di profilo                                         & NI             & /              \\
+        \textbf{TAFF18} & Il cliente deve poter contattare il venditore                                                       & NI             & /              \\
+        \textbf{TAOF19} & Il cliente deve poter effettuare il checkout di un ordine                                           & NI             & /              \\
+        TAOF19.1        & Il cliente deve poter inserire i dati di pagamento                                                  & NI             & /              \\
+        TAOF19.2        & Il cliente deve poter essere avvisato del mancato pagamento                                         & NI             & /              \\
+        \textbf{TAOF20} & Il cliente deve poter annullare il checkout                                                         & NI             & /              \\
+        \textbf{TAOF21} & Il cliente deve essere indirizzato al riepilogo una volta completato l'ordine                       & NI             & /              \\
+        \textbf{TAOF22} & Il cliente deve poter visualizzare la lista degli ordini che ha effettuato                          & NI             & /              \\
+        \textbf{TAOF23} & Il venditore deve poter visualizzare la lista di clienti                                            & NI             & /              \\
+        \textbf{TAOF24} & Il venditore deve poter visualizzare la lista degli ordini                                          & NI             & /              \\
+        \textbf{TAFF25} & Il venditore deve poter contattare un cliente                                                       & NI             & /              \\
+        \textbf{TAOF26} & Il venditore deve poter aggiungere un nuovo prodotto                                                & NI             & /              \\
+        \textbf{TAOF27} & Il venditore deve poter modificare un prodotto                                                      & NI             & /              \\
+        \textbf{TAOF28} & Il venditore deve poter rimuovere un prodotto                                                       & NI             & /              \\
+        \textbf{TAOF29} & Il venditore deve poter aggiungere una nuova categoria                                              & NI             & /              \\
+        \textbf{TAOF30} & Il venditore deve poter rimuovere una categoria                                                     & NI             & /              \\
+        \textbf{TAOF31} & L'utente deve poter visualizzare un errore se inserisce dei dati sbagliati durante l'autenticazione & NI             & /              \\
+        \textbf{TAOF32} & Il cliente deve poter modificare la propria password                                                & NI             & /              \\
+    \end{longtable}
+\end{center}
