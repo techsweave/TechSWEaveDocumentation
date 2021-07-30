@@ -70,7 +70,7 @@ urlcolor=blue}
         \vspace{20px}
         \begin{tabular}{p{100px} | p{100px}}
             \textbf{Versione}     & 3.0.0                                                                      \\
-            \textbf{Responsabile} & Tito Scutari                                                               \\
+            \textbf{Responsabile} & Nicolò Giaccone                                                            \\
             \textbf{Redattori}    & Samuele De Simone \newline Nicolò Giaccone \newline Simone Urbani          \\
             \textbf{Verificatore} & Marco Barbaresco                                                           \\
             \textbf{Destinatari}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave \\
@@ -85,36 +85,40 @@ urlcolor=blue}
 
 %DIARIO DELLE MODIFICHE
 \begin{center}
+    \centering
     \textbf{\Large Diario delle modifiche}\\
     \vspace{10px}
-    \begin{table}[h!]
-        \centering
-        \rowcolors{2}{logo!10}{logo!40}
-        \renewcommand{\arraystretch}{1.8}
-        \begin{tabular}{p{160px} p{90px} p{60px} p{60px} p{50px}}
-            \rowcolor{logo!70} \textbf{Modifica}                 & \textbf{Autore}                            & \textbf{Ruolo}                 & \textbf{Data} & \textbf{Versione} \\
-            Validazione                                          & Tito Scutari                               & Responsabile                   & 2021-04-28    & 2.0.0             \\
-            Piccole correzioni                                   & Amedeo Meggiolaro                          & Verificatore                   & 2021-04-24    & 1.2.2             \\
-            Spostati casi d'uso per sistemare i codici           & Samuele De Simone                          & Analista                       & 2021-04-21    & 1.2.1             \\
-            Aggiunti da UC28 a UC30 per gestione prodotti        & Manuel Varo                                & Analista                       & 2021-04-21    & 1.2.0             \\
-            Spostati casi d'uso per sistemare i codici           & Manuel Varo                                & Analista                       & 2021-04-20    & 1.1.1             \\
-            Aggiunti da UC11 a UC14 per gestione carrello        & Samuele De Simone                          & Analista                       & 2021-04-20    & 1.1.0             \\
-            Validazione                                          & Simone Urbani                              & Responsabile                   & 2021-03-28    & 1.0.0             \\
-            Verifica documento                                   & Amedeo Meggiolaro                          & Verificatore                   & 2021-03-27    & 0.1.0             \\
-            Correzioni requisiti                                 & Simone Urbani                              & Analista                       & 2021-03-26    & 0.0.11            \\
-            Correzioni aggiuntive casi d'uso                     & Nicolò Giaccone                            & Analista                       & 2021-03-26    & 0.0.10            \\
-            Correzioni casi d'uso                                & Samuele De Simone \newline Nicolò Giaccone & Responsabile \newline Analista & 2021-03-25    & 0.0.9             \\
-            Aggiunte tabelle requisiti                           & Simone Urbani                              & Analista                       & 2021-03-25    & 0.0.8             \\
-            Correzione sezione attori e da UC7 a UC16            & Nicolò Giaccone                            & Analista                       & 2021-03-24    & 0.0.7             \\
-            Aggiunti da UC23 a UC28                              & Samuele De Simone                          & Responsabile                   & 2021-03-23    & 0.0.6             \\
-            Aggiunti da UC17 a UC22                              & Nicolò Giaccone                            & Analista                       & 2021-03-22    & 0.0.6             \\
-            Aggiunti da UC14 a UC16                              & Samuele De Simone                          & Responsabile                   & 2021-03-22    & 0.0.5             \\
-            Aggiunti da UC9 a UC13                               & Samuele De Simone                          & Responsabile                   & 2021-03-19    & 0.0.4             \\
-            Aggiunti da UC1 a UC8                                & Nicolò Giaccone                            & Analista                       & 2021-03-19    & 0.0.3             \\
-            Aggiunta sezioni introduzione e descrizione generale & Nicolò Giaccone                            & Analista                       & 2021-03-18    & 0.0.2             \\
-            Prima stesura documento                              & Nicolò Giaccone                            & Analista                       & 2021-03-17    & 0.0.1             \\
-        \end{tabular}
-    \end{table}
+    \rowcolors{2}{logo!10}{logo!40}
+    \renewcommand{\arraystretch}{1.8}
+    \label{tab:RequisitiFunzionali}
+    \begin{longtable}[!h]{p{160px} p{90px} p{60px} p{60px} p{50px}}
+        \rowcolor{logo!70} \textbf{Modifica}                         & \textbf{Autore}                            & \textbf{Ruolo}                 & \textbf{Data} & \textbf{Versione} \\
+        Validazione documento                                        & Nicolò Giaccone                            & Responsabile                   & 2021-5-25     & 3.0.0             \\
+        Verifica documento                                           & Amedeo Meggiolaro                          & Analista                       & 2021-05-24    & 2.1.0             \\
+        Aggiornamento \S1 \newline (Verificatore: Nicolò Giaccone)   & Marco Barbaresco                           & Analista                       & 2021-05-24    & 2.0.3             \\
+        Correzioni \S3, \S4 \newline (Verificatore: Nicolò Giaccone) & Marco Barbaresco                           & Analista                       & 2021-05-22    & 2.0.2             \\
+        Correzioni \S3 \newline (Verificatore: Marco Barbaresco)     & Nicolò Giaccone                            & Analista                       & 2021-05-20    & 2.0.1             \\
+        Validazione                                                  & Tito Scutari                               & Responsabile                   & 2021-04-28    & 2.0.0             \\
+        Piccole correzioni                                           & Amedeo Meggiolaro                          & Verificatore                   & 2021-04-24    & 1.2.2             \\
+        Spostati casi d'uso per sistemare i codici                   & Samuele De Simone                          & Analista                       & 2021-04-21    & 1.2.1             \\
+        Aggiunti da UC28 a UC30 per gestione prodotti                & Manuel Varo                                & Analista                       & 2021-04-21    & 1.2.0             \\
+        Spostati casi d'uso per sistemare i codici                   & Manuel Varo                                & Analista                       & 2021-04-20    & 1.1.1             \\
+        Aggiunti da UC11 a UC14 per gestione carrello                & Samuele De Simone                          & Analista                       & 2021-04-20    & 1.1.0             \\
+        Validazione                                                  & Simone Urbani                              & Responsabile                   & 2021-03-28    & 1.0.0             \\
+        Verifica documento                                           & Amedeo Meggiolaro                          & Verificatore                   & 2021-03-27    & 0.1.0             \\
+        Correzioni requisiti                                         & Simone Urbani                              & Analista                       & 2021-03-26    & 0.0.11            \\
+        Correzioni aggiuntive casi d'uso                             & Nicolò Giaccone                            & Analista                       & 2021-03-26    & 0.0.10            \\
+        Correzioni casi d'uso                                        & Samuele De Simone \newline Nicolò Giaccone & Responsabile \newline Analista & 2021-03-25    & 0.0.9             \\
+        Aggiunte tabelle requisiti                                   & Simone Urbani                              & Analista                       & 2021-03-25    & 0.0.8             \\
+        Correzione sezione attori e da UC7 a UC16                    & Nicolò Giaccone                            & Analista                       & 2021-03-24    & 0.0.7             \\
+        Aggiunti da UC23 a UC28                                      & Samuele De Simone                          & Responsabile                   & 2021-03-23    & 0.0.6             \\
+        Aggiunti da UC17 a UC22                                      & Nicolò Giaccone                            & Analista                       & 2021-03-22    & 0.0.6             \\
+        Aggiunti da UC14 a UC16                                      & Samuele De Simone                          & Responsabile                   & 2021-03-22    & 0.0.5             \\
+        Aggiunti da UC9 a UC13                                       & Samuele De Simone                          & Responsabile                   & 2021-03-19    & 0.0.4             \\
+        Aggiunti da UC1 a UC8                                        & Nicolò Giaccone                            & Analista                       & 2021-03-19    & 0.0.3             \\
+        Aggiunta sezioni introduzione e descrizione generale         & Nicolò Giaccone                            & Analista                       & 2021-03-18    & 0.0.2             \\
+        Prima stesura documento                                      & Nicolò Giaccone                            & Analista                       & 2021-03-17    & 0.0.1             \\
+    \end{longtable}
 \end{center}
 
 %INDICE
