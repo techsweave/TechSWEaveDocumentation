@@ -1,49 +1,10 @@
 \section{Introduction}
 \subsection{Purpose of the document}
-The purpose of this document is to expose in detail the following information regarding the development of the
-project:
-\begin{itemize}
-    \item technologies;
-    \item software tools;
-    \item software architecture\textsubscript{\textbf{G}} patterns;
-    \item design patterns\textsubscript{\textbf{G}};
-    \item setup information.
-\end{itemize}
-The document is to be considered incomplete as the contents will be updated and modified by advancing with it
-product development.
+The purpose of this document is to expose the functionality of the platform \textit{Emporio Lambda}. The end user in this way will have all the information for the correct use of the software.
 \subsection{Purpose of the product}
 The aim of the project is to create an e-commerce\textsubscript{\textbf{G}} platform based on serverless\textsubscript{\textbf{G}} technologies.
 The product should be capable of being used by a generic vendor with minimal technical interaction
 via an AWS\textsubscript{\textbf{G}} vendor account.
-Furthermore, indispensable functions must be implemented for all categories of users who will use this application:
-\begin{itemize}
-    \item unauthenticated user (a generic client), who can:
-          \begin{itemize}
-              \item sign up and sign in;
-              \item browse by product category and access product pages;
-              \item search and filter products;
-              \item add, remove and view all products in the cart.
-          \end{itemize}
-    \item authenticated user (a logged client), who can:
-          \begin{itemize}
-              \item do everything an unauthenticated user can, except signing up and signing in;
-              \item sign out;
-              \item checkout and pay for all of the products in the cart;
-              \item access their profile and edit any personal information;
-              \item access their previous orders information.
-          \end{itemize}
-    \item vendors, who can:
-          \begin{itemize}
-              \item view, add, edit and delete any product;
-              \item view, add, edit and delete any product category;
-              \item see the details of all the orders made by clients;
-              \item see the list of clients who has bought some products.
-          \end{itemize}
-    \item admins, who can:
-          \begin{itemize}
-              \item monitor the state of the platform.
-          \end{itemize}
-\end{itemize}
 \subsection{Glossary}
 There are terms within the document that may be ambiguous depending on the context. In order to avoid possible misunderstandings
 and make clear the terms used, they will be identifiable by a subscript '\textbf{G}' and reported with their meaning in the appendix.
