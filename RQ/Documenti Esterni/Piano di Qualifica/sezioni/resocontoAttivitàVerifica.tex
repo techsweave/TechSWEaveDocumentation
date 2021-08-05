@@ -42,21 +42,56 @@ I dati riportati nel seguito fanno riferimento a:
     \item \textbf{VC:} fase di validazione e collaudo (da aggiungere con l'avanzare del progetto);
     \item \textbf{Incremento:} periodo come definito nel \textit{Piano di Progetto v3.0.0.}
 \end{itemize}
-\newpage
-% \subsubsection{MPR01 - PROS (Percentuale Requisiti Obbligatori Soddisfatti)}
-% \begin{figure}[!ht]
-%     \caption{PROS (Percentuale Requisiti Obbligatori Soddisfatti)}
-%     \vspace{10px}
-%     \includegraphics[scale=0.5]{sezioni/immagini/PercentualeRequisitiObbligatoriSoddisfatti.png}
-%     \centering
-% \end{figure}
-% \subsubsection{MPR02 - PRS (Percentuale Requisiti Soddisfatti)}
-% \begin{figure}[!ht]
-%     \caption{PRS (Percentuale Requisiti Soddisfatti)}
-%     \vspace{10px}
-%     \includegraphics[scale=0.5]{sezioni/immagini/PercentualeRequisitiSoddisfatti.png}
-%     \centering
-% \end{figure}
+% \vspace{30px}
+\begin{center}
+    \centering
+    % \begin{flushleft}
+    %     \textbf{\Large Riepilogo delle metriche}
+    % \end{flushleft}
+    % \vspace{10px}
+    \rowcolors{2}{logo!10}{logo!40}
+    \renewcommand{\arraystretch}{1.8}
+    \label{tab:TabellaRiepilogoMetriche}
+    \begin{longtable}[!h]{p{45px} p{200px} p{105px} p{80px}}
+        \caption{Tabella riepilogativa delle metriche}                                                                                                                     \\
+        \rowcolor{logo!70}   \textbf{Codice} & \textbf{Nome}                                           & \textbf{Accettabile}              & \textbf{Preferibile}          \\
+        MPR01                                & PROS (Percentuale di requisiti obbligatori soddisfatti) & 100\%                             & 100\%                         \\
+        MPR02                                & PRS (Percentuale di requisiti soddisfatti)              & 75\%                              & 100\%                         \\
+        MPR03                                & Indice di Gulpease                                      & 40 < I\textsubscript{G} < 100     & 80 < I\textsubscript{G} < 100 \\
+        MPR04                                & Correttezza ortografica                                 & 0                                 & 0                             \\
+        MPR05                                & PMS (Percentuale di metriche soddisfatte)               & $\geq$ 60\%                       & $\geq$ 80\%                   \\
+        MPR06                                & CC (Code Coverage)                                      & $\geq$ 75\%                       & 100\%                         \\
+        MPR07                                & EAC (Estimate at Completion)                            & $BAC -5\% \leq EAC \leq BAC +5\%$ & $EAC \leq BAC$                \\
+        MPR08                                & VAC (Variance at Completion)                            & $\geq 0$                          & $\geq 0$                      \\
+        MPR09                                & AC (Actual Cost)                                        & $0 \leq AC \leq$ budget totale    & $0 \leq AC \leq PV$           \\
+        MPR010                               & SV (Schedule Variance)                                  & 0                                 & $\geq 0$                      \\
+        MPR011                               & BV (Budget Variance)                                    & $\geq$ 0                          & > 0                           \\
+        MPD01                                & Percentuale Test Superati                               & $\geq$ 80\%                       & 100\%                         \\
+        MPD02                                & Densità errori                                          & $\leq$ 10\%                       & 0\%                           \\
+        MPD03                                & Facilità di utilizzo                                    & $\leq$ 15                         & $\leq$ 10                     \\
+        MPD04                                & Facilità di apprendimento                               & $\leq$ 5                          & $\leq$ 3                      \\
+        MPD05                                & Profondità della gerarchia                              & $\leq$ 7                          & $\leq$ 4                      \\
+        MPD06                                & Facilità di comprensione                                & $\geq$ 0.10                       & $\geq$ 0.20                   \\
+        MPD07                                & Semplicità delle funzioni                               & $\leq$ 6                          & $\leq$ 3                      \\
+        MPD08                                & Semplicità delle classi                                 & $\leq$ 15                         & $\leq$ 8                      \\
+        \rowcolor{white}
+    \end{longtable}
+\end{center}
+\subsubsection{MPR01 - PROS (Percentuale Requisiti Obbligatori Soddisfatti)}
+\begin{figure}[!ht]
+    \caption{PROS (Percentuale Requisiti Obbligatori Soddisfatti)}
+    \vspace{10px}
+    \includegraphics[scale=0.5]{sezioni/immagini/PROS.png}
+    \centering
+\end{figure}
+\subsubsection{MPR02 - PRS (Percentuale Requisiti Soddisfatti)}
+\begin{figure}[!ht]
+    \caption{PRS (Percentuale Requisiti Soddisfatti)}
+    \vspace{10px}
+    \includegraphics[scale=0.5]{sezioni/immagini/PRS.png}
+    \centering
+\end{figure}
+\pagebreak
 \subsubsection{MPR03 - Indice di Gulpease}
 \subsubsubsection{Andamento complessivo}
 \begin{center}
@@ -205,7 +240,7 @@ I dati riportati nel seguito fanno riferimento a:
 \subsubsection{MPD03 - Facilità di utilizzo}
 Per il calcolo di questa metrica si è tenuto in considerazione il segunte percorso:\\
 Home -> lista dei prodotti -> prodotto -> carrello -> checkout.\\
-Poichè durante i primi due incrementi il numero delle funzionalità offerte erano esigue e l'interfaccia utente era molto più semplice, 
+Poichè durante i primi due incrementi il numero delle funzionalità offerte erano esigue e l'interfaccia utente era molto più semplice,
 il numero di click per raggiungere il checkout era minore.
 \begin{figure}[!ht]
     \caption{Facilità di utilizzo}
