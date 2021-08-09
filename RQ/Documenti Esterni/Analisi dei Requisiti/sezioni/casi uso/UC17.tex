@@ -19,14 +19,12 @@
                     \begin{itemize}
                         \item nome;
                         \item cognome;
-                        \item username;
-                        \item password;
-                        \item indirizzo.
+                        \item indirizzo;
+                        \item data di nascita;
+                        \item numero di telefono.
                     \end{itemize}
           \end{itemize}
 \end{itemize}
-
-
 
 \subsubsection{UC17.1 Modifica del nome}
 \label{sec:UC17.1}
@@ -48,29 +46,8 @@
     \item \textbf{Postcondizione:} l'utente può modificare il proprio cognome.
 \end{itemize}
 
-\subsubsection{UC17.3 Modifica dell'username}
+\subsubsection{UC17.3 Modifica dell'indirizzo}
 \label{sec:UC17.3}
-\begin{itemize}
-    \item \textbf{Descrizione:} l'utente vuole modificare il proprio username;
-    \item \textbf{Attore Primario:} utente autenticato;
-    \item \textbf{Attore Secondario:} servizio di autenticazione esterno;
-    \item \textbf{Precondizione:} l'utente si trova all'interno del proprio profilo;
-    \item \textbf{Postcondizione:} l'utente può modificare il proprio username;
-    \item \textbf{Estensione}: visualizzazione errore se l'username è già presente nel database \hyperref[sec:UC17.6]{UC17.6}.
-\end{itemize}
-
-\subsubsection{UC17.4 Modifica della password}
-\label{sec:UC17.4}
-\begin{itemize}
-    \item \textbf{Descrizione:} l'utente vuole modificare la propria password;
-    \item \textbf{Attore Primario:} utente autenticato;
-    \item \textbf{Attore Secondario:} servizio di autenticazione esterno;
-    \item \textbf{Precondizione:} l'utente si trova all'interno del proprio profilo;
-    \item \textbf{Postcondizione:} l'utente può modificare la propria password.
-\end{itemize}
-
-\subsubsection{UC17.5 Modifica dell'indirizzo}
-\label{sec:UC17.5}
 \begin{itemize}
     \item \textbf{Descrizione:} l'utente vuole modificare il proprio indirizzo;
     \item \textbf{Attore Primario:} utente autenticato;
@@ -79,29 +56,22 @@
     \item \textbf{Postcondizione:} l'utente può modificare il proprio indirizzo.
 \end{itemize}
 
-\subsubsection{UC17.6: Visualizzazione username già presente}
-\label{sec:UC17.6}
+\subsubsection{UC17.4 Modifica della data di nascita}
+\label{sec:UC17.4}
 \begin{itemize}
-    \item \textbf{Descrizione:} Visualizzazione di un errore se lo username è già in uso;
+    \item \textbf{Descrizione:} l'utente vuole modificare la data di nascita;
     \item \textbf{Attore Primario:} utente autenticato;
     \item \textbf{Attore Secondario:} servizio di autenticazione esterno;
-    \item \textbf{Precondizione:} l'utente ha inserito uno username non disponibile perchè già usato;
-    \item \textbf{Postcondizione:} l'utente visualizza un messaggio di errore.
+    \item \textbf{Precondizione:} l'utente si trova all'interno del proprio profilo;
+    \item \textbf{Postcondizione:} l'utente può modificare il proprio indirizzo.
 \end{itemize}
 
-\subsubsection{UC17.7: Password non conforme}
-\label{sec:UC17.7}
+\subsubsection{UC17.5 Modifica del numero di telefono}
+\label{sec:UC17.5}
 \begin{itemize}
-    \item \textbf{Descrizione:} Visualizzazione di un errore se la password non è conforme ai requisiti;
+    \item \textbf{Descrizione:} l'utente vuole modificare il numero di telefono;
     \item \textbf{Attore Primario:} utente autenticato;
-    \item \textbf{Attore Secondario:} Amazon Cognito;
-    \item \textbf{Precondizione:} l'utente ha inserito una password non conforme ai requisiti, che sono:
-          \begin{itemize}
-              \item lunghezza almeno di 8 caratteri;
-              \item contenga almeno una lettera maiuscola;
-              \item contenga almeno una lettera minuscola;
-              \item contenga almeno un numero;
-              \item contenga almeno un carattere speciale.
-          \end{itemize}
-    \item \textbf{Postcondizione:} l'utente visualizza un messaggio di errore.
+    \item \textbf{Attore Secondario:} servizio di autenticazione esterno;
+    \item \textbf{Precondizione:} l'utente si trova all'interno del proprio profilo;
+    \item \textbf{Postcondizione:} l'utente può modificare il proprio indirizzo.
 \end{itemize}

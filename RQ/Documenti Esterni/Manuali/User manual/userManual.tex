@@ -1,0 +1,126 @@
+\documentclass[a4paper]{article}
+\usepackage{titlesec}
+\usepackage{geometry}
+\geometry{hmargin={2cm,2cm}, vmargin={3.5cm,3.5cm}}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\usepackage{longtable}
+\hypersetup{pdfborder = {0 0 0},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=blue}
+\definecolor{logo}{RGB}{20,99,163}
+\newcommand{\sectionbreak}{\clearpage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{chngcntr}
+\usepackage{marvosym}
+\counterwithin{table}{section}
+\counterwithin{figure}{subsection}
+
+% creazione comando subsubsubsection
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+    \titlespacing*{\subsubsubsection}
+    {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\def\toclevel@subsubsubsection{4}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%fine creazione comando
+
+%Comandi di impaginazione uguale per tutti i documenti
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.2]{../../../../Images/logo.png}}
+%Titolo del documento
+\rhead{\large User's manual}
+%\rfoot{\thepage}
+\cfoot{Pagina \thepage{} di \pageref{LastPage}}
+\setlength{\headheight}{45pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\counterwithin{table}{subsection}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \includegraphics{../../../../Images/logo.png}\\
+        \vspace{20px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{20px}
+        \textbf{\huge\textcolor{logo}{User's manual}}\\
+        \vspace{10px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{40px}
+        \textbf{\Large About}\\
+        \vspace{20px}
+        \begin{tabular}{p{100px} | p{100px}}
+            \textbf{Version}              & 1.0.0                                                                                        \\
+            \textbf{Manager}              & Marco Barbaresco                                                                             \\
+            \textbf{Writers}              & Amedeo Meggiolaro \newline Nicolò Giaccone                                                   \\
+            \textbf{Verifiers}            & Tito Scutari \newline Manuel Varo                                                            \\
+            \textbf{List of distribution} & Red Babel \newline Prof. Tullio Vardanega \newline Prof. Riccardo Cardin \newline TechSWEave \\
+            \textbf{State}                & Approved                                                                                     \\
+            \textbf{Use}                  & External                                                                                     \\
+        \end{tabular}\\
+        \vspace{60px}
+        \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
+
+    \end{center}
+\end{titlepage}
+
+%DIARIO DELLE MODIFICHE
+\begin{center}
+    \textbf{\Large Change log}\\
+    \vspace{10px}
+    \begin{table}[h!]
+        \centering
+        \rowcolors{2}{logo!10}{logo!40}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{p{150px} p{90px} p{80px} p{60px} p{45px}}
+            \rowcolor{logo!70} \textbf{Changes}                                                                                                                  & \textbf{Author}   & \textbf{Role} & \textbf{Date} & \textbf{Version} \\
+            Document validation                                                                                                                                  & Marco Barbaresco  & Manager       & 2021-08-05    & 1.0.0            \\
+            Document verification\newline(Verifier: Varo Manuel)                                                                                                 & Varo Manuel       & Verifier      & 2021-08-05    & 0.4.0            \\
+            Modified \S{5.2.1}, \S{5.2.2}, \S{5.2.3}, Added \S{5.2.2.1}, \S{5.3}, \S{5.4}, \S{5.4.1}, \S{5.4.2} \newline(Verifier: Varo Manuel)                  & Amedeo Meggiolaro & Developer     & 2021-08-05    & 0.3.1            \\
+            Added Glossary, \S{3}, \S{3.1}, \S{3.1.1}, \S{3.2}, \S{3.2.1}, \S{3.2.2}, \S{3.3}, \S{3.4}, \S{3.5}, \S{3.6}, \S{3.7}\newline(Verifier: Varo Manuel) & Nicolò Giaccone   & Developer     & 2021-08-04    & 0.3.0            \\
+            Added \S{4.2.2}, \S{4.3}, \S{4.4}\newline(Verifier: Varo Manuel)                                                                                     & Nicolò Giaccone   & Developer     & 2021-08-03    & 0.2.1            \\
+            Added \S{5}, \S{5.1}, \S{5.2}, \S{5.2.1}, \S{5.2.2}, \S{5.2.3}\newline(Verifier: Varo Manuel)                                                        & Amedeo Meggiolaro & Developer     & 2021-08-03    & 0.2.0            \\
+            Added \S{4}, \S{4.1}, \S{4.2}  \newline(Verifier: Varo Manuel)                                                                                       & Nicolò Giaccone   & Developer     & 2021-08-03    & 0.1.0            \\
+            Created document base                                                                                                                                & Amedeo Meggiolaro & Developer     & 2021-07-29    & 0.0.1            \\
+        \end{tabular}
+    \end{table}
+\end{center}
+
+%INDICE
+\newpage
+\tableofcontents
+\newpage
+%INDICE DELLE FIGURE
+\newpage
+\listoffigures
+\newpage
+%CORPO DEL DOCUMENTO
+\input{sections/introduction.tex}
+\input{sections/setup.tex}
+\input{sections/genricUserInstruction.tex}
+\input{sections/clientInstruction.tex}
+\input{sections/vendorInstructions.tex}
+\input{sections/glossary.tex}
+
+\end{document}
+
+

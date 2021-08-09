@@ -19,6 +19,12 @@ Questo modello suddivide la qualità in 6 categorie, ognuna con le sue varie sot
     \item \textbf{Conformità:} capacità di aderire agli standard;
     \item \textbf{Sicurezza:} capacità di garantire protezione a informazioni e dati.
 \end{itemize}
+\subsubsubsection{Metriche}
+\begin{itemize}
+    \item \textbf{MPD01 - Percentuale Test Superati:} indica la corretta implementazione delle funzionalità previste dai requisiti.\\
+          \\\textbf{Metodo di misura}: valore percentuale: M = $\frac{N\textsubscript{TS}}{N\textsubscript{TE}}*100$ \\
+          \\dove N\textsubscript{TS} indica il numero di test superati e N\textsubscript{TE} indica il numero test effettuati.
+\end{itemize}
 \subsubsection{Affidabilità}
 È la capacità del software di mantenere prestazioni specifiche in condizioni specificate.
 Si compone di:
@@ -27,6 +33,12 @@ Si compone di:
     \item \textbf{Tolleranza agli errori: }capacità di mantenere i livelli prefissati di prestazioni anche in caso di errori o di usi scorretti del prodotto;
     \item \textbf{Ricuperabilità: }capacità, a seguito di un malfunzionamento o di un uso scorretto, di ripristinare i livelli di prestazioni;
     \item \textbf{Aderenza: }capacità di aderire a standard e regole riguardanti l'affidabilità.
+\end{itemize}
+\subsubsubsection{Metriche}
+\begin{itemize}
+    \item \textbf{MPD02 - Densità errori:} indica la capacità del prodotto di resistere a malfunzionamenti.\\
+          \\\textbf{Metodo di misura}: valore percentuale: M = $\frac{N\textsubscript{ER}}{N\textsubscript{TE}}*100$ \\
+          \\dove N\textsubscript{ER} indica il numero di errori rilevati e N\textsubscript{TE} indica il numero di test eseguiti.
 \end{itemize}
 \subsubsection{Efficienza}
 \'E la capacita del software di svolgere le proprie funzioni ottimizzando l'uso delle risorse e minimizzando i tempi. Si compone di:
@@ -42,13 +54,32 @@ Capacità del prodotto di essere utilizzato e compreso dall'utente, sotto determ
     \item \textbf{Operabilità: }capacità di eseguire gli scopi dell'utente e di essere controllato dall'utente;
     \item \textbf{Attrattività: }capacità di essere piacevole per l'utente.
 \end{itemize}
-\subsection{Manutenibilità}
+\subsubsubsection{Metriche}
+\begin{itemize}
+    \item \textbf{MPD03 - Facilità di utilizzo:} indica la facilità con cui l'utente riesce a ottenere l'informazione che sta cercando.\\
+          \\\textbf{Metodo di misura}: numero di click necessari per arrivare alla pagina di checkout;
+    \item \textbf{MPD04 - Facilità di apprendimento:} indica la facilità con cui l'utente riesce a imparare l'utilizzo delle funzionalità del prodotto.\\
+          \\\textbf{Metodo di misura}: minuti necessari a raggiungere la pagina di checkout;
+    \item \textbf{MPD05 - Profondità della gerarchia:} indica la profondità del sito.\\
+          \\\textbf{Metodo di misura}: livello di profondità delle pagine.
+\end{itemize}
+\subsubsection{Manutenibilità}
 Capacità del prodotto di essere modificato, corretto e adattato. Si compone di:
 \begin{itemize}
     \item \textbf{Analizzabilità: }capacità di essere analizzato per identificare errori;
     \item \textbf{Modificabilità: }capacità di poter essere modificato nel codice, nella documentazione o nella progettazione;
     \item \textbf{Stabilità: }capacità di evitare effetti collaterali indesiderati a seguito di modifiche;
     \item \textbf{Testabilità: }capacità di essere testato per validare le modifiche.
+\end{itemize}
+\subsubsubsection{Metriche}
+\begin{itemize}
+    \item \textbf{MPD06 - Facilità di comprensione:} la facilità con cui l'utente riesce a comprendere il codice può essere rappresentata dal numero di linee di commento nel codice.\\
+          \\\textbf{Metodo di misura}: R = $\frac{N\textsubscript{LCOM}}{N\textsubscript{LCOD}}$ \\
+          \\dove N\textsubscript{LCOM} indica il numero di linee di commento e N\textsubscript{LCOD} indica le linee di codice;
+    \item \textbf{MPD07 - Semplicità delle funzioni:} indica la semplicità di un metodo in base al numero di parametri passati allo stesso.\\
+          \\\textbf{Metodo di misura}: numero di parametri del metodo;
+    \item \textbf{MPD08 - Semplicità delle classi:}  indica la semplicità di una classe in base al numero di metodi della stessa.\\
+          \\\textbf{Metodo di misura}: numero di metodi della classe.
 \end{itemize}
 \subsubsection{Portabilità}
 \begin{itemize}
@@ -57,3 +88,13 @@ Capacità del prodotto di essere modificato, corretto e adattato. Si compone di:
     \item \textbf{Conformità: }capacità di coesistere con altre applicazione, condividendo le risorse;
     \item \textbf{Sostituibilità: }capacità di essere impiegato al posto di altre applicazioni per svolgere gli stessi compiti.
 \end{itemize}
+
+
+
+
+% Affidabilità
+
+
+% Usabilità
+
+
