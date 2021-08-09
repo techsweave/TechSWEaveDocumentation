@@ -27,7 +27,7 @@ portfolio.
     \item \textbf{Link: \url{https://aws.amazon.com/dynamodb/}}
 \end{itemize}
 \subsubsubsection{Chai}
-Chai is a BDD / TDD assertion library for node\textsubscript{\textbf{G}} and the browser that can be delightfully paired with any javascript testing framework.
+Chai is a BDD\textsubscript{\textbf{G}} / TDD\textsubscript{\textbf{G}} assertion library for node\textsubscript{\textbf{G}} and the browser that can be delightfully paired with any javascript testing framework.
 \begin{itemize}
     \item \textbf{Used Version: 4.3.4}
     \item \textbf{Link: \url{https://www.chaijs.com/}}
@@ -156,7 +156,7 @@ The Products service allows the vendor to manage the products of their store. It
 This microservice\textsubscript{\textbf{G}} allows the user to:
 \begin{itemize}
     \item Create a new order;
-    \item Delete a order;
+    \item Delete an order;
     \item View the order details;
     \item Find a specific order using filters.
 \end{itemize}
@@ -211,7 +211,7 @@ The following sequence diagrams describe the main operations that can be carried
     \vspace{5px}
     \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/createProductSequence.png}
     \centering
-    \caption{sequence diagram for creating a product}
+    \caption{Sequence diagram for creating a product}
 \end{figure}
 The diagram represents the sequence of operations necessary to create a product, the \textit{isVendor()} method is responsible for checking that the user who accesses the creation of the product is a vendor and therefore has access to this functionality.
 \pagebreak
@@ -220,7 +220,7 @@ The diagram represents the sequence of operations necessary to create a product,
     \vspace{5px}
     \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/removeProductFromCart.png}
     \centering
-    \caption{sequence diagram for removing a product from the cart}
+    \caption{Sequence diagram for removing a product from the cart}
 \end{figure}
 The diagram represents the sequence of operations required for any user to remove a product from the cart.
 \pagebreak
@@ -229,7 +229,7 @@ The diagram represents the sequence of operations required for any user to remov
     \vspace{5px}
     \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/createCheckoutSequence.png}
     \centering
-    \caption{sequence diagram for checking out}
+    \caption{Sequence diagram for checking out}
 \end{figure}
 The diagram represents the sequence of operations necessary for the checkout with consequent payment of the order. This feature is only available if the user is authenticated and uses Stripe as an external service to proceed with the payment of the order.
 \pagebreak
@@ -238,16 +238,16 @@ The diagram represents the sequence of operations necessary for the checkout wit
     \vspace{5px}
     \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/scanTagSequence.png}
     \centering
-    \caption{sequence diagram for scanning a tag}
+    \caption{Sequence diagram for scanning a tag}
 \end{figure}
-The diagram represents the sequence of operations required to scan the tags, using filters. this feature can be used by any user.
+The diagram represents the sequence of operations required to scan the tags, using filters. This feature can be used by any user.
 \pagebreak
 \subsubsection{Update category}
 \begin{figure}[!h]
     \vspace{5px}
     \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/updateCategorySequence.png}
     \centering
-    \caption{sequence diagram for updating a category}
+    \caption{Sequence diagram for updating a category}
 \end{figure}
 The diagram represents the sequence of operations required to update a category. This function is only accessible by a vendor, for this reason there is the \textit{isVendor()} method to check that the user who accesses it is actually a vendor.
 \pagebreak
@@ -256,6 +256,6 @@ The diagram represents the sequence of operations required to update a category.
     \vspace{5px}
     \includegraphics[scale=0.5]{../../../../Images/Diagrammi/maintainerManual/getProductSequence.png}
     \centering
-    \caption{sequence diagram for getting a product}
+    \caption{Sequence diagram for getting a product}
 \end{figure}
 The diagram represents the sequence of operations necessary to obtain information regarding a product, this function is accessible to any user. The \textit{isVendor()} function checks the type of user and returns different product information depending on the case.

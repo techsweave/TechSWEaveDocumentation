@@ -43,12 +43,12 @@ Jest is a JavaScript testing framework designed to ensure correctness of any Jav
   \item \textbf{Link: \url{https://jestjs.io/docs/getting-started}}
 \end{itemize}
 \subsection{General description}
-The frontend\textsubscript{\textbf{G}} structure is based on the use of an npm utilities-techsweave package produced by the backend, containing the interfaces and services useful for rendering the user interface. The interfaces of the microservices are imported by the "Models" file, while the methods made available by the microservices are imported by the "Services" file. These methods allow to call the lambda functions present within the backend to obtain the results necessary for the functioning of the user interface. To render the pages of the platform, the best practices of react and next are followed. The pages are composed through the use of components, html snippets\textsubscript{\textbf{G}} that reproduce a specific part of the page itself.
+The frontend\textsubscript{\textbf{G}} structure is based on using the npm utilities-techsweave package produced by the backend, containing the interfaces and services useful for rendering the user interface. The interfaces of the microservices are imported by the "Models" file, while the methods made available by the microservices are imported by the "Services" file. These methods allow to call the lambda functions present within the backend to obtain the results necessary for the functioning of the user interface. To render the pages of the platform, the best practices of react and next are followed. The pages are composed through the use of components, HTML snippets\textsubscript{\textbf{G}} that reproduces a specific part of the page itself.
 \subsection{Examples of functioning}
 \subsubsection{Use of a function}
 Calling the scanAsync method on an instance of the product class, the scan of the products in the database will be returned. These products will be passed to the frontend components to render the page and display the data taken from the database.
 \subsubsection{Rendering of a page}
-To render the detail page of a product, by using the getStaticProps function will be returned the data with the necessary product details. the various components are then inserted into the html code to produce the page:
+To render the detail page of a product, by using the getStaticProps function will be returned the data with the necessary product details. The various components are then inserted into the HTML code to produce the page:
 \begin{itemize}
   \item \textbf{Layout}, containing the general style of the page including header, footer and navbar;
   \item \textbf{ProductDetail}, to render product details through images and texts;
