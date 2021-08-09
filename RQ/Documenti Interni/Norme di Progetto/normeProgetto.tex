@@ -18,6 +18,7 @@ urlcolor=blue}
 \usepackage[english,italian]{babel}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage{longtable}
 % creazione comando subsubsubsection
 \titleclass{\subsubsubsection}{straight}[\subsection]
 
@@ -48,9 +49,7 @@ urlcolor=blue}
 \setlength{\headheight}{45pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-
-
-
+%DIARIO DELLE MODIFICHE
 \begin{document}
 \begin{titlepage}
     \begin{center}
@@ -65,10 +64,10 @@ urlcolor=blue}
         \textbf{\Large Informazioni sul documento}\\
         \vspace{20px}
         \begin{tabular}{p{100px} | p{100px}}
-            \textbf{Versione}     & 2.0.0                                                                      \\
-            \textbf{Responsabile} & Tito Scutari                                                               \\
-            \textbf{Redattori}    & Nicolò Giaccone \newline Samuele De Simone                                 \\
-            \textbf{Verificatori} & Simone Urbani                                                              \\
+            \textbf{Versione}     & 3.0.0                                                                      \\
+            \textbf{Responsabile} & Amedeo Meggiolaro                                                          \\
+            \textbf{Redattori}    & Marco Barbaresco \newline Nicolò Giaccone \newline Samuele De Simone       \\
+            \textbf{Verificatori} & Manuel Varo                                                                \\
             \textbf{Destinatari}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave \\
             \textbf{Stato}        & Approvato                                                                  \\
             \textbf{Uso}          & Interno                                                                    \\
@@ -77,38 +76,46 @@ urlcolor=blue}
         \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
     \end{center}
 \end{titlepage}
-\begin{center}
 
+%DIARIO DELLE MODIFICHE
+\begin{center}
+    \centering
     \textbf{\Large Diario delle modifiche}\\
     \vspace{10px}
-    \begin{table}[h!]
-        \centering
-        \rowcolors{2}{logo!10}{logo!40}
-        \renewcommand{\arraystretch}{1.8}
-        \begin{tabular}{p{160px} p{86px} p{70px} p{60px} p{45px}}
-            \rowcolor{logo!70} \textbf{Modifica}        & \textbf{Autore}                             & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione} \\
-            Validazione                                 & Tito Scutari                                & Responsabile   & 2021-04-30    & 2.0.0             \\
-            Piccole correzioni                          & Simone Urbani                               & Verificatore   & 2021-04-26    & 1.2.1             \\
-            Aggiunti standard di qualità                & Samuele                                     & Analista       & 2021-04-24    & 1.2.0             \\
-            Aggiunte norme per la codifica              & Nicolò Giaccone                             & Progettista    & 2021-04-15    & 1.1.0             \\
-            Correzione vari errori di sintassi          & Samuele De Simone                           & Analista       & 2021-04-15    & 1.0.1             \\
-            Validazione                                 & Manuel Varo                                 & Responsabile   & 2021-03-20    & 1.0.0             \\
-            Verifica completa documento                 & Amedeo Meggiolaro \newline Marco Barbaresco & Verificatori   & 2021-03-17    & 0.3.0             \\
-            Aggiunta introduzione                       & Samuele De Simone                           & Analista       & 2021-03-17    & 0.2.1             \\
-            Verifica parziale documento                 & Amedeo Meggiolaro                           & Verificatore   & 2021-03-16    & 0.2.0             \\
-            Completata sezione Qualità del prodotto     & Manuel Varo                                 & Responsabile   & 2021-03-16    & 0.1.4             \\
-            Completata sezione Coordinamento            & Tito Scutari                                & Analista       & 2021-03-15    & 0.1.3             \\
-            Completate sezioni Fornitura e Sviluppo     & Marco Barbaresco                            & Verificatore   & 2021-03-15    & 0.1.2             \\
-            Completata sezione Verifica e Validazione   & Nicolò Giaccone                             & Analista       & 2021-03-14    & 0.1.1             \\
-            Verifica parziale documento                 & Marco Barbaresco                            & Verificatore   & 2021-03-14    & 0.1.0             \\
-            Completata sezione Pianificazione           & Amedeo Meggiolaro                           & Verificatore   & 2021-03-14    & 0.0.5             \\
-            Completata sezione Progettazione e Codifica & Simone Urbani                               & Analista       & 2021-03-14    & 0.0.4             \\
-            Completata sezione Documentazione           & Samuele De Simone                           & Analista       & 2021-03-13    & 0.0.3             \\
-            Scaletta per processi di supporto           & Samuele De Simone                           & Analista       & 2021-03-13    & 0.0.2             \\
-            Prima stesura documento                     & Samuele De Simone                           & Analista       & 2021-03-13    & 0.0.1             \\
-        \end{tabular}
-    \end{table}
+    \rowcolors{2}{logo!10}{logo!40}
+    \renewcommand{\arraystretch}{1.8}
+    \label{tab:Diario delle modifiche}
+    \begin{longtable}[!h]{p{160px} p{80px} p{70px} p{55px} p{40px}}
+        \rowcolor{logo!70} \textbf{Modifica}                                       & \textbf{Autore}                             & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione} \\
+        Validazione documento                                                      & Amedeo Meggiolaro                           & Responsabile   & 2021-06-01    & 3.0.0             \\
+        Verifica documento \newline (Verificatore: Marco Barbaresco)               & Manuel Varo                                 & Amministratore & 2021-06-01    & 2.1.0             \\
+        Aggiornata \S A \newline (Verificatore: Nicolò Giaccone)                   & Marco Barbaresco                            & Amministratore & 2021-05-28    & 2.0.4             \\
+        Riorganizzata e approfondita \S3 \newline (Verificatore: Marco Barbaresco) & Nicolò Giaccone                             & Amministratore & 2021-05-28    & 2.0.3             \\
+        Riorganizzata e approfondita \S4 \newline (Verificatore: Marco Barbaresco) & Nicolò Giaccone                             & Amministratore & 2021-05-26    & 2.0.2             \\
+        Riorganizzata e approfondita \S2 \newline (Verificatore: Nicolò Giaccone)  & Marco Barbaresco                            & Amministratore & 2021-05-25    & 2.0.1             \\
+        Validazione                                                                & Tito Scutari                                & Responsabile   & 2021-04-30    & 2.0.0             \\
+        Piccole correzioni                                                         & Simone Urbani                               & Verificatore   & 2021-04-26    & 1.2.1             \\
+        Aggiunti standard di qualità                                               & Samuele                                     & Analista       & 2021-04-24    & 1.2.0             \\
+        Aggiunte norme per la codifica                                             & Nicolò Giaccone                             & Progettista    & 2021-04-15    & 1.1.0             \\
+        Correzione vari errori di sintassi                                         & Samuele De Simone                           & Analista       & 2021-04-15    & 1.0.1             \\
+        Validazione                                                                & Manuel Varo                                 & Responsabile   & 2021-03-20    & 1.0.0             \\
+        Verifica completa documento                                                & Amedeo Meggiolaro \newline Marco Barbaresco & Verificatori   & 2021-03-17    & 0.3.0             \\
+        Aggiunta introduzione                                                      & Samuele De Simone                           & Analista       & 2021-03-17    & 0.2.1             \\
+        Verifica parziale documento                                                & Amedeo Meggiolaro                           & Verificatore   & 2021-03-16    & 0.2.0             \\
+        Completata sezione Qualità del prodotto                                    & Manuel Varo                                 & Responsabile   & 2021-03-16    & 0.1.4             \\
+        Completata sezione Coordinamento                                           & Tito Scutari                                & Analista       & 2021-03-15    & 0.1.3             \\
+        Completate sezioni Fornitura e Sviluppo                                    & Marco Barbaresco                            & Verificatore   & 2021-03-15    & 0.1.2             \\
+        Completata sezione Verifica e Validazione                                  & Nicolò Giaccone                             & Analista       & 2021-03-14    & 0.1.1             \\
+        Verifica parziale documento                                                & Marco Barbaresco                            & Verificatore   & 2021-03-14    & 0.1.0             \\
+        Completata sezione Pianificazione                                          & Amedeo Meggiolaro                           & Verificatore   & 2021-03-14    & 0.0.5             \\
+        Completata sezione Progettazione e Codifica                                & Simone Urbani                               & Analista       & 2021-03-14    & 0.0.4             \\
+        Completata sezione Documentazione                                          & Samuele De Simone                           & Analista       & 2021-03-13    & 0.0.3             \\
+        Scaletta per processi di supporto                                          & Samuele De Simone                           & Analista       & 2021-03-13    & 0.0.2             \\
+        Prima stesura documento                                                    & Samuele De Simone                           & Analista       & 2021-03-13    & 0.0.1             \\
+    \end{longtable}
 \end{center}
+
+%INDICE
 \newpage
 \tableofcontents
 \newpage
