@@ -43,7 +43,7 @@ urlcolor=blue}
 \pagestyle{fancy}
 \lhead{\includegraphics[scale=0.2]{../../../../Images/logo.png}}
 %Titolo del documento
-\rhead{\large Verbale Esterno del 2021-04-19}
+\rhead{\large Verbale Interno del 2021-05-25}
 %\rfoot{\thepage}
 \cfoot{Pagina \thepage{} di \pageref{LastPage}}
 \setlength{\headheight}{45pt}
@@ -56,7 +56,7 @@ urlcolor=blue}
         \vspace{20px}
         \textcolor{logo}{\hrulefill}\\
         \vspace{20px}
-        \textbf{\huge\textcolor{logo}{Verbale Esterno del 2021-04-19}}\\
+        \textbf{\huge\textcolor{logo}{Verbale Interno del 2021-05-25}}\\
         \vspace{10px}
         \textcolor{logo}{\hrulefill}\\
         \vspace{40px}
@@ -65,8 +65,8 @@ urlcolor=blue}
         \begin{tabular}{p{100px} | p{100px}}
             \textbf{Versione}     & 1.0.0                                                                      \\
             \textbf{Responsabile} & Tito Scutari                                                               \\
-            \textbf{Redattore}    & Nicolò Giaccone                                                            \\
-            \textbf{Verificatore} & Samuele De Simone                                                          \\
+            \textbf{Redattore}    & Marco Barbaresco                                                           \\
+            \textbf{Verificatore} & Amedeo Meggiolaro                                                          \\
             \textbf{Destinatari}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave \\
             \textbf{Stato}        & Approvato                                                                  \\
             \textbf{Uso}          & Interno                                                                    \\
@@ -77,6 +77,7 @@ urlcolor=blue}
     \end{center}
 \end{titlepage}
 
+
 %INDICE
 \newpage
 \tableofcontents
@@ -84,31 +85,41 @@ urlcolor=blue}
 
 \section{Informazioni riunione}
 \begin{itemize}
-    \item Data e ora: 2021-04-19 ore 18:00-18:30.
-    \item Luogo: Google Meet fornito dai proponenti.
+    \item Data e ora: 2021-05-25 ore 18:00-19:00.
+    \item Luogo: Canale Discord del gruppo tramite videochiamata.
     \item Partecipanti interni: Samuele De Simone, Manuel Varo, Tito Scutari, Nicolò Giaccone, Amedeo Meggiolaro, Marco Barbaresco.
-    \item Partecipanti esterni: Milo Ertola, Alessandro Maccagnan.
-    \item Segretario: Amedeo Meggiolaro.
+    \item Partecipanti esterni: nessuno.
+    \item Segretario: Marco Barbaresco.
 \end{itemize}
-\section{Argomenti della riunione}
+\section{Argomenti affrontati}
+Durante l'incontro sono state riepilogate tutte le attività completate recentemente, quelle in essere e quelle da svolgere e si è deciso
+di riorganizzare le attività e distribuirle in un arco temporale maggiore rispetto a quanto preventivato.
+\section{Verbale della riunione}
 \begin{itemize}
-    \item Scelta identity manager: il team inizialmente aveva scelto di utilizzare Auth0 come identity manager, ma essendo questo deprecato per sistemi serverless, si è scelto, in accordo con il proponente di utilizzare Amazon Cognito;
-    \item Scelta del framework: il team ha chiesto ai proponenti se si potesse utilizzare AWS Amplify dato che è un framework ben integrato con i servizi AWS, i proponenti lo hanno sconsigliato in quanto avrebbe portato ad onerosi costi di setup per l'ambiente di lavoro che avrebbero inciso sul tempo di codifica. Il gruppo ha quindi deciso di utilizzare il framework Serverless.
+    \item Allineamento sullo stato delle attività di progetto;
+    \item Discussione sull'effettivo tempo che i vari membri potranno mettere a disposizione del progetto prossimamente: diversi membri del gruppo hanno
+          avuto diversi impegni personali e tutti i membri dovranno sostenere a breve la sessione di esami, potendo quindi impiegare minor tempo nel progetto e, in particolare,
+          meno di quanto previsto inizialmente;
+    \item Discussione sul leggero sforamento del budget di periodo preventivato;
+    \item Riorganizzazione delle attività e delle tempistiche riguardanti la realizzazione del progetto;
+    \item Discussione riguardo al refactoring di alcuni file e cartelle nel frontend;
+    \item Suddivisione del lavoro di aggiornamento del \textit{Piano di Progetto} e del refactoring del frontend.
 \end{itemize}
+\newpage
 \section{Resoconto}
 \begin{center}
-    \textbf{\Large Resoconto riunione}\\
+    \textbf{\Large Registro delle decisioni}\\
     \vspace{10px}
     \begin{table}[h!]
         \centering
         \rowcolors{2}{logo!10}{logo!40}
         \renewcommand{\arraystretch}{1.8}
-        \begin{tabular}{p{150px} p{150px}}
-            \rowcolor{logo!70} \textbf{Quesito} & \textbf{Soluzione}                                        \\
-            Scelta identity manager             & Il gruppo ha scelto di utilizzare Amazon Cognito          \\
-            Scelta del framework                & Il gruppo ha scelto di utilizzare il framework Serverless \\
+        \begin{tabular}{p{200px} p{200px}}
+            \rowcolor{logo!70} \textbf{Codice} & \textbf{Decisione}                                                                                                               \\
+            VI\_2021\_05\_25.1                 & Assegnati i task per l'aggiornamento del \textit{Piano di Progetto} conseguente alla nuova schedulazione temporale di progetto.  \\
+            VI\_2021\_05\_25.2                 & Assegnati i task per l'aggiornamento del \textit{Piano di Progetto} relativo allo sforamento del budget di periodo preventivato. \\
+            VI\_2021\_05\_25.3                 & Assegnati i task per il refactoring del frontend.                                                                                \\
         \end{tabular}
     \end{table}
 \end{center}
-
 \end{document}
