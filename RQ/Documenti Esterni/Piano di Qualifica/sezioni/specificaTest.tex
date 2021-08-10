@@ -50,12 +50,12 @@ Inoltre, per definire l'esito dei test implementati, vengono utilizzate le segue
         \rowcolor{logo!70}
         \textbf{Test} & \textbf{Descrizione}                                                                                                                                                                             & \textbf{Stato} & \textbf{Esito} \\
         TU1           & Verifica che il componente ProductItem renderizzi correttamente il titolo, prezzo ed immagine del prodotto                                                                                       & I              & S              \\
-        TU3           & Verifica che il componente ProductDetail renderizzi correttamente titolo, descrizione, immagine, tasse, prezzo                                                                                   & I              & S              \\
-        TU4           & Verifica che il componente ProductList renderizzi correttamente l'elenco dei prodotti e relative immagini                                                                                        & I              & S              \\
-        TU2           & Verifica che il componente CartItem renderizzi correttamente titolo e prezzo                                                                                                                     & I              & S              \\
+        TU2           & Verifica che il componente ProductDetail renderizzi correttamente titolo, descrizione, immagine, tasse, prezzo                                                                                   & I              & S              \\
+        TU3           & Verifica che il componente ProductList renderizzi correttamente l'elenco dei prodotti e relative immagini                                                                                        & I              & S              \\
+        TU4           & Verifica che il componente CartItem renderizzi correttamente titolo e prezzo                                                                                                                     & I              & S              \\
+        TU5           & Verifica che il componente CartSummary renderizzi correttamente totale del carrello \newline e che questo corrisponda al totale effettivo del carrello                                           & I              & S              \\
         TU6           & Verifica che il componente OrderDetail renderizzi correttamente ID dell'ordine                                                                                                                   & I              & S              \\
         TU7           & Verifica che il componente CarouselItem renderizzi correttamente titolo e prezzo                                                                                                                 & I              & S              \\
-        TU5           & Verifica che il componente CartSummary renderizzi correttamente totale del carrello \newline e che questo corrisponda al totale effettivo del carrello                                           & I              & S              \\
         TU8           & Verifica che il componente Filter renderizzi correttamente i bottoni di applicazione e reset del filtro, e che vengano visualizzati correttamente i valori di minimo e massimo selezionati       & I              & S              \\
         TU9           & Verifica che il componente RelatedArticles renderizzi correttamente la lista dei prodotti alternativi.                                                                                           & I              & S              \\
         TU10          & Verifica che il componente RelatedItem renderizzi correttamente titolo, immagine e prezzo dei prodotti alternativi a quello visualizzato                                                         & I              & S              \\
@@ -64,54 +64,49 @@ Inoltre, per definire l'esito dei test implementati, vengono utilizzate le segue
         TU12          & Verifica che l'handler di `createProduct` controlli correttamente se l'utente sia autorizzato a chiamare la funzione `createProduct`. In caso positivo effettua la chiamata e genera il prodotto & I              & S              \\
         TU13          & Visualizzazione dello stato d'errore nel caso in cui l'accesso alla funzioine `createProduct` si negato all'utente.                                                                              & I              & S              \\
         TU14          & Verifica che la funzione `deleteProduct` elimini correttamente l'oggetto desiderato                                                                                                              & I              & S              \\
-        TU15          & In caso la chiamata venga effettuata su un oggetto inesistente la funzione ritorna il corretto errore di non esistenza del prodotto cercato                                                      & I              & S              \\
+        TU15          & In caso la chiamata alla funzione `deleteProduct` venga effettuata su un oggetto inesistente la funzione ritorna il corretto errore di non esistenza del prodotto cercato                                                      & I              & S              \\
         TU16          & Verifica che l'handler di `deleteProduct` effettui correttamente la chiamata alla funzione `deleteProduct`                                                                                       & I              & S              \\
-        TU17          & Verifica che l'utente sia autorizzato ad effettuare la chiamata alla funzione                                                                                                                    & I              & S              \\
-        TU18          & Verifica che in caso di errore di non esistenza del prodotto da eliminare, la funzione ritorna il corretto errore all'handler                                                                    & I              & S              \\
+        TU17          & Verifica che l'utente sia autorizzato ad effettuare la chiamata alla funzione `deleteProduct`                                                                                                                  & I              & S              \\
+        TU18          & Verifica che in caso di errore di non esistenza del prodotto da eliminare, la funzione `deleteProduct` ritorna il corretto errore all'handler                                                                    & I              & S              \\
         TU19          & Verifica che la funzione `getProduct` ritorni il prodotto corretto                                                                                                                               & I              & S              \\
-        TU20          & In caso la chiamata venga effettuata su un oggetto inesistente la funzione ritorna il corretto errore di non esistenza del prodotto richiesto                                                    & I              & S              \\                                                                                                                                                                                     
+        TU20          & In caso la chiamata venga effettuata su un oggetto inesistente la funzione ritorna il corretto errore di non esistenza del prodotto richiesto                                                    & I              & S              \\
         TU21          & Verifica che l'handler di `getProduct` controlli la tipologia di utente che effettua la chiamata per andare ad utilizzare il metodo corretto                                                     & I              & S              \\
         TU22          & Verifica che l'handler di `getProduct` passi correttamente i parametri alla funzione                                                                                                             & I              & S              \\
         TU23          & Verifica che la funzione di `scanProduct` ritorni il numero corretto di prodotti e che funzioni il filtro in fase di ritorno dei prodotti stessi                                                 & I              & S              \\
-        TU24          & Nel caso in cui il formato del filtro non sia conforme ritorna il corretto il messaggio di errore                                                                                                & I              & S              \\                                                                                                                                                                                   
-        TU25          & Verifica che la funzione `updateProduct` aggiorni correttamente il prodotto           & I              & S              \\
-        TU26          & Verifica che la funzione `updateProduct` visualizzi un errore nel caso in cui non vada a buon fine l'aggiornamento di un prodotto           & I              & S              \\
+        TU24          & Verifica che nel caso in cui il formato del filtro non sia conforme ritorna il corretto il messaggio di errore                                                                                                & I              & S              \\
+        TU25          & Verifica che la funzione `updateProduct` aggiorni correttamente il prodotto                                                                                                                      & I              & S              \\
+        TU26          & Verifica che la funzione `updateProduct` visualizzi un errore nel caso in cui non vada a buon fine l'aggiornamento di un prodotto                                                                & I              & S              \\
         TU27          & Verifica che l'handler di `updateProduct` modifichi un prodotto                                                                                                                                  & I              & S              \\
         TU28          & Verifica che la funzione `createOrder` crei l'ordine correttamente                                                                                                                               & I              & S              \\
         TU29          & Verifica che l'handler di `createOrder` passi i corretti parametri alla funzione `createOrder`                                                                                                   & I              & S              \\
         TU30          & Verifica che l'handler di `createOrder controlli che l'utente sia autorizzato a chiamare la funzione `createOrder`                                                                               & I              & S              \\
-        TU31          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore & I & S \\
+        TU31          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
         TU32          & Verifica che la funzione `deleteOrder` rimuova l'ordine correttamente                                                                                                                            & I              & S              \\
         TU33          & Verifica che l'handler di `deleteOrder` passi i corretti parametri alla funzione `deleteOrder`                                                                                                   & I              & S              \\
         TU34          & Verifica che l'handler di `deleteOrder` controlli che l'utente sia autorizzato a chiamare la funzione `deleteOrder`                                                                              & I              & S              \\
-        TU35 & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore & I & S \\
+        TU35          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
         TU36          & Verifica che la funzione `getOrder` ritorni l'ordine atteso                                                                                                                                      & I              & S              \\
         TU37          & Verifica che la funzione `createTag` crei il tag correttamente                                                                                                                                   & I              & S              \\
         TU38          & Verifica che l'handler di `createTag` passi correttamente i parametri alla funzione `createTag`                                                                                                  & I              & S              \\
         TU39          & Verifica che l'handler di `createTag` controlli che l'utente sia autorizzato a chiamare la funzione `createTag`                                                                                  & I              & S              \\
-        TU40 & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore & I & S \\
-
+        TU40          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
         TU41          & Verifica che la funzione `deleteTag` rimuova il tag correttamente                                                                                                                                & I              & S              \\
-        TU42          & Verifica che l'handler di `deleteTag` rimuova il tag correttamente                                                                                                                                  & I & S \\
+        TU42          & Verifica che l'handler di `deleteTag` rimuova il tag correttamente                                                                                                                               & I              & S              \\
         TU43          & Verifica che l'handler di `deleteTag` controlli che l'utente sia autorizzato a chiamare la funzione `deleteTag`                                                                                  & I              & S              \\
-        TU44 & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore & I & S \\
-                                                                                                                                                                                                                     
-        TU45          & Verifica che la funzione `getTag` ritorni il tag atteso   & I & S \\ 
-        TU46 & Verifica che se il tag richiesto non esiste ritorna il corretto messaggio di errore & I & S \\                                                                                                                               
+        TU44          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
+        TU45          & Verifica che la funzione `getTag` ritorni il tag atteso                                                                                                                                          & I              & S              \\
+        TU46          & Verifica che se il tag richiesto non esiste ritorna il corretto messaggio di errore                                                                                                              & I              & S              \\
         TU47          & Verifica che l'handler di `getTag` ritorni il tag atteso                                                                                                                                         & I              & S              \\
         TU48          & Verifica che l'handler di `getTag` controlli che l'utente sia autorizzato a chiamare la funzione `getTag`                                                                                        & I              & S              \\
-        TU49 & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore & I & S \\
-
+        TU49          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
         TU50          & Verifica che la funzione `updateTag` non sollevi eccezioni                                                                                                                                       & I              & S              \\
         TU51          & Verifica che l'handler di `updateTag` modifichi un tag                                                                                                                                           & I              & S              \\
-        TU52          & Verifica che l'handler di `updateTag` controlli che l'utente sia autorizzato a chiamare la funzione `updateTag`                                                                                        & I              & S              \\
-        TU53 & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore & I & S \\
-
+        TU52          & Verifica che l'handler di `updateTag` controlli che l'utente sia autorizzato a chiamare la funzione `updateTag`                                                                                  & I              & S              \\
+        TU53          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
         TU54          & Verifica che la funzione di `scanTag` applichi i limiti correttamente                                                                                                                            & I              & S              \\
         TU55          & Verifica che l'handler di `scanTag` applichi i limiti correttamente                                                                                                                              & I              & S              \\
-        TU56          & Verifica che l'handler di `scanTag` controlli che l'utente sia autorizzato a chiamare la funzione `scanTag`                                                                                  & I              & S              \\
-        TU57 & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore & I & S \\
-
+        TU56          & Verifica che l'handler di `scanTag` controlli che l'utente sia autorizzato a chiamare la funzione `scanTag`                                                                                      & I              & S              \\
+        TU57          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
     \end{longtable}
 \end{center}
 
@@ -143,84 +138,84 @@ La seguente tabella illustra i test di sistema; ogni test ha un nome che identif
     \renewcommand{\arraystretch}{1.8}
     \label{tab:TestSistema}
     \begin{longtable}[!h]{p{60px} p{240px} p{35px} p{35px}}
-        \caption{Test di sistema}                                                                                                                               \\
+        \caption{Test di sistema}                                                                                                                                                \\
         \rowcolor{logo!70}
-        \textbf{Test}   & \textbf{Descrizione}                                                                                & \textbf{Stato} & \textbf{Esito} \\
-        \textbf{TSOF1}  & Viene verificato che l'utente possa visualizzare la home page                                                       & I              & S              \\
-        TSOF1.1         & Viene verificato che l'utente possa vedere i prodotti in evidenza e in offerta                                      & I              & S              \\
-        TSOF1.2         & Viene verificato che l'utente possa dalla homepage accedere facilmente alla barra di ricerca e al menù             & I              & S              \\
-        TSOF1.3         & Viene verificato che l'utente possa accedere al carrello dalla homepage                                            & I              & S              \\
-        \textbf{TSOF2}  & Viene verificato che l'utente possa visualizzare la pagina per l'autenticazione                                     & I              & S              \\
-        \textbf{TSOF3}  & Viene verificato che l'utente possa autenticarsi tramite username e password                                        & I              & S              \\
-        TSOF3.1         & Viene verificato che l'utente possa inserire il proprio username nella pagina di autenticazione                     & I              & S              \\
-        TSOF3.2         & Viene verificato che l'utente possa inserire la propria password nella pagina di autenticazione                     & I              & S              \\
-        \textbf{TSDF4}  & Viene verificato che l'utente possa autenticarsi tramite un servizio esterno                                        & NI             & /              \\
-        \textbf{TSOF5}  & Viene verificato che l'utente possa visualizzare i dettagli di un prodotto                                          & I              & S              \\
-        TSOF5.1         & Viene verificato che l'utente possa visualizzare il nome del prodotto                                               & I              & S              \\
-        TSOF5.2         & Viene verificato che l'utente possa visualizzare una foto del prodotto                                              & I              & S              \\
-        TSOF5.3         & Viene verificato che l'utente possa visualizzare una descrizione del prodotto                                       & I              & S              \\
-        TSOF5.4         & Viene verificato che l'utente possa visualizzare il prezzo del prodotto                                             & I              & S              \\
-        TSOF5.5         & Viene verificato che l'utente possa visualizzare le tasse del prodotto                                              & I              & S              \\
-        TSDF5.6         & Viene verificato che l'utente possa visualizzare la disponibilità del prodotto                                      & I              & S              \\
-        TSFF5.7         & Viene verificato che l'utente possa visualizzare l'eventuale sconto del prodotto                                    & I              & S              \\
-        TSOF5.8         & Viene verificato che l'utente possa accedere al carrello dal dettaglio del prodotto                                 & I              & S              \\
-        TSDF5.9         & Viene verificato che il cliente possa procedere all'acquisto diretto del prodotto                                   & NI             & /              \\
-        \textbf{TSOF6}  & Viene verificato che l'utente possa aggiungere un prodotto al carrello                                              & I              & S              \\
-        \textbf{TSOF7}  & Viene verificato che l'utente possa cercare i prodotti tramite parola chiave                                        & I              & S              \\
-        \textbf{TSOF8}  & Viene verificato che l'utente possa visualizzare la lista di prodotti                                               & I              & S              \\
-        TSOF8.1         & Viene verificato che l'utente possa selezionare più prodotti                                                        & I              & S              \\
-        \textbf{TSDF9}  & Viene verificato che l'utente possa ordinare la lista di prodotti                                                   & NI             & /              \\
-        TSDF9.1         & Viene verificato che l'utente possa ordinare i prodotti per prezzo                                                  & NI             & /              \\
-        TSDF9.2         & Viene verificato che l'utente possa ordinare i prodotti per nome                                                    & NI             & /              \\
-        \textbf{TSOF10} & Viene verificato che l'utente possa filtrare la lista di prodotti                                                   & I              & S              \\
-        TSOF10.1        & Viene verificato che l'utente possa decidere un prezzo minimo                                                       & I              & S              \\
-        TSOF10.2        & Viene verificato che l'utente possa decidere un prezzo massimo                                                      & I              & S              \\
-        TSFF10.3        & Viene verificato che l'utente possa filtrare per marca                                                              & NI             & /              \\
-        TSDF10.4        & Viene verificato che l'utente possa filtrare per categoria                                                          & NI             & /              \\
-        TSOF10.5        & Viene verificato che l'utente possa modificare un filtro                                                            & I              & S              \\
-        TSOF10.6        & Viene verificato che l'utente possa rimuovere i filtri                                                              & I              & S              \\
-        \textbf{TSOF11} & Viene verificato che l'utente possa registrarsi inserendo i propri dati                                            & I              & S              \\
-        TSOF11.1        & Viene verificato che l'utente possa inserire il proprio nome                                                        & I              & S              \\
-        TSOF11.2        & Viene verificato che l'utente possa inserire il proprio cognome                                                     & I              & S              \\
-        TSOF11.3        & Viene verificato che l'utente possa inserire il proprio username                                                    & I              & S              \\
-        TSOF11.4        & Viene verificato che l'utente possa inserire il proprio password                                                    & I              & S              \\
-        TSFF11.5        & Viene verificato che l'utente possa inserire la propria data di nascita                                             & I              & S              \\
-        TSFF11.6        & Viene verificato che l'utente possa inserire il proprio numero di telefono                                          & I              & S              \\
-        TSOF11.7        & Viene verificato che l'utente possa inserire il proprio indirizzo                                                   & I              & S              \\
-        \textbf{TSDF12} & Viene verificato che l'utente possa registrarsi tramite un servizio esterno                                        & NI             & /              \\
-        \textbf{TSOF13} & Viene verificato che l'utente possa gestire il carrello                                                             & I              & S              \\
-        TSOF13.1        & Viene verificato che l'utente possa visualizzare i prodotti inseriti nel carrello                                   & I              & S              \\
-        TSOF13.2        & Viene verificato che l'utente possa rimuovere i prodotti inseriti nel carrello                                      & I              & S              \\
-        TSDF13.3        & Viene verificato che l'utente possa cambiare la quantità dei prodotti inseriti nel carrello                         & I              & S              \\
-        TSDF13.4        & Viene verificato che l'utente possa essere avvisato se la quantità in magazzino è minore della quantità nel carrello      & I              & S              \\
-        TSOF13.5        & Viene verificato che l'utente possa visualizzare il conto totale del carrello                                       & I              & S              \\
-        TSOF13.6        & Viene verificato che l'utente possa visualizzare le tasse totali del carrello                                       & I              & S              \\
-        \textbf{TSOF14} & Viene verificato che un utente che non riesce ad accedere possa reimpostare la password                             & I              & S              \\
-        \textbf{TSOF15} & Viene verificato che il cliente possa modificare i dati del proprio profilo                                         & I              & S              \\
-        TSOF15.1        & Viene verificato che il cliente possa modificare il proprio nome                                                    & I              & S              \\
-        TSOF15.2        & Viene verificato che il cliente possa modificare il proprio cognome                                                 & I              & S              \\
-        TSOF15.3        & Viene verificato che il cliente possa cambiare il proprio indirizzo                                                 & I              & S              \\
-        TSFF15.4        & Viene verificato che il cliente possa cambiare la propria data di nascita                                           & I              & S              \\
-        TSFF15.5        & Viene verificato che il cliente possa cambiare il proprio numero telefonico                                         & I              & S              \\
-        \textbf{TSOF16} & Viene verificato che il cliente possa effettuare il logout                                                          & I              & S              \\
-        \textbf{TSOF17} & Viene verificato che il cliente possa visualizzare i propri dati di profilo                                         & I              & S              \\
-        \textbf{TSFF18} & Viene verificato che il cliente possa contattare il venditore                                                       & NI             & /              \\
-        \textbf{TSOF19} & Viene verificato che il cliente possa effettuare il checkout di un ordine                                           & I              & S              \\
-        TSOF19.1        & Viene verificato che il cliente possa inserire i dati di pagamento                                                  & I              & S              \\
-        TSOF19.2        & Viene verificato che il cliente sia avvisato del mancato pagamento                                         & I              & S              \\
-        \textbf{TSOF20} & Viene verificato che il cliente possa annullare il checkout                                                         & I              & S              \\
-        \textbf{TSOF21} & Viene verificato che il cliente venga indirizzato al riepilogo una volta completato l'ordine                       & I              & S              \\
-        \textbf{TSOF22} & Viene verificato che il cliente possa visualizzare la lista degli ordini che ha effettuato                          & I              & S              \\
-        \textbf{TSOF23} & Viene verificato che il venditore possa visualizzare la lista di clienti                                            & I              & S              \\
-        \textbf{TSOF24} & Viene verificato che il venditore possa visualizzare la lista degli ordini                                          & I              & S              \\
-        \textbf{TSFF25} & Viene verificato che il venditore possa contattare un cliente                                                       & I              & S              \\
-        \textbf{TSOF26} & Viene verificato che il venditore possa aggiungere un nuovo prodotto                                                & I              & S              \\
-        \textbf{TSOF27} & Viene verificato che il venditore possa modificare un prodotto                                                      & I              & S              \\
-        \textbf{TSOF28} & Viene verificato che il venditore possa rimuovere un prodotto                                                       & I              & S              \\
-        \textbf{TSOF29} & Viene verificato che il venditore possa aggiungere una nuova categoria                                              & I              & S              \\
-        \textbf{TSOF30} & Viene verificato che il venditore possa rimuovere una categoria                                                     & I              & S              \\
-        \textbf{TSOF31} & Viene verificato che l'utente possa visualizzare un errore se inserisce dei dati sbagliati durante l'autenticazione & I              & S              \\
-        \textbf{TSOF32} & Viene verificato che il cliente possa modificare la propria password                                                & I              & S              \\
+        \textbf{Test}   & \textbf{Descrizione}                                                                                                 & \textbf{Stato} & \textbf{Esito} \\
+        \textbf{TSOF1}  & Viene verificato che l'utente possa visualizzare la home page                                                        & I              & S              \\
+        TSOF1.1         & Viene verificato che l'utente possa vedere i prodotti in evidenza e in offerta                                       & I              & S              \\
+        TSOF1.2         & Viene verificato che l'utente possa dalla homepage accedere facilmente alla barra di ricerca e al menù               & I              & S              \\
+        TSOF1.3         & Viene verificato che l'utente possa accedere al carrello dalla homepage                                              & I              & S              \\
+        \textbf{TSOF2}  & Viene verificato che l'utente possa visualizzare la pagina per l'autenticazione                                      & I              & S              \\
+        \textbf{TSOF3}  & Viene verificato che l'utente possa autenticarsi tramite username e password                                         & I              & S              \\
+        TSOF3.1         & Viene verificato che l'utente possa inserire il proprio username nella pagina di autenticazione                      & I              & S              \\
+        TSOF3.2         & Viene verificato che l'utente possa inserire la propria password nella pagina di autenticazione                      & I              & S              \\
+        \textbf{TSDF4}  & Viene verificato che l'utente possa autenticarsi tramite un servizio esterno                                         & NI             & /              \\
+        \textbf{TSOF5}  & Viene verificato che l'utente possa visualizzare i dettagli di un prodotto                                           & I              & S              \\
+        TSOF5.1         & Viene verificato che l'utente possa visualizzare il nome del prodotto                                                & I              & S              \\
+        TSOF5.2         & Viene verificato che l'utente possa visualizzare una foto del prodotto                                               & I              & S              \\
+        TSOF5.3         & Viene verificato che l'utente possa visualizzare una descrizione del prodotto                                        & I              & S              \\
+        TSOF5.4         & Viene verificato che l'utente possa visualizzare il prezzo del prodotto                                              & I              & S              \\
+        TSOF5.5         & Viene verificato che l'utente possa visualizzare le tasse del prodotto                                               & I              & S              \\
+        TSDF5.6         & Viene verificato che l'utente possa visualizzare la disponibilità del prodotto                                       & I              & S              \\
+        TSFF5.7         & Viene verificato che l'utente possa visualizzare l'eventuale sconto del prodotto                                     & I              & S              \\
+        TSOF5.8         & Viene verificato che l'utente possa accedere al carrello dal dettaglio del prodotto                                  & I              & S              \\
+        TSDF5.9         & Viene verificato che il cliente possa procedere all'acquisto diretto del prodotto                                    & NI             & /              \\
+        \textbf{TSOF6}  & Viene verificato che l'utente possa aggiungere un prodotto al carrello                                               & I              & S              \\
+        \textbf{TSOF7}  & Viene verificato che l'utente possa cercare i prodotti tramite parola chiave                                         & I              & S              \\
+        \textbf{TSOF8}  & Viene verificato che l'utente possa visualizzare la lista di prodotti                                                & I              & S              \\
+        TSOF8.1         & Viene verificato che l'utente possa selezionare più prodotti                                                         & I              & S              \\
+        \textbf{TSDF9}  & Viene verificato che l'utente possa ordinare la lista di prodotti                                                    & NI             & /              \\
+        TSDF9.1         & Viene verificato che l'utente possa ordinare i prodotti per prezzo                                                   & NI             & /              \\
+        TSDF9.2         & Viene verificato che l'utente possa ordinare i prodotti per nome                                                     & NI             & /              \\
+        \textbf{TSOF10} & Viene verificato che l'utente possa filtrare la lista di prodotti                                                    & I              & S              \\
+        TSOF10.1        & Viene verificato che l'utente possa decidere un prezzo minimo                                                        & I              & S              \\
+        TSOF10.2        & Viene verificato che l'utente possa decidere un prezzo massimo                                                       & I              & S              \\
+        TSFF10.3        & Viene verificato che l'utente possa filtrare per marca                                                               & NI             & /              \\
+        TSDF10.4        & Viene verificato che l'utente possa filtrare per categoria                                                           & NI             & /              \\
+        TSOF10.5        & Viene verificato che l'utente possa modificare un filtro                                                             & I              & S              \\
+        TSOF10.6        & Viene verificato che l'utente possa rimuovere i filtri                                                               & I              & S              \\
+        \textbf{TSOF11} & Viene verificato che l'utente possa registrarsi inserendo i propri dati                                              & I              & S              \\
+        TSOF11.1        & Viene verificato che l'utente possa inserire il proprio nome                                                         & I              & S              \\
+        TSOF11.2        & Viene verificato che l'utente possa inserire il proprio cognome                                                      & I              & S              \\
+        TSOF11.3        & Viene verificato che l'utente possa inserire il proprio username                                                     & I              & S              \\
+        TSOF11.4        & Viene verificato che l'utente possa inserire il proprio password                                                     & I              & S              \\
+        TSFF11.5        & Viene verificato che l'utente possa inserire la propria data di nascita                                              & I              & S              \\
+        TSFF11.6        & Viene verificato che l'utente possa inserire il proprio numero di telefono                                           & I              & S              \\
+        TSOF11.7        & Viene verificato che l'utente possa inserire il proprio indirizzo                                                    & I              & S              \\
+        \textbf{TSDF12} & Viene verificato che l'utente possa registrarsi tramite un servizio esterno                                          & NI             & /              \\
+        \textbf{TSOF13} & Viene verificato che l'utente possa gestire il carrello                                                              & I              & S              \\
+        TSOF13.1        & Viene verificato che l'utente possa visualizzare i prodotti inseriti nel carrello                                    & I              & S              \\
+        TSOF13.2        & Viene verificato che l'utente possa rimuovere i prodotti inseriti nel carrello                                       & I              & S              \\
+        TSDF13.3        & Viene verificato che l'utente possa cambiare la quantità dei prodotti inseriti nel carrello                          & I              & S              \\
+        TSDF13.4        & Viene verificato che l'utente possa essere avvisato se la quantità in magazzino è minore della quantità nel carrello & I              & S              \\
+        TSOF13.5        & Viene verificato che l'utente possa visualizzare il conto totale del carrello                                        & I              & S              \\
+        TSOF13.6        & Viene verificato che l'utente possa visualizzare le tasse totali del carrello                                        & I              & S              \\
+        \textbf{TSOF14} & Viene verificato che un utente che non riesce ad accedere possa reimpostare la password                              & I              & S              \\
+        \textbf{TSOF15} & Viene verificato che il cliente possa modificare i dati del proprio profilo                                          & I              & S              \\
+        TSOF15.1        & Viene verificato che il cliente possa modificare il proprio nome                                                     & I              & S              \\
+        TSOF15.2        & Viene verificato che il cliente possa modificare il proprio cognome                                                  & I              & S              \\
+        TSOF15.3        & Viene verificato che il cliente possa cambiare il proprio indirizzo                                                  & I              & S              \\
+        TSFF15.4        & Viene verificato che il cliente possa cambiare la propria data di nascita                                            & I              & S              \\
+        TSFF15.5        & Viene verificato che il cliente possa cambiare il proprio numero telefonico                                          & I              & S              \\
+        \textbf{TSOF16} & Viene verificato che il cliente possa effettuare il logout                                                           & I              & S              \\
+        \textbf{TSOF17} & Viene verificato che il cliente possa visualizzare i propri dati di profilo                                          & I              & S              \\
+        \textbf{TSFF18} & Viene verificato che il cliente possa contattare il venditore                                                        & NI             & /              \\
+        \textbf{TSOF19} & Viene verificato che il cliente possa effettuare il checkout di un ordine                                            & I              & S              \\
+        TSOF19.1        & Viene verificato che il cliente possa inserire i dati di pagamento                                                   & I              & S              \\
+        TSOF19.2        & Viene verificato che il cliente sia avvisato del mancato pagamento                                                   & I              & S              \\
+        \textbf{TSOF20} & Viene verificato che il cliente possa annullare il checkout                                                          & I              & S              \\
+        \textbf{TSOF21} & Viene verificato che il cliente venga indirizzato al riepilogo una volta completato l'ordine                         & I              & S              \\
+        \textbf{TSOF22} & Viene verificato che il cliente possa visualizzare la lista degli ordini che ha effettuato                           & I              & S              \\
+        \textbf{TSOF23} & Viene verificato che il venditore possa visualizzare la lista di clienti                                             & I              & S              \\
+        \textbf{TSOF24} & Viene verificato che il venditore possa visualizzare la lista degli ordini                                           & I              & S              \\
+        \textbf{TSFF25} & Viene verificato che il venditore possa contattare un cliente                                                        & I              & S              \\
+        \textbf{TSOF26} & Viene verificato che il venditore possa aggiungere un nuovo prodotto                                                 & I              & S              \\
+        \textbf{TSOF27} & Viene verificato che il venditore possa modificare un prodotto                                                       & I              & S              \\
+        \textbf{TSOF28} & Viene verificato che il venditore possa rimuovere un prodotto                                                        & I              & S              \\
+        \textbf{TSOF29} & Viene verificato che il venditore possa aggiungere una nuova categoria                                               & I              & S              \\
+        \textbf{TSOF30} & Viene verificato che il venditore possa rimuovere una categoria                                                      & I              & S              \\
+        \textbf{TSOF31} & Viene verificato che l'utente possa visualizzare un errore se inserisce dei dati sbagliati durante l'autenticazione  & I              & S              \\
+        \textbf{TSOF32} & Viene verificato che il cliente possa modificare la propria password                                                 & I              & S              \\
     \end{longtable}
 \end{center}
 \pagebreak
@@ -232,84 +227,83 @@ La seguente tabella illustra i test di accettazione da eseguire sul sistema, ogn
     \renewcommand{\arraystretch}{1.8}
     \label{tab:TestAccettazione}
     \begin{longtable}[!h]{p{60px} p{240px} p{35px} p{35px}}
-        \caption{Test di accettazione}                                                                                                                          \\
+        \caption{Test di accettazione}                                                                                                                                           \\
         \rowcolor{logo!70}
-        \textbf{Test}   & \textbf{Descrizione}                                                                                & \textbf{Stato} & \textbf{Esito} \\
-\textbf{TAOF1}  & Viene verificato che l'utente possa visualizzare la home page                                                       & NI              & /              \\
-        TAOF1.1         & Viene verificato che l'utente possa vedere i prodotti in evidenza e in offerta                                      & NI              & /              \\
-        TAOF1.2         & Viene verificato che l'utente possa dalla homepage accedere facilmente alla barra di ricerca e al menù             & NI              & /              \\
-        TAOF1.3         & Viene verificato che l'utente possa accedere al carrello dalla homepage                                            & NI              & /              \\
-        \textbf{TAOF2}  & Viene verificato che l'utente possa visualizzare la pagina per l'autenticazione                                     & NI              & /              \\
-        \textbf{TAOF3}  & Viene verificato che l'utente possa autenticarsi tramite username e password                                        & NI              & /              \\
-        TAOF3.1         & Viene verificato che l'utente possa inserire il proprio username nella pagina di autenticazione                     & NI              & /              \\
-        TAOF3.2         & Viene verificato che l'utente possa inserire la propria password nella pagina di autenticazione                     & NI              & /              \\
-        \textbf{TADF4}  & Viene verificato che l'utente possa autenticarsi tramite un servizio esterno                                        & NI             & /              \\
-        \textbf{TAOF5}  & Viene verificato che l'utente possa visualizzare i dettagli di un prodotto                                          & NI              & /              \\
-        TAOF5.1         & Viene verificato che l'utente possa visualizzare il nome del prodotto                                               & NI              & /              \\
-        TAOF5.2         & Viene verificato che l'utente possa visualizzare una foto del prodotto                                              & NI              & /              \\
-        TAOF5.3         & Viene verificato che l'utente possa visualizzare una descrizione del prodotto                                       & NI              & /              \\
-        TAOF5.4         & Viene verificato che l'utente possa visualizzare il prezzo del prodotto                                             & NI              & /              \\
-        TAOF5.5         & Viene verificato che l'utente possa visualizzare le tasse del prodotto                                              & NI              & /              \\
-        TADF5.6         & Viene verificato che l'utente possa visualizzare la disponibilità del prodotto                                      & NI              & /              \\
-        TAFF5.7         & Viene verificato che l'utente possa visualizzare l'eventuale sconto del prodotto                                    & NI              & /              \\
-        TAOF5.8         & Viene verificato che l'utente possa accedere al carrello dal dettaglio del prodotto                                 & NI              & /              \\
-        TADF5.9         & Viene verificato che il cliente possa procedere all'acquisto diretto del prodotto                                   & NI             & /              \\
-        \textbf{TAOF6}  & Viene verificato che l'utente possa aggiungere un prodotto al carrello                                              & NI              & /              \\
-        \textbf{TAOF7}  & Viene verificato che l'utente possa cercare i prodotti tramite parola chiave                                        & NI              & /              \\
-        \textbf{TAOF8}  & Viene verificato che l'utente possa visualizzare la lista di prodotti                                               & NI              & /              \\
-        TAOF8.1         & Viene verificato che l'utente possa selezionare più prodotti                                                        & NI              & /              \\
-        \textbf{TADF9}  & Viene verificato che l'utente possa ordinare la lista di prodotti                                                   & NI             & /              \\
-        TADF9.1         & Viene verificato che l'utente possa ordinare i prodotti per prezzo                                                  & NI             & /              \\
-        TADF9.2         & Viene verificato che l'utente possa ordinare i prodotti per nome                                                    & NI             & /              \\
-        \textbf{TAOF10} & Viene verificato che l'utente possa filtrare la lista di prodotti                                                   & NI              & /              \\
-        TAOF10.1        & Viene verificato che l'utente possa decidere un prezzo minimo                                                       & NI              & /              \\
-        TAOF10.2        & Viene verificato che l'utente possa decidere un prezzo massimo                                                      & NI              & /              \\
-        TAFF10.3        & Viene verificato che l'utente possa filtrare per marca                                                              & NI             & /              \\
-        TADF10.4        & Viene verificato che l'utente possa filtrare per categoria                                                          & NI             & /              \\
-        TAOF10.5        & Viene verificato che l'utente possa modificare un filtro                                                            & NI              & /              \\
-        TAOF10.6        & Viene verificato che l'utente possa rimuovere i filtri                                                              & NI              & /              \\
-        \textbf{TAOF11} & Viene verificato che l'utente possa registrarsi inserendo i propri dati                                            & NI              & /              \\
-        TAOF11.1        & Viene verificato che l'utente possa inserire il proprio nome                                                        & NI              & /              \\
-        TAOF11.2        & Viene verificato che l'utente possa inserire il proprio cognome                                                     & NI              & /              \\
-        TAOF11.3        & Viene verificato che l'utente possa inserire il proprio username                                                    & NI              & /              \\
-        TAOF11.4        & Viene verificato che l'utente possa inserire il proprio password                                                    & NI              & /              \\
-        TAFF11.5        & Viene verificato che l'utente possa inserire la propria data di nascita                                             & NI              & /              \\
-        TAFF11.6        & Viene verificato che l'utente possa inserire il proprio numero di telefono                                          & NI              & /              \\
-        TAOF11.7        & Viene verificato che l'utente possa inserire il proprio indirizzo                                                   & NI              & /              \\
-        \textbf{TADF12} & Viene verificato che l'utente possa registrarsi tramite un servizio esterno                                        & NI             & /              \\
-        \textbf{TAOF13} & Viene verificato che l'utente possa gestire il carrello                                                             & NI              & /              \\
-        TAOF13.1        & Viene verificato che l'utente possa visualizzare i prodotti inseriti nel carrello                                   & NI              & /              \\
-        TAOF13.2        & Viene verificato che l'utente possa rimuovere i prodotti inseriti nel carrello                                      & NI              & /              \\
-        TADF13.3        & Viene verificato che l'utente possa cambiare la quantità dei prodotti inseriti nel carrello                         & NI              & /              \\
-        TADF13.4        & Viene verificato che l'utente possa essere avvisato se la quantità in magazzino è minore della quantità nel carrello      & NI              & /              \\
-        TAOF13.5        & Viene verificato che l'utente possa visualizzare il conto totale del carrello                                       & NI              & /              \\
-        TAOF13.6        & Viene verificato che l'utente possa visualizzare le tasse totali del carrello                                       & NI              & /              \\
-        \textbf{TAOF14} & Viene verificato che un utente che non riesce ad accedere possa reimpostare la password                             & NI              & /              \\
-        \textbf{TAOF15} & Viene verificato che il cliente possa modificare i dati del proprio profilo                                         & NI              & /              \\
-        TAOF15.1        & Viene verificato che il cliente possa modificare il proprio nome                                                    & NI              & /              \\
-        TAOF15.2        & Viene verificato che il cliente possa modificare il proprio cognome                                                 & NI              & /              \\
-        TAOF15.3        & Viene verificato che il cliente possa cambiare il proprio indirizzo                                                 & NI              & /              \\
-        TAFF15.4        & Viene verificato che il cliente possa cambiare la propria data di nascita                                           & NI              & /              \\
-        TAFF15.5        & Viene verificato che il cliente possa cambiare il proprio numero telefonico                                         & NI              & /              \\
-        \textbf{TAOF16} & Viene verificato che il cliente possa effettuare il logout                                                          & NI              & /              \\
-        \textbf{TAOF17} & Viene verificato che il cliente possa visualizzare i propri dati di profilo                                         & NI              & /              \\
-        \textbf{TAFF18} & Viene verificato che il cliente possa contattare il venditore                                                       & NI             & /              \\
-        \textbf{TAOF19} & Viene verificato che il cliente possa effettuare il checkout di un ordine                                           & NI              & /              \\
-        TAOF19.1        & Viene verificato che il cliente possa inserire i dati di pagamento                                                  & NI              & /              \\
-        TAOF19.2        & Viene verificato che il cliente sia avvisato del mancato pagamento                                         & NI              & /              \\
-        \textbf{TAOF20} & Viene verificato che il cliente possa annullare il checkout                                                         & NI              & /              \\
-        \textbf{TAOF21} & Viene verificato che il cliente venga indirizzato al riepilogo una volta completato l'ordine                       & NI              & /              \\
-        \textbf{TAOF22} & Viene verificato che il cliente possa visualizzare la lista degli ordini che ha effettuato                          & NI              & /              \\
-        \textbf{TAOF23} & Viene verificato che il venditore possa visualizzare la lista di clienti                                            & NI              & /              \\
-        \textbf{TAOF24} & Viene verificato che il venditore possa visualizzare la lista degli ordini                                          & NI              & /              \\
-        \textbf{TAFF25} & Viene verificato che il venditore possa contattare un cliente                                                       & NI              & /              \\
-        \textbf{TAOF26} & Viene verificato che il venditore possa aggiungere un nuovo prodotto                                                & NI              & /              \\
-        \textbf{TAOF27} & Viene verificato che il venditore possa modificare un prodotto                                                      & NI              & /              \\
-        \textbf{TAOF28} & Viene verificato che il venditore possa rimuovere un prodotto                                                       & NI              & /              \\
-        \textbf{TAOF29} & Viene verificato che il venditore possa aggiungere una nuova categoria                                              & NI              & /              \\
-        \textbf{TAOF30} & Viene verificato che il venditore possa rimuovere una categoria                                                     & NI              & /              \\
-        \textbf{TAOF31} & Viene verificato che l'utente possa visualizzare un errore se inserisce dei dati sbagliati durante l'autenticazione & NI              & /              \\
-        \textbf{TAOF32} & Viene verificato che il cliente possa modificare la propria password                                                & NI              & /              \\
-    
-\end{longtable}
+        \textbf{Test}   & \textbf{Descrizione}                                                                                                 & \textbf{Stato} & \textbf{Esito} \\
+        \textbf{TAOF1}  & Viene verificato che l'utente possa visualizzare la home page                                                        & NI             & /              \\
+        TAOF1.1         & Viene verificato che l'utente possa vedere i prodotti in evidenza e in offerta                                       & NI             & /              \\
+        TAOF1.2         & Viene verificato che l'utente possa dalla homepage accedere facilmente alla barra di ricerca e al menù               & NI             & /              \\
+        TAOF1.3         & Viene verificato che l'utente possa accedere al carrello dalla homepage                                              & NI             & /              \\
+        \textbf{TAOF2}  & Viene verificato che l'utente possa visualizzare la pagina per l'autenticazione                                      & NI             & /              \\
+        \textbf{TAOF3}  & Viene verificato che l'utente possa autenticarsi tramite username e password                                         & NI             & /              \\
+        TAOF3.1         & Viene verificato che l'utente possa inserire il proprio username nella pagina di autenticazione                      & NI             & /              \\
+        TAOF3.2         & Viene verificato che l'utente possa inserire la propria password nella pagina di autenticazione                      & NI             & /              \\
+        \textbf{TADF4}  & Viene verificato che l'utente possa autenticarsi tramite un servizio esterno                                         & NI             & /              \\
+        \textbf{TAOF5}  & Viene verificato che l'utente possa visualizzare i dettagli di un prodotto                                           & NI             & /              \\
+        TAOF5.1         & Viene verificato che l'utente possa visualizzare il nome del prodotto                                                & NI             & /              \\
+        TAOF5.2         & Viene verificato che l'utente possa visualizzare una foto del prodotto                                               & NI             & /              \\
+        TAOF5.3         & Viene verificato che l'utente possa visualizzare una descrizione del prodotto                                        & NI             & /              \\
+        TAOF5.4         & Viene verificato che l'utente possa visualizzare il prezzo del prodotto                                              & NI             & /              \\
+        TAOF5.5         & Viene verificato che l'utente possa visualizzare le tasse del prodotto                                               & NI             & /              \\
+        TADF5.6         & Viene verificato che l'utente possa visualizzare la disponibilità del prodotto                                       & NI             & /              \\
+        TAFF5.7         & Viene verificato che l'utente possa visualizzare l'eventuale sconto del prodotto                                     & NI             & /              \\
+        TAOF5.8         & Viene verificato che l'utente possa accedere al carrello dal dettaglio del prodotto                                  & NI             & /              \\
+        TADF5.9         & Viene verificato che il cliente possa procedere all'acquisto diretto del prodotto                                    & NI             & /              \\
+        \textbf{TAOF6}  & Viene verificato che l'utente possa aggiungere un prodotto al carrello                                               & NI             & /              \\
+        \textbf{TAOF7}  & Viene verificato che l'utente possa cercare i prodotti tramite parola chiave                                         & NI             & /              \\
+        \textbf{TAOF8}  & Viene verificato che l'utente possa visualizzare la lista di prodotti                                                & NI             & /              \\
+        TAOF8.1         & Viene verificato che l'utente possa selezionare più prodotti                                                         & NI             & /              \\
+        \textbf{TADF9}  & Viene verificato che l'utente possa ordinare la lista di prodotti                                                    & NI             & /              \\
+        TADF9.1         & Viene verificato che l'utente possa ordinare i prodotti per prezzo                                                   & NI             & /              \\
+        TADF9.2         & Viene verificato che l'utente possa ordinare i prodotti per nome                                                     & NI             & /              \\
+        \textbf{TAOF10} & Viene verificato che l'utente possa filtrare la lista di prodotti                                                    & NI             & /              \\
+        TAOF10.1        & Viene verificato che l'utente possa decidere un prezzo minimo                                                        & NI             & /              \\
+        TAOF10.2        & Viene verificato che l'utente possa decidere un prezzo massimo                                                       & NI             & /              \\
+        TAFF10.3        & Viene verificato che l'utente possa filtrare per marca                                                               & NI             & /              \\
+        TADF10.4        & Viene verificato che l'utente possa filtrare per categoria                                                           & NI             & /              \\
+        TAOF10.5        & Viene verificato che l'utente possa modificare un filtro                                                             & NI             & /              \\
+        TAOF10.6        & Viene verificato che l'utente possa rimuovere i filtri                                                               & NI             & /              \\
+        \textbf{TAOF11} & Viene verificato che l'utente possa registrarsi inserendo i propri dati                                              & NI             & /              \\
+        TAOF11.1        & Viene verificato che l'utente possa inserire il proprio nome                                                         & NI             & /              \\
+        TAOF11.2        & Viene verificato che l'utente possa inserire il proprio cognome                                                      & NI             & /              \\
+        TAOF11.3        & Viene verificato che l'utente possa inserire il proprio username                                                     & NI             & /              \\
+        TAOF11.4        & Viene verificato che l'utente possa inserire il proprio password                                                     & NI             & /              \\
+        TAFF11.5        & Viene verificato che l'utente possa inserire la propria data di nascita                                              & NI             & /              \\
+        TAFF11.6        & Viene verificato che l'utente possa inserire il proprio numero di telefono                                           & NI             & /              \\
+        TAOF11.7        & Viene verificato che l'utente possa inserire il proprio indirizzo                                                    & NI             & /              \\
+        \textbf{TADF12} & Viene verificato che l'utente possa registrarsi tramite un servizio esterno                                          & NI             & /              \\
+        \textbf{TAOF13} & Viene verificato che l'utente possa gestire il carrello                                                              & NI             & /              \\
+        TAOF13.1        & Viene verificato che l'utente possa visualizzare i prodotti inseriti nel carrello                                    & NI             & /              \\
+        TAOF13.2        & Viene verificato che l'utente possa rimuovere i prodotti inseriti nel carrello                                       & NI             & /              \\
+        TADF13.3        & Viene verificato che l'utente possa cambiare la quantità dei prodotti inseriti nel carrello                          & NI             & /              \\
+        TADF13.4        & Viene verificato che l'utente possa essere avvisato se la quantità in magazzino è minore della quantità nel carrello & NI             & /              \\
+        TAOF13.5        & Viene verificato che l'utente possa visualizzare il conto totale del carrello                                        & NI             & /              \\
+        TAOF13.6        & Viene verificato che l'utente possa visualizzare le tasse totali del carrello                                        & NI             & /              \\
+        \textbf{TAOF14} & Viene verificato che un utente che non riesce ad accedere possa reimpostare la password                              & NI             & /              \\
+        \textbf{TAOF15} & Viene verificato che il cliente possa modificare i dati del proprio profilo                                          & NI             & /              \\
+        TAOF15.1        & Viene verificato che il cliente possa modificare il proprio nome                                                     & NI             & /              \\
+        TAOF15.2        & Viene verificato che il cliente possa modificare il proprio cognome                                                  & NI             & /              \\
+        TAOF15.3        & Viene verificato che il cliente possa cambiare il proprio indirizzo                                                  & NI             & /              \\
+        TAFF15.4        & Viene verificato che il cliente possa cambiare la propria data di nascita                                            & NI             & /              \\
+        TAFF15.5        & Viene verificato che il cliente possa cambiare il proprio numero telefonico                                          & NI             & /              \\
+        \textbf{TAOF16} & Viene verificato che il cliente possa effettuare il logout                                                           & NI             & /              \\
+        \textbf{TAOF17} & Viene verificato che il cliente possa visualizzare i propri dati di profilo                                          & NI             & /              \\
+        \textbf{TAFF18} & Viene verificato che il cliente possa contattare il venditore                                                        & NI             & /              \\
+        \textbf{TAOF19} & Viene verificato che il cliente possa effettuare il checkout di un ordine                                            & NI             & /              \\
+        TAOF19.1        & Viene verificato che il cliente possa inserire i dati di pagamento                                                   & NI             & /              \\
+        TAOF19.2        & Viene verificato che il cliente sia avvisato del mancato pagamento                                                   & NI             & /              \\
+        \textbf{TAOF20} & Viene verificato che il cliente possa annullare il checkout                                                          & NI             & /              \\
+        \textbf{TAOF21} & Viene verificato che il cliente venga indirizzato al riepilogo una volta completato l'ordine                         & NI             & /              \\
+        \textbf{TAOF22} & Viene verificato che il cliente possa visualizzare la lista degli ordini che ha effettuato                           & NI             & /              \\
+        \textbf{TAOF23} & Viene verificato che il venditore possa visualizzare la lista di clienti                                             & NI             & /              \\
+        \textbf{TAOF24} & Viene verificato che il venditore possa visualizzare la lista degli ordini                                           & NI             & /              \\
+        \textbf{TAFF25} & Viene verificato che il venditore possa contattare un cliente                                                        & NI             & /              \\
+        \textbf{TAOF26} & Viene verificato che il venditore possa aggiungere un nuovo prodotto                                                 & NI             & /              \\
+        \textbf{TAOF27} & Viene verificato che il venditore possa modificare un prodotto                                                       & NI             & /              \\
+        \textbf{TAOF28} & Viene verificato che il venditore possa rimuovere un prodotto                                                        & NI             & /              \\
+        \textbf{TAOF29} & Viene verificato che il venditore possa aggiungere una nuova categoria                                               & NI             & /              \\
+        \textbf{TAOF30} & Viene verificato che il venditore possa rimuovere una categoria                                                      & NI             & /              \\
+        \textbf{TAOF31} & Viene verificato che l'utente possa visualizzare un errore se inserisce dei dati sbagliati durante l'autenticazione  & NI             & /              \\
+        \textbf{TAOF32} & Viene verificato che il cliente possa modificare la propria password                                                 & NI             & /              \\
+    \end{longtable}
 \end{center}
