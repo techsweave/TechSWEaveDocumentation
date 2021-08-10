@@ -38,8 +38,10 @@ Inoltre, per definire l'esito dei test implementati, vengono utilizzate le segue
     \item \textbf{S:} indica che il test soddisfa la richiesta;
     \item \textbf{NS:} indica che il test non soddisfa la richiesta.
 \end{itemize}
+\pagebreak
 \subsection{Tipi di test}
 \subsubsection{Test di unità}
+La seguente tabella illustra i test di unità effettuati e sarà aggiornata con l'avanzare del progetto.
 \begin{center}
     \centering
     \rowcolors{2}{logo!10}{logo!40}
@@ -62,71 +64,74 @@ Inoltre, per definire l'esito dei test implementati, vengono utilizzate le segue
         %BACKEND
         TU11          & Verifica che la funzione `createProduct` generi correttamente il prodotto nella tabella                                                                                                          & I              & S              \\
         TU12          & Verifica che l'handler di `createProduct` controlli correttamente se l'utente sia autorizzato a chiamare la funzione `createProduct`. In caso positivo effettua la chiamata e genera il prodotto & I              & S              \\
-        TU13          & Visualizzazione dello stato d'errore nel caso in cui l'accesso alla funzioine `createProduct` si negato all'utente.                                                                              & I              & S              \\
+        TU13          & Verifica che venga visualizzato lo stato d'errore nel caso in cui l'accesso alla funzioine `createProduct` si negato all'utente.                                                                              & I              & S              \\
         TU14          & Verifica che la funzione `deleteProduct` elimini correttamente l'oggetto desiderato                                                                                                              & I              & S              \\
-        TU15          & In caso la chiamata alla funzione `deleteProduct` venga effettuata su un oggetto inesistente la funzione ritorna il corretto errore di non esistenza del prodotto cercato                                                      & I              & S              \\
+        TU15          & Veridica che se la chiamata alla funzione `deleteProduct` venga effettuata su un oggetto inesistente la funzione ritorna il corretto errore di non esistenza del prodotto cercato                & I              & S              \\
         TU16          & Verifica che l'handler di `deleteProduct` effettui correttamente la chiamata alla funzione `deleteProduct`                                                                                       & I              & S              \\
-        TU17          & Verifica che l'utente sia autorizzato ad effettuare la chiamata alla funzione `deleteProduct`                                                                                                                  & I              & S              \\
-        TU18          & Verifica che in caso di errore di non esistenza del prodotto da eliminare, la funzione `deleteProduct` ritorna il corretto errore all'handler                                                                    & I              & S              \\
+        TU17          & Verifica che l'utente sia autorizzato ad effettuare la chiamata alla funzione `deleteProduct`                                                                                                    & I              & S              \\
+        TU18          & Verifica che in caso di errore di non esistenza del prodotto da eliminare, la funzione `deleteProduct` ritorna il corretto errore all'handler                                                    & I              & S              \\
         TU19          & Verifica che la funzione `getProduct` ritorni il prodotto corretto                                                                                                                               & I              & S              \\
-        TU20          & In caso la chiamata venga effettuata su un oggetto inesistente la funzione ritorna il corretto errore di non esistenza del prodotto richiesto                                                    & I              & S              \\
+        TU20          & Verifica che se la chiamata viene effettuata su un oggetto inesistente la funzione `getProduct` ritorni il corretto errore di non esistenza del prodotto richiesto                               & I              & S              \\
         TU21          & Verifica che l'handler di `getProduct` controlli la tipologia di utente che effettua la chiamata per andare ad utilizzare il metodo corretto                                                     & I              & S              \\
         TU22          & Verifica che l'handler di `getProduct` passi correttamente i parametri alla funzione                                                                                                             & I              & S              \\
         TU23          & Verifica che la funzione di `scanProduct` ritorni il numero corretto di prodotti e che funzioni il filtro in fase di ritorno dei prodotti stessi                                                 & I              & S              \\
-        TU24          & Verifica che nel caso in cui il formato del filtro non sia conforme ritorna il corretto il messaggio di errore                                                                                                & I              & S              \\
+        TU24          & Verifica che nel caso in cui il formato del filtro non sia conforme l'handler di `scanProduct` ritorna il corretto il messaggio di errore                                                        & I              & S              \\
         TU25          & Verifica che la funzione `updateProduct` aggiorni correttamente il prodotto                                                                                                                      & I              & S              \\
         TU26          & Verifica che la funzione `updateProduct` visualizzi un errore nel caso in cui non vada a buon fine l'aggiornamento di un prodotto                                                                & I              & S              \\
         TU27          & Verifica che l'handler di `updateProduct` modifichi un prodotto                                                                                                                                  & I              & S              \\
-        TU28          & Verifica che la funzione `createOrder` crei l'ordine correttamente                                                                                                                               & I              & S              \\
-        TU29          & Verifica che l'handler di `createOrder` passi i corretti parametri alla funzione `createOrder`                                                                                                   & I              & S              \\
-        TU30          & Verifica che l'handler di `createOrder controlli che l'utente sia autorizzato a chiamare la funzione `createOrder`                                                                               & I              & S              \\
-        TU31          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
-        TU32          & Verifica che la funzione `deleteOrder` rimuova l'ordine correttamente                                                                                                                            & I              & S              \\
-        TU33          & Verifica che l'handler di `deleteOrder` passi i corretti parametri alla funzione `deleteOrder`                                                                                                   & I              & S              \\
-        TU34          & Verifica che l'handler di `deleteOrder` controlli che l'utente sia autorizzato a chiamare la funzione `deleteOrder`                                                                              & I              & S              \\
-        TU35          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
-        TU36          & Verifica che la funzione `getOrder` ritorni l'ordine atteso                                                                                                                                      & I              & S              \\
-        TU37          & Verifica che la funzione `createTag` crei il tag correttamente                                                                                                                                   & I              & S              \\
-        TU38          & Verifica che l'handler di `createTag` passi correttamente i parametri alla funzione `createTag`                                                                                                  & I              & S              \\
-        TU39          & Verifica che l'handler di `createTag` controlli che l'utente sia autorizzato a chiamare la funzione `createTag`                                                                                  & I              & S              \\
-        TU40          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
-        TU41          & Verifica che la funzione `deleteTag` rimuova il tag correttamente                                                                                                                                & I              & S              \\
-        TU42          & Verifica che l'handler di `deleteTag` rimuova il tag correttamente                                                                                                                               & I              & S              \\
-        TU43          & Verifica che l'handler di `deleteTag` controlli che l'utente sia autorizzato a chiamare la funzione `deleteTag`                                                                                  & I              & S              \\
-        TU44          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
-        TU45          & Verifica che la funzione `getTag` ritorni il tag atteso                                                                                                                                          & I              & S              \\
-        TU46          & Verifica che se il tag richiesto non esiste ritorna il corretto messaggio di errore                                                                                                              & I              & S              \\
-        TU47          & Verifica che l'handler di `getTag` ritorni il tag atteso                                                                                                                                         & I              & S              \\
-        TU48          & Verifica che l'handler di `getTag` controlli che l'utente sia autorizzato a chiamare la funzione `getTag`                                                                                        & I              & S              \\
-        TU49          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
-        TU50          & Verifica che la funzione `updateTag` non sollevi eccezioni                                                                                                                                       & I              & S              \\
-        TU51          & Verifica che l'handler di `updateTag` modifichi un tag                                                                                                                                           & I              & S              \\
-        TU52          & Verifica che l'handler di `updateTag` controlli che l'utente sia autorizzato a chiamare la funzione `updateTag`                                                                                  & I              & S              \\
-        TU53          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
-        TU54          & Verifica che la funzione di `scanTag` applichi i limiti correttamente                                                                                                                            & I              & S              \\
-        TU55          & Verifica che l'handler di `scanTag` applichi i limiti correttamente                                                                                                                              & I              & S              \\
-        TU56          & Verifica che l'handler di `scanTag` controlli che l'utente sia autorizzato a chiamare la funzione `scanTag`                                                                                      & I              & S              \\
-        TU57          & In caso in cui l'utente non sia autorizzato ad utilizzare la funzione verifica il corretto messaggio di errore                                                                                   & I              & S              \\
+        TU28          & Verifica che l'handler di `updateProduct` controlli correttamente se l'utente sia autorizzato a chiamare la funzione `createProduct`. In caso positivo effettua la chiamata e genera il prodotto & I              & S              \\
+        TU29          & Verifica che venga visualizzato lo stato d'errore nel caso in cui l'accesso alla funzione `updateProduct` si negato all'utente.                                                                              & I              & S              \\
+        TU30          & Verifica che la funzione `createOrder` crei l'ordine correttamente                                                                                                                               & I              & S              \\
+        TU31          & Verifica che l'handler di `createOrder` passi i corretti parametri alla funzione `createOrder`                                                                                                   & I              & S              \\
+        TU32          & Verifica che l'handler di `createOrder` controlli che l'utente sia autorizzato a chiamare la funzione `createOrder`                                                                              & I              & S              \\
+        TU33          & Verifica che se l'utente non è autorizzato ad utilizzare la funzione l'handler di `createOrder` ritorni il corretto messaggio di errore                                                        & I              & S              \\
+        TU34          & Verifica che la funzione `deleteOrder` rimuova l'ordine correttamente                                                                                                                            & I              & S              \\
+        TU35          & Verifica che l'handler di `deleteOrder` passi i corretti parametri alla funzione `deleteOrder`                                                                                                   & I              & S              \\
+        TU36          & Verifica che l'handler di `deleteOrder` controlli che l'utente sia autorizzato a chiamare la funzione `deleteOrder`                                                                              & I              & S              \\
+        TU37          & Verifica che se l'utente non è autorizzato ad utilizzare la funzione l'handler di `deleteOrder` ritorni il corretto messaggio di errore                                                        & I              & S              \\
+        TU38          & Verifica che la funzione `getOrder` ritorni l'ordine atteso                                                                                                                                      & I              & S              \\
+        TU39          & Verifica che la funzione `createTag` crei il tag correttamente                                                                                                                                   & I              & S              \\
+        TU40          & Verifica che l'handler di `createTag` passi correttamente i parametri alla funzione `createTag`                                                                                                  & I              & S              \\
+        TU41          & Verifica che l'handler di `createTag` controlli che l'utente sia autorizzato a chiamare la funzione `createTag`                                                                                  & I              & S              \\
+        TU42          & Verifica che se l'utente non è autorizzato ad utilizzare la funzione l'handler di `createTag` ritorni il corretto messaggio di errore                                                          & I              & S              \\
+        TU43          & Verifica che la funzione `deleteTag` rimuova il tag correttamente                                                                                                                                & I              & S              \\
+        TU44          & Verifica che l'handler di `deleteTag` rimuova il tag correttamente                                                                                                                               & I              & S              \\
+        TU45          & Verifica che l'handler di `deleteTag` controlli che l'utente sia autorizzato a chiamare la funzione `deleteTag`                                                                                  & I              & S              \\
+        TU46          & Verifica che se l'utente non è autorizzato ad utilizzare la funzione l'handler di `deleteTag` ritorni il corretto messaggio di errore                                                          & I              & S              \\
+        TU47          & Verifica che la funzione `getTag` ritorni il tag atteso                                                                                                                                          & I              & S              \\
+        TU48          & Verifica che se il tag richiesto non esiste la funzione `getTag` ritorna il corretto messaggio di errore                                                                                         & I              & S              \\
+        TU49          & Verifica che l'handler di `getTag` ritorni il tag atteso                                                                                                                                         & I              & S              \\
+        TU50          & Verifica che l'handler di `getTag` controlli che l'utente sia autorizzato a chiamare la funzione `getTag`                                                                                        & I              & S              \\
+        TU51          & Verifica che se l'utente non è autorizzato ad utilizzare la funzione l'handler di `getTag` ritorni il corretto messaggio di errore                                                             & I              & S              \\
+        TU52          & Verifica che la funzione `updateTag` non sollevi eccezioni                                                                                                                                       & I              & S              \\
+        TU53          & Verifica che l'handler di `updateTag` modifichi un tag                                                                                                                                           & I              & S              \\
+        TU54          & Verifica che l'handler di `updateTag` controlli che l'utente sia autorizzato a chiamare la funzione `updateTag`                                                                                  & I              & S              \\
+        TU55          & Verifica che se l'utente non è autorizzato ad utilizzare la funzione l'handler di `updateTag` ritorni il corretto messaggio di errore                                                          & I              & S              \\
+        TU56          & Verifica che la funzione di `scanTag` applichi i limiti correttamente                                                                                                                            & I              & S              \\
+        TU57          & Verifica che l'handler di `scanTag` applichi i limiti correttamente                                                                                                                              & I              & S              \\
+        TU58          & Verifica che l'handler di `scanTag` controlli che l'utente sia autorizzato a chiamare la funzione `scanTag`                                                                                      & I              & S              \\
+        TU59          & Verifica che se l'utente non è autorizzato ad utilizzare la funzione l'handler di `scanTag` ritorni il corretto messaggio di errore                                                            & I              & S              \\
     \end{longtable}
 \end{center}
 
 \subsubsection{Test di integrazione}
+La seguente tabella illustra i test di integrazione effettuati e sarà aggiornata con l'avanzare del progetto.
 \begin{center}
     \centering
     \rowcolors{2}{logo!10}{logo!40}
     \renewcommand{\arraystretch}{1.8}
     \label{tab:TestIntegrazione}
     \begin{longtable}[!h]{p{45px} p{255px} p{35px} p{35px}}
-        \caption{Test di integrazione}                                                                                                                      \\
+        \caption{Test di integrazione}                                                                                                                                                \\
         \rowcolor{logo!70}
-        \textbf{Test} & \textbf{Descrizione}                                                                              & \textbf{Stato} & \textbf{Esito} \\
-        TI1           & Viene verificata la corretta integrazione tra modulo backend e Stripe\textsubscript{\textbf{G}}   & I              & S              \\
-        TI2           & Viene verificata la corretta integrazione tra modulo frontend e Stripe\textsubscript{\textbf{G}}  & I              & S              \\
-        TI3           & Viene verificata la corretta integrazione tra modulo backend e DynamoDB\textsubscript{\textbf{G}} & I              & S              \\
-        TI4           & Viene verificata la corretta integrazione tra modulo backend e Cognito\textsubscript{\textbf{G}}  & I              & S              \\
-        TI5           & Viene verificata la corretta integrazione tra modulo frontend e Cognito\textsubscript{\textbf{G}} & I              & S              \\
-        TI6           & Viene verificata la corretta integrazione tra modulo backend e AWS S3\textsubscript{\textbf{G}}   & I              & S              \\
-        TI7           & Viene verificata la corretta integrazione tra modulo backend e modulo frontend                    & I              & S              \\
+        \textbf{Test} & \textbf{Descrizione}                                                                                                        & \textbf{Stato} & \textbf{Esito} \\
+        TI1           & Viene verificata la corretta integrazione tra modulo backend\textsubscript{\textbf{G}} e Stripe\textsubscript{\textbf{G}}   & I              & S              \\
+        TI2           & Viene verificata la corretta integrazione tra modulo frontend\textsubscript{\textbf{G}} e Stripe\textsubscript{\textbf{G}}  & I              & S              \\
+        TI3           & Viene verificata la corretta integrazione tra modulo backend\textsubscript{\textbf{G}} e DynamoDB\textsubscript{\textbf{G}} & I              & S              \\
+        TI4           & Viene verificata la corretta integrazione tra modulo backend\textsubscript{\textbf{G}} e Cognito\textsubscript{\textbf{G}}  & I              & S              \\
+        TI5           & Viene verificata la corretta integrazione tra modulo frontend\textsubscript{\textbf{G}} e Cognito\textsubscript{\textbf{G}} & I              & S              \\
+        TI6           & Viene verificata la corretta integrazione tra modulo backend\textsubscript{\textbf{G}} e AWS S3\textsubscript{\textbf{G}}   & I              & S              \\
+        TI7           & Viene verificata la corretta integrazione tra modulo backend\textsubscript{\textbf{G}} e modulo frontend                    & I              & S              \\
     \end{longtable}
 \end{center}
 \pagebreak
@@ -218,7 +223,6 @@ La seguente tabella illustra i test di sistema; ogni test ha un nome che identif
         \textbf{TSOF32} & Viene verificato che il cliente possa modificare la propria password                                                 & I              & S              \\
     \end{longtable}
 \end{center}
-\pagebreak
 \subsubsection{Test di accettazione}
 La seguente tabella illustra i test di accettazione da eseguire sul sistema, ogni test ha un nome che identifica tipologia, categoria e importanza e un numero che lo associa a un requisito.
 \begin{center}
