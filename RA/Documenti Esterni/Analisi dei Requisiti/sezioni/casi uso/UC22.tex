@@ -1,0 +1,10 @@
+\subsection{UC22: Annullamento checkout}
+\label{sec:UC22}
+\begin{itemize}
+    \item \textbf{Descrizione:} visualizzazione di un errore per un fallimento nella fase di pagamento;
+    \item \textbf{Attore Primario:} cliente autenticato;
+    \item \textbf{Attore Secondario:} Stripe\textsubscript{\textbf{G}}, gestore di pagamenti di terze parti;
+    \item \textbf{Precondizione:} il cliente ha inserito i dati del pagamento;
+    \item \textbf{Input:} Stripe ritorna un errore nel risultato del pagamento;
+    \item \textbf{Postcondizione:} viene visualizzato un messaggio di errore, successivamente il cliente viene reindirizzato alla sezione del checkout.
+\end{itemize}

@@ -1,0 +1,16 @@
+\subsection{UC39: Password non conforme}
+\label{sec:UC39}
+\begin{itemize}
+    \item \textbf{Descrizione:} Visualizzazione di un errore se la password non è conforme ai requisiti;
+    \item \textbf{Attore Primario:} utente autenticato;
+    \item \textbf{Attore Secondario:} Amazon Cognito;
+    \item \textbf{Precondizione:} l'utente ha inserito una password non conforme ai requisiti, che sono:
+          \begin{itemize}
+              \item lunghezza almeno di 8 caratteri;
+              \item contenga almeno una lettera maiuscola;
+              \item contenga almeno una lettera minuscola;
+              \item contenga almeno un numero;
+              \item contenga almeno un carattere speciale.
+          \end{itemize}
+    \item \textbf{Postcondizione:} l'utente visualizza un messaggio di errore.
+\end{itemize}

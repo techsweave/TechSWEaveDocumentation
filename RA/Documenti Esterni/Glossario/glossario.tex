@@ -1,0 +1,122 @@
+\documentclass[a4paper]{article}
+\usepackage{titlesec}
+\usepackage{geometry}
+\geometry{hmargin={2cm,2cm}, vmargin={3.5cm,3.5cm}}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\newcommand{\sectionbreak}{\clearpage}
+\usepackage{hyperref}
+\hypersetup{pdfborder = {0 0 0},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=blue}
+\definecolor{logo}{RGB}{20,99,163}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+%Comandi di impaginazione uguale per tutti i documenti
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.2]{../../../Images/logo.png}}
+%Titolo del documento
+\rhead{\large Glossario}
+%\rfoot{\thepage}
+\cfoot{Pagina \thepage{} di \pageref{LastPage}}
+\setlength{\headheight}{45pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \includegraphics{../../../Images/logo}\\
+        \vspace{20px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{20px}
+        \textbf{\huge\textcolor{logo}{Glossario}}\\
+        \vspace{10px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{40px}
+        \textbf{\Large Informazioni sul documento}\\
+        \vspace{20px}
+        \begin{tabular}{p{100px} | p{100px}}
+            \textbf{Versione}     & 3.0.0                                                                      \\
+            \textbf{Responsabile} & Nicolò Giaccone                                                            \\
+            \textbf{Redattori}    & Samuele De Simone \newline Marco Barbaresco                                \\
+            \textbf{Verificatori} & Nicolò Giaccone \newline Simone Urbani                                     \\
+            \textbf{Destinatari}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave \\
+            \textbf{Stato}        & Approvato                                                                  \\
+            \textbf{Uso}          & Esterno                                                                    \\
+        \end{tabular}\\
+        \vspace{60px}
+        \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
+
+    \end{center}
+\end{titlepage}
+
+%DIARIO DELLE MODIFICHE
+\begin{center}
+    \textbf{\Large Diario delle modifiche}\\
+    \vspace{10px}
+    \begin{table}[h!]
+        \centering
+        \rowcolors{2}{logo!10}{logo!40}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{p{150px} p{90px} p{60px} p{60px} p{45px}}
+            \rowcolor{logo!70} \textbf{Modifica}                        & \textbf{Autore}   & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione} \\
+            Validazione documento                                       & Nicolò Giaccone   & Responsabile   & 2021-07-14    & 3.0.0             \\
+            Verifica documento \newline (Verificatore: Nicolò Giaccone) & Simone Urbani     & Amministratore & 2021-07-10    & 2.1.0             \\
+            Aggiunti termini \newline (Verificatore: Nicolò Giaccone)   & Marco Barbaresco  & Amministratore & 2021-07-04    & 2.0.1             \\
+            Validazione                                                 & Tito Scutari      & Responsabile   & 2021-04-30    & 2.0.0             \\
+            Aggiunto termine                                            & Samuele De Simone & Verificatore   & 2021-04-25    & 1.0.1             \\
+            Validazione                                                 & Samuele De Simone & Responsabile   & 2021-04-01    & 1.0.0             \\
+            Verifica del documento                                      & Tito Scutari      & Verificatore   & 2021-03-31    & 0.2.0             \\
+            Aggiunti altri termini                                      & Samuele De Simone & Analista       & 2021-03-29    & 0.1.2             \\
+            Aggiunti altri termini                                      & Samuele De Simone & Analista       & 2021-03-27    & 0.1.1             \\
+            Prima verifica del documento                                & Amedeo Meggiolaro & Verificatore   & 2021-03-25    & 0.1.0             \\
+            Aggiunti termini di glossario Q - Z                         & Nicolò Giaccone   & Analista       & 2021-03-24    & 0.0.4             \\
+            Aggiunti termini di glossario H - P                         & Samuele De Simone & Analista       & 2021-03-21    & 0.0.3             \\
+            Aggiunti termini di glossario A - G                         & Nicolò Giaccone   & Analista       & 2021-03-18    & 0.0.2             \\
+            Prima stesura documento                                     & Samuele De Simone & Analista       & 2021-03-11    & 0.0.1             \\
+        \end{tabular}
+    \end{table}
+\end{center}
+
+%INDICE
+\newpage
+\tableofcontents
+\newpage
+\appendix
+\input{Definizioni/A.tex}
+\input{Definizioni/B.tex}
+\input{Definizioni/C.tex}
+\input{Definizioni/D.tex}
+\input{Definizioni/E.tex}
+\input{Definizioni/F.tex}
+\input{Definizioni/G.tex}
+\input{Definizioni/H.tex}
+\input{Definizioni/I.tex}
+\input{Definizioni/J.tex}
+\input{Definizioni/K.tex}
+\input{Definizioni/L.tex}
+\input{Definizioni/M.tex}
+\input{Definizioni/N.tex}
+\input{Definizioni/O.tex}
+\input{Definizioni/P.tex}
+\input{Definizioni/Q.tex}
+\input{Definizioni/R.tex}
+\input{Definizioni/S.tex}
+\input{Definizioni/T.tex}
+\input{Definizioni/U.tex}
+\input{Definizioni/V.tex}
+\input{Definizioni/W.tex}
+\input{Definizioni/X.tex}
+\input{Definizioni/Y.tex}
+\input{Definizioni/Z.tex}
+\end{document}

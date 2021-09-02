@@ -1,0 +1,175 @@
+\documentclass[a4paper]{article}
+\usepackage{titlesec}
+\usepackage{geometry}
+\geometry{hmargin={2cm,2cm}, vmargin={3.5cm,3.5cm}}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\hypersetup{pdfborder = {0 0 0},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=blue}
+\definecolor{logo}{RGB}{20,99,163}
+\newcommand{\sectionbreak}{\clearpage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{grffile}
+\usepackage{longtable}
+%l'indice delle sezioni e immagini parte dalla sezione in cui si trovano 
+\usepackage{chngcntr}
+\usepackage{marvosym}
+\counterwithin{table}{section}
+\counterwithin{figure}{subsection}
+
+% creazione comando subsubsubsection
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+    \titlespacing*{\subsubsubsection}
+    {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\def\toclevel@subsubsubsection{4}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%fine creazione comando
+
+
+%Comandi di impaginazione uguale per tutti i documenti
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.2]{../../../Images/logo}}
+%Titolo del documento
+\rhead{\large Piano di Progetto}
+%\rfoot{\thepage}
+\cfoot{Pagina \thepage{} di \pageref{LastPage}}
+\setlength{\headheight}{45pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \includegraphics{../../../Images/logo}\\
+        \vspace{20px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{20px}
+        \textbf{\huge\textcolor{logo}{Piano di Progetto}}\\
+        \vspace{10px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{40px}
+        \textbf{\Large Informazioni sul documento}\\
+        \vspace{20px}
+        \begin{tabular}{p{100px} | p{100px}}
+            \textbf{Versione}     & 3.0.0                                                                     \\
+            \textbf{Responsabile} & Nicolò Giaccone                                                           \\
+            \textbf{Redattori}    & Amedeo Meggiolaro \newline Nicolò Giaccone \newline Tito Scutari          \\
+            \textbf{Verificatore} & Nicolò Giaccone \newline Manuel Varo                                      \\
+            \textbf{Destinatari}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin \newline TechSWEave \\
+            \textbf{Stato}        & Approvato                                                                 \\
+            \textbf{Uso}          & Esterno                                                                   \\
+        \end{tabular}\\
+        \vspace{60px}
+        \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
+
+    \end{center}
+\end{titlepage}
+
+%DIARIO DELLE MODIFICHE
+\begin{center}
+    \textbf{\Large Diario delle modifiche}\\
+    \vspace{10px}
+    \begin{table}[h!]
+        \centering
+        \rowcolors{2}{logo!10}{logo!40}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{p{160px} p{90px} p{70px} p{55px} p{45px}}
+            \rowcolor{logo!70} \textbf{Modifica}                          & \textbf{Autore}   & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione} \\
+            Approvazione del documento per RQ                                                                       &   Nicolò Giaccone   & Responsabile   & 2021-07-21    & 3.0.0             \\
+            Verifica e revisione completa del documento \newline(Verificatore: Tito Scutari)                        &  Urbani Simone   & Responsabile   & 2021-06-30    & 2.2.0             \\
+            Modificata \S 4.5 \newline(Verificatore: Tito Scutari)                                                  & Amedeo Meggiolaro & Progettista    & 2021-06-30    & 2.1.8             \\
+            Completata \S 6.3 \newline(Verificatore: Tito Scutari)                                                  & Amedeo Meggiolaro & Progettista    & 2021-06-28    & 2.1.7             \\
+            Continuata estensione \S 6.3 \newline(Verificatore: Tito Scutari)                                       & Amedeo Meggiolaro & Progettista    & 2021-06-05    & 2.1.6             \\
+            Aggiunti casi ad appendice B \newline(Verificatore: Tito Scutari)                                       & Amedeo Meggiolaro & Progettista    & 2021-06-04    & 2.1.5             \\
+            Iniziata \S 6.3 \newline(Verificatore: Manuel Varo)                                                     & Amedeo Meggiolaro & Progettista    & 2021-06-04    & 2.1.4             \\
+            Aggiunti casi ad appendice B \newline(Verificatore: Manuel Varo)                                        & Nicolò Giaccone   & Amministratore   & 2021-06-04    & 2.1.3             \\
+            Aggiunti tabelle e diagrammi a \S 5.5 \newline(Verificatore: Manuel Varo)                               & Amedeo Meggiolaro & Progettista    & 2021-06-04    & 2.1.2             \\
+            Aggiunti tabelle e diagrammi a \S 5.4 \newline(Verificatore: Manuel Varo)                               & Amedeo Meggiolaro & Progettista    & 2021-06-02    & 2.1.1             \\
+            Verifica e revisione completa del documento \newline(Verificatore: Barbaresco Marco)                    & Amedeo Meggiolaro & Progettista    & 2021-06-01    & 2.1.0             \\
+            Aggiunta \S 4.5 \newline(Verificatore: Barbaresco Marco)                                                & Nicolò Giaccone   & Amministratore   & 2021-05-31    & 2.0.5             \\
+            Aggiunta \S 3.2.3 \newline(Verificatore: Barbaresco Marco)                                              & Nicolò Giaccone   & Amministratore   & 2021-05-30    & 2.0.4             \\
+            Completata estensione di \S 4.4   \newline(Verificatore: Barbaresco Marco)                              & Nicolò Giaccone   & Amministratore   & 2021-05-24    & 2.0.3             \\
+            Iniziata \S 4.4   \newline(Verificatore: Barbaresco Marco)                                              & Nicolò Giaccone   & Amministratore   & 2021-05-23    & 2.0.2             \\
+            Aggiunta \S 3.2.2 \newline(Verificatore: Barbaresco Marco)                                              & Nicolò Giaccone   & Amministratore   & 2021-05-22    & 2.0.1             \\
+            
+        \end{tabular}
+    \end{table}
+
+\begin{table}[h!]
+    \centering
+    \rowcolors{2}{logo!10}{logo!40}
+    \renewcommand{\arraystretch}{1.8}
+    \begin{tabular}{p{160px} p{90px} p{70px} p{55px} p{45px}}
+        \rowcolor{logo!70} \textbf{Modifica}                          & \textbf{Autore}   & \textbf{Ruolo} & \textbf{Data} & \textbf{Versione} \\
+        Validazione                                                   & Tito Scutari      & Responsabile   & 2021-05-02    & 2.0.0             \\
+        Correzioni documento                                          & Manuel Varo       & Verificatore   & 2021-04-30    & 1.2.1             \\
+        Sistemazione \S 6                                             & Tito Scutari      & Responsabile   & 2021-04-29    & 1.2.0             \\
+        Sistemazione \S 3                                             & Nicolò Giaccone   & Amministratore & 2021-04-28    & 1.1.2             \\
+        Sistemazione \S 4                                             & Amedeo Meggiolaro & Responsabile   & 2021-04-22    & 1.1.1             \\
+        Aggiunta appendice B                                          & Nicolò Giaccone   & Amministratore & 2021-04-20    & 1.1.0             \\
+        Validazione                                                   & Samuele De Simone & Responsabile   & 2021-03-30    & 1.0.0             \\
+        Verifica documento                                            & Nicolò Giaccone   & Verificatore   & 2021-03-28    & 0.1.0             \\
+        Completate sezioni Consuntivo e Organigramma                  & Amedeo Meggiolaro & Analista       & 2021-03-25    & 0.0.11            \\
+        Completamento sezione Pianificazione                          & Amedeo Meggiolaro & Analista       & 2021-03-25    & 0.0.10            \\
+        Aggiunta diagrammi di Gantt                                   & Amedeo Meggiolaro & Analista       & 2021-03-24    & 0.0.9             \\
+        Aggiunta sezione Pianificazione                               & Amedeo Meggiolaro & Analista       & 2021-03-24    & 0.0.8             \\
+        Completamento sezione Analisi dei Rischi                      & Manuel Varo       & Analista       & 2021-03-23    & 0.0.7             \\
+        Completamento sezione Modello di Sviluppo                     & Manuel Varo       & Analista       & 2021-03-22    & 0.0.6             \\
+        Completamento Preventivo                                      & Amedeo Meggiolaro & Analista       & 2021-03-22    & 0.0.5             \\
+        Avanzamento Analisi dei Rischi                                & Manuel Varo       & Analista       & 2021-03-19    & 0.0.4             \\
+        Avanzamento sezione Preventivo                                & Manuel Varo       & Analista       & 2021-03-19    & 0.0.3             \\
+        Inizio sezione Analisi dei Rischi\newline e Inizio Preventivo & Manuel Varo       & Analista       & 2021-03-18    & 0.0.2             \\
+        Prima stesura documento                                       & Manuel Varo       & Analista       & 2021-03-17    & 0.0.1             \\
+    \end{tabular}
+\end{table}
+
+\end{center}
+
+%INDICE
+\newpage
+\tableofcontents
+\newpage
+%INDICE DELLE FIGURE
+\newpage
+\listoffigures
+\newpage
+%INDICE DELLE TABELLE
+\newpage
+\listoftables
+\newpage
+% CORPO DEL DOCUMENTO
+\input{sezioni/introduzione.tex}
+\input{sezioni/analisiDeiRischi.tex}
+\input{sezioni/modelloDiSviluppo.tex}
+\input{sezioni/pianificazione.tex}
+\input{sezioni/preventivo.tex}
+\input{sezioni/consuntivo.tex}
+\appendix
+\input{sezioni/organigramma.tex}
+\input{sezioni/attualizzazioneDeiRischi.tex}
+
+\end{document}
+
+

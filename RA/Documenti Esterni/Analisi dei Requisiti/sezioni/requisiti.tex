@@ -1,0 +1,186 @@
+\section{Requisiti}
+Ogni requisito è composto dalla seguente struttura:
+\begin{itemize}
+    \item \textbf{Codice identificativo:} ogni codice identificativo è univoco e conforme alla seguente codifica:
+          \begin{center}
+              \textbf{R[ID][Tipologia]}
+          \end{center}
+          Il significato delle voci è:
+          \begin{itemize}
+              \item \textbf{ID:} identificatore univoco del requisito in forma gerarchica, la presenza del secondo numero indica che si tratta di un requisito figlio.
+              \item \textbf{Tipologia:} ogni requisito può assumere uno dei seguenti valori:
+                    \begin{itemize}
+                        \item \textit{F}: funzionale;
+                        \item \textit{Q}: qualitativo;
+                        \item \textit{V}: vincolo;
+                        \item \textit{P}: prestazionale.
+                    \end{itemize}
+          \end{itemize}
+
+    \item \textbf{Importanza:} riporta l'importanza del requisito:
+          \begin{itemize}
+              \item obbligatorio: requisito irrinunciabile per gli stakeholders\textsubscript{\textbf{G}};
+              \item desiderabile: requisito non strettamente necessario ma con valore aggiunto riconoscibile;
+              \item facoltativo: requisito relativamente utile oppure contrattabile in un secondo momento durante lo sviluppo.
+          \end{itemize}
+    \item \textbf{Descrizione:} descrizione del requisito, meno ambigua possibile;
+    \item \textbf{Fonti:} ogni requisito deriva da una di queste fonti:
+          \begin{itemize}
+              \item \textit{capitolato:} è un requisito emerso dall'analisi del capitolato;
+              \item \textit{interno:} è un requisito aggiunto dagli analisti;
+              \item \textit{caso d'uso:} è un requisito estratto da uno o più casi d'uso, è riportato il codice del caso d'uso a cui ci si riferisce;
+              \item \textit{verbale:} è un requisito individuato attraverso una riunione con i proponenti.
+          \end{itemize}
+\end{itemize}
+
+\newpage
+\subsection{Requisiti funzionali}
+\begin{center}
+    \centering
+    \rowcolors{2}{logo!10}{logo!40}
+    \renewcommand{\arraystretch}{1.8}
+    \label{tab:RequisitiFunzionali}
+    \begin{longtable}[!h]{p{50px} p{245px} p{75px} p{50px}}
+        \rowcolor{white}\caption{Requisiti funzionali}                                                                                                                                                                          \\
+        \rowcolor{logo!70} \textbf{Requisito} & \textbf{Descrizione}                                                                                & \textbf{Classificazione} & \textbf{Fonti}                                 \\
+        \textbf{R1F}                          & L'utente deve poter visualizzare la home page                                                       & Obbligatorio             & Capitolato                                     \\
+        R1.1F                                 & L'utente deve poter vedere i prodotti in evidenza e in offerta                                      & Obbligatorio             & Capitolato                                     \\
+        R1.2F                                 & L'utente dalla home page deve poter accedere facilmente alla barra di ricerca e al menù             & Obbligatorio             & Capitolato                                     \\
+        R1.3F                                 & L'utente dalla home page deve poter accedere al carrello                                            & Obbligatorio             & Capitolato                                     \\
+        \textbf{R2F}                          & L'utente deve poter visualizzare la pagina per l'autenticazione                                     & Obbligatorio             & \hyperref[sec:UC1]{UC1}                        \\
+        \textbf{R3F}                          & L'utente deve poter autenticarsi tramite username e password                                        & Obbligatorio             & \hyperref[sec:UC2]{UC2}                        \\
+        R3.1F                                 & L'utente deve poter inserire il proprio username nella pagina di autenticazione                     & Obbligatorio             & \hyperref[sec:UC2.1]{UC2.1}                    \\
+        R3.2F                                 & L'utente deve poter inserire la propria password nella pagina di autenticazione                     & Obbligatorio             & \hyperref[sec:UC2.2]{UC2.2}                    \\
+        \textbf{R4F}                          & L'utente deve poter autenticarsi tramite un servizio esterno                                        & Desiderabile             & \hyperref[sec:UC3]{UC3}                        \\
+        \textbf{R5F}                          & L'utente deve poter visualizzare i dettagli di un prodotto                                          & Obbligatorio             & \hyperref[sec:UC4]{UC4}                        \\
+        R5.1F                                 & L'utente deve poter visualizzare il nome del prodotto                                               & Obbligatorio             & \hyperref[sec:UC4]{UC4}                        \\
+        R5.2F                                 & L'utente deve poter visualizzare una foto del prodotto                                              & Obbligatorio             & \hyperref[sec:UC4]{UC4}                        \\
+        R5.3F                                 & L'utente deve poter visualizzare una descrizione del prodotto                                       & Obbligatorio             & \hyperref[sec:UC4]{UC4}                        \\
+        R5.4F                                 & L'utente deve poter visualizzare il prezzo del prodotto                                             & Obbligatorio             & \hyperref[sec:UC4]{UC4}                        \\
+        R5.5F                                 & L'utente deve poter visualizzare le tasse del prodotto                                              & Obbligatorio             & Capitolato, \newline \hyperref[sec:UC4]{UC4}   \\
+        R5.6F                                 & L'utente deve poter visualizzare la disponibilità del prodotto                                      & Desiderabile             & \hyperref[sec:UC4]{UC4}                        \\
+        R5.7F                                 & L'utente deve poter visualizzare l'eventuale sconto del prodotto                                    & Facoltativo              & \hyperref[sec:UC4]{UC4}                        \\
+        R5.8F                                 & L'utente deve poter accedere al carrello dal dettaglio del prodotto                                 & Obbligatorio             & \hyperref[sec:UC4]{UC4}                        \\
+        R5.9F                                 & Il cliente deve poter procedere all'acquisto diretto del prodotto                                   & Desiderabile             & \hyperref[sec:UC4]{UC4}                        \\
+        \textbf{R6F}                          & L'utente deve poter aggiungere un prodotto al carrello                                              & Obbligatorio             & \hyperref[sec:UC5]{UC5}                        \\
+        \textbf{R7F}                          & L'utente deve poter cercare i prodotti tramite parola chiave                                        & Obbligatorio             & \hyperref[sec:UC6]{UC6}                        \\
+        \textbf{R8F}                          & L'utente deve poter visualizzare la lista di prodotti                                               & Obbligatorio             & \hyperref[sec:UC7]{UC7}                        \\
+        R8.1F                                 & L'utente deve poter selezionare più prodotti                                                        & Obbligatorio             & Capitolato                                     \\
+        \textbf{R9F}                          & L'utente deve poter ordinare la lista di prodotti                                                   & Desiderabile             & \hyperref[sec:UC34]{UC34}                      \\
+        R9.1F                                 & L'utente deve poter ordinare i prodotti per prezzo                                                  & Desiderabile             & \hyperref[sec:UC34]{UC34}                      \\
+        R9.2F                                 & L'utente deve poter ordinare i prodotti per nome                                                    & Desiderabile             & \hyperref[sec:UC34]{UC34}                      \\
+        \textbf{R10F}                         & L'utente deve poter filtrare la lista di prodotti                                                   & Obbligatorio             & \hyperref[sec:UC35]{UC35}                      \\
+        R10.1F                                & L'utente deve poter decidere un prezzo minimo                                                       & Obbligatorio             & \hyperref[sec:UC35]{UC35}                      \\
+        R10.2F                                & L'utente deve poter decidere un prezzo massimo                                                      & Obbligatorio             & \hyperref[sec:UC35]{UC35}                      \\
+        R10.3F                                & L'utente deve poter filtrare per marca                                                              & Facoltativo              & \hyperref[sec:UC35]{UC35}                      \\
+        R10.4F                                & L'utente deve poter filtrare per categoria                                                          & Desiderabile             & Capitolato,\newline \hyperref[sec:UC15]{UC15}                      \\
+        R10.5F                                & L'utente deve poter modificare un filtro                                                            & Obbligatorio             & \hyperref[sec:UC35]{UC35}                      \\
+        R10.6F                                & L'utente deve poter rimuovere i filtri                                                              & Obbligatorio             & \hyperref[sec:UC35]{UC35}                      \\
+        \textbf{R11F}                         & L'utente deve potersi registrare inserendo i propri dati                                            & Obbligatorio             & \hyperref[sec:UC9]{UC9}                        \\
+        R11.1F                                & L'utente deve poter inserire il proprio nome                                                        & Obbligatorio             & \hyperref[sec:UC9.1]{UC9.1}                    \\
+        R11.2F                                & L'utente deve poter inserire il proprio cognome                                                     & Obbligatorio             & \hyperref[sec:UC9.2]{UC9.2}                    \\
+        R11.3F                                & L'utente deve poter inserire il proprio username                                                    & Obbligatorio             & \hyperref[sec:UC9.3]{UC9.3}                    \\
+        R11.4F                                & L'utente deve poter inserire il proprio password                                                    & Obbligatorio             & \hyperref[sec:UC9.4]{UC9.4}                    \\
+        R11.5F                                & L'utente deve poter inserire la propria data di nascita                                             & Facoltativo             & \hyperref[sec:UC9.5]{UC9.5}                    \\
+        R11.6F                                & L'utente deve poter inserire il proprio numero di telefono                                          & Facoltativo             & \hyperref[sec:UC9.6]{UC9.6}                    \\
+        R11.7F                                & L'utente deve poter inserire il proprio indirizzo                                                   & Obbligatorio             & \hyperref[sec:UC9.7]{UC9.7}                    \\
+        \textbf{R12F}                         & L'utente deve potersi registrare tramite un servizio esterno                                        & Desiderabile             & \hyperref[sec:UC10]{UC10}                      \\
+        \textbf{R13F}                         & L'utente deve poter gestire il carrello                                                             & Obbligatorio             & Capitolato                                     \\
+        R13.1F                                & L'utente deve poter visualizzare i prodotti inseriti nel carrello                                   & Obbligatorio             & \hyperref[sec:UC11]{UC11}                      \\
+        R13.2F                                & L'utente deve poter rimuovere i prodotti inseriti nel carrello                                      & Obbligatorio             & \hyperref[sec:UC12]{UC12}                      \\
+        R13.3F                                & L'utente deve poter cambiare la quantità dei prodotti inseriti nel carrello                         & Desiderabile             & \hyperref[sec:UC13]{UC13}                      \\
+        R13.4F                                & L'utente deve essere avvisato se la quantità in magazzino è minore della quantità nel carrello      & Desiderabile             & \hyperref[sec:UC14]{UC14}                      \\
+        R13.5F                                & L'utente deve poter visualizzare il conto totale del carrello                                       & Obbligatorio             & Capitolato, \newline \hyperref[sec:UC11]{UC11} \\
+        R13.6F                                & L'utente deve poter visualizzare le tasse totali del carrello                                       & Obbligatorio             & Capitolato                                     \\
+        \textbf{R14F}                         & Un utente che non riesce ad accedere deve poter reimpostare la password                             & Obbligatorio             & \hyperref[sec:UC16]{UC16}                      \\
+        \textbf{R15F}                         & Il cliente deve poter modificare i dati del proprio profilo                                         & Obbligatorio             & \hyperref[sec:UC17]{UC17}                      \\
+        R15.1F                                & Il cliente deve poter modificare il proprio nome                                                    & Obbligatorio             & \hyperref[sec:UC17.1]{UC17.1}                  \\
+        R15.2F                                & Il cliente deve poter modificare il proprio cognome                                                 & Obbligatorio             & \hyperref[sec:UC17.2]{UC17.2}                  \\
+        R15.3F                                & Il cliente deve poter cambiare il proprio indirizzo                                                 & Obbligatorio             & \hyperref[sec:UC17.3]{UC17.3}                  \\
+        R15.4F                                & Il cliente deve poter cambiare la propria data di nascita                                           & Facoltativo              & \hyperref[sec:UC17.4]{UC17.4}                  \\
+        R15.5F                                & Il cliente deve poter cambiare il proprio numero telefonico                                         & Facoltativo              & \hyperref[sec:UC17.5]{UC17.5}                  \\
+        \textbf{R16F}                         & Il cliente deve poter effettuare il logout                                                          & Obbligatorio             & \hyperref[sec:UC18]{UC18}                      \\
+        \textbf{R17F}                         & Il cliente deve poter visualizzare i propri dati di profilo                                         & Obbligatorio             & \hyperref[sec:UC19]{UC19}                      \\
+        \textbf{R18F}                         & Il cliente deve poter contattare il venditore                                                       & Facoltativo              & \hyperref[sec:UC20]{UC20}                      \\
+        \textbf{R19F}                         & Il cliente deve poter effettuare il checkout di un ordine                                           & Obbligatorio             & \hyperref[sec:UC21]{UC21}                      \\
+        % R19.1F                                & L'utente deve poter inserire l'indirizzo di fatturazione                                            & Obbligatorio             & \hyperref[sec:UC21.1]{UC21.1}                  \\
+        % R19.2F                                & L'utente deve poter inserire l'indirizzo di spedizione                                              & Obbligatorio             & \hyperref[sec:UC21.2]{UC21.2}                  \\
+        R19.1F                                & Il cliente deve poter inserire i dati di pagamento                                                  & Obbligatorio             & \hyperref[sec:UC21.1]{UC21.1}                  \\
+        R19.2F                                & Il cliente deve poter essere avvisato del mancato pagamento                                         & Obbligatorio             & \hyperref[sec:UC36]{UC36}                      \\
+        \textbf{R20F}                         & Il cliente deve poter annullare il checkout                                                         & Obbligatorio             & \hyperref[sec:UC22]{UC22}                      \\
+        \textbf{R21F}                         & Il cliente deve essere indirizzato al riepilogo una volta completato l'ordine                       & Obbligatorio             & \hyperref[sec:UC23]{UC23}                      \\
+        \textbf{R22F}                         & Il cliente deve poter visualizzare la lista degli ordini che ha effettuato                          & Obbligatorio             & \hyperref[sec:UC24]{UC24}                      \\
+        \textbf{R23F}                         & Il venditore deve poter visualizzare la lista di clienti                                            & Obbligatorio             & \hyperref[sec:UC25]{UC25}                      \\
+        \textbf{R24F}                         & Il venditore deve poter visualizzare la lista degli ordini                                          & Obbligatorio             & \hyperref[sec:UC26]{UC26}                      \\
+        \textbf{R25F}                         & Il venditore deve poter contattare un cliente                                                       & Facoltativo              & \hyperref[sec:UC27]{UC27}                      \\
+        \textbf{R26F}                         & Il venditore deve poter aggiungere un nuovo prodotto                                                & Obbligatorio             & \hyperref[sec:UC28]{UC28}                      \\
+        \textbf{R27F}                         & Il venditore deve poter modificare un prodotto                                                      & Obbligatorio             & \hyperref[sec:UC29]{UC29}                      \\
+        \textbf{R28F}                         & Il venditore deve poter rimuovere un prodotto                                                       & Obbligatorio             & \hyperref[sec:UC30]{UC30}                      \\
+        \textbf{R29F}                         & Il venditore deve poter aggiungere una nuova categoria                                              & Obbligatorio             & \hyperref[sec:UC31]{UC31}                      \\
+        \textbf{R30F}                         & Il venditore deve poter rimuovere una categoria                                                     & Obbligatorio             & \hyperref[sec:UC32]{UC32}                      \\
+        \textbf{R31F}                         & L'utente deve poter visualizzare un errore se inserisce dei dati sbagliati durante l'autenticazione & Obbligatorio             & \hyperref[sec:UC33]{UC33}                      \\
+        \textbf{R32F}                         & Il cliente deve poter modificare la propria password                                                & Obbligatorio             & Capitolato, \hyperref[sec:UC37]{UC37}          \\
+        % R32.1F                                & L'utente deve poter modificare il proprio username                                                  & Obbligatorio             & \hyperref[sec:UC37.1]{UC37.1}                  \\
+        % R32.2F                                & L'utente deve poter cambiare la propria password                                                    & Obbligatorio             & \hyperref[sec:UC37.2]{UC37.2}                  \\
+    \end{longtable}
+\end{center}
+\newpage
+\subsection{Requisiti di qualità}
+\begin{center}
+    \centering
+    \rowcolors{2}{logo!10}{logo!40}
+    \renewcommand{\arraystretch}{1.8}
+    \label{tab:RequisitiQualita}
+    \begin{longtable}[!h]{p{50px} p{200px} p{100px} p{50px}}
+        \rowcolor{white}\caption{Requisiti di qualità}                                                                                                                                                                                                                                    \\
+        \rowcolor{logo!70} \textbf{Requisito} & \textbf{Descrizione}                                                                                                                                                            & \textbf{Classificazione} & \textbf{Fonti}               \\
+        \textbf{R1Q}                          & Deve essere fornito un manuale utente che descriva l'utilizzo del prodotto                                                                                                      & Obbligatorio             & Capitolato                   \\
+        \textbf{R2Q}                          & Deve essere fornito un manuale che descriva l'installazione e l'esecuzione della piattaforma \textit{EmporioLambda}                                                             & Obbligatorio             & Capitolato                   \\
+        \textbf{R3Q}                          & La documentazione (\textbf{R1Q}, \textbf{R2Q}) deve essere scritta in lingua inglese                                                                                            & Obbligatorio             & Verbale                      \\
+        \textbf{R4Q}                          & Il codice deve essere ospitato su un repository pubblico su \textit{GitHub}\textsubscript{\textbf{G}} o \textit{GitLab}\textsubscript{\textbf{G}}                               & Obbligatorio             & Capitolato                   \\
+        \textbf{R5Q}                          & Il software sviluppato deve essere coerente con quanto descritto nel documento \textit{Norme di Progetto v3.0.0}                                                                & Obbligatorio             & Interno                      \\
+        \textbf{R6Q}                          & Tutto il codice (commenti, nomi di variabili, ecc...), i commit di \textit{Git}, i nomi di cartelle e tutto quello che riguarda il codice deve essere scritto in lingua inglese & Obbligatorio             & Capitolato                   \\
+        \textbf{R7Q}                          & Non vanno usate chiamate di \textit{callback}\textsubscript{\textbf{G}}, \newline ma solo funzioni \textit{await/async}\textsubscript{\textbf{G}}                               & Obbligatorio             & Capitolato, \newline Verbale \\
+        \textbf{R8Q}                          & Durante l'attività di sviluppo deve essere utilizzato \textit{ESLint}\textsubscript{\textbf{G}} per il controllo del codice                                                     & Obbligatorio             & Capitolato                   \\
+        \textbf{R9Q}                          & Il prodotto deve essere distribuito sotto \textit{licenza MIT}\textsubscript{\textbf{G}}                                                                                        & Obbligatorio             & Capitolato                   \\
+        \textbf{R10Q}                         & Vanno definiti test di unità per ogni microservizio, distribuito su \textit{AWS}\textsubscript{\textbf{G}}                                                                      & Obbligatorio             & Capitolato                   \\
+        \textbf{R11Q}                         & Il progetto deve avere degli specifici ambienti di sviluppo                                                                                                                     & Obbligatorio             & Capitolato                   \\
+        R11.1Q                                & Deve essere presente l'ambiente di sviluppo locale                                                                                                                              & Obbligatorio             & Capitolato                   \\
+        R11.2Q                                & Deve essere presente l'ambiente di sviluppo di test                                                                                                                             & Obbligatorio             & Capitolato                   \\
+        R11.3Q                                & Deve essere presente l'ambiente di sviluppo di \textit{staging}\textsubscript{\textbf{G}}                                                                                       & Obbligatorio             & Capitolato                   \\
+    \end{longtable}
+\end{center}
+
+\newpage
+\subsection{Requisiti di vincolo}
+\begin{center}
+    \centering
+    \rowcolors{2}{logo!10}{logo!40}
+    \renewcommand{\arraystretch}{1.8}
+    \label{tab:RequisitiVincolo}
+    \begin{longtable}[!h]{p{50px} p{200px} p{100px} p{50px}}
+        \rowcolor{white}\caption{Requisiti di vincolo}                                                                                                                                                                                               \\
+        \rowcolor{logo!70} \textbf{Requisito} & \textbf{Descrizione}                                                                                                                                     & \textbf{Classificazione} & \textbf{Fonti} \\
+        \textbf{R1V}                          & L'architettura dell'applicazione deve essere basata sulla \textit{microservices architecture}\textsubscript{\textbf{G}}                                  & Obbligatorio             & Capitolato     \\
+        \textbf{R2V}                          & I microservizi devono essere delle funzioni \newline Lambda ospitate su \textit{AWS Lambda}\textsubscript{\textbf{G}}                                    & Obbligatorio             & Capitolato     \\
+        \textbf{R3V}                          & Il \textit{BFF} deve essere scritto in \textit{Next.js}\textsubscript{\textbf{G}}                                                                        & Obbligatorio             & Capitolato     \\
+        \textbf{R4V}                          & I microservizi devono essere scritti utilizzando l'ultima versione di \textit{TypeScript}\textsubscript{\textbf{G}}                                      & Obbligatorio             & Capitolato     \\
+        \textbf{R5V}                          & Deve essere usato \textit{DynamoDb}\textsubscript{\textbf{G}} per lo storage dei dati                                                                    & Obbligatorio             & Capitolato     \\
+        \textbf{R6V}                          & Deve essere usato \textit{Stripe}\textsubscript{\textbf{G}} come servizio esterno per il pagamento                                                       & Obbligatorio             & Capitolato     \\
+        \textbf{R7V}                          & Deve essere utilizzato \textit{Amazon CloudWatch}\textsubscript{\textbf{G}} per la parte di monitoraggio della piattaforma                               & Obbligatorio             & Capitolato     \\
+        \textbf{R8V}                          & Devono essere applicate tecniche di \textit{Search Engine Optimization}\textsubscript{\textbf{G}} nella homepage e nella pagina della lista dei prodotti & Obbligatorio             & Capitolato     \\
+        \textbf{R9V}                          & La piattaforma \textit{EmporioLambda} deve essere fruibile in lingua inglese                                                                             & Obbligatorio             & Verbale        \\
+    \end{longtable}
+\end{center}
+
+\newpage
+\subsection{Tracciamento}
+\subsubsection{Fonti - Requisiti}
+\input{sezioni/tabellaFontiRequisiti.tex}
+
+\newpage
+\subsubsection{Requisiti - Fonti}
+\input{sezioni/tabellaRequisitiFonti.tex}
+
+\subsection{Considerazioni}
+I requisiti elencati potrebbero essere modificati in futuro, apportando modifiche o migliorie.

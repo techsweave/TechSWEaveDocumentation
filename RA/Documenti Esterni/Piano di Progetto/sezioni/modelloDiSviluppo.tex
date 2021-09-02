@@ -1,0 +1,275 @@
+\section{Modello di Sviluppo}
+La scelta del modello di sviluppo è fondamentale per la pianificazione del progetto, per tale scopo è stato adottato il \textbf{modello incrementale.}
+
+\subsection{Modello incrementale}
+Il modello di sviluppo incrementale permette di frazionare lo sviluppo del sistema per incrementi, ognuno dei quali rappresenta uno dei principali passi della progettazione software.
+L'implementazione di nuovi requisiti, la modifica o cancellazione di quelli preesistenti, sono consentite previa discussione con il proponente e dopo la sua approvazione; in ogni caso non sono permesse durante la fase di sviluppo del processo corrente.
+Tale modello di sviluppo si combina bene con il versionamento del sistema, che ne traccia le modifiche rendendole più visibili.
+I vantaggi dell'utilizzo del modello incrementale sono i seguenti:
+\begin{itemize}
+    \item le funzionalità primarie hanno priorità nello sviluppo, in questo modo al proponente può valutarle subito;
+    \item è possibile ricevere il feedback del cliente frequentemente, anche a ogni incremento;
+    \item lo sviluppo a incrementi successivi permette di limitare gli errori al singolo incremento;
+    \item l'individuazione degli errori, la correzione e l'apporto di modifiche sono più economiche;
+    \item vengono facilitate le fasi di verifica e test perché più mirate.
+\end{itemize}
+
+\subsection{Incrementi}
+Durante i periodi di Progettazione e Codifica per la Technology Baseline sono stati apportati alcuni incrementi. Di seguito ne riportiamo il tracciamento, in modo tale da comprendere meglio quali requisiti vengono soddisfatti in ciascun incremento
+\newline
+Tutti i requisiti sono reperibili all'interno del documento \textit{Analisi dei Requisiti v.2.0.0}
+\subsubsection{Incrementi per la fase di progettazione architetturale}
+%Tabella incrementi
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{logo!40}{logo!10}
+\arrayrulecolor{white}
+\begin{longtable}{
+    >{\centering}p{0.15\textwidth}
+    >{\raggedright}p{0.40\textwidth}
+    >{\centering}p{0.15\textwidth}
+    >{\centering}p{0.15\textwidth}
+    }
+
+    \caption{Tabella di tracciamento progettazione architetturale}                                                                \\
+    \rowcolor{white}                                                                                                              \\
+    \rowcolor{logo!70}
+    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi}  & \centering\textbf{Casi d'uso} & \centering\textbf{Requisiti}
+    \tabularnewline
+    \endfirsthead
+    \rowcolor{white}\caption[]{(continua)}                                                                                        \\
+    \rowcolor{logo!70}
+    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi}  & \centering\textbf{Casi d'uso} & \centering\textbf{Requisiti}
+    \tabularnewline
+    \endhead
+
+    %Incremento 1 ---------------------------------------------------------
+    Incremento 1                  &
+    \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item creazione della homepage;
+        \item aggiunta del bottone per accedere direttamente al carrello.
+    \end{itemize}     & Nessun caso d'uso implementato & R1F                                                          \\ R1.3F
+    \tabularnewline
+
+    %Incremento 2 ---------------------------------------------------------
+    Incremento 2                  &
+    \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item implementazione di registrazione e accesso tramite \textit{Amazon Cognito};
+        \item aggiunta del bottone per accedere alla pagina di registrazione e autenticazione.
+    \end{itemize}     & UC1                                                                                           \\ UC2 \\  UC9 \\ UC16 \\ UC18 \\ UC33                  & R2F                          \\ R3F \\ R3.1F \\ R3.2F \\
+    R11F                                                                                                                          \\ R14F \\ R16F \\ R31F
+    \tabularnewline
+
+    %Incremento 3 ---------------------------------------------------------
+    Incremento 3                  &
+    \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item creazione della lista dei prodotti;
+        \item aggiunta del bottone per accedere alla lista dei prodotti;
+        \item aggiunta delle chiamate \textit{Lambda} per prendere i dati dal backend;
+        \item aggiunta della pagina di dettaglio per ogni prodotto della piattaforma.
+    \end{itemize}     & UC4                                                                                           \\ UC7                              & R5F                          \\ R5.1F \\ R5.3F \\ R5.4F \\ R5.6F \\ R8F
+    \tabularnewline
+
+    %Incremento 4 ---------------------------------------------------------
+    Incremento 4                  & \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item creazione del carrello con visualizzazione dei prodotti in esso inseriti.
+    \end{itemize}     & UC11                           & R13.1F
+    \tabularnewline
+
+    %Incremento 5 ---------------------------------------------------------
+    Incremento 5                  & \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item implementazione del servizio di pagamento \textit{Stripe};
+        \item aggiunta del bottone per effettuare il checkout.
+    \end{itemize}     & UC21                                                                                          \\ UC22                           & R19F                         \\ R19.3F \\ R19.4F \\ R20F
+    \tabularnewline
+\end{longtable}
+\counterwithin{table}{subsection}
+\renewcommand{\arraystretch}{1}
+% Non so bene se gli incrementi già effettuati devono essere lasciati oppure non credo però cmq al momento gli lascio
+\subsubsection{Incrementi per la fase di progettazione e codifica di dettaglio}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{logo!40}{logo!10}
+\arrayrulecolor{white}
+\begin{longtable}{
+    >{\centering}p{0.15\textwidth}
+    >{\raggedright}p{0.40\textwidth}
+    >{\centering}p{0.15\textwidth}
+    >{\centering}p{0.15\textwidth}
+    }
+
+    \caption{Tabella di tracciamento per la codifica di dettaglio}                                                                 \\
+    \rowcolor{white}                                                                                                               \\
+    \rowcolor{logo!70}
+    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi}  & \centering\textbf{Casi d'uso}  & \centering\textbf{Requisiti}
+    \tabularnewline
+    \endfirsthead
+    \rowcolor{white}\caption[]{(continua)}                                                                                         \\
+    \rowcolor{logo!70}
+    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi}  & \centering\textbf{Casi d'uso}  & \centering\textbf{Requisiti}
+    \tabularnewline
+    \endhead
+
+    %Incremento 6 RQ ---------------------------------------------------------
+    Incremento 6                  &
+    \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item Preparazione alle attività di progettazione e codifica di dettaglio;
+        \item Incremento della documentazione per verifica e miglioramento continuo.
+    \end{itemize}     & Nessun caso d'uso implementato & Nessun caso d'uso implementato
+    \tabularnewline
+
+    %Incremento 7 RQ ---------------------------------------------------------
+    Incremento 7                  &
+    \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item Miglioramento della struttura delle funzioni Lambda, con l'aggiunta dei filtri di ricerca;
+        \item  Miglioramento delle chiamate \textit{API GATEWAY} nel frontend per ottenere le informazioni delle funzioni lambda;
+        \item Inizio della stesura della documentazione legata al prodotto software;
+        \item Incremento della documentazione per verifica e miglioramento continuo.
+    \end{itemize}
+
+                                  & UC15                                                                                           \\ UC35                                                                 & R10F                                                                                                       \\ R10.1F \\ R10.2F \\ R10.5F\\ R10.6F
+    \tabularnewline
+
+    %Incremento 8 RQ ---------------------------------------------------------
+    Incremento 8
+                                  &
+    \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item Ristrutturazione dei servizi lato backend;
+        \item Riconfigurazione del linter \textit{eslint};
+        \item Correzione della documentazione in base alla RP;
+        \item Incremento della documentazione per verifica e miglioramento continuo.
+    \end{itemize}
+                                  & Nessun caso d'uso implementato & R8Q                                                           \\ R1V \\ R2V \\ R4V    \tabularnewline
+
+    %Incremento 9 RQ ---------------------------------------------------------
+    Incremento 9                  &
+    \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item Distinzione tra cliente e venditore;
+        \item Implementazione lato frontend;
+        \item Incremento della documentazione per verifica e miglioramento continuo.
+    \end{itemize}
+                                  & UC17                                                                                           \\ UC19  \\ UC37
+                                  & R15F                                                                                           \\ R15.1F \\ R15.2F \\ R15.3F \\ R17F \\ R32F
+    \tabularnewline
+
+    %Incremento 10 RQ ---------------------------------------------------------
+    Incremento 10                 & \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item Completamento Checkout;
+        \item Completamento carrello;
+        \item Completamento pagina PDP;
+        \item Incremento della documentazione per verifica e miglioramento continuo.
+    \end{itemize}    & UC4                                                                                            \\ UC5 \\ UC11                                                                                                                                                                                     \\ UC12 \\UC13\\UC14\\ UC21.1 \\ UC22 \\ UC23 \\ UC24 \\ UC36 & R5F\\5.7F\\5.8F \\ R6F \\ R13F  \\ R13.2F \\R13.3F \\R13.4F \\ R13.5F \\ R13.6F \\ R19.1F \\ R19.2F \\ R20F \\ R21F \\ R22F
+    \tabularnewline
+    %Incremento 11 RQ ---------------------------------------------------------
+    Incremento 11                 & \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item Completamento Homepage;
+        \item Completamento PLP;
+        \item Implementazione ricerca di un prodotto;
+        \item Incremento della documentazione per verifica e miglioramento continuo.
+    \end{itemize}    & UC6                                                                                            \\ UC7 & R1.1F \\ R1.2F \\ R7F \\ R8F
+    \tabularnewline
+    %Incremento 12 RQ ---------------------------------------------------------
+    Incremento 12                 & \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item Completamento pagina venditore;
+        \item Aggiunta sezione per la gestione delle categorie;
+        \item Aggiunta visualizzazione elenco clienti e ordini ricevuti;
+        \item Aggiunta sezione per la gestione di un prodotto;
+        \item Incremento della documentazione per verifica e miglioramento continuo;
+        \item Aggiunta possibilità per il venditore di contattare un cliente.
+    \end{itemize}    & UC25                                                                                           \\ UC26 \\ UC27 \\ UC28 \\ UC29 \\ UC30 \\ UC31 \\ UC32 & R23F \\ R24F \\ R25F \\ R26F \\ R27F \\ R28F \\ R29F \\ R30F
+    \tabularnewline
+    %Incremento 13 RQ ---------------------------------------------------------
+    Incremento 13                 &
+    \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item Preparazione per la \textit{Revisione di Qualifica};
+        \item Correzione del codice secondo le indicazioni ricevute durante la \textit{Product Baseline} e con il proponente;
+        \item Correzione dell'\textbf{Allegato Tecnico};
+        \item Incremento della documentazione per verifica e miglioramento continuo.
+    \end{itemize}    & Nessun caso d'uso implementato & Nessun caso d'uso implementato
+    \tabularnewline
+\end{longtable}
+\counterwithin{table}{subsection}
+\renewcommand{\arraystretch}{1}
+\subsubsection{Incrementi per la fase di validazione e collaudo}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{logo!40}{logo!10}
+\arrayrulecolor{white}
+\begin{longtable}{
+    >{\centering}p{0.15\textwidth}
+    >{\raggedright}p{0.40\textwidth}
+    >{\centering}p{0.15\textwidth}
+    >{\centering}p{0.15\textwidth}
+    }
+
+    \caption{Tabella di tracciamento per la validazione}                                                                           \\
+    \rowcolor{white}                                                                                                               \\
+    \rowcolor{logo!70}
+    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi}  & \centering\textbf{Casi d'uso}  & \centering\textbf{Requisiti}
+    \tabularnewline
+    \endfirsthead
+    \rowcolor{white}\caption[]{(continua)}                                                                                         \\
+    \rowcolor{logo!70}
+    \centering\textbf{Incremento} & \centering\textbf{Obbiettivi}  & \centering\textbf{Casi d'uso}  & \centering\textbf{Requisiti}
+    \tabularnewline
+    \endhead
+    Incremento 14                 & \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item Aggiunta ordinamento alla lista dei prodotti;
+        \item Aggiunti filtri per categoria e marca;
+        \item Aggiunto acquisto diretto del prodotto;
+        \item Incremento della documentazione per verifica e miglioramento continuo.
+    \end{itemize}    & UC4                                                                                            \\ UC15 \\ UC34 \\ UC35  & R5.9F \\ R9F \\ R9.1F \\ R9.2F \\ R10.3F \\ R10.4F
+    \tabularnewline
+    Incremento 15                 & \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item Correzione della documentazione in base alle indicazioni dei proponenti;
+        \item Aggiunto registrazione con servizio esterno;
+        \item Aggiunto autenticazione con servizio esterno;
+        \item Incremento della documentazione per verifica e miglioramento continuo.
+    \end{itemize}    & UC3                                                                                            \\ UC10                                                                                                & R4F \\ R12F
+    \tabularnewline
+    Incremento 16                 & \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item Aggiunto la possibilità di contattare il venditore da parte del cliente;
+        \item Incremento della documentazione per verifica e miglioramento continuo.
+    \end{itemize}    & UC20                                                                                          & R18F 
+    \tabularnewline
+
+    Incremento 17                 & \vspace{-15px}
+    \begin{itemize}
+        \renewcommand\labelitemi{-}
+        \item Preparazione all'esposizione per la \textit{Revisione di accettazione};
+        \item Preparazione per il collaudo con il proponente;
+        \item Incremento della documentazione per verifica e miglioramento continuo.
+    \end{itemize}    & Nessun caso d'uso implementato & Nessun caso d'uso implementato
+    \tabularnewline
+\end{longtable}
+\counterwithin{table}{subsection}
+\renewcommand{\arraystretch}{1}

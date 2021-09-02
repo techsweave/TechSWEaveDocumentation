@@ -1,0 +1,129 @@
+\documentclass[a4paper]{article}
+\usepackage{titlesec}
+\usepackage{geometry}
+\geometry{hmargin={2cm,2cm}, vmargin={3.5cm,3.5cm}}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\hypersetup{pdfborder = {0 0 0},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=blue}
+\definecolor{logo}{RGB}{20,99,163}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{comment}
+
+% creazione comando subsubsubsection
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\titleformat{\subsubsubsection}
+    {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+    \titlespacing*{\subsubsubsection}
+    {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\def\toclevel@subsubsubsection{4}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%fine creazione comando
+
+
+%Comandi di impaginazione uguale per tutti i documenti
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.2]{../../../../Images/logo.png}}
+%Titolo del documento
+\rhead{\large Verbale Interno del 2021-05-10}
+%\rfoot{\thepage}
+\cfoot{Pagina \thepage{} di \pageref{LastPage}}
+\setlength{\headheight}{45pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \includegraphics{../../../../Images/logo.png}\\
+        \vspace{20px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{20px}
+        \textbf{\huge\textcolor{logo}{Verbale Interno del 2021-05-10}}\\
+        \vspace{10px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{40px}
+        \textbf{\Large Informazioni sul documento}\\
+        \vspace{20px}
+        \begin{tabular}{p{100px} | p{100px}}
+            \textbf{Versione}     & 1.0.0                                                                      \\
+            \textbf{Responsabile} & Tito Scutari                                                               \\
+            \textbf{Redattore}    & Marco Barbaresco                                                           \\
+            \textbf{Verificatore} & Nicolò Giaccone                                                            \\
+            \textbf{Destinatari}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave \\
+            \textbf{Stato}        & Approvato                                                                  \\
+            \textbf{Uso}          & Interno                                                                    \\
+        \end{tabular}\\
+        \vspace{60px}
+        \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
+
+    \end{center}
+\end{titlepage}
+
+
+%INDICE
+\newpage
+\tableofcontents
+\newpage
+
+\section{Informazioni riunione}
+\begin{itemize}
+    \item Data e ora: 2021-05-10 ore 18:00-19:30.
+    \item Luogo: Canale Discord del gruppo tramite videochiamata.
+    \item Partecipanti interni: Samuele De Simone, Manuel Varo, Tito Scutari, Nicolò Giaccone, Amedeo Meggiolaro, Marco Barbaresco.
+    \item Partecipanti esterni: nessuno.
+    \item Segretario: Marco Barbaresco.
+\end{itemize}
+\section{Argomenti affrontati}
+Durante l'incontro sono stati discussi il passaggio a un'architettura a microservizi, la pianificazione per il periodo di progettazione di dettaglio ed è stato
+richiesto un incontro al proponente.
+\section{Verbale della riunione}
+\begin{itemize}
+    \item Discussione sull'architettura a microservizi;
+    \item Brain storming e visualizzazione collettiva di documentazione, guide e tutorial al fine d'individuare i microservizi utili al progetto;
+    \item Pianificazione delle attività da svolgere in vista della \textit{Revisione di Qualifica};
+    \item Discussione sui requisiti che il prodotto dovrà soddisfare per la \textit{Revisione di Qualifica};
+    \item Discussione sul servizio da utilizzare come storage per le immagini;
+    \item Discussione su quale framework utilizzare per la realizzazione dell'interfaccia utente (Bootstrap, Material-UI, Tailwind):
+          si è deciso di attendere l'incontro con i proponenti e chiedere se hanno delle preferenze;
+    \item Suddivisione dei ruoli e dei task per il periodo di progettazione di dettaglio;
+    \item Richiesta d'incontro con il proponente \textit{Red Babel}.
+\end{itemize}
+\newpage
+\section{Resoconto}
+\begin{center}
+    \textbf{\Large Registro delle decisioni}\\
+    \vspace{10px}
+    \begin{table}[h!]
+        \centering
+        \rowcolors{2}{logo!10}{logo!40}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{p{200px} p{200px}}
+            \rowcolor{logo!70} \textbf{Codice} & \textbf{Decisione}                                                                                                                             \\
+            VI\_2021\_05\_10.1                 & Individuati i microservizi utili al progetto, rimandando la decisione sull'effettivo passaggio di architettura alla riunione con i proponenti. \\
+            VI\_2021\_05\_10.2                 & Individuati i requisiti che il prodotto dovrà soddisfare in vista della \textit{Revisione di Qualifica}.                                       \\
+            VI\_2021\_05\_10.3                 & Assegnati ruoli e task per il periodo di progettazione di dettaglio.                                                                           \\
+            VI\_2021\_05\_10.4                 & Utilizzo di Amazon S3 come servizio di storage.                                                                                                \\
+            VI\_2021\_05\_10.5                 & Viene richiesto al proponente, tramite piattaforma Slack, un incontro per il 2021-16-05.                                                       \\
+        \end{tabular}
+    \end{table}
+\end{center}
+
+\end{document}

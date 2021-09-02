@@ -1,0 +1,125 @@
+\documentclass[a4paper]{article}
+\usepackage{titlesec}
+\usepackage{geometry}
+\geometry{hmargin={2cm,2cm}, vmargin={3.5cm,3.5cm}}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\hypersetup{pdfborder = {0 0 0},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=blue}
+\definecolor{logo}{RGB}{20,99,163}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{comment}
+
+% creazione comando subsubsubsection
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\titleformat{\subsubsubsection}
+    {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+    \titlespacing*{\subsubsubsection}
+    {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\def\toclevel@subsubsubsection{4}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%fine creazione comando
+
+
+%Comandi di impaginazione uguale per tutti i documenti
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.2]{../../../../Images/logo.png}}
+%Titolo del documento
+\rhead{\large Verbale Esterno del 2021-05-21}
+%\rfoot{\thepage}
+\cfoot{Pagina \thepage{} di \pageref{LastPage}}
+\setlength{\headheight}{45pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \includegraphics{../../../../Images/logo.png}\\
+        \vspace{20px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{20px}
+        \textbf{\huge\textcolor{logo}{Verbale Esterno del 2021-05-21}}\\
+        \vspace{10px}
+        \textcolor{logo}{\hrulefill}\\
+        \vspace{40px}
+        \textbf{\Large Informazioni sul documento}\\
+        \vspace{20px}
+        \begin{tabular}{p{100px} | p{100px}}
+            \textbf{Versione}     & 1.0.0                                                                      \\
+            \textbf{Responsabile} & Tito Scutari                                                               \\
+            \textbf{Redattore}    & Marco Barbaresco                                                           \\
+            \textbf{Verificatore} & Amedeo Meggiolaro                                                          \\
+            \textbf{Destinatari}  & Prof. Tullio Vardanega \newline Prof. Riccardo Cardin, \newline TechSWEave \\
+            \textbf{Stato}        & Approvato                                                                  \\
+            \textbf{Uso}          & Esterno                                                                    \\
+        \end{tabular}\\
+        \vspace{60px}
+        \href{mailto:techsweave@gmail.com}{techsweave@gmail.com}\\
+
+    \end{center}
+\end{titlepage}
+
+%INDICE
+\newpage
+\tableofcontents
+\newpage
+
+\section{Informazioni riunione}
+\begin{itemize}
+    \item Data e ora: 2021-05-21 ore 17:30-18:00.
+    \item Luogo: Google Meet fornito dai proponenti.
+    \item Partecipanti interni: Samuele De Simone, Manuel Varo, Tito Scutari, Nicolò Giaccone, Amedeo Meggiolaro, Marco Barbaresco.
+    \item Partecipanti esterni: Milo Ertola, Alessandro Maccagnan.
+    \item Segretario: Marco Barbaresco.
+\end{itemize}
+\section{Argomenti affrontati}
+Durante l'incontro sono stati chiesti ai proponenti chiarimenti e consigli riguardo dettagli progettuali e implementativi.\\
+I proponenti hanno esaminato alcuni file sorgente, indicandone pregi e difetti.
+\section{Verbale della riunione}
+\begin{itemize}
+    \item Aggiornamento del proponente sullo stato del progetto e sull'esito della \textit{Revisione di Progettazione};
+    \item Discussione sulle modalità di comunicazione (servizi Amazon SNS, SQS, SES) tra i vari microservizi;
+    \item Discussione sull'indipendenza dei vari microservizi
+    \item Esame del codice di alcune funzioni lambda;
+    \item Esame dello schema del database;
+    \item Discussione sull'importanza della reattività delle pagine del sito;
+    \item Discussione sulla struttura degli eventi e su un approccio in grado di rendere più indipendenti i microservizi;
+    \item Discussione sul versionamento dei prodotti nel database.
+\end{itemize}
+\section{Resoconto}
+\begin{center}
+    \textbf{\Large Registro delle decisioni}\\
+    \vspace{10px}
+    \begin{table}[h!]
+        \centering
+        \rowcolors{2}{logo!10}{logo!40}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{p{200px} p{200px}}
+            \rowcolor{logo!70} \textbf{Codice} & \textbf{Decisione}                                                                 \\
+            VE\_2021\_05\_21.1                 & Utilizzo di Amazon SNS come servizio di messaggistica tra microservizi.            \\
+            VE\_2021\_05\_21.2                 & Utilizzo di Amazon SQS come servizio di accodamento messaggi.                      \\
+            VE\_2021\_05\_21.3                 & Utilizzo facoltativo e discrezionale di Amazon SES.                                \\
+            VE\_2021\_05\_21.4                 & Utilizzo di codice SKU per il versionamento dei prodotti all'interno del database.
+        \end{tabular}
+    \end{table}
+\end{center}
+
+\end{document}
