@@ -43,7 +43,24 @@ Jest is a JavaScript testing framework designed to ensure correctness of any Jav
   \item \textbf{Link: \url{https://jestjs.io/docs/getting-started}}
 \end{itemize}
 \subsection{General description}
-The frontend\textsubscript{\textbf{G}} structure is based on using the npm utilities-techsweave package produced by the backend, containing the interfaces and services useful for rendering the user interface. The interfaces of the microservices are imported by the "Models" file, while the methods made available by the microservices are imported by the "Services" file. These methods allow to call the lambda functions present within the backend to obtain the results necessary for the functioning of the user interface. To render the pages of the platform, the best practices of React and Next.js are followed. The pages are composed through the use of components, HTML snippets\textsubscript{\textbf{G}} that reproduces a specific part of the page itself.
+The frontend\textsubscript{\textbf{G}} structure has three macro categories that explains its works:
+\begin{itemize}
+  \item data fetching
+\end{itemize}
+
+
+
+
+is based on using the npm utilities-techsweave package produced by the backend, containing the interfaces and services useful for rendering the user interface. The interfaces of the microservices are imported by the "Models" file, while the methods made available by the microservices are imported by the "Services" file. These methods allow to call the lambda functions present within the backend to obtain the results necessary for the functioning of the user interface. To render the pages of the platform, the best practices of React and Next.js are followed. The pages are composed through the use of components, HTML snippets\textsubscript{\textbf{G}} that reproduces a specific part of the page itself.
+
+\begin{figure}[!ht]
+  \caption{Profile page navbar}
+  \vspace{10px}
+  \includegraphics[scale=0.3]{../../../../Images/Diagrammi/maintainerManual/FEgraph.png}
+  \centering
+\end{figure}
+
+
 \subsection{Examples of functioning}
 \subsubsection{Use of a function}
 The scan of the products in the database will be returned when calling the scanAsync method on an instance of the product class. These products will be passed to the frontend components to render the page and display the data taken from the database.
