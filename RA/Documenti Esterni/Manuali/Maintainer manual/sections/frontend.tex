@@ -149,6 +149,9 @@ The following diagrams show the structure of every page.
 \end{figure}
 \clearpage
 \subsubsection{Utilities-techsweave}
+\textit{Utilities-techsweave} is a npm package which has the same function as a library. Especially the package provides to the frontend all types and services made from the backend. Thanks to this package we have been able to greatly simplify interactions between frontend and backend, in fact the implementation of the method is trasparent to the frontend, the only thing that frontend knows about the method is its signature.
+In addition to methods \textit{utilities-techsweave} provides type used in the various function, in this case the frontend module has only to create e new type based on what the package provides. With this package the separetion of presentation logic and buisness logic it's further accentuated thus allowing to the frontend to focus on the presentation logic. This marked separetion of concepts consists in a better stability for the finished.
+
 
 
 
@@ -165,14 +168,24 @@ The following diagrams show the structure of every page.
 
 \subsection{Examples of functioning}
 \subsubsection{Use of a function}
-The scan of the products in the database will be returned when calling the scanAsync method on an instance of the product class. These products will be passed to the frontend components to render the page and display the data taken from the database.
-\subsubsection{Rendering of a page}
-To render the detail page of a product, by using the getStaticProps function will be returned the data with the necessary product details. The various components are then inserted into the HTML code to produce the page:
+To call a method exposed from \textit{utilities-techsweave}, first we have to import Module and Services from utilities-techsweave in the file.
+\begin{lstlisting}
+    import { Models, Services } from 'utilities-techsweave'
+\end{lstlisting}
+After this we have to create a new istance of the type that we want to use in the page, for example if we need a scan of the product we have to create a new istance of {\fontfamily{qcr}\selectfont IProduct}. This type istance is the caller for the method that we want to use, following the previous example the caller allows us to call the {\fontfamily{qcr}\selectfont scanAsync} method that return the scan of product's table in the DB. This procedure has to be done inside the fetch function previously explained:
 \begin{itemize}
-  \item \textbf{Layout}, containing the general style of the page including header, footer and navbar;
-  \item \textbf{ProductDetail}, to render product details through images and texts;
-  \item \textbf{RelatedProduct}, creates a list of products with the same category of the one currently displayed;
-  \item \textbf{ProductInfo}, creates a list of products specifications;
-  \item \textbf{AddToCart}, displays a button to add the currently displayed product in the cart.
+  \item {\fontfamily{qcr}\selectfont getStaticProps}
+  \item {\fontfamily{qcr}\selectfont getServerSideProps}
+  \item {\fontfamily{qcr}\selectfont useEffect and an async function}
+\end{itemize}
+\subsubsection{Rendering of a page}
+The rendering of page  is a succession of components calls. All starts from the page that include and call some components and does the data fetching. When the page has the data, passes it to the component. The \textit{Layout} component contains the general style of the page including header, footer and navbar, and it's included in every page. The product detail page renderign has the following procedure:
+\begin{itemize}
+  \item \textbf{ProductDetail} is the main component this component takes care of showing the data of the product like, his title, his image and his price, and calls all other components:
+        \begin{itemize}
+          \item \textbf{RelatedProduct}, creates a list of products with the same category of the one currently displayed, to achieve this the component calls the RelatedItem that render the single item of the list ;
+          \item \textbf{ProductInfo}, creates a list of products specifications;
+          \item \textbf{AddToCart}, displays a button to add the currently displayed product in the cart.
+        \end{itemize}
 \end{itemize}
 
