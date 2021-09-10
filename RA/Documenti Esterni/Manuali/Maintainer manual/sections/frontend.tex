@@ -25,7 +25,7 @@ NextAuth.js is a complete open source authentication solution for Next.js applic
   \item \textbf{Link: \url{https://next-auth.js.org/}}
 \end{itemize}
 \subsubsection{Swiper}
-Swiper is a React componenent that render a touch slider with hardware accelerated transitions.
+Swiper is a React component that render a touch slider with hardware accelerated transitions.
 \begin{itemize}
   \item \textbf{Used Version: 6.7.0}
   \item \textbf{Link: \url{https://swiperjs.com/}}
@@ -60,7 +60,7 @@ This is a package diagram to show the principal architecture of \textit{EmporioL
 \end{figure}
 
 \subsubsection{Data fetching}
-For the data fetching we followed the \textit{Next.js} and \textit{React} best paractices.
+For the data fetching we followed the \textit{Next.js} and \textit{React} best practices.
 \\
 \\
 \textit{Next.js} for the data fetching pre-renders every page. This means that \textit{Next.js} generates HTML for each page in advance, instead of having it all done by client-side \textit{JavaScript}. Next offers two type of pre-rendering:
@@ -68,18 +68,18 @@ For the data fetching we followed the \textit{Next.js} and \textit{React} best p
   \item \textbf{Static Generation:} The HTML is generated at build time and will be reused on each request;
   \item \textbf{Server-side Rendering}: The HTML is generated on each request.
 \end{itemize}
-Static generation performs significantly better than Server-side Rendering this because with static generation a page can be cached in the server and every time the browser need it the server just send the page without rebuilding it. For this reason we choose to use static generation in all pages that are directly addressed by browser, beacuse the page are always shown entirely to the browser and this allows better SEO perfomances. Some pages can't be generated with static generetion, because their data has to be constantly and rapidly update or because there is sessione verification to allow access to the page.
+Static generation performs significantly better than Server-side Rendering this because with static generation a page can be cached in the server and every time the browser need it the server just send the page without rebuilding it. For this reason we choose to use static generation in all pages that are directly addressed by browser, beacuse the page are always shown entirely to the browser and this allows better SEO\textsubscript{\textbf{G}} perfomances. Some pages can't be generated with static generation, because their data has to be constantly and rapidly update or because there is session verification to allow access to the page.
 \\
 \\
-We also use \textit{React} data fetching method, that consists in a client side rendering that allows to have some preformace benefits.
+We also use \textit{React} data fetching method, that consists in a client side rendering that allows to have some performance benefits.
 Every page of \textit{EmporioLambda} fetches data using this method:
 \begin{itemize}
   \item \textbf{getStaticProps:} a function that returns a GetStaticProps object, which indicates that the page will use static generation;
-  \item \textbf{getServerSideProps:} a function that return a GetServerSideProps object, which indicates that the page will use server-side renderingG. It will  re-render the page after receiving new data, or at evrey request.
+  \item \textbf{getServerSideProps:} a function that return a GetServerSideProps object, which indicates that the page will use server-side rendering. It will  re-render the page after receiving new data, or at every request.
   \item \textbf{useEffect:} a \textit{React} function which consists of modify parts of the pages when needed.
 \end{itemize}
 \subsubsection{Components}
-\textit{EmporioLambda} use \textit{React}, \textit{JavaScript} and \textit{TypeScript} to use components. Components are HTML snippets that allow us to create the UI and its parts. The usign of components allowed us to separate the business logic from the presentation logic. In \textit{EmporioLambda} has two type components:
+\textit{EmporioLambda} use \textit{React}, \textit{JavaScript} and \textit{TypeScript} to use components. Components are HTML snippets that allow us to create the UI and its parts. The using of components allowed us to separate the business logic from the presentation logic. In \textit{EmporioLambda} has two type components:
 \begin{itemize}
   \item \textbf{presentation components:} these components has the only scope to render the data fetched from pages. This type of components can only call other presentation components;
   \item \textbf{container components:} these components can use state and function to fetch or send data to the business logic. These type of components can also call presentation components sending to them the needed data.
@@ -89,7 +89,7 @@ The \textit{React} components can accept two different variables:
   \item \textbf{Props:} variables or object that can only be passed from a parent component to a children component. Props can be used from a next page so give to his principal component the needed data.
   \item \textbf{State:} these variables cause the re-rendering of a component. This state has to be initialized from the component constructor.
 \end{itemize}
-The use of state variables allows us to introduce the \textit{Observer pattern} a design pattern used by the frontend to render a page. This design pattern is native implmented in \textit{React}. In our case the state of the component is our observable: the component, when the state has been changed, automatically re-renders the page with the new values, re-rendering its children as well.
+The use of state variables allows us to introduce the \textit{Observer pattern} a design pattern used by the frontend to render a page. This design pattern is natively implemented in \textit{React}. In our case the state of the component is our observable: the component, when the state has been changed, automatically re-renders the page with the new values, re-rendering its children as well.
 \\
 \\
 The following diagrams show the structure of every page.
@@ -149,8 +149,8 @@ The following diagrams show the structure of every page.
 \end{figure}
 \clearpage
 \subsubsection{Utilities-techsweave}
-\textit{Utilities-techsweave} is a npm package which has the same function as a library. Especially the package provides to the frontend all types and services made from the backend. Thanks to this package we have been able to greatly simplify interactions between frontend and backend, in fact the implementation of the method is trasparent to the frontend, the only thing that frontend knows about the method is its signature.
-In addition to methods \textit{utilities-techsweave} provides type used in the various function, in this case the frontend module has only to create e new type based on what the package provides. With this package the separetion of presentation logic and buisness logic it's further accentuated thus allowing to the frontend to focus on the presentation logic. This marked separetion of concepts consists in a better stability for the finished.
+\textit{Utilities-techsweave} is a npm package which has the same function as a library. Especially the package provides to the frontend all types and services made from the backend. Thanks to this package we have been able to greatly simplify interactions between frontend and backend, in fact the implementation of the method is transparent to the frontend, the only thing that frontend knows about the method is its signature.
+In addition to methods \textit{utilities-techsweave} provides type used in the various function, in this case the frontend module has only to create e new type based on what the package provides. With this package the separation of presentation logic and business logic it's further accentuated thus allowing to the frontend to focus on the presentation logic. This marked separation of concepts consists in a better stability for the finished.
 
 
 
@@ -172,14 +172,14 @@ To call a method exposed from \textit{utilities-techsweave}, first we have to im
 \begin{lstlisting}
     import { Models, Services } from 'utilities-techsweave'
 \end{lstlisting}
-After this we have to create a new istance of the type that we want to use in the page, for example if we need a scan of the product we have to create a new istance of {\fontfamily{qcr}\selectfont IProduct}. This type istance is the caller for the method that we want to use, following the previous example the caller allows us to call the {\fontfamily{qcr}\selectfont scanAsync} method that return the scan of product's table in the DB. This procedure has to be done inside the fetch function previously explained:
+After this we have to create a new instance of the type that we want to use in the page, for example if we need a scan of the product we have to create a new instance of {\fontfamily{qcr}\selectfont IProduct}. This type instance is the caller for the method that we want to use, following the previous example the caller allows us to call the {\fontfamily{qcr}\selectfont scanAsync} method that return the scan of product's table in the DB. This procedure has to be done inside the fetch function previously explained:
 \begin{itemize}
   \item {\fontfamily{qcr}\selectfont getStaticProps}
   \item {\fontfamily{qcr}\selectfont getServerSideProps}
   \item {\fontfamily{qcr}\selectfont useEffect and an async function}
 \end{itemize}
 \subsubsection{Rendering of a page}
-The rendering of page  is a succession of components calls. All starts from the page that include and call some components and does the data fetching. When the page has the data, passes it to the component. The \textit{Layout} component contains the general style of the page including header, footer and navbar, and it's included in every page. The product detail page renderign has the following procedure:
+The rendering of page  is a succession of components calls. All starts from the page that include and call some components and does the data fetching. When the page has the data, passes it to the component. The \textit{Layout} component contains the general style of the page including header, footer and navbar, and it's included in every page. The product detail page rendering has the following procedure:
 \begin{itemize}
   \item \textbf{ProductDetail} is the main component this component takes care of showing the data of the product like, his title, his image and his price, and calls all other components:
         \begin{itemize}
